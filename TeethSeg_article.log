@@ -1,0 +1,552 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.2.26)  17 OCT 2021 22:44
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/omq/papers/TeethSegmentation/TeethSeg_article.tex
+(/home/omq/papers/TeethSegmentation/TeethSeg_article.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+\Gm@cnth=\count175
+\Gm@cntv=\count176
+\c@Gm@tempcnt=\count177
+\Gm@bindingoffset=\dimen135
+\Gm@wd@mp=\dimen136
+\Gm@odd@mp=\dimen137
+\Gm@even@mp=\dimen138
+\Gm@layoutwidth=\dimen139
+\Gm@layoutheight=\dimen140
+\Gm@layouthoffset=\dimen141
+\Gm@layoutvoffset=\dimen142
+\Gm@dimlist=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip49
+\@affilsep=\skip50
+\c@Maxaffil=\count178
+\c@authors=\count179
+\c@affil=\count180
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen143
+\Gin@req@width=\dimen144
+) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count181
+\c@continuedfloat=\count182
+)
+\c@KVtest=\count183
+\sf@farskip=\skip51
+\sf@captopadj=\dimen152
+\sf@capskip=\skip52
+\sf@nearskip=\skip53
+\c@subfigure=\count184
+\c@subfigure@save=\count185
+\c@lofdepth=\count186
+\c@subtable=\count187
+\c@subtable@save=\count188
+\c@lotdepth=\count189
+\sf@top=\skip54
+\sf@bottom=\skip55
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip56
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen153
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen154
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count190
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count191
+\leftroot@=\count192
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count193
+\DOTSCASE@=\count194
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen155
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count195
+\c@MaxMatrixCols=\count196
+\dotsspace@=\muskip16
+\c@parentequation=\count197
+\dspbrk@lvl=\count198
+\tag@help=\toks19
+\row@=\count199
+\column@=\count266
+\maxfields@=\count267
+\andhelp@=\toks20
+\eqnshift@=\dimen156
+\alignsep@=\dimen157
+\tagshift@=\dimen158
+\tagwidth@=\dimen159
+\totwidth@=\dimen160
+\lineht@=\dimen161
+\@envbody=\toks21
+\multlinegap=\skip57
+\multlinetaggap=\skip58
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2017/10/31 v2.20.4
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip59
+\thm@postskip=\skip60
+\thm@headsep=\skip61
+\dth@everypar=\toks28
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count268
+\float@exts=\toks29
+\float@box=\box47
+\@float@everytoks=\toks30
+\@floatcapt=\box48
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks31
+\c@algorithm=\count269
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count270
+\c@ALC@line=\count271
+\c@ALC@rem=\count272
+\c@ALC@depth=\count273
+\ALC@tlm=\skip62
+\algorithmicindent=\skip63
+) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip64
+\multirow@cntb=\count274
+\multirow@dima=\skip65
+\bigstrutjot=\dimen162
+) (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+) (/usr/share/texlive/texmf-dist/tex/latex/cjk-ko/kotex.sty
+Package: kotex 2015/04/19 v1.6 Korean TeX (ko.TeX)
+ (/usr/share/texlive/texmf-dist/tex/latex/kotex-utf/kotex.cfg) (/usr/share/texlive/texmf-dist/tex/latex/kotex-utf/kotexutf.sty
+Package: kotexutf 2015/07/18 v2.1.1 typesetting UTF-8 Korean documents
+ (/usr/share/texlive/texmf-dist/tex/plain/kotex-plain/kotexutf-core.tex
+\unih@ngulpoint=\count275
+\dhucs@emph@raise=\dimen163
+)
+Now handling font encoding LUC ...
+... processing UTF-8 mapping file for font encoding LUC
+ (/usr/share/texlive/texmf-dist/tex/latex/kotex-utf/lucenc.dfu
+File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201C (decimal 8220)
+   defining Unicode char U+201D (decimal 8221)
+   defining Unicode char U+3001 (decimal 12289)
+   defining Unicode char U+3002 (decimal 12290)
+   defining Unicode char U+3008 (decimal 12296)
+   defining Unicode char U+3009 (decimal 12297)
+   defining Unicode char U+300A (decimal 12298)
+   defining Unicode char U+300B (decimal 12299)
+   defining Unicode char U+300C (decimal 12300)
+   defining Unicode char U+300D (decimal 12301)
+   defining Unicode char U+300E (decimal 12302)
+   defining Unicode char U+300F (decimal 12303)
+   defining Unicode char U+3010 (decimal 12304)
+   defining Unicode char U+3011 (decimal 12305)
+   defining Unicode char U+3014 (decimal 12308)
+   defining Unicode char U+3015 (decimal 12309)
+   defining Unicode char U+3016 (decimal 12310)
+   defining Unicode char U+3017 (decimal 12311)
+   defining Unicode char U+3018 (decimal 12312)
+   defining Unicode char U+3019 (decimal 12313)
+   defining Unicode char U+301A (decimal 12314)
+   defining Unicode char U+301B (decimal 12315)
+   defining Unicode char U+FF01 (decimal 65281)
+   defining Unicode char U+FF08 (decimal 65288)
+   defining Unicode char U+FF09 (decimal 65289)
+   defining Unicode char U+FF0C (decimal 65292)
+   defining Unicode char U+FF0E (decimal 65294)
+   defining Unicode char U+FF1A (decimal 65306)
+   defining Unicode char U+FF1B (decimal 65307)
+   defining Unicode char U+FF1C (decimal 65308)
+   defining Unicode char U+FF1D (decimal 65309)
+   defining Unicode char U+FF1E (decimal 65310)
+   defining Unicode char U+FF1F (decimal 65311)
+   defining Unicode char U+FF3B (decimal 65339)
+   defining Unicode char U+FF3D (decimal 65341)
+   defining Unicode char U+FF5B (decimal 65371)
+   defining Unicode char U+FF5D (decimal 65373)
+   defining Unicode char U+FF61 (decimal 65377)
+   defining Unicode char U+FF62 (decimal 65378)
+   defining Unicode char U+FF63 (decimal 65379)
+   defining Unicode char U+FF64 (decimal 65380)
+   defining Unicode char U+FF65 (decimal 65381)
+)
+\@josa=\count276
+\josatoks=\toks32
+ (/usr/share/texlive/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
+Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
+)))
+\c@theorem=\count277
+ (/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box49
+\UL@hyphenbox=\box50
+\UL@skip=\skip66
+\UL@hook=\toks33
+\UL@height=\dimen164
+\UL@pe=\count278
+\UL@pixel=\dimen165
+\ULC@box=\box51
+Package: ulem 2019/11/18
+\ULdepth=\dimen166
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count279
+\l__pdf_internal_box=\box52
+) (/home/omq/papers/TeethSegmentation/TeethSeg_article.aux)
+\openout1 = `TeethSeg_article.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 95.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 95.
+ (/usr/share/texlive/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
+File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
+)
+LaTeX Font Info:    ... okay on input line 95.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(89.62709pt, 418.25368pt, 89.6271pt)
+* v-part:(T,H,B)=(101.40665pt, 591.5302pt, 152.11pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25368pt
+* \textheight=591.5302pt
+* \oddsidemargin=17.3571pt
+* \evensidemargin=17.3571pt
+* \topmargin=-7.86334pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count280
+\scratchdimen=\dimen167
+\scratchbox=\box53
+\nofMPsegments=\count281
+\nofMParguments=\count282
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count283
+\MPscratchDim=\dimen168
+\MPnumerator=\count284
+\makeMPintoPDFobject=\count285
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 118.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 118.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Reference `Def:gadf_def' on page 1 undefined on input line 123.
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 182.
+
+<./Figures/seg_eta.png, id=55, 380.17032pt x 264.99pt>
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 184.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+<./Figures/seg_comp.png, id=56, 380.17032pt x 264.99pt>
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 185.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[3 <./Figures/seg_eta.png> <./Figures/seg_comp.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 203.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 205.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 206.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[4]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 231.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 233.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 234.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[5]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 254.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 256.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 257.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 272.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 274.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 275.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 282.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 284.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 285.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[6] [7] [8]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 331.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 333.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 334.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 345.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 347.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 348.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[9]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 373.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 385.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 387.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 388.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+[10] [11]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 423.
+
+File: ./Figures/seg_eta.png Graphic file (type png)
+<use ./Figures/seg_eta.png>
+Package pdftex.def Info: ./Figures/seg_eta.png  used on input line 425.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+File: ./Figures/seg_comp.png Graphic file (type png)
+<use ./Figures/seg_comp.png>
+Package pdftex.def Info: ./Figures/seg_comp.png  used on input line 426.
+(pdftex.def)             Requested size: 195.93782pt x 136.5733pt.
+(/home/omq/papers/TeethSegmentation/TeethSeg_article.bbl [12]) [13] (/home/omq/papers/TeethSegmentation/TeethSeg_article.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5265 strings out of 481239
+ 75967 string characters out of 5920377
+ 327213 words of memory out of 5000000
+ 20397 multiletter control sequences out of 15000+600000
+ 548992 words of font info for 83 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 50i,15n,49p,1878b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmac.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmad.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmae.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb3.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb4.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmb9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmba.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmbd.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmcd.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmce.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd1.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd3.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/nanumtype1/nanummjmd6.pfb>
+Output written on /home/omq/papers/TeethSegmentation/TeethSeg_article.pdf (13 pages, 1619462 bytes).
+PDF statistics:
+ 246 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
