@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{Jonker:1992}
+{\sc P.~P.~J. (auth.)}, {\em Morphological Image Processing: Architecture and
+  VLSI design}, Springer US, 1~ed., 1992.
+
 \bibitem{Blum:1967}
 {\sc H.~Blum et~al.}, {\em A transformation for extracting new descriptors of
   shape}, vol.~43, MIT press Cambridge, MA, 1967.
@@ -13,12 +17,16 @@
   sparse and low-rank reflection model}, in Proceedings of the European
   Conference on Computer Vision (ECCV), September 2018.
 
-\bibitem{Hahn:2009}
-{\sc J.~Hahn and C.-O. Lee}, {\em A nonlinear structure tensor with the
-  diffusivity matrix composed of the image gradient}, Journal of Mathematical
-  Imaging and Vision, 34 (2009), pp.~137--151.
+\bibitem{Hahn:2006}
+{\sc J.~Hahn and C.-O. Lee}, {\em Highly accurate segmentation using geometric
+  attraction-driven flow in edge-regions},  (2006).
 
-\bibitem{HAHN:2010}
+\bibitem{Hahn:2009}
+\leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em A nonlinear
+  structure tensor with the diffusivity matrix composed of the image gradient},
+  Journal of Mathematical Imaging and Vision, 34 (2009), pp.~137--151.
+
+\bibitem{Hahn:2010}
 {\sc J.~Hahn and C.-O. Lee}, {\em Geometric attraction-driven flow for image
   segmentation and boundary detection}, Journal of Visual Communication and
   Image Representation, 21 (2010), pp.~56--66.
@@ -28,6 +36,10 @@
   specular reflections in tooth color image by perceptron neural nets}, in 2010
   2nd International Conference on Signal Processing Systems, vol.~1, IEEE,
   2010, pp.~V1--285.
+
+\bibitem{MATLAB:R2021a_u1}
+{\sc The Mathworks, Inc.}, {\em {MATLAB version 9.10.0.1649659 (R2021a) Update
+  1}}, Natick, Massachusetts, 2021.
 
 \bibitem{Ronneberger:2015}
 {\sc O.~Ronneberger, P.~Fischer, and T.~Brox}, {\em U-net: Convolutional
