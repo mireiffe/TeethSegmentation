@@ -4,45 +4,45 @@ The top-level auxiliary file: TeethSeg_article.aux
 The style file: siam.bst
 Database file #1: bibliography.bib
 Warning--empty journal in Hahn:2006
-You've used 18 entries,
+You've used 46 entries,
             2030 wiz_defined-function locations,
-            624 strings with 7190 characters,
-and the built_in function-call counts, 6640 in all, are:
-= -- 611
-> -- 337
+            801 strings with 12589 characters,
+and the built_in function-call counts, 18236 in all, are:
+= -- 1658
+> -- 1023
 < -- 0
-+ -- 137
-- -- 116
-* -- 533
-:= -- 1032
-add.period$ -- 18
-call.type$ -- 18
-change.case$ -- 111
++ -- 404
+- -- 353
+* -- 1477
+:= -- 2830
+add.period$ -- 47
+call.type$ -- 46
+change.case$ -- 307
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 293
-empty$ -- 494
-format.name$ -- 116
-if$ -- 1412
+cite$ -- 47
+duplicate$ -- 775
+empty$ -- 1293
+format.name$ -- 353
+if$ -- 3882
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 18
-newline$ -- 57
-num.names$ -- 33
-pop$ -- 118
+int.to.str$ -- 46
+missing$ -- 41
+newline$ -- 142
+num.names$ -- 93
+pop$ -- 332
 preamble$ -- 1
-purify$ -- 95
+purify$ -- 263
 quote$ -- 0
-skip$ -- 234
+skip$ -- 653
 stack$ -- 0
-substring$ -- 396
-swap$ -- 113
+substring$ -- 1057
+swap$ -- 321
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 180
 warning$ -- 1
-while$ -- 59
-width$ -- 20
-write$ -- 162
+while$ -- 158
+width$ -- 48
+write$ -- 405
 (There was 1 warning)
