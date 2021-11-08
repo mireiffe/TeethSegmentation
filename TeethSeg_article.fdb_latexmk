@@ -1,15 +1,15 @@
 # Fdb version 3
-["bibtex TeethSeg_article"] 1634897726 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1635122080
+["bibtex TeethSeg_article"] 1635487950 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1635488185
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/siam.bst" 1292289607 19403 812681d329611d2a1625ad7ae5186edc ""
-  "TeethSeg_article.aux" 1635122080 17308 a99853bb82eb7ad1a973d3569ecd3ee7 "pdflatex"
+  "TeethSeg_article.aux" 1635488184 17308 a99853bb82eb7ad1a973d3569ecd3ee7 "pdflatex"
   "bibliography.bib" 1634897714 25686 65313eb1da5ebcb9140c38447f2917ae ""
   (generated)
   "TeethSeg_article.bbl"
   "TeethSeg_article.blg"
-["pdflatex"] 1635122079 "/home/omq/papers/TeethSegmentation/TeethSeg_article.tex" "/home/omq/papers/TeethSegmentation/TeethSeg_article.pdf" "TeethSeg_article" 1635122080
+["pdflatex"] 1635488183 "/home/omq/papers/TeethSegmentation/TeethSeg_article.tex" "/home/omq/papers/TeethSegmentation/TeethSeg_article.pdf" "TeethSeg_article" 1635488185
   "/etc/texmf/web2c/texmf.cnf" 1614323645 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/omq/papers/TeethSegmentation/TeethSeg_article.aux" 1635122080 17308 a99853bb82eb7ad1a973d3569ecd3ee7 ""
-  "/home/omq/papers/TeethSegmentation/TeethSeg_article.tex" 1635122078 67170 943ae747ffef0e652405b55bb0afc0e7 ""
+  "/home/omq/papers/TeethSegmentation/TeethSeg_article.aux" 1635488184 17308 a99853bb82eb7ad1a973d3569ecd3ee7 ""
+  "/home/omq/papers/TeethSegmentation/TeethSeg_article.tex" 1635488183 67170 943ae747ffef0e652405b55bb0afc0e7 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -295,14 +295,14 @@
   "Figures/Fig8_img4/iter250.pdf" 1634801130 69199 d582c6b5281fbe3408878cb39e5e9384 ""
   "Figures/Fig8_img4/iter400.pdf" 1634801762 71976 a35a2a07e197d7e9ff61478561a3fcd8 ""
   "Figures/Fig8_img4/iter600.pdf" 1634802748 73424 580b8f35655755e830478acc5602dbd6 ""
-  "TeethSeg_article.aux" 1635122080 17308 a99853bb82eb7ad1a973d3569ecd3ee7 "pdflatex"
-  "TeethSeg_article.bbl" 1634897726 9831 0a761e2a51e835011c4d05cea10c9c29 "bibtex TeethSeg_article"
-  "TeethSeg_article.out" 1635122080 1231 1a30c239172de3dace65db57587549f6 "pdflatex"
-  "TeethSeg_article.tex" 1635122078 67170 943ae747ffef0e652405b55bb0afc0e7 ""
+  "TeethSeg_article.aux" 1635488184 17308 a99853bb82eb7ad1a973d3569ecd3ee7 "pdflatex"
+  "TeethSeg_article.bbl" 1635487950 9831 0a761e2a51e835011c4d05cea10c9c29 "bibtex TeethSeg_article"
+  "TeethSeg_article.out" 1635488184 1231 1a30c239172de3dace65db57587549f6 "pdflatex"
+  "TeethSeg_article.tex" 1635488183 67170 943ae747ffef0e652405b55bb0afc0e7 ""
   (generated)
-  "TeethSeg_article.log"
   "TeethSeg_article.pdf"
+  "TeethSeg_article.log"
   "/home/omq/papers/TeethSegmentation/TeethSeg_article.pdf"
-  "TeethSeg_article.aux"
-  "/home/omq/papers/TeethSegmentation/TeethSeg_article.log"
   "TeethSeg_article.out"
+  "/home/omq/papers/TeethSegmentation/TeethSeg_article.log"
+  "TeethSeg_article.aux"
