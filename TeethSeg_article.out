@@ -1,14 +1,14 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Background}{}% 2
+\BOOKMARK [1][-]{section.2}{.. .. .... .. .... .. ..}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Geometric Attraction-Driven Flow}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Weak edge detection}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Edge regions outside the tooth boundaries}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Avoidance of light reflections in the teeth image}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Avoiding light reflections in teeth images}{section.2}% 6
 \BOOKMARK [1][-]{section.3}{Proposed Method}{}% 7
 \BOOKMARK [2][-]{subsection.3.1}{Data labeling and training by strategy}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.2}{Obtaining an edge region candidate from a neural network and region trimming}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.3}{Segmentation using active contours using competing ballon force}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.4}{Teeth and non-teeth region classification}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Refinement of pre\205edge region}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.3}{Segmentation using active contours with competing ballon force}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.4}{Identification of tooth and non-teeth regions}{section.3}% 11
 \BOOKMARK [1][-]{section.4}{Experimental results and numerical aspect}{}% 12
 \BOOKMARK [1][-]{section.5}{Conclusion}{}% 13
 \BOOKMARK [1][-]{appendix.A}{Finding edges and extension from the edge}{}% 14
