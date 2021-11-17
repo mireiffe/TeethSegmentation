@@ -34,7 +34,7 @@
 \citation{LeeRemoval:2010}
 \citation{Kim:2020}
 \citation{Pham:2020}
-\citation{Zhu:2020:maskrcnn}
+\citation{Zhu:2020:teethMaskrcnn}
 \citation{He:2018:MRCNN}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{Sec:Introduction}{{1}{1}{Introduction}{section.1}{}}
@@ -44,18 +44,18 @@
 \citation{Dollr:2006}
 \citation{Hahn:2006}
 \citation{Hahn:2010:GADF}
-\citation{Hahn:2010}
-\citation{Hahn:2010}
+\citation{Hahn:2010:GADF}
+\citation{Hahn:2010:GADF}
 \@writefile{toc}{\contentsline {section}{\numberline {2}Edge regions in human teeth image}{2}{section.2}\protected@file@percent }
 \newlabel{Sec:er_teeth}{{2}{2}{Edge regions in human teeth image}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Geometric Attraction-Driven Flow}{2}{subsection.2.1}\protected@file@percent }
 \newlabel{Subsec:GADF}{{2.1}{2}{Geometric Attraction-Driven Flow}{subsection.2.1}{}}
 \newlabel{Def:edge}{{2.1}{2}{Geometric Attraction-Driven Flow}{equation.2.1}{}}
 \newlabel{Def:gadf}{{2.2}{2}{Geometric Attraction-Driven Flow}{equation.2.2}{}}
-\citation{Hahn:2010}
+\citation{Hahn:2010:GADF}
 \citation{Hahn:2006}
 \citation{SpecRemoval:2018}
-\citation{SpecRemoval:2006}
+\citation{SpecRemoval:2020}
 \citation{SpecRemoval:2016}
 \citation{SpecRemoval:2015}
 \newlabel{Eq:gadf}{{2.3}{3}{Geometric Attraction-Driven Flow}{equation.2.3}{}}
@@ -79,6 +79,7 @@
 \newlabel{Fig:er_outside}{{2}{5}{(a) Teeth image with light reflection. (c) Results obtained from (b) by removing regions caused by (C-1) and with dilation. (d--f) From left to right, the contour evolution over time by \eqref {Eq:gadf} over time is shown. The first column shows initial contours located at (d) the left tooth, (e) the right tooth, and (f) outside of teeth. Observe that the contour goes into the narrow area of (c), but does not the large, closed regions and finally stops. Especially in (d), the contour cannot reach the entire tooth boundary. \relax }{figure.caption.2}{}}
 \citation{LeeRemoval:2010}
 \citation{Zhang:2020}
+\citation{Zhang:2018:BCE}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Avoiding light reflections in teeth images}{6}{subsection.2.3}\protected@file@percent }
 \newlabel{Subsec:avoidance}{{2.3}{6}{Avoiding light reflections in teeth images}{subsection.2.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Method}{6}{section.3}\protected@file@percent }
@@ -88,6 +89,8 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }}{7}{figure.caption.3}\protected@file@percent }
 \newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }{figure.caption.3}{}}
 \citation{Freeman:1961:Chaincoding}
+\citation{Jonker:1992:Morphological}
+\citation{Blum:1967}
 \newlabel{Fig:4a}{{4(a)}{8}{\relax }{figure.caption.4}{}}
 \newlabel{sub@Fig:4a}{{(a)}{8}{\relax }{figure.caption.4}{}}
 \newlabel{Fig:4b}{{4(b)}{8}{$\ome $\relax }{figure.caption.4}{}}
@@ -104,7 +107,9 @@
 \newlabel{Fig:network}{{5}{9}{The structure of designed upscale module. Overall, each rectangle represents a trainable layer. Each layer is described by the kernel size, type, and number of channels in the output. Further descriptions like $/2$ or $\times 2$ means strides or scale factor, respectively. For every trainable layers except for the last one, the outputs are produced through the batch normalization and ReLU activation function. In the last $1\times 1$ convolutional layer, we uses the sigmoid activation function. \relax }{figure.caption.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (First row) Input images and (Second row) obtained pre--edge regions. \relax }}{9}{figure.caption.6}\protected@file@percent }
 \newlabel{Fig:pre_er}{{6}{9}{(First row) Input images and (Second row) obtained pre--edge regions. \relax }{figure.caption.6}{}}
+\citation{Osher:1988:LVset}
 \citation{Kass:1988:Snakes}
+\citation{Xu:2000:ParamGeoAC}
 \newlabel{Fig:ex_ends_a}{{7(a)}{10}{\relax }{figure.caption.7}{}}
 \newlabel{sub@Fig:ex_ends_a}{{(a)}{10}{\relax }{figure.caption.7}{}}
 \newlabel{Fig:ex_ends_b}{{7(b)}{10}{\relax }{figure.caption.7}{}}
@@ -132,41 +137,46 @@
 \newlabel{Fig:results}{{8}{12}{(a) Input images and (b) obtained pre--edge regions. The segmentation results for the images (a) are in (c). \relax }{figure.caption.8}{}}
 \bibstyle{siam}
 \bibdata{bibliography}
-\bibcite{Caselles:1997:GAC}{1}
-\bibcite{Chan:2001:chanvese}{2}
-\bibcite{Cohen:1991:Balloon}{3}
-\bibcite{Dollr:2006}{4}
-\bibcite{Freeman:1961:Chaincoding}{5}
-\bibcite{SpecRemoval:2018}{6}
-\bibcite{Hahn:2006}{7}
-\bibcite{Hahn:2010:GADF}{8}
-\bibcite{He:2018:MRCNN}{9}
-\bibcite{He:2015:ResNet}{10}
+\bibcite{Blum:1967}{1}
+\bibcite{Caselles:1997:GAC}{2}
+\bibcite{Chan:2001:chanvese}{3}
+\bibcite{Cohen:1991:Balloon}{4}
+\bibcite{Dollr:2006}{5}
+\bibcite{Freeman:1961:Chaincoding}{6}
+\bibcite{SpecRemoval:2018}{7}
+\bibcite{Hahn:2006}{8}
+\bibcite{Hahn:2010:GADF}{9}
+\bibcite{He:2018:MRCNN}{10}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}\protected@file@percent }
 \newlabel{Sec:Conclusion}{{5}{13}{Conclusion}{section.5}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A}List of features of non-tooth regions}{13}{appendix.A}\protected@file@percent }
 \newlabel{App:list_nonteeth}{{A}{13}{List of features of non-tooth regions}{appendix.A}{}}
-\bibcite{Kass:1988:Snakes}{11}
-\bibcite{Kim:2020}{12}
-\bibcite{Kingma:2017}{13}
-\bibcite{Krizhevsky:2012:ImageNet}{14}
-\bibcite{LeeWater:2010}{15}
-\bibcite{LeeColor:2009}{16}
-\bibcite{LeeSegRemoval:2010}{17}
-\bibcite{LeeRemoval:2010}{18}
-\bibcite{Yuan:2020:teethParanomic}{19}
-\bibcite{Naumovich:2015:teethCT3D}{20}
-\bibcite{Park:2014:SRM}{21}
-\bibcite{Said:2006:teethxray}{22}
-\bibcite{Shah:2006:teethautoseg}{23}
-\bibcite{SpecRemoval:2006}{24}
-\bibcite{SpecRemoval:2016}{25}
-\bibcite{SUSSMAN:1994}{26}
-\bibcite{Pham:2020}{27}
-\bibcite{WU:2016}{28}
-\bibcite{Xu:1997:GVF}{29}
-\bibcite{SpecRemoval:2015}{30}
-\bibcite{Zhang:2020}{31}
-\bibcite{Zhang:1984}{32}
-\bibcite{Zhu:2020:maskrcnn}{33}
-\bibcite{Zhu:1996:RegCompet}{34}
+\bibcite{He:2015:ResNet}{11}
+\bibcite{Jonker:1992:Morphological}{12}
+\bibcite{Kass:1988:Snakes}{13}
+\bibcite{Kim:2020}{14}
+\bibcite{Kingma:2017}{15}
+\bibcite{Krizhevsky:2012:ImageNet}{16}
+\bibcite{LeeWater:2010}{17}
+\bibcite{LeeColor:2009}{18}
+\bibcite{LeeSegRemoval:2010}{19}
+\bibcite{LeeRemoval:2010}{20}
+\bibcite{SpecRemoval:2020}{21}
+\bibcite{Yuan:2020:teethParanomic}{22}
+\bibcite{Naumovich:2015:teethCT3D}{23}
+\bibcite{Osher:1988:LVset}{24}
+\bibcite{Park:2014:SRM}{25}
+\bibcite{Said:2006:teethxray}{26}
+\bibcite{Shah:2006:teethautoseg}{27}
+\bibcite{SpecRemoval:2016}{28}
+\bibcite{SUSSMAN:1994}{29}
+\bibcite{Pham:2020}{30}
+\bibcite{WU:2016}{31}
+\bibcite{Xu:1997:GVF}{32}
+\bibcite{Xu:2000:ParamGeoAC}{33}
+\bibcite{SpecRemoval:2015}{34}
+\bibcite{Zhang:2020}{35}
+\bibcite{Zhang:1984}{36}
+\bibcite{Zhang:2018:BCE}{37}
+\bibcite{Zhu:2020:teethMaskrcnn}{38}
+\bibcite{Zhu:1996:RegCompet}{39}

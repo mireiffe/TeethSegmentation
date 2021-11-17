@@ -3,47 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TeethSeg_article.aux
 The style file: siam.bst
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Hahn:2010"
-Warning--empty journal in Hahn:2006
-You've used 34 entries,
+You've used 39 entries,
             2030 wiz_defined-function locations,
-            739 strings with 11075 characters,
-and the built_in function-call counts, 14113 in all, are:
-= -- 1305
-> -- 766
+            765 strings with 11772 characters,
+and the built_in function-call counts, 16563 in all, are:
+= -- 1601
+> -- 787
 < -- 0
-+ -- 297
-- -- 261
-* -- 1133
-:= -- 2170
-add.period$ -- 35
-call.type$ -- 34
-change.case$ -- 224
++ -- 312
+- -- 270
+* -- 1283
+:= -- 2473
+add.period$ -- 39
+call.type$ -- 39
+change.case$ -- 250
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 604
-empty$ -- 988
-format.name$ -- 261
-if$ -- 3040
+cite$ -- 39
+duplicate$ -- 746
+empty$ -- 1200
+format.name$ -- 270
+if$ -- 3624
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 30
-newline$ -- 106
-num.names$ -- 74
-pop$ -- 225
+int.to.str$ -- 39
+missing$ -- 41
+newline$ -- 120
+num.names$ -- 77
+pop$ -- 250
 preamble$ -- 1
-purify$ -- 190
+purify$ -- 212
 quote$ -- 0
-skip$ -- 540
+skip$ -- 666
 stack$ -- 0
-substring$ -- 882
-swap$ -- 272
+substring$ -- 1170
+swap$ -- 345
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 136
-warning$ -- 1
-while$ -- 128
-width$ -- 36
-write$ -- 305
-(There were 2 warnings)
+type$ -- 152
+warning$ -- 0
+while$ -- 161
+width$ -- 41
+write$ -- 355

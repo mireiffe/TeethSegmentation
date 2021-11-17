@@ -145,7 +145,7 @@ Individual tooth segmentation, Pre--edge region, Image Segmentation, Supervised 
 
 The image segmentation is one of major topic in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation. It makes the contour surrounding an object move to the boundary of the objects with the designed force \cite{Kass:1988:Snakes}; The gradient vector flows \cite{Xu:1997:GVF}, geodesic active contours \cite{Caselles:1997:GAC} and balloon forces \cite{Cohen:1991:Balloon} are generally well-known models with different forces. In \cite{Chan:2001:chanvese}, a remarkable method was proposed, which does not extract edge during the segmentation. There are also statistical models that forces so that the distribution of intensities in the regions divided by the contour is more similar \cite{Park:2014:SRM,Zhu:1996:RegCompet}.
 
-Segmentation of individual tooth in human teeth images is mainly performed in computed tomography (CT) or X-ray images \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. The CT or X-ray images are grayscale, and the tooth regions are easily segmented because the intensity of teeth region is much stronger than the gums or tissues. But segmentation of individual tooth in a camera taken teeth image is a more difficult problem. In the teeth images, weak edges and light reflections appear and even the colors and illuminance are inhomogeneous because of plaques and the oral structure. These obstacles make it difficult to segment individual tooth in a teeth image. Several attempts have been made to segment individual tooth in a teeth image. In \cite{LeeWater:2010, LeeColor:2009} the watershed algorithm with color information was proposed. In \cite{LeeSegRemoval:2010}, an additional light reflection removal process \cite{LeeRemoval:2010} was applied before segmentation. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:maskrcnn}, segmentations using deep learning methods with Mask R-CNN \cite{He:2018:MRCNN} were proposed.
+Segmentation of individual tooth in human teeth images is mainly performed in computed tomography (CT) or X-ray images \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. The CT or X-ray images are grayscale, and the tooth regions are easily segmented because the intensity of teeth region is much stronger than the gums or tissues. But segmentation of individual tooth in a camera taken teeth image is a more difficult problem. In the teeth images, weak edges and light reflections appear and even the colors and illuminance are inhomogeneous because of plaques and the oral structure. These obstacles make it difficult to segment individual tooth in a teeth image. Several attempts have been made to segment individual tooth in a teeth image. In \cite{LeeWater:2010, LeeColor:2009} the watershed algorithm with color information was proposed. In \cite{LeeSegRemoval:2010}, an additional light reflection removal process \cite{LeeRemoval:2010} was applied before segmentation. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, segmentations using deep learning methods with Mask R-CNN \cite{He:2018:MRCNN} were proposed.
 
 Individual tooth segmentation can be applied to reconstruction of 3D teeth model. In \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}, 3D teeth is reconstructed by segmentation in CT teeth image. In \cite{WU:2016}, a 3D teeth model reconstruction using a teeth image was proposed. Here, the 3D teeth model reconstruction is achieved using individual tooth boundaries in a teeth image. In here, a supervised learning method BEL \cite{Dollr:2006} was used to extract the individual tooth boundaries with manually labeled $40$ teeth studio-taken images as the training data. 
 
@@ -169,7 +169,7 @@ where
 \begin{align*}
     u_x(s) = I\left( x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|} \right)\pd
 \end{align*}
-In \cite{Hahn:2010}, the GADF is defined as
+In \cite{Hahn:2010:GADF}, the GADF is defined as
 \begin{align}
     F_a(x) = \mbox{sgn}(\ell(x))\frac{\nabla I(x)}{\left|\nabla{I(x)}\right|},\quad \forall{x}\in\Omega\cm  \label{Def:gadf}
 \end{align}
@@ -179,7 +179,7 @@ where $\mbox{sgn}$ is the sign function and
 \end{align*}
 By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge where $u_x''(s)=0$. 
 
-Under this setting, contour evolution using a level set formulation is proposed in \cite{Hahn:2010}:
+Under this setting, contour evolution using a level set formulation is proposed in \cite{Hahn:2010:GADF}:
 \begin{align}
     \frac{\partial}{\partial{t}}\phi(x,\,t) &= \mu\kappa(\phi)\left|\nabla\phi\right| - \chi_{\oma}F_a\cdot\nabla\phi + \chi_{\Omega_b}F_b|\nabla\phi|\cm \label{Eq:gadf}\\
     \phi(x,\,0) &= \phi_0(x)\cm \nonumber
@@ -201,7 +201,7 @@ The edge region is a region that is thought to contain edges. Since $\oma$ conta
 \label{Subsec:er_outside}
 
 그림으로 설명을 대체?
-In human teeth images, weak edges are appeared at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. It is hard to extract those weak edges using existing methods but $\oma$ in \eqref{Def:oma} contains all edges in an image \cite{Hahn:2010} including weak edges. On the other hand, $\oma$ contains unnecessary parts outside the tooth boundaries due to inhomogeneity of the object surface or noise in the image. Due to these edges, $\oma$ includes many connected regions outside the tooth boundary as shown in Figure~\ref{Fig:1d}.
+In human teeth images, weak edges are appeared at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. It is hard to extract those weak edges using existing methods but $\oma$ in \eqref{Def:oma} contains all edges in an image \cite{Hahn:2010:GADF} including weak edges. On the other hand, $\oma$ contains unnecessary parts outside the tooth boundaries due to inhomogeneity of the object surface or noise in the image. Due to these edges, $\oma$ includes many connected regions outside the tooth boundary as shown in Figure~\ref{Fig:1d}.
 % Figure: Weak edges in teeth image
 \begin{figure}
     \centering
@@ -369,7 +369,7 @@ The regions resulting from (C--3) are large and of a closed shape. Because of th
 \subsection{Avoiding light reflections in teeth images}
 \label{Subsec:avoidance}
 
-There are previous studies to remove light reflections in a single image \cite{SpecRemoval:2018,SpecRemoval:2006,SpecRemoval:2016,SpecRemoval:2015}. In these, an image was separated into reflective region and non--reflective region, using intensity histogram or assuming a dichromatic image model. These methods are based on color information of the reflective region, but in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, parts of the tooth surface is also removed with the light reflection. 
+There are previous studies to remove light reflections in a single image \cite{SpecRemoval:2018,SpecRemoval:2020,SpecRemoval:2016,SpecRemoval:2015}. In these, an image was separated into reflective region and non--reflective region, using intensity histogram or assuming a dichromatic image model. These methods are based on color information of the reflective region, but in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, parts of the tooth surface is also removed with the light reflection. 
 
 There has been an attempt to remove the light reflection in teeth images using the single layer perceptron \cite{LeeRemoval:2010}, but there is a limitation that it cannot be applied to a wide range of image because learning is processed using only one image as well as the perceptron has an extremely simple structure.
 
@@ -445,7 +445,7 @@ As shown in Figure~\ref{Fig:flowchart}(a), we make labels for training data usin
         0 & \mbox{otherwise}
     \end{cases}\cm
 \end{align*}
-where $\oms$ is obtained by dilation of the selected region from $\ome$ by a structuring element that is an $\omega\times\omega$ matrix with the origin at the center. For training, the part of ResNeSt--50 \cite{Zhang:2020} before the global average pooling layer is used as the encoder part, and a custom upscale module is designed for the decoder part. The network takes a 3 channel image as an input $X\colon\Omega\rightarrow\mathbf{R}^3$ and produces a 1 channel image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ and is trained by minimizing the binary cross entropy (BCE) loss function. In Figure~\ref{Fig:labeling}, the labeling process is presented and the entire network structure is shown in the Figure~\ref{Fig:network}.
+where $\oms$ is obtained by dilation of the selected region from $\ome$ by a structuring element that is an $\omega\times\omega$ matrix with the origin at the center. For training, the part of ResNeSt--50 \cite{Zhang:2020} before the global average pooling layer is used as the encoder part, and a custom upscale module is designed for the decoder part. The network takes a 3 channel image as an input $X\colon\Omega\rightarrow\mathbf{R}^3$ and produces a 1 channel image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ and is trained by minimizing the binary cross entropy (BCE) loss function \cite{Zhang:2018:BCE}. In Figure~\ref{Fig:labeling}, the labeling process is presented and the entire network structure is shown in the Figure~\ref{Fig:network}.
 
 % Figure: Labeling images
 \begin{figure}[]
@@ -584,7 +584,7 @@ as a pre--edge region of $X$, and some pre--edge regions are shown in Figure~\re
 \subsection{Refinement of pre--edge region}
 \label{Subsec:refine}
 
-The region $\omcc$ obtained in \ref{Subsec:pre_er} is not yet perfect. As it contains small fragments and leakages, we apply a refinement process to $\omcc$ to form closed individual tooth area. First, small fragments and holes can be easily removed compared to the size of the image domain $\Omega$. Since we want $\omcc$ to consist of thick closed curves, leakage means breaking of the closed curve. Thus, we can fill the leakages by extending the ends of the curves in $\omcc$. By applying the chin--coding \cite{Freeman:1961:Chaincoding} to the skeleton of $\omcc$, we can find the ends of $\omcc$ and a parametric curve representing $\omcc$.
+The region $\omcc$ obtained in \ref{Subsec:pre_er} is not yet perfect. As it contains small fragments and leakages, we apply a refinement process to $\omcc$ to form closed individual tooth area. First, small fragments and holes can be easily removed compared to the size of the image domain $\Omega$. Since we want $\omcc$ to consist of thick closed curves, leakage means breaking of the closed curve. Thus, we can fill the leakages by extending the ends of the curves in $\omcc$. By applying the chin--coding \cite{Freeman:1961:Chaincoding,Jonker:1992:Morphological} to the skeleton \cite{Blum:1967} of $\omcc$, we can find the ends of $\omcc$ and a parametric curve representing $\omcc$.
 
 The strategy for extension is to return if not reached; if the leakage is not filled after a certain length of extension, then return and start extension in the next direction. Three directions are considered sequentially:
 \begin{itemize}
@@ -627,7 +627,7 @@ We call the resulting extension as $\omc$ and finally, we define an edge region 
 
 In this section, we denote $\sdf(X)$ by a signed distance function which is negative on the set $X$ and constantly zero on $\partial X$. In addition, for a signed distance function $\phi$, $\Omega_{\phi}^+$, $\Omega_{\phi}^-$ and $\Omega_{\phi}^0$ denote the sets $\left\{x\mid \phi > 0 \right\}$, $\left\{x\mid \phi < 0 \right\}$ and $\left\{x\mid \phi = 0 \right\}$, respectively.
 
-We begin with a brief mention of active contour models with level set formulation. At first, a parametric active contour model proposed in \cite{Kass:1988:Snakes} formulated by minimizing an energy functional. In there, the active contours are  In A, the active contour was formulated in the level set framework, and it showed better performance than minimizing the energy function in a more intuitive way by designing the force itself acting on the contour.
+We begin with a brief mention of active contour models with level set formulation \cite{Osher:1988:LVset}. At first, a parametric active contour model proposed in \cite{Kass:1988:Snakes} formulated by minimizing an energy functional. In \cite{Xu:2000:ParamGeoAC} active contours are  In A, the active contour was formulated in the level set framework, and it showed better performance than minimizing the energy function in a more intuitive way by designing the force itself acting on the contour.
 
 모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다
 
