@@ -16,7 +16,7 @@
   publisher={Springer}
 }
 
-@article{Hahn:2010,
+@article{Hahn:2010:GADF,
 title = {Geometric attraction-driven flow for image segmentation and boundary detection},
 journal = {Journal of Visual Communication and Image Representation},
 volume = {21},
@@ -31,7 +31,7 @@ keywords = {Geometric attraction-driven flow, Binary edge function, Binary ballo
 abstract = {Novel forces in image segmentation based on active contours models are proposed for capturing objects in the image. Contemplating the common functionality of forces in previous active contours models, we propose the geometric attraction-driven flow (GADF), the binary edge function, and the binary balloon forces to detect objects in difficult cases such as varying illumination and complex shapes. The orientation of GADF is orthogonally aligned with the boundary of object and has the opposite direction across the boundary. It prevents the leakage through weak edges of objects, which occur due to illumination. To reduce the interference from other forces, we design the binary edge function using the property of the orientation in the GADF. We also design the binary balloon force based on the four-color theorem. Combining with initial dual level set functions, the proposed model captures holes in objects and multiple junctions from different colors. The result does not depend on positions of initial contours.}
 }
 
-@book{Jonker:1992,
+@book{Jonker:1992:Morphological,
   title =     {Morphological Image Processing: Architecture and VLSI design},
   author =    {Petrus Paulus Jonker (auth.)},
   publisher = {Springer US},
@@ -40,8 +40,36 @@ abstract = {Novel forces in image segmentation based on active contours models a
   edition =   {1},
 }
 
+@inproceedings{Zhang:2018:BCE,
+  title={Generalized cross entropy loss for training deep neural networks with noisy labels},
+  author={Zhang, Zhilu and Sabuncu, Mert R},
+  booktitle={32nd Conference on Neural Information Processing Systems (NeurIPS)},
+  year={2018}
+}
 
-@inproceedings{Rousson:2003,
+@inproceedings{Krizhevsky:2012:ImageNet,
+ author = {Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+ booktitle = {Advances in Neural Information Processing Systems},
+ editor = {F. Pereira and C. J. C. Burges and L. Bottou and K. Q. Weinberger},
+ pages = {},
+ publisher = {Curran Associates, Inc.},
+ title = {ImageNet Classification with Deep Convolutional Neural Networks},
+ url = {https://proceedings.neurips.cc/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf},
+ volume = {25},
+ year = {2012}
+}
+
+@ARTICLE{Freeman:1961:Chaincoding,
+  author={Freeman, Herbert},
+  journal={IRE Transactions on Electronic Computers}, 
+  title={On the Encoding of Arbitrary Geometric Configurations}, 
+  year={1961},
+  volume={EC-10},
+  number={2},
+  pages={260-268},
+  doi={10.1109/TEC.1961.5219197}}
+
+@inproceedings{Rousson:2003:StrTensor,
   title={Active unsupervised texture segmentation on a diffusion based feature space},
   author={Rousson, Mika{\"e}l and Brox, Thomas and Deriche, Rachid},
   booktitle={2003 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2003. Proceedings.},
@@ -51,7 +79,7 @@ abstract = {Novel forces in image segmentation based on active contours models a
   organization={IEEE}
 }
 
-@Article{Kass:1988,
+@Article{Kass:1988:Snakes,
 author={Kass, Michael
 and Witkin, Andrew
 and Terzopoulos, Demetri},
@@ -69,7 +97,7 @@ doi={10.1007/BF00133570},
 url={https://doi.org/10.1007/BF00133570}
 }
 
-@INPROCEEDINGS{Xu:1997,
+@INPROCEEDINGS{Xu:1997:GVF,
   author={Chenyang Xu and Prince, J.L.},
   booktitle={Proceedings of IEEE Computer Society Conference on Computer Vision and Pattern Recognition}, 
   title={Gradient vector flow: a new external force for snakes}, 
@@ -80,7 +108,7 @@ url={https://doi.org/10.1007/BF00133570}
   doi={10.1109/CVPR.1997.609299}
 }
 
-@Article{Caselles:1997,
+@Article{Caselles:1997:GAC,
   author={Caselles, Vicent
   and Kimmel, Ron
   and Sapiro, Guillermo},
@@ -98,7 +126,7 @@ url={https://doi.org/10.1007/BF00133570}
   url={https://doi.org/10.1023/A:1007979827043}
 }
 
-@article{COHEN:1991,
+@article{Cohen:1991:Balloon,
   title = {On active contour models and balloons},
   journal = {CVGIP: Image Understanding},
   volume = {53},
@@ -112,7 +140,27 @@ url={https://doi.org/10.1007/BF00133570}
   abstract = {The use of energy-minimizing curves, known as “snakes,” to extract features of interest in images has been introduced by Kass, Witkin & Terzopoulos (Int. J. Comput. Vision 1, 1987, 321–331). We present a model of deformation which solves some of the problems encountered with the original method. The external forces that push the curve to the edges are modified to give more stable results. The original snake, when it is not close enough to contours, is not attracted by them and straightens to a line. Our model makes the curve behave like a balloon which is inflated by an additional force. The initial curve need no longer be close to the solution to converge. The curve passes over weak edges and is stopped only if the edge is strong. We give examples of extracting a ventricle in medical images. We have also made a first step toward 3D object reconstruction, by tracking the extracted contour on a series of successive cross sections.}
 }
 
-@ARTICLE{Zhu:1996,
+@INPROCEEDINGS{Shah:2006:teethautoseg,
+  author={Shah, Samir and Abaza, Ayman and Ross, Arun and Ammar, Hany},
+  booktitle={2006 Biometrics Symposium: Special Session on Research at the Biometric Consortium Conference}, 
+  title={Automatic Tooth Segmentation Using Active Contour Without Edges}, 
+  year={2006},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/BCC.2006.4341636}}
+
+@ARTICLE{Said:2006:teethxray,
+  author={Said, E.H. and Nassar, D.E.M. and Fahmy, G. and Ammar, H.H.},
+  journal={IEEE Transactions on Information Forensics and Security}, 
+  title={Teeth segmentation in digitized dental X-ray films using mathematical morphology}, 
+  year={2006},
+  volume={1},
+  number={2},
+  pages={178-189},
+  doi={10.1109/TIFS.2006.873606}}
+
+@ARTICLE{Zhu:1996:RegCompet,
   author={Song Chun Zhu and Yuille, A.},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
   title={Region competition: unifying snakes, region growing, and {Bayes/MDL} for multiband image segmentation}, 
@@ -146,7 +194,7 @@ url={https://doi.org/10.1007/BF00133570}
   year={2020}
 }
 
-@ARTICLE{Chan:2001,
+@ARTICLE{Chan:2001:Chanvese,
   author={Chan, T.F. and Vese, L.A.},
   journal={IEEE Transactions on Image Processing}, 
   title={Active contours without edges}, 
@@ -156,7 +204,7 @@ url={https://doi.org/10.1007/BF00133570}
   pages={266-277},
   doi={10.1109/83.902291}}
 
-@article{Park:2014,
+@article{Park:2014:SRM,
   title={Image segmentation based on the statistical variational formulation using the local region information},
   author={Park, Sung Ha and Lee, Chang-Ock and Hahn, Jooyoung},
   journal={Journal of the Korean Society for Industrial and Applied Mathematics},
@@ -210,7 +258,30 @@ abstract = {A level set approach for computing solutions to incompressible two-p
   pages={1964-1971}
 }
 
-@misc{He:2018,
+@INPROCEEDINGS{Xu:2000:ParamGeoAC,
+  author={Chenyang Xu and Yezzi, A. and Prince, J.L.},
+  booktitle={Conference Record of the Thirty-Fourth Asilomar Conference on Signals, Systems and Computers (Cat. No.00CH37154)}, 
+  title={On the relationship between parametric and geometric active contours}, 
+  year={2000},
+  volume={1},
+  number={},
+  pages={483-489 vol.1},
+  doi={10.1109/ACSSC.2000.911003}}
+
+@article{Osher:1988:LVset,
+title = {Fronts propagating with curvature-dependent speed: Algorithms based on Hamilton-Jacobi formulations},
+journal = {Journal of Computational Physics},
+volume = {79},
+number = {1},
+pages = {12-49},
+year = {1988},
+issn = {0021-9991},
+doi = {https://doi.org/10.1016/0021-9991(88)90002-2},
+url = {https://www.sciencedirect.com/science/article/pii/0021999188900022},
+author = {Stanley Osher and James A Sethian},
+}
+
+@misc{He:2018:MRCNN,
       title={Mask R-CNN}, 
       author={Kaiming He and Georgia Gkioxari and Piotr Dollár and Ross Girshick},
       year={2018},
@@ -409,7 +480,7 @@ year = {2018}
       primaryClass={cs.CV}
 }
 
-@InProceedings{Yuan:2020,
+@InProceedings{Yuan:2020:teethParanomic,
   author="Liang, Yuan
   and Song, Weinan
   and Yang, Jiawei
@@ -430,11 +501,9 @@ year = {2018}
   publisher="Springer International Publishing",
   address="Cham",
   pages="400--409",
-  abstract="3D teeth reconstruction from X-ray is important for dental diagnosis and many clinical operations. However, no existing work has explored the reconstruction of teeth for a whole cavity from a single panoramic radiograph. Different from single object reconstruction from photos, this task has the unique challenge of constructing multiple objects at high resolutions. To conquer this task, we develop a novel ConvNet X2Teeth that decomposes the task into teeth localization and single-shape estimation. We also introduce a patch-based training strategy, such that X2Teeth can be end-to-end trained for optimal performance. Extensive experiments show that our method can successfully estimate the 3D structure of the cavity and reflect the details for each tooth. Moreover, X2Teeth achieves a reconstruction IoU of 0.681, which significantly outperforms the encoder-decoder method by {\$}{\$}1.71{\{}{\backslash}times {\}}{\$}{\$}1.71{\texttimes}and the retrieval-based method by {\$}{\$}1.52{\{}{\backslash}times {\}}{\$}{\$}1.52{\texttimes}. Our method can also be promising for other multi-anatomy 3D reconstruction tasks.",
-  isbn="978-3-030-59713-9"
 }
 
-@article{Naumovich:2015,
+@article{Naumovich:2015:teethCT3D,
   author = {Naumovich, S S and Naumovich, S A and Goncharenko, V G},
   title = {Three-dimensional reconstruction of teeth and jaws based on segmentation of CT images using watershed transformation},
   journal = {Dentomaxillofacial Radiology},
@@ -446,7 +515,6 @@ year = {2018}
   note ={PMID: 25564886},
   URL = {https://doi.org/10.1259/dmfr.20140313},
   eprint = {https://doi.org/10.1259/dmfr.20140313},
-  abstract = { The objective of the present study was the development and clinical testing of a three-dimensional (3D) reconstruction method of teeth and a bone tissue of the jaw on the basis of CT images of the maxillofacial region. 3D reconstruction was performed using the specially designed original software based on watershed transformation. Computed tomograms in digital imaging and communications in medicine format obtained on multispiral CT and CBCT scanners were used for creation of 3D models of teeth and the jaws. The processing algorithm is realized in the stepwise threshold image segmentation with the placement of markers in the mode of a multiplanar projection in areas relating to the teeth and a bone tissue. The developed software initially creates coarse 3D models of the entire dentition and the jaw. Then, certain procedures specify the model of the jaw and cut the dentition into separate teeth. The proper selection of the segmentation threshold is very important for CBCT images having a low contrast and high noise level. The developed semi-automatic algorithm of multispiral and cone beam computed tomogram processing allows 3D models of teeth to be created separating them from a bone tissue of the jaws. The software is easy to install in a dentist's workplace, has an intuitive interface and takes little time in processing. The obtained 3D models can be used for solving a wide range of scientific and clinical tasks. }
 }
 
 @InProceedings{Pham:2020,
@@ -492,7 +560,7 @@ url={http://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE10495798},
 language={한국어}
 }
 
-@INPROCEEDINGS{Zhu:2020,
+@INPROCEEDINGS{Zhu:2020:maskrcnn,
   author={Zhu, Guohua and Piao, Zewen and Kim, Suk Chan},
   booktitle={2020 International Conference on Artificial Intelligence in Information and Communication (ICAIIC)}, 
   title={Tooth Detection and Segmentation with Mask R-CNN}, 
@@ -502,7 +570,7 @@ language={한국어}
   pages={070-072},
   doi={10.1109/ICAIIC48513.2020.9065216}}
 
-@misc{He:2015,
+@misc{He:2015:ResNet,
   title={Deep Residual Learning for Image Recognition}, 
   author={Kaiming He and Xiangyu Zhang and Shaoqing Ren and Jian Sun},
   year={2015},

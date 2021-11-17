@@ -1,22 +1,14 @@
 \begin{thebibliography}{10}
 
-\bibitem{Jonker:1992}
-{\sc P.~P.~J. (auth.)}, {\em Morphological Image Processing: Architecture and
-  VLSI design}, Springer US, 1~ed., 1992.
-
-\bibitem{Blum:1967}
-{\sc H.~Blum et~al.}, {\em A transformation for extracting new descriptors of
-  shape}, vol.~43, MIT press Cambridge, MA, 1967.
-
-\bibitem{Caselles:1997}
+\bibitem{Caselles:1997:GAC}
 {\sc V.~Caselles, R.~Kimmel, and G.~Sapiro}, {\em Geodesic active contours},
   International Journal of Computer Vision, 22 (1997), pp.~61--79.
 
-\bibitem{Chan:2001}
+\bibitem{Chan:2001:chanvese}
 {\sc T.~Chan and L.~Vese}, {\em Active contours without edges}, IEEE
   Transactions on Image Processing, 10 (2001), pp.~266--277.
 
-\bibitem{COHEN:1991}
+\bibitem{Cohen:1991:Balloon}
 {\sc L.~D. Cohen}, {\em On active contour models and balloons}, CVGIP: Image
   Understanding, 53 (1991), pp.~211--218.
 
@@ -24,6 +16,10 @@
 {\sc P.~Doll{\'a}r, Z.~Tu, and S.~J. Belongie}, {\em Supervised learning of
   edges and object boundaries}, 2006 IEEE Computer Society Conference on
   Computer Vision and Pattern Recognition (CVPR'06), 2 (2006), pp.~1964--1971.
+
+\bibitem{Freeman:1961:Chaincoding}
+{\sc H.~Freeman}, {\em On the encoding of arbitrary geometric configurations},
+  IRE Transactions on Electronic Computers, EC-10 (1961), pp.~260--268.
 
 \bibitem{SpecRemoval:2018}
 {\sc J.~Guo, Z.~Zhou, and L.~Wang}, {\em Single image highlight removal with a
@@ -34,24 +30,19 @@
 {\sc J.~Hahn and C.-O. Lee}, {\em Highly accurate segmentation using geometric
   attraction-driven flow in edge-regions},  (2006).
 
-\bibitem{Hahn:2010}
+\bibitem{Hahn:2010:GADF}
 {\sc J.~Hahn and C.-O. Lee}, {\em Geometric attraction-driven flow for image
   segmentation and boundary detection}, Journal of Visual Communication and
   Image Representation, 21 (2010), pp.~56--66.
 
-\bibitem{He:2018}
+\bibitem{He:2018:MRCNN}
 {\sc K.~He, G.~Gkioxari, P.~Dollár, and R.~Girshick}, {\em Mask r-cnn}, 2018.
 
-\bibitem{He:2015}
+\bibitem{He:2015:ResNet}
 {\sc K.~He, X.~Zhang, S.~Ren, and J.~Sun}, {\em Deep residual learning for
   image recognition}, 2015.
 
-\bibitem{Hu:2018}
-{\sc J.~Hu, L.~Shen, and G.~Sun}, {\em Squeeze-and-excitation networks}, in
-  Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR), June 2018.
-
-\bibitem{Kass:1988}
+\bibitem{Kass:1988:Snakes}
 {\sc M.~Kass, A.~Witkin, and D.~Terzopoulos}, {\em Snakes: Active contour
   models}, International Journal of Computer Vision, 1 (1988), pp.~321--331.
 
@@ -63,6 +54,13 @@
 \bibitem{Kingma:2017}
 {\sc D.~P. Kingma and J.~Ba}, {\em Adam: A method for stochastic optimization},
   2017.
+
+\bibitem{Krizhevsky:2012:ImageNet}
+{\sc A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton}, {\em Imagenet
+  classification with deep convolutional neural networks}, in Advances in
+  Neural Information Processing Systems, F.~Pereira, C.~J.~C. Burges,
+  L.~Bottou, and K.~Q. Weinberger, eds., vol.~25, Curran Associates, Inc.,
+  2012.
 
 \bibitem{LeeWater:2010}
 {\sc S.-t. Lee, K.-s. Kim, and T.-H. Yoon}, {\em Individual tooth image
@@ -86,11 +84,7 @@
   2nd International Conference on Signal Processing Systems, vol.~1, IEEE,
   2010, pp.~V1--285.
 
-\bibitem{Li:2019}
-{\sc X.~Li, W.~Wang, X.~Hu, and J.~Yang}, {\em Selective kernel networks},
-  2019.
-
-\bibitem{Yuan:2020}
+\bibitem{Yuan:2020:teethParanomic}
 {\sc Y.~Liang, W.~Song, J.~Yang, L.~Qiu, K.~Wang, and L.~He}, {\em X2teeth: 3d
   teeth reconstruction from a single panoramic radiograph}, in Medical Image
   Computing and Computer Assisted Intervention -- MICCAI 2020, A.~L. Martel,
@@ -98,33 +92,34 @@
   D.~Racoceanu, and L.~Joskowicz, eds., Cham, 2020, Springer International
   Publishing, pp.~400--409.
 
-\bibitem{Naumovich:2015}
+\bibitem{Naumovich:2015:teethCT3D}
 {\sc S.~S. Naumovich, S.~A. Naumovich, and V.~G. Goncharenko}, {\em
   Three-dimensional reconstruction of teeth and jaws based on segmentation of
   ct images using watershed transformation}, Dentomaxillofacial Radiology, 44
   (2015), p.~20140313.
 \newblock PMID: 25564886.
 
-\bibitem{Park:2014}
+\bibitem{Park:2014:SRM}
 {\sc S.~H. Park, C.-O. Lee, and J.~Hahn}, {\em Image segmentation based on the
   statistical variational formulation using the local region information},
   Journal of the Korean Society for Industrial and Applied Mathematics, 18
   (2014), pp.~129--142.
 
-\bibitem{Ronneberger:2015}
-{\sc O.~Ronneberger, P.~Fischer, and T.~Brox}, {\em U-net: Convolutional
-  networks for biomedical image segmentation}, in International Conference on
-  Medical image computing and computer-assisted intervention, Springer, 2015,
-  pp.~234--241.
+\bibitem{Said:2006:teethxray}
+{\sc E.~Said, D.~Nassar, G.~Fahmy, and H.~Ammar}, {\em Teeth segmentation in
+  digitized dental x-ray films using mathematical morphology}, IEEE
+  Transactions on Information Forensics and Security, 1 (2006), pp.~178--189.
+
+\bibitem{Shah:2006:teethautoseg}
+{\sc S.~Shah, A.~Abaza, A.~Ross, and H.~Ammar}, {\em Automatic tooth
+  segmentation using active contour without edges}, in 2006 Biometrics
+  Symposium: Special Session on Research at the Biometric Consortium
+  Conference, 2006, pp.~1--6.
 
 \bibitem{SpecRemoval:2006}
 {\sc T.~H. Stehle}, {\em Specular reflection removal in endoscopic images}, in
   Proceedings of the 10th international student conference on electrical
   engineering, Citeseer, 2006.
-
-\bibitem{Sun:2019}
-{\sc K.~Sun, B.~Xiao, D.~Liu, and J.~Wang}, {\em Deep high-resolution
-  representation learning for human pose estimation}, in CVPR, 2019.
 
 \bibitem{SpecRemoval:2016}
 {\sc J.~Suo, D.~An, X.~Ji, H.~Wang, and Q.~Dai}, {\em Fast and high quality
@@ -136,18 +131,6 @@
   computing solutions to incompressible two-phase flow}, Journal of
   Computational Physics, 114 (1994), pp.~146--159.
 
-\bibitem{Szegedy:2015}
-{\sc C.~Szegedy, W.~Liu, Y.~Jia, P.~Sermanet, S.~Reed, D.~Anguelov, D.~Erhan,
-  V.~Vanhoucke, and A.~Rabinovich}, {\em Going deeper with convolutions}, in
-  Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition
-  (CVPR), June 2015.
-
-\bibitem{Szegedy:2016}
-{\sc C.~Szegedy, V.~Vanhoucke, S.~Ioffe, J.~Shlens, and Z.~Wojna}, {\em
-  Rethinking the inception architecture for computer vision}, in Proceedings of
-  the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), June
-  2016.
-
 \bibitem{Pham:2020}
 {\sc T.~Van~Pham, Y.~Lucas, S.~Treuillet, and L.~Debraux}, {\em Object contour
   refinement using instance segmentation in dental images}, in Advanced
@@ -155,21 +138,12 @@
   W.~Philips, D.~Popescu, and P.~Scheunders, eds., Cham, 2020, Springer
   International Publishing, pp.~99--107.
 
-\bibitem{Wang:2019}
-{\sc J.~Wang, K.~Sun, T.~Cheng, B.~Jiang, C.~Deng, Y.~Zhao, D.~Liu, Y.~Mu,
-  M.~Tan, X.~Wang, W.~Liu, and B.~Xiao}, {\em Deep high-resolution
-  representation learning for visual recognition}, TPAMI,  (2019).
-
 \bibitem{WU:2016}
 {\sc C.~Wu, D.~Bradley, P.~Garrido, M.~Zollh{\"o}fer, C.~Theobalt, M.~Gross,
   and T.~Beeler}, {\em {Model-Based Teeth Reconstruction}}, ACM Transactions on
   Graphics (TOG), 35 (2016).
 
-\bibitem{Xie:2017}
-{\sc S.~Xie, R.~Girshick, P.~Dollár, Z.~Tu, and K.~He}, {\em Aggregated
-  residual transformations for deep neural networks}, 2017.
-
-\bibitem{Xu:1997}
+\bibitem{Xu:1997:GVF}
 {\sc C.~Xu and J.~Prince}, {\em Gradient vector flow: a new external force for
   snakes}, in Proceedings of IEEE Computer Society Conference on Computer
   Vision and Pattern Recognition, 1997, pp.~66--71.
@@ -178,11 +152,6 @@
 {\sc Q.~Yang, J.~Tang, and N.~Ahuja}, {\em Efficient and robust specular
   highlight removal}, IEEE Transactions on Pattern Analysis and Machine
   Intelligence, 37 (2015), pp.~1304--1311.
-
-\bibitem{Zeileis:2009}
-{\sc A.~Zeileis, K.~Hornik, and P.~Murrell}, {\em Escaping rgbland: Selecting
-  colors for statistical graphics}, Computational Statistics and Data Analysis,
-  53 (2009), pp.~3259--3270.
 
 \bibitem{Zhang:2020}
 {\sc H.~Zhang, C.~Wu, Z.~Zhang, Y.~Zhu, H.~Lin, Z.~Zhang, Y.~Sun, T.~He,
@@ -193,12 +162,12 @@
 {\sc T.~Y. Zhang and C.~Y. Suen}, {\em A fast parallel algorithm for thinning
   digital patterns}, Communications of the ACM, 27 (1984), pp.~236--239.
 
-\bibitem{Zhu:2020}
+\bibitem{Zhu:2020:maskrcnn}
 {\sc G.~Zhu, Z.~Piao, and S.~C. Kim}, {\em Tooth detection and segmentation
   with mask r-cnn}, in 2020 International Conference on Artificial Intelligence
   in Information and Communication (ICAIIC), 2020, pp.~070--072.
 
-\bibitem{Zhu:1996}
+\bibitem{Zhu:1996:RegCompet}
 {\sc S.~C. Zhu and A.~Yuille}, {\em Region competition: unifying snakes, region
   growing, and {Bayes/MDL} for multiband image segmentation}, IEEE Transactions
   on Pattern Analysis and Machine Intelligence, 18 (1996), pp.~884--900.
