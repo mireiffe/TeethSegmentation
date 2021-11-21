@@ -1,0 +1,214 @@
+\begin{subfigure}[]{1\textwidth}
+    \newcommand*{\al}{0.3}%
+    \newcommand*{\aw}{1.mm}%
+    \newcommand*{\hei}{1.1 cm}%
+    \newcommand*{\flr}{3.5cm}%
+    \newcommand*{\wgap}{1cm}%
+    \newcommand*{\init}{0}%
+    \newcommand*{\wwa}{.2}%
+    \newcommand*{\wwb}{.3}%
+    \newcommand*{\wwc}{.4}%
+    \newcommand*{\wwd}{.5}%
+    \newcommand*{\wwe}{.6}%
+    \newcommand*{\wwf}{.7}%
+    \newcommand*{\wwg}{.9}%
+
+    \newcommand*{\hha}{1}%
+    \newcommand*{\hhb}{.9}%
+    \newcommand*{\hhc}{.8}%
+    \newcommand*{\hhd}{.6}%
+    \newcommand*{\hhe}{.4}%
+    \newcommand*{\hhf}{.2}%
+    \newcommand*{\hhg}{.2}%
+    \centering
+    \begin{tikzpicture}[]
+        \footnotesize
+        \node (x0) at (0,0) [draw=none,minimum width=1mm,minimum height=\hei, fill=blue!50!white,label=above:{$3$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=red!70!black] (x0.south) to ++(0,-\al);
+
+        \node (x1) at ($(x0) + (0,-\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwa cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$32$}] {}; 
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x1.east) -- ++(\al, 0);
+
+        \node (x2) at ($(x1) + (\al+ \wwa/2 + \wwa/2,0)$) [draw=none,minimum width=\wwa cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$32$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x2.east) -- ++(\al, 0);
+        
+        \node (x3) at ($(x2) + (\al+\wwa/2 + \wwb/2,0)$) [draw=none,minimum width=\wwb cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=yellow!80!black] (x3.south) to ++(0,-\al);
+        
+        \node (x4) at ($(x3) + (0,-\hhb*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwb cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x4.east) -- ++(\al, 0);
+        
+        \node (x5) at ($(x4) + (\al+\wwb/2 + \wwd/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x5.east) -- node [above, color=black] {$\times 2$} ++(1.5*\al, 0);
+
+        \node (x6) at ($(x5) + (1.5*\al+\wwd/2 + \wwd/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!green] (x6.south) to  ++(0,-\al) {};
+
+        \node (x7) at ($(x6) + (0,-\hhc*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!green] (x7.east) to node [above, color=black] {$\times 3$} ++(1.5*\al,0) {};
+
+        \node (x8) at ($(x7) + (1.5*\al+\wwe/2 + \wwe/2,0)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=blue!60!black] (x8.south) to  ++(0,-\al) {};
+
+        \node (x9) at ($(x8) + (0,-\hhd*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=blue!60!black] (x9.east) to node [above,color=black] {$\times 5$} ++(1.5*\al,0) {};
+
+        \node (x10) at ($(x9) + (1.5*\al+\wwf/2 + \wwf/2,0)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=violet!90!black] (x10.south) to  ++(0,-\al) {};
+
+        \node (x11) at ($(x10) + (0,-\hhe*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=violet!90!black] (x11.east) to node [above, color=black] {$\times 2$} ++(1.5*\al,0) {};
+        
+        \node (x12) at ($(x11) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        
+        % latent variable
+        \node (x13) at ($(x12) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=2mm, fill=blue!50!white,label=above:{$2048$}] {};
+        \draw [line width=\aw] (x12.east) to (x13.west) {};
+        
+        \node (x14) at ($(x13) + (0,\hhe*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=lime!50!black] (x14.south) to ++(0,-\al);
+        
+        \node (x15) at ($(x14) + (1.5*\al + \wwg/2 + \wwf/2,0)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x14.east) to node [above, color=black] {$\times 2$} (x15.west) {};
+
+        \node (x16) at ($(x15) + (0,\hhd*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwf cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=lime!50!black] (x16.south) to ++(0,-\al);
+        
+        \node (x17) at ($(x16) + (1.5*\al + \wwe/2 + \wwf/2,0)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x16.east) to node [above, color=black] {$\times 2$} (x17.west) {};
+
+        \node (x18) at ($(x17) + (0,\hhc*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwe cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=lime!50!black] (x18.south) to ++(0,-\al);
+        
+        \node (x19) at ($(x18) + (1.5*\al + \wwd/2 + \wwe/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x18.east) to node [above, color=black] {$\times 2$} (x19.west) {};
+
+        \node (x20) at ($(x19) + (0,\hhb*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwd cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=red!40!white] (x20.south) to ++(0,-\al);
+        
+        \node (x21) at ($(x20) + (1.5*\al + \wwd/2 + \wwc/2,0)$) [draw=none,minimum width=\wwc cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$128$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x20.east) to node [above, color=black] {$\times 2$} (x21.west) {};
+
+        \node (x22) at ($(x21) + (0,\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwc cm,minimum height=\hei, fill=blue!50!white,label=above:{$128$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=red!40!white] (x22.south) to ++(0,-\al);
+        
+        \node (x23) at ($(x22) + (1.5*\al + \wwb/2 + \wwc/2,0)$) [draw=none,minimum width=\wwb cm,minimum height=\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] (x22.east) to node [above, color=black] {$\times 2$} (x23.west) {};
+        
+        \node (x24) at ($(x23) + (\al + \wwb/2 + .1,0)$) [draw=none,minimum width=.1 cm,minimum height=\hei, fill=blue!50!white,label=above:{$1$}] {};
+        \draw [-{Arc Barb[scale=.5]},line width=\aw,,color=red] (x23.east) to (x24.west) {};
+    \end{tikzpicture}
+    \caption{Network structure}
+\end{subfigure}\\
+
+\vspace{1mm}
+
+\begin{subfigure}[]{.65\textwidth}
+    \newcommand*{\hg}{.8}%
+    \newcommand*{\wid}{.5}%
+    \newcommand*{\hei}{1.3}%
+    \newcommand*{\init}{0}%
+    \newcommand*{\aw}{1mm}%
+    \centering
+    \begin{tikzpicture}
+        \scriptsize
+        \node (ipt) at (0,0) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$c$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {\footnotesize };
+        
+        \node (x1) at ($(ipt) + (\hg,0)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white,  label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x21) at ($(x1) + (\hg,-1.5)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x22) at ($(x1) + (\hg,1.5)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (sum1) at ($(x1) + (2*\hg,0)$) [circle, draw, very thick,minimum width=.1 cm,minimum height=.1 cm,text height=.15 cm, fill=none] {\footnotesize $+$};
+
+        % \node (x3) at ($(x1) + (3*\hg,0)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x4) at ($(x1) + (3*\hg,0)$) [rotate=90,draw=none,minimum width=.1 cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x5) at ($(x4) + (\hg,0)$) [rotate=90,draw=none,minimum width=.1 cm,minimum height=.7*\wid cm, fill=orange!30!white, label={[xshift=2.1em, yshift=.8em] $m/2$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x61) at ($(x5) + (0,-.9)$) [rotate=90,draw=none,minimum width=.1 cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (x62) at ($(x5) + (0,.9)$) [rotate=90,draw=none,minimum width=.1 cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (prod11) at ($(x61) + (0,-1.1)$) [circle, draw, very thick,minimum width=.1 cm,minimum height=.1 cm, fill=none] {\footnotesize $\times$};
+        \node (prod12) at ($(x62) + (0,1.1)$) [circle, draw, very thick,minimum width=.01 cm,minimum height=.01 cm,fill=none] {\scriptsize $\times$};
+
+        \node (sum2) at ($(x5) + (\hg,0)$) [circle, draw, very thick,minimum width=.1 cm,minimum height=.1 cm,text height=.15 cm, fill=none] {\footnotesize $+$};
+
+        \node (x7) at ($(x5) + (2*\hg,0)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$4m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \node (sum3) at ($(x7) + (1*\hg,0)$) [circle, draw, very thick,minimum width=.1 cm,minimum height=.1 cm,text height=.15 cm, fill=none] {\footnotesize $+$};
+
+        \node (x8) at ($(x7) + (2*\hg,0)$) [rotate=90,draw=none,minimum width=\hei cm,minimum height=\wid cm, fill=orange!30!white, label=right:{$4m$}, label={[xshift=-.7em, yshift=-.4em, rotate=90]}] {};
+
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=red] (ipt.south) to (x1.north) {};
+        % \draw [-{Triangle[scale=.5]},line width=.2mm,color=black,dashed] (x1.south) to (x1.north) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] ($(x1.south) + (0,-.5)$) to (x21.north) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] ($(x1.south) + (0,.5)$) to (x22.north) {};
+        % \draw [-{Triangle[scale=.5]},line width=\aw] (sum1.east) to (x3.north) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw] (sum1.east) to (x4.north) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=magenta] (x4.south) to (x5.north) {};
+        \draw [-{Bar[scale=.5]},line width=.5mm,color=magenta] (x5.west) to ++ (0,-.4);
+        \draw [{Bar[scale=.5]}-,line width=.5mm,color=magenta] (x62.west) to ++ (0,-.4);
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=red] (sum2.east) to (x7);
+        
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (x21.south) to (sum1) {};
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (x22.south) to (sum1) {};
+        \draw [-{Triangle[scale=.5]},line width=.2mm] ($(x21.south) + (0,-.5)$) to (prod11);
+        \draw [-{Triangle[scale=.5]},line width=.2mm] ($(x22.south) + (0,.5)$) to (prod12);
+        \draw [{Triangle[scale=.5]}-,line width=.2mm] (prod11.north) to (x61.west);
+        \draw [{Triangle[scale=.5]}-,line width=.2mm] (prod12.south) to ++(0,-.4);
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (prod11.east) to (sum2);
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (prod12.east) to (sum2);
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (prod12.east) to (sum2);
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (x7.south) to (sum3);
+        \draw [dashed,line width=.25mm] (x1.west) -- ($(x21.west) + (0,-1cm)$) -- ($(x7.west) + (0,-2.5cm)$) -- (sum3.south) [-{Triangle[scale=.5]}];
+        \draw [-{Triangle[scale=.5]},line width=.2mm] (sum3.east) to (x8.north);
+    \end{tikzpicture}
+    \caption{ResNeSt block with mid--channel size $m$ (RNS--$m$)}
+\end{subfigure}
+\begin{subfigure}[]{.3\textwidth}
+    \newcommand*{\hg}{1.1}%
+    \newcommand*{\wid}{.5}%
+    \newcommand*{\hei}{2}%
+    \newcommand*{\init}{-1}%
+    \newcommand*{\aw}{.9mm}%
+    \newcommand*{\al}{.5}%
+    \centering
+    \begin{tikzpicture}
+        \footnotesize
+        \matrix [draw,below left, thick] at (current bounding box) {
+            \draw [line width=\aw,color=red!70!black] (\init,0) to ++(\al,0) node[right, color=black] {$3\times 3$ conv, $/2$, $+1$};\\
+
+            \draw [line width=\aw,color=orange!80!white] (\init,0) to ++(\al,0) node[right, color=black] {$3\times 3$ conv, $+1$};\\
+
+            \draw [line width=\aw,color=yellow!80!black] (\init,0) to ++(\al,0) node[right, color=black] {$3\times 3$ maxpool, $/2$, $+1$};\\
+
+            \draw [line width=\aw,color=green!80!black] (\init,0) to ++(\al,0) node[right, color=black] {RNS--$64$};\\
+            \draw [line width=\aw,color=cyan!90!green] (\init,0) to ++(\al,0) node[right, color=black] {RNS--$128$};\\
+            \draw [line width=\aw,color=blue!60!black] (\init,0) to ++(\al,0) node[right, color=black] {RNS--$256$};\\
+            \draw [line width=\aw,color=violet!90!black] (\init,0) to ++(\al,0) node[right, color=black] {RNS--$512$};\\
+
+            \draw [line width=\aw] (\init,0) to ++(\al,0) node[right, color=black] {GAP};\\
+
+            \draw [line width=\aw,color=lime!50!black] (\init,0) to ++(\al,0) node[right, color=black] {$2\times 2$, trans conv, $/2$};\\
+
+            \draw [line width=\aw,color=red!40!white] (\init,0) to ++(\al,0) node[right, color=black] {Bilinear upscale};\\
+
+            \draw [line width=\aw,color=red] (\init,0) to ++(\al,0) node[right, color=black] {$1\times 1$ conv};\\
+
+            \draw [line width=\aw,color=magenta] (\init,0) to ++(\al,0) node[right, color=black] {Fully connected};\\
+            \draw [-{Triangle[scale=.5]},line width=.3mm,color=black,dashed] (\init,0) to ++(\al,0) node[right, color=black] {Identity};\\
+
+            \draw [-{Triangle[scale=.5]},line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {ReLU};
+            \draw [-{Arc Barb[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Sigmoid};\\
+            \draw [line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {None};
+            \draw [-{Bar[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Softmax};\\
+            \node (mod1) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD1} node[right, color=black] {$3 \times 3$ avgpool, $/2$, $+1$};\\
+            \node (mod2) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD2} node[right, color=black] {$2 \times 2$ avgpool, $/2$, $+1$,};\\
+            \node (mod22) at (0,.25) [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {} node[right, color=black] {$1 \times 1$ conv, BN};\\
+        };
+    \end{tikzpicture}
+\end{subfigure}

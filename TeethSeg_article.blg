@@ -5,42 +5,42 @@ The style file: siam.bst
 Database file #1: bibliography.bib
 You've used 39 entries,
             2030 wiz_defined-function locations,
-            765 strings with 11772 characters,
-and the built_in function-call counts, 16563 in all, are:
-= -- 1601
-> -- 787
+            766 strings with 11909 characters,
+and the built_in function-call counts, 16852 in all, are:
+= -- 1631
+> -- 812
 < -- 0
-+ -- 312
-- -- 270
-* -- 1283
-:= -- 2473
++ -- 322
+- -- 280
+* -- 1296
+:= -- 2505
 add.period$ -- 39
 call.type$ -- 39
-change.case$ -- 250
+change.case$ -- 255
 chr.to.int$ -- 0
 cite$ -- 39
-duplicate$ -- 746
-empty$ -- 1200
-format.name$ -- 270
-if$ -- 3624
+duplicate$ -- 767
+empty$ -- 1204
+format.name$ -- 280
+if$ -- 3695
 int.to.chr$ -- 0
 int.to.str$ -- 39
 missing$ -- 41
 newline$ -- 120
 num.names$ -- 77
-pop$ -- 250
+pop$ -- 257
 preamble$ -- 1
-purify$ -- 212
+purify$ -- 217
 quote$ -- 0
-skip$ -- 666
+skip$ -- 693
 stack$ -- 0
-substring$ -- 1170
-swap$ -- 345
+substring$ -- 1172
+swap$ -- 365
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 152
 warning$ -- 0
-while$ -- 161
+while$ -- 159
 width$ -- 41
-write$ -- 355
+write$ -- 354

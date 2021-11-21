@@ -21,9 +21,9 @@
 \citation{Xu:1997:GVF}
 \citation{Caselles:1997:GAC}
 \citation{Cohen:1991:Balloon}
-\citation{Chan:2001:chanvese}
 \citation{Park:2014:SRM}
 \citation{Zhu:1996:RegCompet}
+\citation{Chan:2001:chanvese}
 \citation{Yuan:2020:teethParanomic}
 \citation{Naumovich:2015:teethCT3D}
 \citation{Said:2006:teethxray}
@@ -88,6 +88,10 @@
 \newlabel{Subsec:pre_er}{{3.1}{6}{Obtaining pre-edge regions from a neural network}{subsection.3.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }}{7}{figure.caption.3}\protected@file@percent }
 \newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }{figure.caption.3}{}}
+\citation{He:2015:ResNet}
+\citation{He:2019:ResNetTrick}
+\citation{He:2015:ResNet}
+\citation{He:2019:ResNetTrick}
 \citation{Freeman:1961:Chaincoding}
 \citation{Jonker:1992:Morphological}
 \citation{Blum:1967}
@@ -103,13 +107,11 @@
 \newlabel{Fig:labeling}{{4}{8}{Labeling process described in Section~\ref {Subsec:pre_er}. (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by dilation. \relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Refinement of pre--edge region}{8}{subsection.3.2}\protected@file@percent }
 \newlabel{Subsec:refine}{{3.2}{8}{Refinement of pre--edge region}{subsection.3.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The structure of designed upscale module. Overall, each rectangle represents a trainable layer. Each layer is described by the kernel size, type, and number of channels in the output. Further descriptions like $/2$ or $\times 2$ means strides or scale factor, respectively. For every trainable layers except for the last one, the outputs are produced through the batch normalization and ReLU activation function. In the last $1\times 1$ convolutional layer, we uses the sigmoid activation function. \relax }}{9}{figure.caption.5}\protected@file@percent }
-\newlabel{Fig:network}{{5}{9}{The structure of designed upscale module. Overall, each rectangle represents a trainable layer. Each layer is described by the kernel size, type, and number of channels in the output. Further descriptions like $/2$ or $\times 2$ means strides or scale factor, respectively. For every trainable layers except for the last one, the outputs are produced through the batch normalization and ReLU activation function. In the last $1\times 1$ convolutional layer, we uses the sigmoid activation function. \relax }{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (First row) Input images and (Second row) obtained pre--edge regions. \relax }}{9}{figure.caption.6}\protected@file@percent }
-\newlabel{Fig:pre_er}{{6}{9}{(First row) Input images and (Second row) obtained pre--edge regions. \relax }{figure.caption.6}{}}
-\citation{Osher:1988:LVset}
-\citation{Kass:1988:Snakes}
-\citation{Xu:2000:ParamGeoAC}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The structure of neural network used in this paper. Overall, each bold arrow represents a layer and type of the layer is listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions fully connected layers in (b) having thin lines width. The type of the following activation function is represented by the shape of arrow heads, and it is indicated at the bottom of the legend. In the legend, there are some abbreviations; $/2$ and $+1$ mean stride and padding of the layer with that numbers, respectively, GAP is the global average pooling, and the trans conv stand for the transposed convolution layer. stride follows all layers. The bilinear upscaling is applied with scale factor $2$. When the $c \neq  m$, a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite  {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }}{9}{figure.caption.5}\protected@file@percent }
+\newlabel{Fig:network}{{5}{9}{The structure of neural network used in this paper. Overall, each bold arrow represents a layer and type of the layer is listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions fully connected layers in (b) having thin lines width. The type of the following activation function is represented by the shape of arrow heads, and it is indicated at the bottom of the legend. In the legend, there are some abbreviations; $/2$ and $+1$ mean stride and padding of the layer with that numbers, respectively, GAP is the global average pooling, and the trans conv stand for the transposed convolution layer. stride follows all layers. The bilinear upscaling is applied with scale factor $2$. When the $c \neq m$, a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }{figure.caption.5}{}}
+\citation{Caselles:1997:GAC}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (First row) Input images and (Second row) obtained pre--edge regions. \relax }}{10}{figure.caption.6}\protected@file@percent }
+\newlabel{Fig:pre_er}{{6}{10}{(First row) Input images and (Second row) obtained pre--edge regions. \relax }{figure.caption.6}{}}
 \newlabel{Fig:ex_ends_a}{{7(a)}{10}{\relax }{figure.caption.7}{}}
 \newlabel{sub@Fig:ex_ends_a}{{(a)}{10}{\relax }{figure.caption.7}{}}
 \newlabel{Fig:ex_ends_b}{{7(b)}{10}{\relax }{figure.caption.7}{}}
@@ -125,16 +127,26 @@
 \citation{Zhang:1984}
 \citation{He:2015:ResNet}
 \citation{Krizhevsky:2012:ImageNet}
-\citation{Kingma:2017}
 \newlabel{Eq:proposed}{{3.1}{11}{Segmentation using active contours with competing ballon forces}{equation.3.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Identification of tooth and non-tooth regions}{11}{subsection.3.4}\protected@file@percent }
 \newlabel{Subsec:regClass}{{3.4}{11}{Identification of tooth and non-tooth regions}{subsection.3.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Experimental results and numerical aspect}{11}{section.4}\protected@file@percent }
 \newlabel{Sec:result}{{4}{11}{Experimental results and numerical aspect}{section.4}{}}
-\newlabel{Fig:result}{{8(b)}{12}{Segmented result\relax }{figure.caption.8}{}}
-\newlabel{sub@Fig:result}{{(b)}{12}{Segmented result\relax }{figure.caption.8}{}}
+\citation{Kingma:2017}
+\citation{LeeWater:2010}
+\citation{LeeWater:2010}
+\citation{Na:2014LteethMorph}
+\citation{Na:2014LteethMorph}
+\newlabel{Fig:lee2010}{{8(b)}{12}{MCWA \cite {LeeWater:2010}\relax }{figure.caption.8}{}}
+\newlabel{sub@Fig:lee2010}{{(b)}{12}{MCWA \cite {LeeWater:2010}\relax }{figure.caption.8}{}}
+\newlabel{Fig:na2014}{{8(c)}{12}{Na er al. \cite {Na:2014LteethMorph}\relax }{figure.caption.8}{}}
+\newlabel{sub@Fig:na2014}{{(c)}{12}{Na er al. \cite {Na:2014LteethMorph}\relax }{figure.caption.8}{}}
+\newlabel{Fig:result}{{8(d)}{12}{ours\relax }{figure.caption.8}{}}
+\newlabel{sub@Fig:result}{{(d)}{12}{ours\relax }{figure.caption.8}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces (a) Input images and (b) obtained pre--edge regions. The segmentation results for the images (a) are in (c). \relax }}{12}{figure.caption.8}\protected@file@percent }
 \newlabel{Fig:results}{{8}{12}{(a) Input images and (b) obtained pre--edge regions. The segmentation results for the images (a) are in (c). \relax }{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{12}{section.5}\protected@file@percent }
+\newlabel{Sec:Conclusion}{{5}{12}{Conclusion}{section.5}{}}
 \bibstyle{siam}
 \bibdata{bibliography}
 \bibcite{Blum:1967}{1}
@@ -147,33 +159,31 @@
 \bibcite{Hahn:2006}{8}
 \bibcite{Hahn:2010:GADF}{9}
 \bibcite{He:2018:MRCNN}{10}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{13}{section.5}\protected@file@percent }
-\newlabel{Sec:Conclusion}{{5}{13}{Conclusion}{section.5}{}}
+\bibcite{He:2015:ResNet}{11}
+\bibcite{He:2019:ResNetTrick}{12}
+\bibcite{Jonker:1992:Morphological}{13}
+\bibcite{Kass:1988:Snakes}{14}
+\bibcite{Kim:2020}{15}
 \@writefile{toc}{\contentsline {section}{\numberline {A}List of features of non-tooth regions}{13}{appendix.A}\protected@file@percent }
 \newlabel{App:list_nonteeth}{{A}{13}{List of features of non-tooth regions}{appendix.A}{}}
-\bibcite{He:2015:ResNet}{11}
-\bibcite{Jonker:1992:Morphological}{12}
-\bibcite{Kass:1988:Snakes}{13}
-\bibcite{Kim:2020}{14}
-\bibcite{Kingma:2017}{15}
-\bibcite{Krizhevsky:2012:ImageNet}{16}
-\bibcite{LeeWater:2010}{17}
-\bibcite{LeeColor:2009}{18}
-\bibcite{LeeSegRemoval:2010}{19}
-\bibcite{LeeRemoval:2010}{20}
-\bibcite{SpecRemoval:2020}{21}
-\bibcite{Yuan:2020:teethParanomic}{22}
-\bibcite{Naumovich:2015:teethCT3D}{23}
-\bibcite{Osher:1988:LVset}{24}
-\bibcite{Park:2014:SRM}{25}
-\bibcite{Said:2006:teethxray}{26}
-\bibcite{Shah:2006:teethautoseg}{27}
-\bibcite{SpecRemoval:2016}{28}
-\bibcite{SUSSMAN:1994}{29}
-\bibcite{Pham:2020}{30}
-\bibcite{WU:2016}{31}
-\bibcite{Xu:1997:GVF}{32}
-\bibcite{Xu:2000:ParamGeoAC}{33}
+\bibcite{Kingma:2017}{16}
+\bibcite{Krizhevsky:2012:ImageNet}{17}
+\bibcite{LeeWater:2010}{18}
+\bibcite{LeeColor:2009}{19}
+\bibcite{LeeSegRemoval:2010}{20}
+\bibcite{LeeRemoval:2010}{21}
+\bibcite{SpecRemoval:2020}{22}
+\bibcite{Yuan:2020:teethParanomic}{23}
+\bibcite{Na:2014LteethMorph}{24}
+\bibcite{Naumovich:2015:teethCT3D}{25}
+\bibcite{Park:2014:SRM}{26}
+\bibcite{Said:2006:teethxray}{27}
+\bibcite{Shah:2006:teethautoseg}{28}
+\bibcite{SpecRemoval:2016}{29}
+\bibcite{SUSSMAN:1994}{30}
+\bibcite{Pham:2020}{31}
+\bibcite{WU:2016}{32}
+\bibcite{Xu:1997:GVF}{33}
 \bibcite{SpecRemoval:2015}{34}
 \bibcite{Zhang:2020}{35}
 \bibcite{Zhang:1984}{36}

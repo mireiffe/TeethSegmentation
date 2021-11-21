@@ -18,6 +18,7 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows, positioning, calc}
 \usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows.meta}
 
 \tikzstyle{title} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm, fill=white!100]
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -117,7 +118,7 @@
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\blue}[1]{{\color{blue}{#1}}}
 
-\title{ Individual Tooth Segmentation in Human Teeth Image by Pre--Edge Region from Deep supervised Learning with an assistance of Model--Based Method }
+\title{ Individual Tooth Segmentation in Human Teeth Image by Pre--Edge Region Learning }
 \author{Seongeun Kim and Chang-Ock Lee}
 \affil{Department of Mathematical Sciences, KAIST, Daejeon 34141, Korea}
 \date{ }
@@ -126,14 +127,13 @@
 \maketitle
 
 \begin{abstract}
-Reconstruction of 3D teeth from a human teeth image is considered a difficult problem and required in many fields such as computer graphics and personal health care. In a recent study \cite{WU:2016}, a method for reconstructing 3D teeth from individual tooth regions of a human teeth image was proposed. However, obtaining individual tooth regions from a human teeth image is very difficult due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we present a method of segmenting individual tooth regions in a human teeth image under the active contour framework applied to pre--edge region acquired using a deep neural network (DNN) despite these obstacles. We also present a strategy to perform the labeling process of data required for training DNN using existing image processing methods.
+Segmentation of individual tooth region in a human teeth image have been performed well on CT or X-ray images. However, in human teeth images taken outside the oral cavity, it is difficult to segment individual tooth due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we propose a method for segmenting individual teeth from a human teeth image. The key of the method is to obtain the pre--edge region using the deep supervised learning method. To avoid spending time and cost in the labeling process, we present a strategy to support the labeling process using existing model--based methods.
 
-이미지 분할부터 다시 이미지 분할부터 다시 이미지 분할부터 다시 
-
+In a recent work \cite{WU:2016}, a 3D model reconstruction method in a single teeth image using individual tooth boundaries was proposed, which emphasizes the importance of segmentation of tooth regions.
 \end{abstract}
 
 {\small \textbf{Key words}
-Individual tooth segmentation, Pre--edge region, Image Segmentation, Supervised Learning, }
+Tooth segmentation, Pre--edge region, Supervised Learning, Image Segmentation, Geometric attraction--driven flow, Edge region, Weak edge, Light reflection, Multiple level set functions}
 
 {\small \textbf{AMS subject classifications}
 94A08, 68T07}
@@ -143,9 +143,10 @@ Individual tooth segmentation, Pre--edge region, Image Segmentation, Supervised 
 \section{Introduction}
 \label{Sec:Introduction}
 
-The image segmentation is one of major topic in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation. It makes the contour surrounding an object move to the boundary of the objects with the designed force \cite{Kass:1988:Snakes}; The gradient vector flows \cite{Xu:1997:GVF}, geodesic active contours \cite{Caselles:1997:GAC} and balloon forces \cite{Cohen:1991:Balloon} are generally well-known models with different forces. In \cite{Chan:2001:chanvese}, a remarkable method was proposed, which does not extract edge during the segmentation. There are also statistical models that forces so that the distribution of intensities in the regions divided by the contour is more similar \cite{Park:2014:SRM,Zhu:1996:RegCompet}.
+The image segmentation is one of major topic in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation. It makes the contour surrounding an object move to the boundary of the objects with the designed force \cite{Kass:1988:Snakes}; The gradient vector flows \cite{Xu:1997:GVF}, geodesic active contours \cite{Caselles:1997:GAC} and balloon forces \cite{Cohen:1991:Balloon} are generally well-known models with different forces. There are also variational models that uses statistical information of intensities
+in an image \cite{Park:2014:SRM,Zhu:1996:RegCompet}. In \cite{Chan:2001:chanvese}, unlike the previous methods using edge maps, a region-based active contour method has been proposed.
 
-Segmentation of individual tooth in human teeth images is mainly performed in computed tomography (CT) or X-ray images \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. The CT or X-ray images are grayscale, and the tooth regions are easily segmented because the intensity of teeth region is much stronger than the gums or tissues. But segmentation of individual tooth in a camera taken teeth image is a more difficult problem. In the teeth images, weak edges and light reflections appear and even the colors and illuminance are inhomogeneous because of plaques and the oral structure. These obstacles make it difficult to segment individual tooth in a teeth image. Several attempts have been made to segment individual tooth in a teeth image. In \cite{LeeWater:2010, LeeColor:2009} the watershed algorithm with color information was proposed. In \cite{LeeSegRemoval:2010}, an additional light reflection removal process \cite{LeeRemoval:2010} was applied before segmentation. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, segmentations using deep learning methods with Mask R-CNN \cite{He:2018:MRCNN} were proposed.
+Segmentation of individual tooth in human teeth images have mainly been performed in computed tomography (CT) or X-ray images \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. The CT or X-ray images are grayscale, and the tooth regions are easily segmented because the intensities of teeth region are much stronger than the gums or tissues. But segmentation of individual tooth in a camera taken teeth image is a more difficult problem. In the teeth images, weak edges and light reflections appear and even the colors and illuminance are inhomogeneous because of plaques and the oral structure. These obstacles make it difficult to segment individual tooth in a teeth image. Several attempts have been made to segment individual tooth in a teeth image. In \cite{LeeWater:2010, LeeColor:2009} the watershed algorithm with color information was proposed. In \cite{LeeSegRemoval:2010}, an additional light reflection removal process \cite{LeeRemoval:2010} was applied before segmentation. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, segmentations using deep learning methods with Mask R-CNN \cite{He:2018:MRCNN} were proposed.
 
 Individual tooth segmentation can be applied to reconstruction of 3D teeth model. In \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}, 3D teeth is reconstructed by segmentation in CT teeth image. In \cite{WU:2016}, a 3D teeth model reconstruction using a teeth image was proposed. Here, the 3D teeth model reconstruction is achieved using individual tooth boundaries in a teeth image. In here, a supervised learning method BEL \cite{Dollr:2006} was used to extract the individual tooth boundaries with manually labeled $40$ teeth studio-taken images as the training data. 
 
@@ -452,26 +453,26 @@ where $\oms$ is obtained by dilation of the selected region from $\ome$ by a str
     \centering
     \begin{subfigure}[]{.4\textwidth}
         \centering
-        \includegraphics[height=3.8cm]{./Figures/Fig4_img.pdf}
+        \includegraphics[height=3.8cm]{./Figures/Fig4_img.png}
         \caption{}
         \label{Fig:4a}
     \end{subfigure}
     \begin{subfigure}[]{.4\textwidth}
         \centering
-        \includegraphics[height=3.8cm]{./Figures/Fig4_er.pdf}
+        \includegraphics[height=3.8cm]{./Figures/Fig4_er.png}
         \caption{$\ome$}
         \label{Fig:4b}
     \end{subfigure}\\
     \vspace{1mm}
     \begin{subfigure}[]{.4\textwidth}
         \centering
-        \includegraphics[height=3.8cm]{./Figures/Fig4_seler.pdf}
+        \includegraphics[height=3.8cm]{./Figures/Fig4_seler.png}
         \caption{$\Omega_s$}
         \label{Fig:4c}
     \end{subfigure}
     \begin{subfigure}[]{.4\textwidth}
         \centering
-        \includegraphics[height=3.8cm]{./Figures/Fig4_label.pdf}
+        \includegraphics[height=3.8cm]{./Figures/Fig4_label.png}
         \caption{labeled image}
         \label{Fig:4d}
     \end{subfigure}
@@ -486,70 +487,10 @@ The network output $\hat{Y}(x)$ is the probability of an edge region caused by t
 as a pre--edge region of $X$, and some pre--edge regions are shown in Figure~\ref{Fig:pre_er}. One notable point is that although the label contains many unnecessary regions, most of $\omcc$ are correctly located on the tooth boundary.
 
 % Figure: Network structure
-\newcommand*{\hg}{.8}%
-\newcommand*{\wid}{.4}%
-\newcommand*{\hei}{2}%
-\newcommand*{\init}{0}%
-
 \begin{figure}[]
     \centering
-    \begin{subfigure}[]{1\textwidth}
-        \centering
-        \begin{tikzpicture}
-            \draw [draw=none] (\init + \hg * -1, \hei) rectangle (\init + \hg * -1 + \wid, -\hei) node (layf)[pos=.5, rotate=90, black] {\scriptsize latent variable $\ell$};
-            % first
-            \draw [ultra thick, gray, fill=blue!20!white] (\init + \hg * 0, \hei) rectangle (\init + \hg * 0 + \wid, -\hei) node (lay0)[pos=.5, rotate=90, black] {\scriptsize $2\times2$ trans conv, $2048$, $/2$};
-            \draw [arrow] (lay0.south) -- ++(\hg - \wid, 0);
-            \draw [arrow]  ($(lay0.south) + (-\hg, 0)$) -- (lay0.north);
-            
-            \draw [ultra thick, gray, fill=blue!20!white] (\init + \hg * 1, \hei) rectangle (\init + \hg * 1 + \wid, -\hei) node (lay1)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $2048$};
-            \draw [arrow] (lay1.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=blue!20!white] (\init + \hg * 2, \hei) rectangle (\init + \hg * 2 + \wid, -\hei) node (lay2)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $1024$};
-            \draw [arrow] (lay2.south) -- ++(\hg - \wid, 0);
-            
-            % second
-            \draw [ultra thick, gray, fill=green!15!white] (\init + \hg * 3, \hei) rectangle (\init + \hg * 3 + \wid, -\hei) node (lay3)[pos=.5, rotate=90, black] {\scriptsize $2\times2$ trans conv, $1024$, $/2$};
-            \draw [arrow] (lay3.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=green!15!white] (\init + \hg * 4, \hei) rectangle (\init + \hg * 4 + \wid, -\hei) node (lay4)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $1024$};
-            \draw [arrow] (lay4.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=green!15!white] (\init + \hg * 5, \hei) rectangle (\init + \hg * 5 + \wid, -\hei) node (lay5)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $512$};
-            \draw [arrow] (lay5.south) -- ++(\hg - \wid, 0);
-            % third
-            \draw [ultra thick, gray, fill=red!15!white] (\init + \hg * 6, \hei) rectangle (\init + \hg * 6 + \wid, -\hei) node (lay6)[pos=.5, rotate=90, black] {\scriptsize $2\times2$ trans conv, $512$, $/2$};
-            \draw [arrow] (lay6.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=red!15!white] (\init + \hg * 7, \hei) rectangle (\init + \hg * 7 + \wid, -\hei) node (lay7)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $512$};
-            \draw [arrow] (lay7.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=red!15!white] (\init + \hg * 8, \hei) rectangle (\init + \hg * 8 + \wid, -\hei) node (lay8)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $256$};
-            \draw [arrow] (lay8.south) -- ++(\hg - \wid, 0);
-            % fourth
-            \draw [draw=none] (\init + \hg * 9, \hei) rectangle (\init + \hg * 9 + \wid, -\hei) node (lay9)[pos=.5, rotate=90, black] {\scriptsize bilinear, $\times2$};
-            \draw [arrow] (lay9.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=orange!15!white] (\init + \hg * 10, \hei) rectangle (\init + \hg * 10 + \wid, -\hei) node (lay10)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $256$};
-            \draw [arrow] (lay10.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=orange!15!white] (\init + \hg * 11, \hei) rectangle (\init + \hg * 11 + \wid, -\hei) node (lay11)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $128$};
-            \draw [arrow] (lay11.south) -- ++(\hg - \wid, 0);
-            % fifth
-            \draw [draw=none] (\init + \hg * 12, \hei) rectangle (\init + \hg * 12 + \wid, -\hei) node (lay12)[pos=.5, rotate=90, black] {\scriptsize bilinear, $\times2$};
-            \draw [arrow] (lay12.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=violet!15!white] (\init + \hg * 13, \hei) rectangle (\init + \hg * 13 + \wid, -\hei) node (lay13)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $128$};
-            \draw [arrow] (lay13.south) -- ++(\hg - \wid, 0);
-            
-            \draw [ultra thick, gray, fill=violet!15!white] (\init + \hg * 14, \hei) rectangle (\init + \hg * 14 + \wid, -\hei) node (lay14)[pos=.5, rotate=90, black] {\scriptsize $3\times3$ conv, $64$};
-            \draw [arrow] (lay14.south) -- ++(\hg - \wid, 0);
-            \draw [ultra thick, gray, fill=black!15!white] (\init + \hg * 15, \hei) rectangle (\init + \hg * 15 + \wid, -\hei) node (lay15)[pos=.5, rotate=90, black] {\scriptsize $1\times1$ conv, $1$};
-            \draw [draw=none] (\init + \hg * 16, \hei) rectangle (\init + \hg * 16 + \wid, -\hei) node (layl)[pos=.5, rotate=90, black] {\scriptsize output $\hat{Y}$};
-            \draw [arrow] (lay15.south) -- ++(\hg - \wid, 0);
-        \end{tikzpicture}
-    \end{subfigure}
-    \caption{The structure of designed upscale module. Overall, each rectangle represents a trainable layer. Each layer is described by the kernel size, type, and number of channels in the output. Further descriptions like $/2$ or $\times2$ means strides or scale factor, respectively. For every trainable layers except for the last one, the outputs are produced through the batch normalization and ReLU activation function. In the last $1\times1$ convolutional layer, we uses the sigmoid activation function. }
+    \input{./TeethSeg_network.tex}
+    \caption{The structure of neural network used in this paper. Overall, each bold arrow represents a layer and type of the layer is listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions fully connected layers in (b) having thin lines width. The type of the following activation function is represented by the shape of arrow heads, and it is indicated at the bottom of the legend. In the legend, there are some abbreviations; $/2$ and $+1$ mean stride and padding of the layer with that numbers, respectively, GAP is the global average pooling, and the trans conv stand for the transposed convolution layer.  stride  follows all layers. The bilinear upscaling is applied with scale factor $2$. When the $c \neq m$, a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite{He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. }
     \label{Fig:network}
 \end{figure}
 
@@ -627,33 +568,25 @@ We call the resulting extension as $\omc$ and finally, we define an edge region 
 
 In this section, we denote $\sdf(X)$ by a signed distance function which is negative on the set $X$ and constantly zero on $\partial X$. In addition, for a signed distance function $\phi$, $\Omega_{\phi}^+$, $\Omega_{\phi}^-$ and $\Omega_{\phi}^0$ denote the sets $\left\{x\mid \phi > 0 \right\}$, $\left\{x\mid \phi < 0 \right\}$ and $\left\{x\mid \phi = 0 \right\}$, respectively.
 
-We begin with a brief mention of active contour models with level set formulation \cite{Osher:1988:LVset}. At first, a parametric active contour model proposed in \cite{Kass:1988:Snakes} formulated by minimizing an energy functional. In \cite{Xu:2000:ParamGeoAC} active contours are  In A, the active contour was formulated in the level set framework, and it showed better performance than minimizing the energy function in a more intuitive way by designing the force itself acting on the contour.
-
-모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다모르겠다
-
-We segment each tooth region using several active contours formulated by level set method. Let $\{\Omega_i\}_{i=1}^N$ be a collection of disjoint subsets of a given domain $\Omega\subset\mathbf{R}^2$ such that
-\begin{align*}
-    \bigcup_{i=1}^N {\omi} =\Omega\setminus\omc\pd
-\end{align*}
-Here, each $\omi$ is an incomplete tooth region obtained by subtracting $\omc$ from an entire tooth region. Thus, to find entire tooth region, we push each $\partial\omi$ inside $\omc$ and stopping when it reaches an edge. For this, we propose a contour evolution using a level set formulation:
+The movement of the active contour is only affected by the force applied in the normal direction of the contour. Therefore, by defining the force, we can move the active contour to achieve our goal. This kind of methods are called geometric active contours \cite{Caselles:1997:GAC} and widely used by formulated as a level set method. In here, we segment each tooth region using multiple active contours formulated by multiple level sets. Let $\{\Omega_i\}_{i=1}^N$ be a connected component of a set $\Omega\setminus\omc$. Then, each $\omi$ is an subset of each tooth region obtained by subtracting $\omc$ from the entire tooth region. Thus, to find entire tooth region, we push each $\partial\omi$ inside $\omc$ and stop when it arrives an edge point. For this, we propose a contour evolution using a level set formulation:
 \begin{align}
     \frac{\partial}{\partial{t}}\phi_i(x,\,t) &= \mu\kappa(\phi_i)\ngphii + \chi_{\Omega\setminus\ER}\fci\ngphii+\chi_{\omc\setminus\ER}F_s\ngphii-\chi_{\ER}F_a\cdot \gphi \cm \label{Eq:proposed}\\
     \phi_i(x,\,0) &= \phi_{i,\,0}(x)\cm \nonumber
 \end{align}
-where $\mu$ is a constant, $\chi$ is a characteristic function on the set of subscription and $\phi_{i,\,0}(x)$ is a $\sdf(\omi)$. There are three forces $F_a$, $F_s$ and $\fci$ where $F_a$ is GADF in \eqref{Def:gadf}, and $F_s$ is the statistically reinstating force (SRF) proposed in \cite{Park:2014:SRM}. The force $F_s(x)$ can have values $1$ or $-1$, is and designed to push given contour so that the image intensity at $x$ belongs to a region with more similar intensity distribution. The force $\fci$ is the competing balloon force defined as
+where $\mu$ is a constant, $\chi$ is a characteristic function on the set of subscription and $\phi_{i,\,0}(x)=\sdf(\omi)$ for all $i=1\cm\cdots\cm N$. There are three forces $F_a$, $F_s$ and $\fci$; $F_a$ is GADF in \eqref{Def:gadf}, $F_s$ is the statistically reinstating force (SRF) proposed in \cite{Park:2014:SRM}. The force $F_s(x)$ examine intensity distributions of in and out regions of a given contour and decided as $1$ or $-1$ to push the contour so that $x$ belongs to a region with more similar intensity. The force $\fci$ is the competing balloon force defined as
 \begin{align*}
     \fci(x,\,t) =
         -1 - \sum_{j\neq i}\min\left(\phi_j(x,\,t) - 1,\,0\right)\cm
 \end{align*}
-which is designed to inflate the set $\{x\mid\phi_i(x,\,t) < 0\}$ until it faces the set $\{x\mid\phi_j(x,\,t) < 0,~~j\neq i\}$, and stop.
+which is designed to inflate the set $\Omega_{\phi_{i}}^-$ until it meet $\Omega_{\phi_{j}}^-$ for any $j\neq i$, and stop.
 
-Suppose that an initial contour $\phi_{i,\,0}$ is evolving by \eqref{Eq:proposed}. Basically, $\phi_{i,\,0}$ inflates by the balloon force $\fci$ and goes into the surrounding region $\omc$. If $\phi_{i,\,0}$ reaches to $\ER$ then it goes to edge following $F_a$. Else if there are no $\ER$, then it keeps going until $F_s=1$ or different contours faces.
+Suppose that an initial contour $\Omega_{\phi_{i}}^0$ is evolving by \eqref{Eq:proposed}. Basically, $\Omega_{\phi_{i}}^-$ inflates by $\fci$ and so goes into the surrounding region $\omc$. If $\Omega_{\phi_{i}}^0$ enters to $\ER$ then it goes to edge following $F_a$. Else if there are no $\ER$, then edge is decided by the force $F_s$. In the case of there are neither $\ER$ nor edge detected by $F_s$, the contour $\Omega_{\phi_{i}}^0$ keeps going until it faces some other contours and determines edge by competing each other.
 
 % Subsection: Teeth and non-teeth region classification
 \subsection{Identification of tooth and non-tooth regions}
 \label{Subsec:regClass}
 
-As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth from the result in Section~\ref{Subsec:SegLevelset}, we identify tooth and a non-tooth regions. In a human teeth image, tooth and non--tooth regions can be distinguished by shape and color. While a tooth have white color and convex shape, the non-teeth region is usually not. We can check the shape or color of a region by considering several aspects; curvature on the edge, inertia tensor about center of mass or point distribution in a color space. The region having features in the list of Appendix~\ref{App:list_nonteeth} is identified as a non--teeth region.
+As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth from the result in Section~\ref{Subsec:SegLevelset}, we identify tooth and a non-tooth regions. In a human teeth image, tooth and non--tooth regions can be distinguished by shape and color. While a tooth have white color and convex shape, the non-teeth region is usually not. We can check the shape or color of a region by considering several aspects; curvature on the edge, inertia tensor about the center of mass or point distribution in a color space. The region having features in the list of Appendix~\ref{App:list_nonteeth} is identified as a non--teeth region.
 
 % Section: Experimental results
 \section{Experimental results and numerical aspect}
@@ -671,26 +604,61 @@ each parameter was randomly determined within the given ranges. The neural netwo
 
 % Figure: Edge region candidate and results
 \begin{figure}[]
+    \newcommand*{\wdth}{2.5}%
+    \newcommand*{\twdth}{.16}%
     \centering
-    \begin{subfigure}[]{.3\textwidth}
+    \begin{subfigure}[]{\twdth \textwidth}
         \centering
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img0.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img1.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img5.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img8.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img18.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_img17.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img0.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img1.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img5.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img8.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img18.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_img17.pdf}
         \caption{Input images}
     \end{subfigure}
-    \begin{subfigure}[]{.3\textwidth}
+    % \begin{subfigure}[]{\twdth \textwidth}
+    %     \centering
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_0.pdf}
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_1.pdf}
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_5.pdf}
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_8.pdf}
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_18.pdf}
+    %     \includegraphics[width=\wdth cm]{./Figures/lee2010_17.pdf}
+    %     \caption{LEE (2010) MCWA \cite{LeeWater:2010}}
+    %     \label{Fig:lee2010}
+    % \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
         \centering
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res0.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res1.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res5.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res8.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res18.pdf}
-        \includegraphics[width=4.2cm]{./Figures/Fig10_res17.pdf}
-        \caption{Segmented result}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_0.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_1.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_5.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_8.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_18.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/lee2010s_17.pdf}
+        \caption{MCWA \cite{LeeWater:2010}}
+        \label{Fig:lee2010}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/na2014_0.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/na2014_1.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/na2014_5.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/na2014_8.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/na2014_18.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/na2014_17.pdf}
+        \caption{Na er al. \cite{Na:2014LteethMorph}}
+        \label{Fig:na2014}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res0.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res1.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res5.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res8.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res18.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/Fig10_res17.pdf}
+        \caption{ours}
         \label{Fig:result}
     \end{subfigure}
     \caption{(a) Input images and (b) obtained pre--edge regions. The segmentation results for the images (a) are in (c). }
