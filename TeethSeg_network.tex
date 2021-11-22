@@ -18,7 +18,7 @@
     \newcommand*{\hhc}{.8}%
     \newcommand*{\hhd}{.6}%
     \newcommand*{\hhe}{.4}%
-    \newcommand*{\hhf}{.2}%
+    \newcommand*{\hhf}{.3}%
     \newcommand*{\hhg}{.2}%
     \centering
     \begin{tikzpicture}[]
@@ -148,7 +148,7 @@
         \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] ($(x1.south) + (0,-.5)$) to (x21.north) {};
         \draw [-{Triangle[scale=.5]},line width=\aw,color=orange!80!white] ($(x1.south) + (0,.5)$) to (x22.north) {};
         % \draw [-{Triangle[scale=.5]},line width=\aw] (sum1.east) to (x3.north) {};
-        \draw [-{Triangle[scale=.5]},line width=\aw] (sum1.east) to (x4.north) {};
+        \draw [line width=\aw] (sum1.east) to (x4.north) {};
         \draw [-{Triangle[scale=.5]},line width=\aw,color=magenta] (x4.south) to (x5.north) {};
         \draw [-{Bar[scale=.5]},line width=.5mm,color=magenta] (x5.west) to ++ (0,-.4);
         \draw [{Bar[scale=.5]}-,line width=.5mm,color=magenta] (x62.west) to ++ (0,-.4);
@@ -207,7 +207,7 @@
             \draw [line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {None};
             \draw [-{Bar[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Softmax};\\
             \node (mod1) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD1} node[right, color=black] {$3 \times 3$ avgpool, $/2$, $+1$};\\
-            \node (mod2) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD2} node[right, color=black] {$2 \times 2$ avgpool, $/2$, $+1$,};\\
+            \node (mod2) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD2} node[right, color=black] {$2 \times 2$ avgpool, $/2$};\\
             \node (mod22) at (0,.25) [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {} node[right, color=black] {$1 \times 1$ conv, BN};\\
         };
     \end{tikzpicture}

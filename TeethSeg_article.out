@@ -1,13 +1,13 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Edge regions in human teeth image}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Geometric Attraction-Driven Flow}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Edge regions outside the tooth boundaries}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Edges beside the tooth boundaries}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{Avoiding light reflections in teeth images}{section.2}% 5
 \BOOKMARK [1][-]{section.3}{Proposed Method}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Obtaining pre-edge regions from a neural network}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.1}{Obtaining pre\205edge regions from a neural network}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{Refinement of pre\205edge region}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.3}{Segmentation using active contours with competing ballon forces}{section.3}% 9
 \BOOKMARK [2][-]{subsection.3.4}{Identification of tooth and non-tooth regions}{section.3}% 10
 \BOOKMARK [1][-]{section.4}{Experimental results and numerical aspect}{}% 11
 \BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
-\BOOKMARK [1][-]{appendix.A}{List of features of non-tooth regions}{}% 13
+\BOOKMARK [1][-]{appendix.A}{List of features of non-tooth region}{}% 13
