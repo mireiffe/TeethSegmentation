@@ -1,13 +1,13 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Edge regions in human teeth image}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Geometric Attraction-Driven Flow}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Edges beside the tooth boundaries}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Avoiding light reflections in teeth images}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{Proposed Method}{}% 6
-\BOOKMARK [2][-]{subsection.3.1}{Obtaining pre\205edge regions from a neural network}{section.3}% 7
-\BOOKMARK [2][-]{subsection.3.2}{Refinement of pre\205edge region}{section.3}% 8
-\BOOKMARK [2][-]{subsection.3.3}{Segmentation using active contours with competing ballon forces}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.4}{Identification of tooth and non-tooth regions}{section.3}% 10
-\BOOKMARK [1][-]{section.4}{Experimental results and numerical aspect}{}% 11
-\BOOKMARK [1][-]{section.5}{Conclusion}{}% 12
-\BOOKMARK [1][-]{appendix.A}{List of features of non-tooth region}{}% 13
+\BOOKMARK [1][-]{section.1}{\376\377\000I\000n\000t\000r\000o\000d\000u\000c\000t\000i\000o\000n}{}% 1
+\BOOKMARK [1][-]{section.2}{\376\377\000E\000d\000g\000e\000\040\000r\000e\000g\000i\000o\000n\000s\000\040\000i\000n\000\040\000h\000u\000m\000a\000n\000\040\000t\000e\000e\000t\000h\000\040\000i\000m\000a\000g\000e}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{\376\377\000G\000e\000o\000m\000e\000t\000r\000i\000c\000\040\000A\000t\000t\000r\000a\000c\000t\000i\000o\000n\000-\000D\000r\000i\000v\000e\000n\000\040\000F\000l\000o\000w}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{\376\377\000E\000d\000g\000e\000s\000\040\000b\000e\000s\000i\000d\000e\000\040\000t\000h\000e\000\040\000t\000o\000o\000t\000h\000\040\000b\000o\000u\000n\000d\000a\000r\000i\000e\000s}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{\376\377\000A\000v\000o\000i\000d\000i\000n\000g\000\040\000l\000i\000g\000h\000t\000\040\000r\000e\000f\000l\000e\000c\000t\000i\000o\000n\000s\000\040\000i\000n\000\040\000t\000e\000e\000t\000h\000\040\000i\000m\000a\000g\000e\000s}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{\376\377\000P\000r\000o\000p\000o\000s\000e\000d\000\040\000M\000e\000t\000h\000o\000d}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{\376\377\000O\000b\000t\000a\000i\000n\000i\000n\000g\000\040\000p\000r\000e\040\023\000e\000d\000g\000e\000\040\000r\000e\000g\000i\000o\000n\000s\000\040\000f\000r\000o\000m\000\040\000a\000\040\000n\000e\000u\000r\000a\000l\000\040\000n\000e\000t\000w\000o\000r\000k}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{\376\377\000R\000e\000f\000i\000n\000e\000m\000e\000n\000t\000\040\000o\000f\000\040\000p\000r\000e\040\023\000e\000d\000g\000e\000\040\000r\000e\000g\000i\000o\000n}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{\376\377\000S\000e\000g\000m\000e\000n\000t\000a\000t\000i\000o\000n\000\040\000u\000s\000i\000n\000g\000\040\000a\000c\000t\000i\000v\000e\000\040\000c\000o\000n\000t\000o\000u\000r\000s\000\040\000w\000i\000t\000h\000\040\000c\000o\000m\000p\000e\000t\000i\000n\000g\000\040\000b\000a\000l\000l\000o\000n\000\040\000f\000o\000r\000c\000e\000s}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{\376\377\000I\000d\000e\000n\000t\000i\000f\000i\000c\000a\000t\000i\000o\000n\000\040\000o\000f\000\040\000t\000o\000o\000t\000h\000\040\000a\000n\000d\000\040\000n\000o\000n\000-\000t\000o\000o\000t\000h\000\040\000r\000e\000g\000i\000o\000n\000s}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{\376\377\000E\000x\000p\000e\000r\000i\000m\000e\000n\000t\000a\000l\000\040\000r\000e\000s\000u\000l\000t\000s\000\040\000a\000n\000d\000\040\000n\000u\000m\000e\000r\000i\000c\000a\000l\000\040\000a\000s\000p\000e\000c\000t}{}% 11
+\BOOKMARK [1][-]{section.5}{\376\377\000C\000o\000n\000c\000l\000u\000s\000i\000o\000n}{}% 12
+\BOOKMARK [1][-]{appendix.A}{\376\377\000L\000i\000s\000t\000\040\000o\000f\000\040\000f\000e\000a\000t\000u\000r\000e\000s\000\040\000o\000f\000\040\000n\000o\000n\000-\000t\000o\000o\000t\000h\000\040\000r\000e\000g\000i\000o\000n}{}% 13

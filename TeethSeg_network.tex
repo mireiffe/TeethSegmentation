@@ -57,15 +57,15 @@
         \draw [-{Triangle[scale=.5]},line width=\aw,color=violet!90!black] (x10.south) to  ++(0,-\al) {};
 
         \node (x11) at ($(x10) + (0,-\hhe*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
-        \draw [-{Triangle[scale=.5]},line width=\aw,color=violet!90!black] (x11.east) to node [above, color=black] {$\times 2$} ++(1.5*\al,0) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=violet!90!black] (x11.east) to node [above, color=black] {$\times 2$} ++(3*\al,0) {};
         
-        \node (x12) at ($(x11) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        \node (x12) at ($(x11) + (3*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
         
         % latent variable
-        \node (x13) at ($(x12) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=2mm, fill=blue!50!white,label=above:{$2048$}] {};
-        \draw [line width=\aw] (x12.east) to (x13.west) {};
+        % \node (x13) at ($(x12) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=2mm, fill=blue!50!white,label=above:{$2048$}] {};
+        % \draw [line width=\aw] (x12.east) to (x13.west) {};
         
-        \node (x14) at ($(x13) + (0,\hhe*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        \node (x14) at ($(x12) + (0,\hhe*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$2048$}] {};
         \draw [{Triangle[scale=.5]}-,line width=\aw,color=lime!50!black] (x14.south) to ++(0,-\al);
         
         \node (x15) at ($(x14) + (1.5*\al + \wwg/2 + \wwf/2,0)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
