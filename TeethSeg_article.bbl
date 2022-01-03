@@ -26,6 +26,11 @@
 {\sc L.~D. Cohen}, {\em On active contour models and balloons}, CVGIP: Image
   Understanding, 53 (1991), pp.~211--218.
 
+\bibitem{Dollar:2006:BEL}
+{\sc P.~Dollar, Z.~Tu, and S.~Belongie}, {\em Supervised learning of edges and
+  object boundaries}, in 2006 IEEE Computer Society Conference on Computer
+  Vision and Pattern Recognition (CVPR'06), vol.~2, (2006), pp.~1964--1971.
+
 \bibitem{T005}
 {\sc dozenist}, {\em Photo of teeth.}
 \newblock
@@ -89,17 +94,6 @@
   classification with deep convolutional neural networks}, in Advances in
   Neural Information Processing Systems, vol.~25, (2012), pp.~1097--1105.
 
-\bibitem{LeeWater:2010}
-{\sc S.-t. Lee, K.-S. Kim, and T.-H. Yoon}, {\em Individual tooth image
-  segmentation by watershed algorithm}, The transactions of The Korean
-  Institute of Electrical Engineers, 59 (2010), pp.~210--216.
-
-\bibitem{LeeSegRemoval:2010}
-{\sc S.-T. Lee, K.-S. Kim, T.-H. Yoon, J.-W. Lee, K.-D. Kim, and W.-S. Park},
-  {\em Individual tooth image segmentation with correcting of specular
-  reflections}, The Transactions of the Korean Institute of Electrical
-  Engineers, 59 (2010), pp.~1136--1142.
-
 \bibitem{LeeRemoval:2010}
 {\sc S.-T. Lee, T.-H. Yoon, K.-S. Kim, K.-D. Kim, and W.-S. Park}, {\em Removal
   of specular reflections in tooth color image by perceptron neural nets}, in
@@ -127,8 +121,8 @@
 \bibitem{Na:2014LteethMorph}
 {\sc S.~D. Na, G.~Lee, J.~H. Lee, and M.~N. Kim}, {\em Individual tooth region
   segmentation using modified watershed algorithm with morphological
-  characteristic}, Bio-Medical Materials and Engineering, 24 (2014), p.~3303
-  – 3309.
+  characteristic}, Bio-Medical Materials and Engineering, 24 (2014),
+  pp.~3303--3309.
 
 \bibitem{Naumovich:2015:teethCT3D}
 {\sc S.~S. Naumovich, S.~A. Naumovich, and V.~G. Goncharenko}, {\em

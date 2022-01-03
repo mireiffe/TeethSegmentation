@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex TeethSeg_article"] 1640848754 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1640849772
-  "TeethSeg_article.aux" 1640849770 17055 ab82479b3d8e21d348e986e3c25bf80f "pdflatex"
-  "bibliography.bib" 1640848033 21972 d36ed86f2d5d5664600f3f1737ac9b86 ""
+["bibtex TeethSeg_article"] 1640916678 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1640918512
+  "TeethSeg_article.aux" 1640918511 16585 906d129296ddaa77d8163e199597b810 "pdflatex"
+  "bibliography.bib" 1640912875 21966 beb5fc8741ff2e1fa34dc8dd6da93402 ""
   "c:/texlive/2021/texmf-dist/bibtex/bst/base/siam.bst" 1640658954 19403 812681d329611d2a1625ad7ae5186edc ""
   (generated)
   "TeethSeg_article.bbl"
   "TeethSeg_article.blg"
-["pdflatex"] 1640849735 "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" "TeethSeg_article.pdf" "TeethSeg_article" 1640849772
+["pdflatex"] 1640918490 "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" "TeethSeg_article.pdf" "TeethSeg_article" 1640918512
   "Figures/Fig10_img0.pdf" 1634731621 533136 49e646914d53e0a5f2bb37604f1401e1 ""
   "Figures/Fig10_img1.pdf" 1634730394 349720 623b7f975274311898667a6fe1a28986 ""
   "Figures/Fig10_img17.pdf" 1634731214 1473378 12f68ddb88bfeb2c893c4bc320d556d0 ""
@@ -79,10 +79,10 @@
   "Figures/na2014_18.pdf" 1637605405 807489 febfc22d3730a555d3975cd45336a8de ""
   "Figures/na2014_5.pdf" 1637605291 310300 6ddc7823edfd6698e8b729aa425b5d41 ""
   "Figures/na2014_8.pdf" 1637605294 142996 4eb2c9a916bbcee862ee7dcdd4c1a100 ""
-  "TeethSeg_article.aux" 1640849770 17055 ab82479b3d8e21d348e986e3c25bf80f "pdflatex"
-  "TeethSeg_article.bbl" 1640848754 10261 d9ac23320db96b79567898df952de3e6 "bibtex TeethSeg_article"
-  "TeethSeg_article.out" 1640849770 3004 814360452cb9097d8ab93cab8cd744fd "pdflatex"
-  "TeethSeg_article.tex" 1640849733 45612 d8cf1941827dc1e7746cc9a65bf4f5aa ""
+  "TeethSeg_article.aux" 1640918511 16585 906d129296ddaa77d8163e199597b810 "pdflatex"
+  "TeethSeg_article.bbl" 1640916679 9996 0a5620a1cc0ddd79be69c1eb205a506b "bibtex TeethSeg_article"
+  "TeethSeg_article.out" 1640918511 2901 1318dd4a449ba9699108f36d131364c2 "pdflatex"
+  "TeethSeg_article.tex" 1640918489 37255 c4e33f3e5043d4b9646d270cf56b1472 ""
   "TeethSeg_network.tex" 1638964744 16142 16c0d0e1cd759f7bfa17f1e251631f74 ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640659195 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1640659847 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -309,7 +309,10 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1640662720 4412718 ada1c61bbfa7db40aae998c8d328ff5e ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1640662891 2820070 e4786655df6966427ec32b626f6fb8c4 ""
   "c:/texlive/2021/texmf.cnf" 1640662697 713 e69b156964470283e0530f5060668171 ""
-  "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" 1640849733 45612 d8cf1941827dc1e7746cc9a65bf4f5aa ""
+  "fig1.tex" 1640918327 2066 67b2a9c85dc49fd065bb0785a095af54 ""
+  "fig2.tex" 1640918360 4135 018c2eb5d0bbb6c2680c89195df35e15 ""
+  "fig3.tex" 1640918476 2580 84b0325c6512dad18aaea83b930b97e5 ""
+  "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" 1640918489 37255 c4e33f3e5043d4b9646d270cf56b1472 ""
   (generated)
   "TeethSeg_article.aux"
   "TeethSeg_article.log"

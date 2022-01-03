@@ -1035,6 +1035,10 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT ./fig1.tex
+INPUT ./fig1.tex
+INPUT ./fig1.tex
+INPUT ./fig1.tex
 INPUT ./Figures/Fig1_img.png
 INPUT ./Figures/Fig1_img.png
 INPUT ./Figures/Fig1_img.png
@@ -1116,6 +1120,10 @@ INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib6.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm
+INPUT ./fig2.tex
+INPUT ./fig2.tex
+INPUT ./fig2.tex
+INPUT ./fig2.tex
 INPUT ./Figures/Fig2_img.png
 INPUT ./Figures/Fig2_img.png
 INPUT ./Figures/Fig2_img.png
@@ -1206,6 +1214,10 @@ INPUT ./Figures/Fig2_evolve_3/iter1000.png
 INPUT ./Figures/Fig2_evolve_3/iter1000.png
 INPUT ./Figures/Fig2_evolve_3/iter1000.png
 INPUT ./Figures/Fig2_evolve_3/iter1000.png
+INPUT ./fig3.tex
+INPUT ./fig3.tex
+INPUT ./fig3.tex
+INPUT ./fig3.tex
 INPUT ./Figures/Fig4_img.png
 INPUT ./Figures/Fig4_img.png
 INPUT ./Figures/Fig4_img.png

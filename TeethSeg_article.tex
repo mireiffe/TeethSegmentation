@@ -148,212 +148,79 @@ Tooth segmentation, Neural network, Geometric attraction--driven flow, Edge-regi
 
 Image segmentation is one of major topics in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation. It makes the contour surrounding an object move to the boundary of the object with the designed force~\cite{Kass:1988:Snakes}; gradient vector flows~\cite{Xu:1997:GVF}, geodesic active contours~\cite{Caselles:1997:GAC} and balloon forces~\cite{Cohen:1991:Balloon} are well-known models with different forces. There are also variational models that uses statistical information of intensities in an image~\cite{Park:2014:SRM,Zhu:1996:RegCompet}. In \cite{Chan:2001:chanvese}, unlike the previous methods using edge maps, a region-based active contour method was proposed.
 
-Segmentation of individual tooth in human teeth images has been mainly performed on computed tomography (CT) or X-ray images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. Teeth are easily segmented in these CT or X-ray images since the intensity of teeth region is much stronger than the gums or tissues. However, segmenting individual tooth in a teeth image taken outside the mouth with a camera is a more difficult problem. In the teeth images, not only weak edges and light reflections appear but also the colors and illuminance are inhomogeneous because of plaques and the oral structure, and these are main obstacles that make individual tooth segmentation difficult. Several attempts have been made to segment individual tooth in a teeth image. In \cite{LeeWater:2010,Na:2014LteethMorph} the watershed algorithm with color information was proposed. In \cite{LeeSegRemoval:2010}, an additional light reflection removal process \cite{LeeRemoval:2010} was applied before segmentation. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, segmentations using deep learning methods based on Mask R--CNN \cite{He:2018:MRCNN} were proposed. The main application area is 3D tooth model reconstruction from 2D tooth images. The 3D teeth model reconstruction have been developed based on individual tooth segmentation in CT images \cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}. But in a recent work \cite{WU:2016}, a 3D teeth model reconstruction method using individual tooth boundaries in a single teeth image was proposed, which suggests the importance of segmentation of tooth regions.
+Segmentation of individual tooth in human teeth images has been mainly performed on computed tomography (CT) or X-ray images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. Teeth are easily segmented in these CT or X-ray images since the intensity of the teeth region is much stronger than the gums or tissues. However, segmenting individual tooth in a teeth image taken outside the oral cavity with a general digital camera is a more difficult problem. In the teeth images, not only weak edges and light reflections appear, but also colors and illuminance are inhomogeneous due to plaque and oral structure, which are major obstacles to segmentation of individual tooth. Several attempts have been made to segment individual tooth in teeth images. In~\cite{Na:2014LteethMorph} the watershed algorithm~\cite{Vincent:1991:watershed} with color information was proposed. In recent studies \cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, segmentations using deep learning methods based on Mask R--CNN \cite{He:2018:MRCNN} were proposed. In~\cite{WU:2016}, a supervised learning method BEL~\cite{Dollar:2006:BEL} was used to obtain the individual tooth boundaries. 
 
-Existing methodologies can be divided into two categories; model--based method \cite{LeeWater:2010,LeeSegRemoval:2010,Na:2014LteethMorph} or supervised learning method \cite{Kim:2020,Pham:2020,WU:2016,Zhu:2020:teethMaskrcnn}. Model--based methods used the watershed algorithm \cite{Vincent:1991:watershed} based on the color information of image. Although these methods are reliable, produces poor results when applied to images obtained in an unrefined environment. On the other hand, it is well known that a supervised learning methods can give outstanding results for a variety of images but sufficient amount of training data is required for stable performance, and this labeling process consumes a lot of time and effort. 
-% In \cite{WU:2016}, a supervised learning method BEL \cite{Dollar:2006:BEL} was used to obtain the individual tooth boundaries, and manually labeled $40$ teeth studio-taken images are used as the training data.
-In this paper, we segment individual tooth regions by obtaining pre--edge region using the supervised learning method. In the supervised learning process, data labeling process is assisted by model--based methods to avoid spending time and cost.
+Although the model-based method in~\cite{Na:2014LteethMorph} is reliable, it produces poor results when applied to images obtained in an unrefined environment. On the other hand, it is well known that supervised learning methods can give excellent results for a variety of images, but require sufficient amount of training data for stable performance, and that the labeling process of training data takes a lot of time and effort.
 
-The remainder of this paper is organized as follows. In Section~\ref{Sec:er_teeth}, we will talk about geometric attraction-driven flow (GADF), edge regions, and the problems of edge regions obtained from teeth images. In Section~\ref{Sec:PM}, the proposed algorithm is described and the experimental results are present in Section~\ref{Sec:result}. We will conclude this paper at Section~\ref{Sec:Conclusion}. 
+The main applications of individual tooth segmentation are reconstruction of 3D tooth models, postmortem identification of deceased persons, and dental healthcare. In particular, the 3D teeth model reconstruction was developed based on individual tooth segmentation in CT images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}. However, in a recent study~\cite{WU:2016}, a 3D teeth model reconstruction method using individual tooth boundaries in a single teeth image was proposed.
+
+In this paper, we segment individual tooth regions by obtaining pre-edge region using the supervised learning method. In the supervised learning process, data labeling process is assisted by model-based methods to avoid spending time and cost.
+
+The remainder of this paper is organized as follows. In Section~\ref{Sec:er_teeth}, we will discuss geometric attraction-driven flow (GADF), edge-regions, and problems of edge-regions obtained from teeth images. In Section~\ref{Sec:PM}, the proposed algorithm is described, and the experimental results are presented in Section~\ref{Sec:result}. We will conclude this paper in Section~\ref{Sec:Conclusion}. 
 
 % Sec:Background
-\section{Edge regions in human teeth image}
+\section{Geometric Attraction-Driven Flow, edge-regions and segmentations}
 \label{Sec:er_teeth}
-In this section, we briefly review GADF \cite{Hahn:2006, Hahn:2010:GADF} and edge region, which play key role in segmenting individual tooth. Concerning the problematic features of the teeth image we will show weak points of edge region obtained from GADF.
+In this section, we briefly review the geometric attraction-driven flow (GADF) and edge-region in~\cite{Hahn:2006, Hahn:2010:GADF}, which play key roles in segmenting individual tooth. Then we will show that the edge-regions obtained by GADF are incomplete due to the problematic features of the teeth image.
 
 % Subsec:GADF
-\subsection{Geometric Attraction-Driven Flow}
+\subsection{GADF}
 \label{Subsec:GADF}
-Let $I\colon\Omega\subset\mathbf{R}^2\rightarrow[0,\,1]$ be a given smooth gray image. The image intensity changes rapidly on the boundary of objects in the image. Thus, a point $x\in\Omega$ is defined as an edge of the image if
-\begin{align}
-    u_x''(0)=0\cm \label{Def:edge}
-\end{align}
+Let $I\colon\Omega\subset\mathbf{R}^2\rightarrow[0,\,1]$ be a given smooth gray image. The image intensity changes rapidly on the boundary of objects in the image. Thus, a point $x\in\Omega$ is defined as an edge point if
+\begin{align*}
+    u_x''(0)=0\cm %label{Def:edge}
+\end{align*}
 where
 \begin{align*}
     u_x(s) = I\left( x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|} \right)\pd
 \end{align*}
 In \cite{Hahn:2010:GADF}, the GADF is defined as
-\begin{align}
-    F_a(x) = \mbox{sgn}(\ell(x))\frac{\nabla I(x)}{\left|\nabla{I(x)}\right|},\quad \forall{x}\in\Omega\cm  \label{Def:gadf}
-\end{align}
+\begin{align*}
+    F_a(x) = \mbox{sgn}(\ell(x))\frac{\nabla I(x)}{\left|\nabla{I(x)}\right|},\quad \forall{x}\in\Omega\cm  %\label{Def:gadf}
+\end{align*}
 where $\mbox{sgn}$ is the sign function and 
 \begin{align*}
     \ell(x) &= \int^{\epsilon}_{0} {u'_x(s)}\,ds - \int^{0}_{-\epsilon} {u'_x(s)}\,ds\quad\mbox{for a small}~\epsilon > 0\pd
 \end{align*}
-By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge where $u_x''(s)=0$. 
+By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge point. The GADF can be naturally extended to color images; see~\cite{Hahn:2006,Hahn:2010:GADF}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Under this setting, contour evolution using a level set formulation is proposed in \cite{Hahn:2010:GADF}:
 \begin{align}
     \frac{\partial}{\partial{t}}\phi(x,\,t) &= \mu\kappa(\phi)\left|\nabla\phi\right| - \chi_{\oma}F_a\cdot\nabla\phi + \chi_{\Omega_b}F_b|\nabla\phi|\cm \label{Eq:gadf}\\
     \phi(x,\,0) &= \phi_0(x)\cm \nonumber
 \end{align}
-where $\mu$ is a constant, $\phi_0$ is the initial signed distance function (SDF), $\chi$ is a characteristic function of the set of subscription and $\oma$ is a region in which $F_a$ faces each other, i.e.,
-\begin{align}
-    \Omega_a = \delta_{S}\left( \Omega_E \right)\cm \label{Def:oma}
-\end{align}
+where $\mu$ is a constant, $\phi_0$ is the initial signed distance function (SDF), $\chi$ is a characteristic function of the set of subscription and $\oma$ is a region, called the candidate of edge-regions, where $F_a$ faces each other, i.e.,
+\begin{align*}
+    \Omega_a = \delta_{S}\left( \Omega_E \right)\cm %\label{Def:oma}
+\end{align*}
 where
 \begin{align*}
     \Omega_E = \left\{ x\in\Omega \mid F_a(x^*) \cdot F_a(x) < 0 ~\mbox{and}~ x^*=x+F_a(x) \right\}\pd %\label{Def:pre_er}
 \end{align*}
-and $\delta_{S}(X)$ is a dilation of a set $X$ by a structuring element $S$ which is a $3\times3$ matrix with origin at its center. Observe that the initial contour goes outward in $\Omega_b = \Omega\setminus\Omega_a$ by a balloon force $F_b$ and approaches the edge by $F_a$ once it reaches in $\Omega_a$.
+and $\delta_{S}(X)$ is a dilation of a set $X$ by a $3 \times 3$ square structuring element $S$ with origin at its center. Observe that the initial contour goes outward in $\Omega_b = \Omega\setminus\Omega_a$ by a balloon force $F_b$ and approaches the edge by $F_a$ once it reaches in $\Omega_a$.
 
-The edge region is a region that is thought to contain edges. Since $\oma$ contains all edges by the definition, it can be a first candidate of the edge region, and in fact, whole region of $\oma$ is used as an edge region in \eqref{Eq:gadf}. But, in practice $\oma$ contains a lot of unnecessary parts, and so it cannot be used as an edge region for the individual tooth segmentation.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Subsection: Edges outside the tooth boundaries
-\subsection{Edges beside the tooth boundaries}
+\subsection{Edges-regions}
 \label{Subsec:er_outside}
 
-As shown in Figure~\ref{Fig:1d}, $\oma$ contains all existing edges in the image and so it contains many parts beside the tooth boundaries.  
+The edge-region is roughly defined as the AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA of thin regions containing most of object boundaries, regardless of the strength of edges. In practice, as shown in Figure~\ref{Fig:1d}, $\oma$ is a candidate for the edge-region, because $\ome$ contains many regions that are not intersected with the boundaries of the objects. Hence it is necessary to remove them as many as possible.
+
 % Figure: Weak edges in teeth image
-\begin{figure}
-    \centering
-    \begin{subfigure}{1\textwidth}
-        \centering
-        \includegraphics[width=10cm]{./Figures/Fig1_img.png}
-        \caption{A teeth image \cite{T001}}
-        \label{fig:1a}
-    \end{subfigure} 
-    \newline 
-    
-    \vspace{1mm}
-    
-    \begin{subfigure}{.165\textwidth}
-        \centering
-        \includegraphics[width=2.4cm]{./Figures/Fig1_img1.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_img3.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_img2.png}
-        \caption{}
-    \end{subfigure}
-    \begin{subfigure}{.165\textwidth}
-        \centering
-        \includegraphics[width=2.4cm]{./Figures/Fig1_sbl1.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_sbl3.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_sbl2.png}
-        \caption{Sobel}
-    \end{subfigure}
-    \begin{subfigure}{.165\textwidth}
-        \centering
-        \includegraphics[width=2.4cm]{./Figures/Fig1_cny1.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_cny3.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_cny2.png}
-        \caption{Canny}
-    \end{subfigure}
-    \begin{subfigure}{.165\textwidth}
-        \centering
-        \includegraphics[width=2.4cm]{./Figures/Fig1_er1.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_er3.png}
-        \includegraphics[width=2.4cm]{./Figures/Fig1_er2.png}
-        \caption{$\oma$}
-        \label{Fig:1d}
-    \end{subfigure}
-    \caption{(a) A teeth image and (b) sub-images in the green boxes. The results of different methods are shown. (c--d) Results of Sobel and Canny edge detectors with automatically chosen thresholds by MATLAB. (e) $\oma$ from the GADF. Weak edges are appeared at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. As shown in the results, GADF can detect tooth boundaries much better than the other methods while there are many unnecessary parts. }
-    \label{Fig:weak_edges}
-\end{figure}
+\input{./fig1.tex}
+
 As an initial contour evolves forward to edges, these unnecessary parts hinder the movement of the contour. In fact, except for connected components of $\oma$ with closed shape, it can be easily removed or disregarded; the components have small size or flat image intensities around them are easily removed \cite{Hahn:2006}. For the components that cannot form a closed shape, the evolving contour can intrude from the ends and disregard the component. The connected components with closed shape are mainly caused by a strong light reflection. They block the movement of the contour and make it difficult to find the correct tooth boundary like a barrier. As a result, presence of such light reflections is a major obstacle to individual tooth segmentation. The described contour evolution is shown in Figure~\ref{Fig:er_outside}.
 
 % Figure: Edge regions outside the tooth boundaries
-\begin{figure}
-    \centering
-    % First row
-    \begin{subfigure}{.24\textwidth}
-        \centering
-        \includegraphics[height=2.8cm]{./Figures/Fig2_img.png}
-        \caption{}
-        \label{Fig:2a}
-    \end{subfigure}
-    \begin{subfigure}{.24\textwidth}
-        \centering
-        \includegraphics[height=2.8cm]{./Figures/Fig2_er.png}
-        \caption{$\ome$}
-        \label{Fig:2b}
-    \end{subfigure}
-    \begin{subfigure}{.24\textwidth}
-        \centering
-        \includegraphics[height=2.8cm]{./Figures/Fig2_reser.png}
-        \caption{}
-        \label{Fig:2c}
-    \end{subfigure}\\
-    \vspace{1mm}
-    % First row
-    \begin{subfigure}{.025\textwidth}
-        \centering
-        \caption*{\rotatebox[origin=c]{90}{\hspace{-4mm} (d) Left tooth}}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_1/iter0.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_1/iter150.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_1/iter250.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_1/iter300.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_1/iter1000.png}
-    \end{subfigure}\\
-    \vspace{1mm}
-    % Second row
-    \begin{subfigure}{.025\textwidth}
-        \centering
-        \caption*{\rotatebox[origin=c]{90}{\hspace{-4mm} (e) Right tooth}}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_2/iter0.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_2/iter200.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_2/iter350.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_2/iter650.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_2/iter1000.png}
-    \end{subfigure}\\
-    \vspace{1mm}
-    % Third row
-    \begin{subfigure}{.025\textwidth}
-        \caption*{\rotatebox[origin=c]{90}{\hspace{-3mm} (f) Outside}}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter0.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter200.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter350.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter650.png}
-    \end{subfigure}
-    \begin{subfigure}{.18\textwidth}
-        \centering
-        \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter1000.png}
-    \end{subfigure}\\
+\input{./fig2.tex}
 
-    \caption{(a) Teeth image with light reflection. (c) Results obtained from (b) by removing unnecessary components and with dilated. (d--f) From left to right, the contour evolution over time by \eqref{Eq:gadf} is shown. The first column shows initial contours located at (d) the left tooth, (e) the right tooth, and (f) outside of teeth. Observe that the contours intrude into the components when it meets ends but are blocked when meets regions with closed shape. Especially in (d), the contour cannot extract the entire tooth boundary because of the closed shape component. }
-    \label{Fig:er_outside}
-\end{figure}
 
 % Subsection: Avoidance of light reflections in the teeth image
 \subsection{Avoiding light reflections in teeth images}
@@ -378,50 +245,7 @@ In this section, we describe the steps of the proposed individual tooth segmenta
 \end{itemize}
 
 % Figure: Algorithm flowchart
-\begin{figure}
-    \centering
-    \begin{subfigure}[]{1\textwidth}
-        % \centering
-        \begin{tikzpicture}[node distance=1.4cm and 1.5cm]
-            \node (title1) [title] {(a) Data labeling and training};
-            \node (title3) [title, right=6.5cm of title1] {(b) Segmentation};
-            \node (teeth1) [io, below=.9cm of title1] {Teeth image};
-            \node (pro11) [process, below=of teeth1] {$\Omega_E$ from GADF};
-            \node (pro12) [process, below=of pro11] {Manual selection \& dilation};
-            \node (label) [io, right=of teeth1] {Labeled data};
-            \node (pro14) [process, below=of label] {Training};
-            \node (dnn) [io, below=of pro14] {Deep neural network};
-            
-            \node (teeth3) [io, below=.5cm of title3] {Teeth image};
-            \node (pro31) [process, below=.65cm of teeth3] {Deep neural network};
-            \node (pro32) [process, below=.65cm of pro31] {Pre--edge region + region refinement};
-            \node (pro33) [process, below=.65cm of pro32] {Active contours};
-            \node (pro34) [process, below=.65cm of pro33] {Region identification};
-            \node (res) [io, below=.65cm of pro34] {Result};
-            
-            \draw [arrow] (teeth1) -- (pro11);
-            \draw [arrow] (pro11) -- (pro12);
-            \draw [arrow] (pro12.east) -| ($(label.west) + (-.8, 0)$) -- (label.west);
-            \draw [arrow] (label) -- (pro14);
-            \draw [arrow] (pro14) -- (dnn);
-            \draw [arrow] (teeth3) -- (pro31);
-            \draw [arrow] (pro31) -- (pro32);
-            \draw [arrow] (pro32) -- (pro33);
-            \draw [arrow] (pro33) -- (pro34);
-            \draw [arrow] (pro34) -- (res);
-
-            \draw [red,line width=.5mm,dotted] ($(teeth1.east) + (-.07, -.2)$) |- ($(label.west) + (-.07, -.2)$);
-            \draw [arrow, red,line width=.5mm, dotted] ($(label.west) + (-.45, -.2)$) |- (pro14.west);
-            \draw [arrow, red,line width=.5mm, dotted] (dnn.east) -| ($(pro31.west) + (-.95,0)$) -- (pro31.west);
-            \begin{scope}[on background layer]
-                \draw[black,line width=.4mm,dashed] ($(title1.west)+(-.6,0)$)  rectangle ($(title1.east)+(5.3,-11)$);
-                \draw[black,line width=.4mm,dashed] ($(title3.west)+(-.7,0)$)  rectangle ($(title3.east)+(.7,-11)$);
-            \end{scope}
-        \end{tikzpicture}
-    \end{subfigure}
-    \caption{Algorithm flowchart; (a) data labeling and training process (b) segmentation process.}
-    \label{Fig:flowchart}
-\end{figure}
+\input{./fig3.tex}
     
 % Subsection: Obtaining pre-edge regions from a neural network
 \subsection{Obtaining pre--edge regions from a neural network}
