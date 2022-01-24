@@ -288,16 +288,16 @@ We consider a neural network consisting of the part of ResNeSt--50 \cite{Zhang:2
     \begin{subfigure}[]{.4\textwidth}
         \centering
         \includegraphics[height=3.8cm]{./Figures/Fig4_seler.png}
-        \caption{Selected region}
+        \caption{Selected regions}
         \label{Fig:4c}
     \end{subfigure}
     \begin{subfigure}[]{.4\textwidth}
         \centering
         \includegraphics[height=3.8cm]{./Figures/Fig4_label.png}
-        \caption{Labeled image}
+        \caption{Labeled image $Y$}
         \label{Fig:4d}
     \end{subfigure}
-    \caption{ Labeling process described in Section~\ref{Subsec:pre_er}. (a) An image in the training dataset. (b) The region $\Omega_E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. }
+    \caption{ Labeling process described in Section~\ref{Subsec:pre_er}: (a) An image in the training dataset. (b) The region $\Omega_E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. }
     \label{Fig:labeling}
 \end{figure}
 
@@ -333,7 +333,7 @@ as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth im
         \includegraphics[height=2.4cm]{./Figures/Fig10_img5.pdf}
         \includegraphics[height=2.4cm]{./Figures/Fig10_neter5.pdf}
     \end{subfigure}
-    \caption{(First row) Input images and (Second row) obtained pre--edge regions. }
+    \caption{First row: Input images. Second row: obtained pseudo edge-region from the neural network. }
     \label{Fig:pre_er}
 \end{figure}
 
@@ -347,6 +347,7 @@ The region $\omcc$ in Section~\eqref{Def:omcc} is not yet perfect enough for seg
 
 For each end, the strategy for extension is to return if not reached; if the leakage is not filled after a certain length of extension, then return and start extension in the next direction. Three directions are considered sequentially:
 \begin{itemize}
+    \setlength{\itemindent}{1.5mm}
     \item [(D--1)] If $\ome$ exists at the breaking of $\omcc$ and direction of $\ome$ coincides with the representative curve of $\omcc$, then $\omcc$ is extended along $\ome$,
 
     \item [(D--2)] Following the quadratic curve which is the least square quadratic approximation of the representative curve,
@@ -379,10 +380,10 @@ We call the resulting extension as $\omc$ and finally, we define a region $\ER :
     \begin{subfigure}[]{.22\textwidth}
         \centering
         \includegraphics[height=3.5cm]{./Figures/Fig8_use_er.png}
-        \caption{}
+        \caption{$\ER$}
         \label{Fig:ex_useer_d}
     \end{subfigure}
-    \caption{The process of extension from the ends. (b) The parametric curves with ends (blue dots) are presented on $\omcc$ of the teeth image (a). (c) The extended region $\omc$. (d) Among $\ome$, the region $\ER$ is highlighted by with red color. }
+    \caption{The process of extension from the ends of curves. (b) The parametric curves with ends (blue dots) are presented in $\omcc$ of the teeth image (a). (c) The extended region $\omc$. (d) Among $\ome$, the region $\ER$ is displayed in red. }
     \label{Fig:ex_ends}
 \end{figure}
 
@@ -491,10 +492,10 @@ As a final step, the identification of the segmented regions remains. Since our 
         \includegraphics[width=\wdth cm]{./Figures/Fig10_res8.pdf}
         \includegraphics[width=\wdth cm]{./Figures/Fig10_res18.pdf}
         \includegraphics[width=\wdth cm]{./Figures/Fig10_res17.pdf}
-        \caption{ours}
+        \caption{Our algorithm}
         \label{Fig:result}
     \end{subfigure}
-    \caption{(a) Input images \cite{T000,T008,T005,T018,T017} and segmented results. }
+    \caption{ Segmented results of several methods for input images \cite{T000,T008,T005,T018,T017}. }
     \label{Fig:results}
 \end{figure}
 

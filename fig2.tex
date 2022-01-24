@@ -97,6 +97,6 @@
         \includegraphics[height=2.4cm]{./Figures/Fig2_evolve_3/iter1000.png}
     \end{subfigure}\\
 
-    \caption{(a) Teeth image with light reflection. (c) Results obtained from (b) by removing unnecessary components and with dilated. (d--f) From left to right, the contour evolution over time by \eqref{Eq:gadf} is shown. The first column shows initial contours located at (d) the left tooth, (e) the right tooth, and (f) outside of teeth. Observe that the contours intrude into the components when it meets ends but are blocked when meets regions with closed shape. Especially in (d), the contour cannot extract the entire tooth boundary because of the closed shape component. }
+    \caption{(a) Teeth image with light reflection. (b) The region $\ome$ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by~\eqref{Eq:gadf} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. }
     \label{Fig:er_outside}
 \end{figure}

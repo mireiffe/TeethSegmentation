@@ -14,7 +14,7 @@
             
             \node (teeth3) [io, below=.5cm of title3] {Teeth image};
             \node (pro31) [process, below=.65cm of teeth3] {Deep neural network};
-            \node (pro32) [process, below=.65cm of pro31] {Pre--edge region + region refinement};
+            \node (pro32) [process, below=.65cm of pro31] {Pseudo edge-region + region refinement};
             \node (pro33) [process, below=.65cm of pro32] {Active contours};
             \node (pro34) [process, below=.65cm of pro33] {Region identification};
             \node (res) [io, below=.65cm of pro34] {Result};
@@ -39,6 +39,6 @@
             \end{scope}
         \end{tikzpicture}
     \end{subfigure}
-    \caption{Algorithm flowchart; (a) data labeling and training process (b) segmentation process.}
+    \caption{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. }
     \label{Fig:flowchart}
 \end{figure}

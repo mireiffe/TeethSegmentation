@@ -71,22 +71,24 @@
 \newlabel{sub@fig:1a}{{(a)}{4}{A teeth image \cite {T001}\relax }{figure.caption.1}{}}
 \newlabel{Fig:1d}{{1(e)}{4}{$\oma $\relax }{figure.caption.1}{}}
 \newlabel{sub@Fig:1d}{{(e)}{4}{$\oma $\relax }{figure.caption.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (a) A teeth image and (b) sub-images in the green boxes. The results of different methods are shown. (c--d) Results of Sobel and Canny edge detectors with automatically chosen thresholds by MATLAB. (e) $\Omega _a$ from the GADF. Weak edges are appeared at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. As shown in the results, GADF can detect tooth boundaries much better than the other methods while there are many unnecessary parts. \relax }}{4}{figure.caption.1}\protected@file@percent }
-\newlabel{Fig:weak_edges}{{1}{4}{(a) A teeth image and (b) sub-images in the green boxes. The results of different methods are shown. (c--d) Results of Sobel and Canny edge detectors with automatically chosen thresholds by MATLAB. (e) $\oma $ from the GADF. Weak edges are appeared at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. As shown in the results, GADF can detect tooth boundaries much better than the other methods while there are many unnecessary parts. \relax }{figure.caption.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces (a) A teeth image and (b) sub-images in the green boxes. (c--d) Results of Sobel and Canny edge detectors with automatically chosen thresholds by MATLAB. (e) $\Omega _a$ from GADF. Weak edges appear at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. As shown in the results, GADF can detect tooth boundaries much better than the other methods while there are many unnecessary parts. \relax }}{4}{figure.caption.1}\protected@file@percent }
+\newlabel{Fig:weak_edges}{{1}{4}{(a) A teeth image and (b) sub-images in the green boxes. (c--d) Results of Sobel and Canny edge detectors with automatically chosen thresholds by MATLAB. (e) $\oma $ from GADF. Weak edges appear at the boundary between teeth and gums, the boundary between two teeth with similar color and brightness, and the junction of boundaries. As shown in the results, GADF can detect tooth boundaries much better than the other methods while there are many unnecessary parts. \relax }{figure.caption.1}{}}
 \newlabel{Fig:2a}{{2(a)}{5}{\relax }{figure.caption.2}{}}
 \newlabel{sub@Fig:2a}{{(a)}{5}{\relax }{figure.caption.2}{}}
 \newlabel{Fig:2b}{{2(b)}{5}{$\ome $\relax }{figure.caption.2}{}}
 \newlabel{sub@Fig:2b}{{(b)}{5}{$\ome $\relax }{figure.caption.2}{}}
 \newlabel{Fig:2c}{{2(c)}{5}{\relax }{figure.caption.2}{}}
 \newlabel{sub@Fig:2c}{{(c)}{5}{\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Teeth image with light reflection. (c) Results obtained from (b) by removing unnecessary components and with dilated. (d--f) From left to right, the contour evolution over time by \textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {Eq:gadf}\unskip \@@italiccorr )}} is shown. The first column shows initial contours located at (d) the left tooth, (e) the right tooth, and (f) outside of teeth. Observe that the contours intrude into the components when it meets ends but are blocked when meets regions with closed shape. Especially in (d), the contour cannot extract the entire tooth boundary because of the closed shape component. \relax }}{5}{figure.caption.2}\protected@file@percent }
-\newlabel{Fig:er_outside}{{2}{5}{(a) Teeth image with light reflection. (c) Results obtained from (b) by removing unnecessary components and with dilated. (d--f) From left to right, the contour evolution over time by \eqref {Eq:gadf} is shown. The first column shows initial contours located at (d) the left tooth, (e) the right tooth, and (f) outside of teeth. Observe that the contours intrude into the components when it meets ends but are blocked when meets regions with closed shape. Especially in (d), the contour cannot extract the entire tooth boundary because of the closed shape component. \relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Teeth image with light reflection. (b) The region $\Omega _E$ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {Eq:gadf}\unskip \@@italiccorr )}} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. \relax }}{5}{figure.caption.2}\protected@file@percent }
+\newlabel{Fig:er_outside}{{2}{5}{(a) Teeth image with light reflection. (b) The region $\ome $ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by~\eqref {Eq:gadf} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. \relax }{figure.caption.2}{}}
 \citation{Zhang:2020}
 \citation{Zhang:2018:BCE}
 \citation{T023}
 \citation{T023}
+\citation{Zhang:2020:ResNeSt}
 \citation{He:2015:ResNet}
 \citation{He:2019:ResNetTrick}
+\citation{Zhang:2020:ResNeSt}
 \citation{He:2015:ResNet}
 \citation{He:2019:ResNetTrick}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Method}{6}{section.3}\protected@file@percent }
@@ -94,27 +96,27 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Obtaining pseudo edge-region from a neural network}{6}{subsection.3.1}\protected@file@percent }
 \newlabel{Subsec:pre_er}{{3.1}{6}{Obtaining pseudo edge-region from a neural network}{subsection.3.1}{}}
 \newlabel{Def:omcc}{{3.1}{6}{Obtaining pseudo edge-region from a neural network}{equation.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }}{7}{figure.caption.3}\protected@file@percent }
-\newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart; (a) data labeling and training process (b) segmentation process.\relax }{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }}{7}{figure.caption.3}\protected@file@percent }
+\newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }{figure.caption.3}{}}
 \newlabel{Fig:4a}{{4(a)}{8}{A training image \cite {T023}\relax }{figure.caption.4}{}}
 \newlabel{sub@Fig:4a}{{(a)}{8}{A training image \cite {T023}\relax }{figure.caption.4}{}}
 \newlabel{Fig:4b}{{4(b)}{8}{$\ome $\relax }{figure.caption.4}{}}
 \newlabel{sub@Fig:4b}{{(b)}{8}{$\ome $\relax }{figure.caption.4}{}}
-\newlabel{Fig:4c}{{4(c)}{8}{Selected region\relax }{figure.caption.4}{}}
-\newlabel{sub@Fig:4c}{{(c)}{8}{Selected region\relax }{figure.caption.4}{}}
-\newlabel{Fig:4d}{{4(d)}{8}{Labeled image\relax }{figure.caption.4}{}}
-\newlabel{sub@Fig:4d}{{(d)}{8}{Labeled image\relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Labeling process described in Section\nobreakspace  {}\ref  {Subsec:pre_er}. (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }}{8}{figure.caption.4}\protected@file@percent }
-\newlabel{Fig:labeling}{{4}{8}{Labeling process described in Section~\ref {Subsec:pre_er}. (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }{figure.caption.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The structure of neural network used in this paper. Overall, each bold arrow represents a layer and types of the layers are listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions; the global average poolings (GAP) and fully connected layers in (b) having thin lines width. The type of the activation function is represented by the shape of arrow heads, and it is also listed in the legend. In the legend, there are some notations; $/$ and $+$ mean stride and padding of the layer with the followind number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq  m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite  {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }}{9}{figure.caption.5}\protected@file@percent }
-\newlabel{Fig:network}{{5}{9}{The structure of neural network used in this paper. Overall, each bold arrow represents a layer and types of the layers are listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions; the global average poolings (GAP) and fully connected layers in (b) having thin lines width. The type of the activation function is represented by the shape of arrow heads, and it is also listed in the legend. In the legend, there are some notations; $/$ and $+$ mean stride and padding of the layer with the followind number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }{figure.caption.5}{}}
+\newlabel{Fig:4c}{{4(c)}{8}{Selected regions\relax }{figure.caption.4}{}}
+\newlabel{sub@Fig:4c}{{(c)}{8}{Selected regions\relax }{figure.caption.4}{}}
+\newlabel{Fig:4d}{{4(d)}{8}{Labeled image $Y$\relax }{figure.caption.4}{}}
+\newlabel{sub@Fig:4d}{{(d)}{8}{Labeled image $Y$\relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Labeling process described in Section\nobreakspace  {}\ref  {Subsec:pre_er}: (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }}{8}{figure.caption.4}\protected@file@percent }
+\newlabel{Fig:labeling}{{4}{8}{Labeling process described in Section~\ref {Subsec:pre_er}: (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }{figure.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The structure of the neural network: ResNeSt\nobreakspace  {}\cite  {Zhang:2020:ResNeSt} + upscale module. Overall, each bold arrow represents a layer and the types of layers are listed in the lower right legend in the colors of the arrows . Each layer is followed by a batch normalization (BN) and an activation function with only two exceptions: the global average poolings (GAP) and fully connected layers in (b) having thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are some notations: $/$ and $+$ mean stride and padding of the layer with the following number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq  m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite  {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }}{9}{figure.caption.5}\protected@file@percent }
+\newlabel{Fig:network}{{5}{9}{The structure of the neural network: ResNeSt~\cite {Zhang:2020:ResNeSt} + upscale module. Overall, each bold arrow represents a layer and the types of layers are listed in the lower right legend in the colors of the arrows . Each layer is followed by a batch normalization (BN) and an activation function with only two exceptions: the global average poolings (GAP) and fully connected layers in (b) having thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are some notations: $/$ and $+$ mean stride and padding of the layer with the following number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }{figure.caption.5}{}}
 \citation{Freeman:1961:Chaincoding}
 \citation{Jonker:1992:Morphological}
 \citation{Blum:1967}
 \citation{Caselles:1997:GAC}
 \citation{Xu:2000:ParamGeoAC}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces (First row) Input images and (Second row) obtained pre--edge regions. \relax }}{10}{figure.caption.6}\protected@file@percent }
-\newlabel{Fig:pre_er}{{6}{10}{(First row) Input images and (Second row) obtained pre--edge regions. \relax }{figure.caption.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces First row: Input images. Second row: obtained pseudo edge-region from the neural network. \relax }}{10}{figure.caption.6}\protected@file@percent }
+\newlabel{Fig:pre_er}{{6}{10}{First row: Input images. Second row: obtained pseudo edge-region from the neural network. \relax }{figure.caption.6}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Refinement of pseudo edge-region}{10}{subsection.3.2}\protected@file@percent }
 \newlabel{Subsec:refine}{{3.2}{10}{Refinement of pseudo edge-region}{subsection.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Segmentation using active contours}{10}{subsection.3.3}\protected@file@percent }
@@ -126,10 +128,10 @@
 \newlabel{sub@Fig:ex_ends_b}{{(b)}{11}{\relax }{figure.caption.7}{}}
 \newlabel{Fig:ex_ends_d}{{7(c)}{11}{\relax }{figure.caption.7}{}}
 \newlabel{sub@Fig:ex_ends_d}{{(c)}{11}{\relax }{figure.caption.7}{}}
-\newlabel{Fig:ex_useer_d}{{7(d)}{11}{\relax }{figure.caption.7}{}}
-\newlabel{sub@Fig:ex_useer_d}{{(d)}{11}{\relax }{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The process of extension from the ends. (b) The parametric curves with ends (blue dots) are presented on $\Omega _P$ of the teeth image (a). (c) The extended region $\overline  {\Omega }_P$. (d) Among $\Omega _E$, the region $\Omega _{Er}$ is highlighted by with red color. \relax }}{11}{figure.caption.7}\protected@file@percent }
-\newlabel{Fig:ex_ends}{{7}{11}{The process of extension from the ends. (b) The parametric curves with ends (blue dots) are presented on $\omcc $ of the teeth image (a). (c) The extended region $\omc $. (d) Among $\ome $, the region $\ER $ is highlighted by with red color. \relax }{figure.caption.7}{}}
+\newlabel{Fig:ex_useer_d}{{7(d)}{11}{$\ER $\relax }{figure.caption.7}{}}
+\newlabel{sub@Fig:ex_useer_d}{{(d)}{11}{$\ER $\relax }{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The process of extension from the ends of curves. (b) The parametric curves with ends (blue dots) are presented in $\Omega _P$ of the teeth image (a). (c) The extended region $\overline  {\Omega }_P$. (d) Among $\Omega _E$, the region $\Omega _{Er}$ is displayed in red. \relax }}{11}{figure.caption.7}\protected@file@percent }
+\newlabel{Fig:ex_ends}{{7}{11}{The process of extension from the ends of curves. (b) The parametric curves with ends (blue dots) are presented in $\omcc $ of the teeth image (a). (c) The extended region $\omc $. (d) Among $\ome $, the region $\ER $ is displayed in red. \relax }{figure.caption.7}{}}
 \newlabel{Eq:proposed}{{3.2}{11}{Segmentation using active contours}{equation.3.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Identification of tooth and non-tooth regions}{11}{subsection.3.4}\protected@file@percent }
 \newlabel{Subsec:regClass}{{3.4}{11}{Identification of tooth and non-tooth regions}{subsection.3.4}{}}
@@ -165,12 +167,10 @@
 \newlabel{sub@Fig:lee2010_2}{{(c)}{13}{MCWA2 \cite {LeeSegRemoval:2010}\relax }{figure.caption.8}{}}
 \newlabel{Fig:na2014}{{8(d)}{13}{MWA \cite {Na:2014LteethMorph}\relax }{figure.caption.8}{}}
 \newlabel{sub@Fig:na2014}{{(d)}{13}{MWA \cite {Na:2014LteethMorph}\relax }{figure.caption.8}{}}
-\newlabel{Fig:result}{{8(e)}{13}{ours\relax }{figure.caption.8}{}}
-\newlabel{sub@Fig:result}{{(e)}{13}{ours\relax }{figure.caption.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces (a) Input images \cite  {T000,T008,T005,T018,T017} and segmented results. \relax }}{13}{figure.caption.8}\protected@file@percent }
-\newlabel{Fig:results}{{8}{13}{(a) Input images \cite {T000,T008,T005,T018,T017} and segmented results. \relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A}List of features of non-tooth region}{13}{appendix.A}\protected@file@percent }
-\newlabel{App:list_nonteeth}{{A}{13}{List of features of non-tooth region}{appendix.A}{}}
+\newlabel{Fig:result}{{8(e)}{13}{Our algorithm\relax }{figure.caption.8}{}}
+\newlabel{sub@Fig:result}{{(e)}{13}{Our algorithm\relax }{figure.caption.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces  Segmented results of several methods for input images \cite  {T000,T008,T005,T018,T017}. \relax }}{13}{figure.caption.8}\protected@file@percent }
+\newlabel{Fig:results}{{8}{13}{Segmented results of several methods for input images \cite {T000,T008,T005,T018,T017}. \relax }{figure.caption.8}{}}
 \bibstyle{siam}
 \bibdata{bibliography}
 \bibcite{T000}{1}
@@ -178,6 +178,8 @@
 \bibcite{Blum:1967}{3}
 \bibcite{Caselles:1997:GAC}{4}
 \bibcite{Chan:2001:chanvese}{5}
+\@writefile{toc}{\contentsline {section}{\numberline {A}List of features of non-tooth region}{14}{appendix.A}\protected@file@percent }
+\newlabel{App:list_nonteeth}{{A}{14}{List of features of non-tooth region}{appendix.A}{}}
 \bibcite{Cohen:1991:Balloon}{6}
 \bibcite{Dollar:2006:BEL}{7}
 \bibcite{T005}{8}
@@ -213,7 +215,7 @@
 \bibcite{Xu:1997:GVF}{38}
 \bibcite{Xu:2000:ParamGeoAC}{39}
 \bibcite{SpecRemoval:2015}{40}
-\bibcite{Zhang:2020}{41}
+\bibcite{Zhang:2020:ResNeSt}{41}
 \bibcite{Zhang:1984}{42}
 \bibcite{Zhang:2018:BCE}{43}
 \bibcite{Zhu:2020:teethMaskrcnn}{44}
