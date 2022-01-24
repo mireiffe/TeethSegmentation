@@ -5,33 +5,32 @@ The style file: siam.bst
 Database file #1: bibliography.bib
 Warning--I didn't find a database entry for "LeeWater:2010"
 Warning--I didn't find a database entry for "LeeSegRemoval:2010"
-Warning--empty journal in T000
 You've used 45 entries,
             2030 wiz_defined-function locations,
-            800 strings with 12630 characters,
-and the built_in function-call counts, 17584 in all, are:
-= -- 1680
-> -- 813
+            799 strings with 12614 characters,
+and the built_in function-call counts, 17545 in all, are:
+= -- 1677
+> -- 807
 < -- 0
-+ -- 324
-- -- 276
-* -- 1319
-:= -- 2648
-add.period$ -- 57
++ -- 322
+- -- 274
+* -- 1315
+:= -- 2642
+add.period$ -- 56
 call.type$ -- 45
 change.case$ -- 271
 chr.to.int$ -- 0
-cite$ -- 46
+cite$ -- 45
 duplicate$ -- 796
 empty$ -- 1330
-format.name$ -- 276
-if$ -- 3841
+format.name$ -- 274
+if$ -- 3834
 int.to.chr$ -- 0
 int.to.str$ -- 45
 missing$ -- 41
-newline$ -- 150
+newline$ -- 149
 num.names$ -- 89
-pop$ -- 309
+pop$ -- 306
 preamble$ -- 1
 purify$ -- 227
 quote$ -- 0
@@ -43,8 +42,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 176
-warning$ -- 1
+warning$ -- 0
 while$ -- 169
 width$ -- 47
 write$ -- 413
-(There were 3 warnings)
+(There were 2 warnings)

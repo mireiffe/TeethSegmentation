@@ -184,9 +184,28 @@ where $\mbox{sgn}$ is the sign function and
 \end{align*}
 By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge point. The GADF can be naturally extended to color images; see~\cite{Hahn:2006,Hahn:2010:GADF}.
 
+% Subsection: Edges outside the tooth boundaries
+\subsection{Edges-regions}
+\label{Subsec:er_outside}
+
+The edge-region is roughly defined as the chain of thin regions containing most of object boundaries, regardless of the strength of edges. In practice, as shown in Figure~\ref{Fig:1d}, $\oma$ is a candidate for the edge-region, because $\ome$ contains many regions that are not intersected with the boundaries of the objects. Hence it is necessary to remove them as many as possible.
+
+% Figure: Weak edges in teeth image
+\input{./fig1.tex}
+
+As an initial contour evolves forward to edges, these unnecessary parts hinder the movement of the contour. In fact, except for connected components of $\oma$ with closed shape, it can be easily removed or disregarded; the components with a small size or flat image intensities around them are easily removed \cite{Hahn:2006}. For the components that cannot form a closed shape, the evolving contour can intrude from the ends and disregard the component. The connected components with closed shape are mainly caused by a strong light reflection. They, like a barrier, block the movement of the contour and make it difficult to find the correct tooth boundary. As a result, presence of such light reflections is a major obstacle to individual tooth segmentation. The described contour evolution is shown in Figure~\ref{Fig:er_outside}.
+
+% Figure: Edge regions outside the tooth boundaries
+\input{./fig2.tex}
+
+% Subsection: Active Contour Model
+\subsection{Active Contour Model}
+\label{Subsec:activecontour}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+액티브 컨투어에 대한 설명
 
 Under this setting, contour evolution using a level set formulation is proposed in \cite{Hahn:2010:GADF}:
 \begin{align}
@@ -207,39 +226,26 @@ and $\delta_{S}(X)$ is a dilation of a set $X$ by a $3 \times 3$ square structur
 MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Subsection: Edges outside the tooth boundaries
-\subsection{Edges-regions}
-\label{Subsec:er_outside}
 
-The edge-region is roughly defined as the AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA of thin regions containing most of object boundaries, regardless of the strength of edges. In practice, as shown in Figure~\ref{Fig:1d}, $\oma$ is a candidate for the edge-region, because $\ome$ contains many regions that are not intersected with the boundaries of the objects. Hence it is necessary to remove them as many as possible.
+% Subsection: Light reflections in the teeth image
+\subsection{Light reflections in teeth images}
+\label{Subsec:light}
 
-% Figure: Weak edges in teeth image
-\input{./fig1.tex}
+There have been several studies to remove light reflections in a single image \cite{SpecRemoval:2018,SpecRemoval:2020,SpecRemoval:2016,SpecRemoval:2015}. In these works, an image was separated into a non-reflective image and a reflection map in the image domain. These methods are based on the intensity histogram or assumption of a dichromatic image model using color information of the reflective region. However, in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, parts of the tooth surface is also removed along with the light reflection. 
 
-As an initial contour evolves forward to edges, these unnecessary parts hinder the movement of the contour. In fact, except for connected components of $\oma$ with closed shape, it can be easily removed or disregarded; the components have small size or flat image intensities around them are easily removed \cite{Hahn:2006}. For the components that cannot form a closed shape, the evolving contour can intrude from the ends and disregard the component. The connected components with closed shape are mainly caused by a strong light reflection. They block the movement of the contour and make it difficult to find the correct tooth boundary like a barrier. As a result, presence of such light reflections is a major obstacle to individual tooth segmentation. The described contour evolution is shown in Figure~\ref{Fig:er_outside}.
+Although there was an attempt to remove the light reflection in teeth images using a single layer perceptron \cite{LeeRemoval:2010}, there is a limitation that it cannot be applied to a wide range of images because the perceptron has an extremely simple structure and learning is processed with only one image.
 
-% Figure: Edge regions outside the tooth boundaries
-\input{./fig2.tex}
-
-
-% Subsection: Avoidance of light reflections in the teeth image
-\subsection{Avoiding light reflections in teeth images}
-\label{Subsec:avoidance}
-
-There are previous studies to remove light reflections in a single image \cite{SpecRemoval:2018,SpecRemoval:2020,SpecRemoval:2016,SpecRemoval:2015}. In these, an image was separated into non--reflective image and reflection map on the image domain. These methods are based on the intensity histogram or assuming a dichromatic image model which uses color information of the reflective region. But in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, a part of the tooth surface is also removed with the light reflection. 
-
-There has been an attempt to remove the light reflection in teeth images using the single layer perceptron \cite{LeeRemoval:2010}, but there is a limitation that it cannot be applied to a wide range of image because learning is processed using only one image as well as the perceptron has an extremely simple structure.
-
-The most important thing is that even if light reflection is removed from the teeth image, individual tooth can not be segmented immediately. There are a lot of unnecessary edges appear other than due to the light reflection. Each can be breakable since it does not have a closed shape, but if they stick together forming a large bunch or a closed shape, it becomes an obstacle to detect boundary. In addition, if light reflection appears on the tooth boundary, the edge collapses and the boundary becomes undetectable when the light reflection is removed. Therefore, we seek a way to directly obtain only the edge region near the tooth boundary, regardless of stains, noise or light reflection of the image. For this, a supervised learning method with deep neural networks is considered.
+The most problematic thing is that even if light reflection is removed from the teeth image, individual tooth cannot be segmented immediately. This is because there are a lot of unnecessary edges besides the light reflection. If each is simple, it does not interfere with the movement of the contour, but if they stick together forming a large bunch or enclosing a region, it hinders the movement of the contour and becomes an obstacle to detecting the boundary of the tooth. In addition, when light reflection appears on the tooth boundary, the edge collapses when the light reflection is removed, so that the boundary becomes undetectable. Therefore, we seek a way to directly obtain only the edge-region near the tooth boundary, regardless of stains, noise or light reflection of the image. For this, a supervised learning method with deep neural networks is considered.
 
 % Section: Proposed Method
 \section{Proposed Method}
 \label{Sec:PM}
-In this section, we describe the steps of the proposed individual tooth segmentation algorithm. It have the following four main steps and the whole process is shown in Figure~\ref{Fig:flowchart}:
+In this section, we describe the steps of the proposed individual tooth segmentation algorithm. It has the following four main steps and the whole process is shown in Figure~\ref{Fig:flowchart}:
 
 \begin{itemize}
-    \item[STEP 1] Obtaining pre--edge regions from a neural network,
-    \item[STEP 2] Refinement of the pre--edge region,
+\setlength{\itemindent}{5mm}
+    \item[STEP 1] Obtaining pseudo edge-regions from a neural network,
+    \item[STEP 2] Refinement of the pseudo edge-region,
     \item[STEP 3] Segmentation using active contours with competing ballon forces,
     \item[STEP 4] Identification of tooth and non--tooth region.
 \end{itemize}
@@ -248,18 +254,20 @@ In this section, we describe the steps of the proposed individual tooth segmenta
 \input{./fig3.tex}
     
 % Subsection: Obtaining pre-edge regions from a neural network
-\subsection{Obtaining pre--edge regions from a neural network}
+\subsection{Obtaining pseudo edge-region from a neural network}
 \label{Subsec:pre_er}
 
-As shown in Figure~\ref{Fig:flowchart}(a), we make labels for training data using GADF and manual selection; first, we manually select the connected components of $\Omega_E$ overlapping the tooth boundary, and the label $Y\colon\Omega\subset\mathbf{R}^2\rightarrow\{0,\,1\}$ is defined as a binary image
+As shown in Figure~\ref{Fig:flowchart}(a), we make labels for training data using GADF and manual selection; first, we manually select the connected components of $\Omega_E$ intersecting the tooth boundary, then the label $Y\colon\Omega\subset\mathbf{R}^2\rightarrow\{0,\,1\}$ is defined as a binary image
 \begin{align*}
     Y(x) =
     \begin{cases}
-        1 & x\in\oms\\
-        0 & \mbox{otherwise}
-    \end{cases}\cm
+        1 & x\in\oms\cm\\
+        0 & \mbox{otherwise}\cm
+    \end{cases}
 \end{align*}
-where $\oms$ is obtained by dilation of the selected region from $\ome$ using a structuring element which is an $\eta\times\eta$ matrix with the origin at its center. For training, the part of ResNeSt--50 \cite{Zhang:2020} before the global average pooling layer is used as the encoder part, and a custom upscale module is designed for the decoder part. The network takes a 3 channel image $X\colon\Omega\rightarrow\mathbf{R}^3$ as an input and produces a 1 channel image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ as an output and is trained by minimizing the binary cross entropy (BCE) loss function \cite{Zhang:2018:BCE} of $Y$ and $\hat{Y}$. In Figure~\ref{Fig:labeling}, the labeling process is presented and the entire network structure is shown in the Figure~\ref{Fig:network}.
+where $\oms$ is obtained by dilating the selected regions from $\ome$ using an $\eta\times\eta$ square structuring element with the origin at its center. In Figure~\ref{Fig:labeling}, the labeling process is presented.
+
+We consider a neural network consisting of the part of ResNeSt--50 \cite{Zhang:2020} before the global average pooling layer as the encoder part and a custom upscaling module for the decoder part. The network takes a 3 channel image $X\colon\Omega\rightarrow\mathbf{R}^3$ as an input and produces an image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ as an output and is trained by minimizing the binary cross entropy (BCE) loss function \cite{Zhang:2018:BCE} of $Y$ and $\hat{Y}$. The entire network structure is shown in Figure~\ref{Fig:network}.
 
 % Figure: Labeling images
 \begin{figure}[]
@@ -293,19 +301,14 @@ where $\oms$ is obtained by dilation of the selected region from $\ome$ using a 
     \label{Fig:labeling}
 \end{figure}
 
-The network output $\hat{Y}(x)$ is the probability that an edge region caused by tooth boundary exists at $x$. We call
-\begin{align*}
-    \omcc = \left\{ x\in\Omega \mid \hat{Y}(x) > 0.5 \right\}
-\end{align*}
-as a pre--edge region of $X$, and pre--edge regions for some teeth images are shown in Figure~\ref{Fig:pre_er}. One notable point is that although the label contains many unnecessary regions, most of $\omcc$ are correctly located on the tooth boundary.
+The network output $\hat{Y}(x)$ is the probability that an edge-region caused by the tooth boundary exists at $x$. We call
+\begin{align}
+    \omcc = \left\{ x\in\Omega \mid \hat{Y}(x) > 0.5 \right\} \label{Def:omcc}
+\end{align}
+as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth images are shown in Figure~\ref{Fig:pre_er}.
 
 % Figure: Network structure
-\begin{figure}[]
-    \centering
-    \input{./TeethSeg_network.tex}
-    \caption{The structure of neural network used in this paper. Overall, each bold arrow represents a layer and types of the layers are listed on the right--bottom legend in order to arrow colors. Each layer is followed by a batch normalization (BN) and an activation function, with only two exceptions; the global average poolings (GAP) and fully connected layers in (b) having thin lines width. The type of the activation function is represented by the shape of arrow heads, and it is also listed in the legend. In the legend, there are some notations; $/$ and $+$ mean stride and padding of the layer with the followind number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite{He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. }
-    \label{Fig:network}
-\end{figure}
+\input{./TeethSeg_network.tex}
 
 % Figure: pre_er
 \begin{figure}[]
@@ -335,10 +338,12 @@ as a pre--edge region of $X$, and pre--edge regions for some teeth images are sh
 \end{figure}
 
 % Subsection: Refinement of pre--edge region
-\subsection{Refinement of pre--edge region}
+\subsection{Refinement of pseudo edge-region}
 \label{Subsec:refine}
 
-The region $\omcc$ obtained in Section~\ref{Subsec:pre_er} is not yet perfect. As it contains small fragments and leakages, we apply a refinement process to $\omcc$ to form closed individual tooth area. First, small fragments and holes are removed compared to the size of the image domain $\Omega$, and then dilation and erosion are applied in order by the structuring element of $\omega \times\omega$ matrix with origin at its center. Second, since we want $\omcc$ to consist of thick closed curves, leakage means breaking of the closed curve. Thus, we can fill the leakages by extending the ends of the curves in $\omcc$. By applying the chin--coding \cite{Freeman:1961:Chaincoding,Jonker:1992:Morphological} to the skeleton \cite{Blum:1967} of $\omcc$, we can find the parametric curves representing $\omcc$, see Figure~\ref{Fig:ex_ends_b}.
+내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜
+
+The region $\omcc$ in Section~\eqref{Def:omcc} is not yet perfect enough for segmenting individual tooth. Since it contains small fragments and leakages, which mean breakage of the closed curve, a refining process is applied to $\omcc$ to form a thick closed curve surrounding the individual tooth. First, small fragments and holes compared to the size of the image domain $\Omega$ are removed, and then dilation and erosion are sequentially applied by an $\omega \times\omega$ square structuring element with origin at its center. Second, since we want $\omcc$ to consist of thick closed curves,  Thus, we can fill the leakages by extending the ends of the curves in $\omcc$. By applying the chin--coding \cite{Freeman:1961:Chaincoding,Jonker:1992:Morphological} to the skeleton \cite{Blum:1967} of $\omcc$, we can find the parametric curves representing $\omcc$, see Figure~\ref{Fig:ex_ends_b}.
 
 For each end, the strategy for extension is to return if not reached; if the leakage is not filled after a certain length of extension, then return and start extension in the next direction. Three directions are considered sequentially:
 \begin{itemize}
@@ -382,51 +387,53 @@ We call the resulting extension as $\omc$ and finally, we define a region $\ER :
 \end{figure}
 
 % Subsection: Segmentation using active contours with competing ballon forces
-\subsection{Segmentation using active contours with competing ballon forces}
+\subsection{Segmentation using active contours}
 \label{Subsec:SegLevelset}
 
 In this section, we denote $\sdf(A)$ by a SDF which is negative on the set $A$ and constantly zero on $\partial A$. In addition, for a SDF $\phi$, $\opp$, $\opn$ and $\opo$ denote the sets $\left\{x\mid \phi > 0 \right\}$, $\left\{x\mid \phi < 0 \right\}$ and $\left\{x\mid \phi = 0 \right\}$, respectively.
 
-The movement of the active contour is only affected by the force applied in the normal direction of the contour. Therefore, by defining the force, we can move the active contour to achieve our goal. This kind of methods are called geometric active contours \cite{Caselles:1997:GAC,Xu:2000:ParamGeoAC} and widely used by formulated as a level set method. In this paper, we segment each tooth region using multiple active contours formulated by multiple level sets. Let $\{\Omega_i\}_{i=1}^N$ be a connected component of a set $\Omega\setminus\omc$. As shown in Figure~\ref{Fig:ex_ends_d}, some $\omi$ is a subset of each tooth region obtained by subtracting $\omc$ from the entire tooth region. Thus, to find tooth regions, we push each $\partial\omi$ inside $\omc$ and stop when it arrives an edge point. For this, we propose a contour evolution using a level set formulation:
+The movement of the contour is performed by a force applied in the normal direction to the contour. Therefore, by defining the appropriate force, we can move the contour to reach the boundary of the object. This kind of methods are called geometric active contours methods \cite{Caselles:1997:GAC,Xu:2000:ParamGeoAC} and are widely used formulated as a level set method. In this paper, we segment each tooth region using multiple active contours formulated as multiple level sets. Let $\{\Omega_i\}_{i=1}^N$ be a collection of all connected component of $\Omega\setminus\omc$. As shown in Figure~\ref{Fig:ex_ends_d}, $\omi$ is included in an individual tooth region, gum or oral cavity. Thus, to find a curve enclosing an individual tooth, we take the curve on $\partial\omi$ and push it outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
 \begin{align}
     \frac{\partial}{\partial{t}}\phi_i(x,\,t) &= \mu\kappa(\phi_i)\ngphii + \left( \chi_{\Omega\setminus\ER}\fci +\chi_{\omc\setminus\ER}F_s \right) \ngphii-\chi_{\ER}F_a\cdot \gphi \cm \label{Eq:proposed}\\
     \phi_i(x,\,0) &= \phi_{i,\,0}(x)\cm \nonumber
 \end{align}
-where $\mu$ is a constant and $\phi_{i,\,0}(x)=\sdf(\omi)$ for all $i=1\cm\cdots\cm N$. There are three forces $F_a$, $F_s$ and $\fci$; $F_a$ is GADF defined in \eqref{Def:gadf}, $F_s$ is the statistically reinstating force proposed in \cite{Park:2014:SRM}. The force $F_s(x)$ examine intensity distributions of in and out regions of a given contour and decided as $1$ or $-1$ to push the contour so that $x$ belongs to a region with more similar intensity. The force $\fci$ is the competing balloon force defined as
+where $\mu$ is a constant, $\kappa(\phi)_i$ is the curvature of $\phi_i$, and $\phi_{i,\,0}(x)=\sdf(\omi)$ for all $i=1\cm\ldots\cm N$. Here are three forces $F_a$, $F_s$ and $\fci$; $F_a$ is GADF defined in~\eqref{Def:gadf}, $F_s$ is the statistically reinstating force proposed in~\cite{Park:2014:SRM}. The force $F_s(x)$ examines intensity distributions of in and out regions of a given contour and decided as $1$ or $-1$ to push the contour so that $x$ belongs to a region with more similar intensity. The force $\fci$ is the competing balloon force defined as
 \begin{align*}
     \fci(x,\,t) =
-        -1 - \sum_{j\neq i}\min\left(\phi_j(x,\,t) - 1,\,0\right)\cm\quad\forall i=1,\,\cdots,\,N\cm
+        -1 - \sum_{j\neq i}\min\left(\phi_j(x,\,t) - 1,\,0\right)\cm\quad\forall i=1,\,\ldots,\,N\cm
 \end{align*}
-which is designed to inflate the set $\opn$ until it meet $\Omega_{\phi_{j}}^-$ for any $j\neq i$, and then stop.
+which is designed to inflate the set $\opn$ until it meets $\Omega_{\phi_{j}}^-$ for any $j\neq i$ and then stop.
 
-Suppose that an initial contour $\opo$ is evolving by \eqref{Eq:proposed}. Basically, $\opn$ is inflated by $\fci$ and so $\opo$ goes into the surrounding region $\omc$. In $\omcc$, we can consider three cases in order; $\opo$ is in $\ER$, outside $\ER$ and far from the other contour, or outside $\ER$ and faces to other contours. If $\opo$ is in $\ER$, it goes to edge following $F_a$. If not, $\opo$ evolves by $\fci + F_s$ and edge is determined by the value of $F_s$ since $\fci$ only can have a value in $[-1,\,0]$.
-In the case of there are neither $\ER$ nor detected edge by $F_s$, the contour $\opo$ evolves only following $\fci$ and so keeps going until it faces some other contours and determines edge by competing each other.
+Suppose that an initial contour $\opo$ is evolving by \eqref{Eq:proposed}. Basically, $\opn$ is inflated by $\fci$ so that $\opo$ enters the interior of the region $\omc$. In $\omc$, we consider three cases of $\opo$ in order: inside $\ER$, outside $\ER$ a way from other contours, and outside $\ER$ facing other contours. If $\opo$ is in $\ER$, it follows $F_a$ to the edge . If not, $\opo$ evolves by $\fci + F_s$ and edge is determined by the value of $F_s$ since $\fci$ only can have a value in $[-1,\,0]$. In the case that there are neither $\ER$ nor edges detected by $F_s$, the contour $\opo$ continues to evolve only with $\fci$ going until it encounters some other contours and determines an edge by competing each other.
 
 % Subsection: Teeth and non-teeth region classification
 \subsection{Identification of tooth and non-tooth regions}
 \label{Subsec:regClass}
 
-As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth from the result in Section~\ref{Subsec:SegLevelset}, we identify tooth and a non-tooth regions. In a human teeth image, tooth and non--tooth regions can be distinguished by shape and color. Teeth are relatively white and have convex shape, thus contrasting regions can be removed. We can check the shape or color of a region by considering several aspects; inertia tensor about the center of mass, curvature on the boundaries or point distribution in a color space. The region having features in the list of Appendix~\ref{App:list_nonteeth} is identified as a non--teeth region in order.
+As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth from the result in Section~\ref{Subsec:SegLevelset}, we need to identify tooth and non-tooth regions. In a human teeth image, tooth and non-tooth regions can be easily distinguished by shape and color. Teeth are relatively white and convex in shape, thus non-tooth regions can be easily removed. We can check the shape or color of a region by considering several aspects: inertia tensor, curvature on the boundaries, and point distribution in a color space. The region having the following features is identified as a non--teeth region in order.
+
+어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자
 
 % Section: Experimental results
 \section{Experimental results and numerical aspect}
 \label{Sec:result}
 
-\textbf{Common parameters.} For the all experiments, parameters are fixed as $\mu=1$ and $\eta=\lfloor|\Omega| / 600 + 1/2\rfloor$. In Section~\ref{Subsec:refine}, $\omega=2\lfloor\theta + 1/2\rfloor + 1$ where $\theta$ is average thickness of $\omcc$ measured by sampling random points in $\omcc$. In the Section~\ref{Subsec:refine}, small fragments having skeleton shorter than $\sqrt{m^2+n^2} / 10$ and holes with size $< mn / 10000$ are removed where $m$ and $n$ are height and width of the image, respectively.
+\textbf{Common parameters.} In all experiments, the parameter $\mu$ in~\eqref{} is fixed at $\mu=1$. In Section~\ref{}, $\eta=\lfloor|\Omega| / 600 + 1/2\rfloor$ and in Section~\ref{}, $\omega=2\lfloor\theta + 1/2\rfloor + 1$, where $\theta$ is the average thickness of $\omcc$ measured by sampling random points in $\omcc$. Also in Section~\ref{Subsec:refine}, small fragments with a skeleton shorter than $\sqrt{m^2+n^2} / 10$ and holes with size less than $mn / 10000$ are removed for an $m\times n$ image.
 
-\noindent\textbf{Numerical schemes.} Overall, finite difference scheme is applied to all differentiations. For the contour evolution in \eqref{Eq:proposed}, the explicit Euler method is used. While doing the contour evolution, the level set function is frequently reinitialized by the method in \cite{SUSSMAN:1994}. The skeleton of  $\omcc$ in Section~\ref{Subsec:refine} is obtained by applying a skeletonization algorithm of \cite{Zhang:1984} to $\left\{x \mid \ngphi(x) < \sqrt{2}/2\right\}$ where $\phi=\sdf(\omcc)$.
+\noindent\textbf{Numerical schemes.} Overall, the finite difference scheme is applied to all derivatives. For the contour evolution \eqref{Eq:proposed}, the explicit Euler method is used. While performing the contour evolution, the level set function is frequently reinitialized by the method in \cite{SUSSMAN:1994}. The skeleton of $\omcc$ \eqref{} is obtained by applying a skeletonization algorithm of \cite{Zhang:1984} to $\left\{x \mid |\gphi(x)| < \sqrt{2}/2\right\}$ with $\phi=\sdf(\omcc)$.
 
-\noindent\textbf{Data augmentation.} To get more diverse training data, data augmentations are applied. In each epoch, images are resized with randomly sampled height in $[256,\, 512]$, and $256\times256$ patch or its horizontal flip is randomly cropped \cite{He:2015:ResNet,Krizhevsky:2012:ImageNet}. Furthermore, for each image and each augmentation in the following list, it is randomly decided that the augmentation is applied or not with a probability of $0.5$:
+\noindent\textbf{Data augmentation.} To get more diverse training data, data augmentation is applied. In each epoch, images are resized with randomly sampled height in $[256,\, 512]$, and $256\times256$ patch or its horizontal flip is randomly cropped \cite{He:2015:ResNet,Krizhevsky:2012:ImageNet}. Furthermore, for each image, the augmentation in the following list is randomly applied with a probability of $0.5$ within the given ranges:
 \begin{itemize}
-    \item Gaussian smoothing with $\sigma_1\in[0.25,\,0.75]$,
-    \item Adding Gaussian noise with $\sigma_2\in[0.005,\,0.015]$,
+    \item Gaussian smoothing with $\sigma\in[0.25,\,0.75]$,
+    \item Adding Gaussian noise with $\sigma\in[0.005,\,0.015]$,
     \item Gamma correction with $\gamma\in[0.5,\,2]$,
 \end{itemize}
-each parameter was randomly determined within the given ranges.
 
-\noindent\textbf{Training data.} The training dataset is composed as $46$ images obtained from web search using various search words. All teeth images contains light reflections on the surface of teeth, gums or other parts.
+\noindent\textbf{Training data.} The training dataset consists of $46$ images obtained from web searches using various search terms. All teeth images contain \cite{} light reflections on the surface of teeth, gums or other parts.
 
-\noindent\textbf{Training.} The neural network is trained by minimizing the BCE loss function \cite{Zhang:2018:BCE} using the Adam optimizer \cite{Kingma:2017}. Exponential decay rates for moment of Adam optimizer are set as $(\beta_1,\,\beta_2)=(0.9,\,0.999)$ and the learning rate is $0.005$. Network is trained over $10000$ epochs with $46$ iterations for each epoch, and the parameters after the last epoch are selected. In Figure~\ref{Fig:results}, several teeth images and its segmentation results for existing and proposed methods. As shown in the figure, the proposed method shows prominent performance. Quantitative measurement is not possible since there is no ground truths, but compared to the results of the existing methods, it can be seen that the tooth regions are neatly segmented. In particular, only the tooth regions are segmented in the teeth images in which the lips and the face part exist.
+\noindent\textbf{Training.} The neural network is trained by minimizing the BCE loss function \cite{Zhang:2018:BCE} using the Adam optimizer \cite{Kingma:2017}. The exponential decay rates for the moment of Adam optimizer are set $(\beta_1,\,\beta_2)=(0.9,\,0.999)$ and the learning rate is $0.005$. Network is trained over $10{,}000$ epochs with $46$ iterations for each epoch, and the parameters after the last epoch are selected. 
+
+\noindent\textbf{Results.} In Figure~\ref{Fig:results}, several teeth images with its segmentation results for existing and proposed methods are presented. As shown in the figure, the proposed method shows prominent results. Quantitative measurement is impossible since there is no ground truth, but compared to the results of the existing methods, it can be seen that the tooth regions are neatly segmented. In particular, only the tooth regions are segmented in the teeth images the lips and the face part exist.
 
 % Figure: Edge region candidate and results
 \begin{figure}[]
@@ -495,11 +502,13 @@ each parameter was randomly determined within the given ranges.
 \section{Conclusion}
 \label{Sec:Conclusion}
 
-In this paper, we proposed a method for individual tooth segmentation in a human teeth image. Including the strong light reflection, there are several obstacles that hinder the segmentation process. We solved these problem by acquiring pre--edge region using deep supervised learning method. In the labeling process, model--based supporting was devised in order to reduce the time consuming and costs. In addition, we proposed a contour evolution which determines edges using different forces depending on the situation while inflating the initial contour. 
+In this paper, we proposed a method for individual tooth segmentation in a human teeth image. Including the strong light reflection, there are several obstacles that hinder the segmentation process. We solved these problem by acquiring pseudo edge-region using a deep neural network with supervised learning. In the labeling process, model-based methods were used to reduce time consumption and cost. In addition, we proposed contour evolution to inflating the initial contour using different forces depending on the situation 
 
-Among the existing methods, the model-based method shows insufficient performance. Although the supervised learning method using Mask R--CNN has excellent performance, it is difficult to construct the training data. This work is significant in that it proposed an algorithm that can easily prepare training data while having good performance through a combination of a model--based method and a supervised learning method. It was observed that the combination of the two methods made a synergistic effect; model--based methods streamline the labeling process for training neural networks and the networks simplify the problem by inferring pre--edge regions. 
+to find the boundary of the tooth from te refined pseudo edge-regions + identification of tooth and non-tooth region. 
 
-One of the most important application of individual tooth segmentation is the 3D teeth model reconstruction. It is hoped that this study will be of great help in reconstructing 3D teeth model from a 2D teeth image. In addition, obtaining pre--edge region learning can be widely applied to difficult image segmentation problems. Therefore, we hope that this strategy can be a breakthrough for other image segmentation problems that are not yet easy to solve.
+Among the existing methods, model-based methods show insufficient performance. Although the supervised learning method using Mask R--CNN has similar performance to ours, it is difficult to label the data for training. This work is significant in that it proposed an algorithm that can easily prepare training data while performing well through a combination of model-based methods and a supervised learning method. It is noted that the combination of the two methods produced a synergistic effect; model-based methods streamline the labeling process for training deep neural networks and the networks simplify the problem by inferring pseudo edge-regions. 
+
+One of the most important application of individual tooth segmentation is the 3D teeth model reconstruction. That this study will be of great help in reconstructing a more sophisticated 3D teeth model from a 2D teeth image.
 
 % Section: Acknowledgement
 % \section*{Acknowledgement}
@@ -509,17 +518,17 @@ One of the most important application of individual tooth segmentation is the 3D
 \section{List of features of non-tooth region}
 \label{App:list_nonteeth}
 
-The list below is applied sequentially, that is, the features of the next number are examined against regions not removed from the previous number. For a region, $c$ is the center of mass and $\mathcal{I}$ is the inertia tensor about the $c$. Furthermore, $\Lambda$ and $\lambda$ are maximal and minimal eigenvalues of $\mathcal{I}$, respectively, and $v$ is an normalized eigenvector corresponding to the $\lambda$. Let the image $I$ be embedded into the CIELAB color space and by denoted $I_{LAB}(x)=[L(x),\,A(x),\,B(x)]$, and let $x^*\in\Omega$ be a point such that
+The methods in the list below is applied sequentially for identification of tooth and non-tooth regions. For a region, let $c$ be the center of mass and $\mathcal{I}$ the inertia tensor about $c$. Then the inertia tensor has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda \le \lambda$). Let $v$ be an normalized eigenvector corresponding to the $\lambda$. Let the image $I$ be embedded into the CIELAB color space~\cite{} and denoted by $I_{LAB}(x)=[L(x),\,A(x),\,B(x)]$, and let $x^*\in\Omega$ be a point such that
 \begin{align*}
     x^* = \argmax A(x)\pd
 \end{align*}
 
 \begin{itemize}
-    \item [(F--1)] The center of mass $c$ is outside the region,
+    \item [(F--1)] If the center of mass $c$ is outside the region, a region identified as a non-tooth region.
 
-    \item [(F--2)] The ratio $\Lambda / \lambda$ is large than the average of the ratio for all regions and $|v\cdot e_1| < \cos(\pi/9)$ where $e_1$ is unit vector $(1,\,0)$,
+    \item [(F--2)] If the ratio $\Lambda / \lambda$ is larger than the average of the ratio for all regions and $|v\cdot e_1| \le \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region identified as a non-tooth region.
     
-    \item [(F--3)] When counting the number of points with positive or negative curvature on the edge, there are more points of negative curvature than points of positive curvature,
+    \item [(F--3)] Count the number of points with positive or negative curvature on the boundary of region. If there are more points of negative curvature than points of positive curvature, the region is identified as a non-tooth region
     
     \item [(F--4)] For each vertical line passing through the region, values of $I_{LAB}$ on the points where the line passes are clustered together $I_{LAB}(x^*)$ by the $k$--means clurstering algorithm.
 \end{itemize}

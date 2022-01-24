@@ -1,18 +1,19 @@
 \begin{thebibliography}{10}
 
 \bibitem{T000}
-{\sc M.~S.~M. ABDLHMED}, {\em Developmental disturbance of teeth},  (2018).
+{\sc M.~S.~M. Abdlhmed}, {\em Developmental disturbance of teeth}, faculty of
+  Basic Medical Science-Libyan International Medical University,  (2018).
 
 \bibitem{T008}
 {\sc BioMin}, {\em What are white spots on teeth? / what are white marks on
   teeth?}
 \newblock
-  \url{https://www.biomintoothpaste.com.au/wp-content/uploads/2018/02/20171031_161122-600X400.jpg}.
+  \url{https://www.biomintoothpaste.com.au/biomin-learning-articles-centre/white-spot-repair/}.
 \newblock Accessed: 2021-11-22.
 
 \bibitem{Blum:1967}
-{\sc H.~Blum et~al.}, {\em A transformation for extracting new descriptors of
-  shape}, vol.~43, MIT press Cambridge, MA, (1967).
+{\sc H.~Blum}, {\em A transformation for extracting new descriptors of shape},
+  vol.~43, MIT press, Cambridge, MA, 1967.
 
 \bibitem{Caselles:1997:GAC}
 {\sc V.~Caselles, R.~Kimmel, and G.~Sapiro}, {\em Geodesic active contours},
@@ -32,10 +33,10 @@
   Vision and Pattern Recognition (CVPR'06), vol.~2, (2006), pp.~1964--1971.
 
 \bibitem{T005}
-{\sc dozenist}, {\em Photo of teeth.}
+{\sc Dozenist}, {\em Photo of teeth,}.
 \newblock
-  \url{https://en.wikipedia.org/wiki/Human_tooth#/media/File:06-10-06smile.jpg}.
-\newblock Accessed: 2021-11-22.
+  \url{https://en.wikipedia.org/wiki/Human_tooth#/media/File:06-10-06smile.jpg},
+  2006.
 
 \bibitem{Freeman:1961:Chaincoding}
 {\sc H.~Freeman}, {\em On the encoding of arbitrary geometric configurations},
@@ -44,11 +45,12 @@
 \bibitem{SpecRemoval:2018}
 {\sc J.~Guo, Z.~Zhou, and L.~Wang}, {\em Single image highlight removal with a
   sparse and low-rank reflection model}, in Proceedings of the European
-  Conference on Computer Vision (ECCV), (2018), pp.~268--283.
+  Conference on Computer Vision (ECCV), 2018, pp.~268--283.
 
 \bibitem{Hahn:2006}
 {\sc J.~Hahn and C.-O. Lee}, {\em Highly accurate segmentation using geometric
-  attraction-driven flow in edge-regions}, IMA Preprints Series,  (2006).
+  attraction-driven flow in edge-regions \# 2125}, IMA Preprints Series,
+  (2006).
 
 \bibitem{Hahn:2010:GADF}
 \leavevmode\vrule height 2pt depth -1.6pt width 23pt, {\em Geometric
@@ -64,13 +66,13 @@
 \bibitem{He:2015:ResNet}
 {\sc K.~He, X.~Zhang, S.~Ren, and J.~Sun}, {\em Deep residual learning for
   image recognition}, in Proceedings of the IEEE Conference on Computer Vision
-  and Pattern Recognition (CVPR), (2016), pp.~770--778.
+  and Pattern Recognition (CVPR), 2016, pp.~770--778.
 
 \bibitem{He:2019:ResNetTrick}
 {\sc T.~He, Z.~Zhang, H.~Zhang, Z.~Zhang, J.~Xie, and M.~Li}, {\em Bag of
   tricks for image classification with convolutional neural networks}, in
   Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
-  Recognition (CVPR), (2019), pp.~558--567.
+  Recognition (CVPR), 2019, pp.~558--567.
 
 \bibitem{Jonker:1992:Morphological}
 {\sc P.~P. Jonker}, {\em Morphological Image Processing: Architecture and VLSI
@@ -224,7 +226,7 @@
 \bibitem{Zhu:2020:teethMaskrcnn}
 {\sc G.~Zhu, Z.~Piao, and S.~C. Kim}, {\em Tooth detection and segmentation
   with mask r-cnn}, in 2020 International Conference on Artificial Intelligence
-  in Information and Communication (ICAIIC), (2020), pp.~70--72.
+  in Information and Communication (ICAIIC), 2020, pp.~70--72.
 
 \bibitem{Zhu:1996:RegCompet}
 {\sc S.~C. Zhu and A.~Yuille}, {\em Region competition: unifying snakes, region
