@@ -14,8 +14,7 @@
 \fi}
 \global\let\hyper@last\relax 
 \gdef\HyperFirstAtBeginDocument#1{#1}
-\providecommand\HyField@AuxAddToFields[1]{}
-\providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand*\HyPL@Entry[1]{}
 \citation{Kass:1988:Snakes}
 \citation{Xu:1997:GVF}
 \citation{Caselles:1997:GAC}
@@ -36,6 +35,7 @@
 \citation{WU:2016}
 \citation{Dollar:2006:BEL}
 \citation{Na:2014LteethMorph}
+\HyPL@Entry{0<</S/D>>}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
 \newlabel{Sec:Introduction}{{1}{1}{Introduction}{section.1}{}}
 \citation{Yuan:2020:teethParanomic}
@@ -46,26 +46,23 @@
 \citation{Hahn:2010:GADF}
 \citation{Hahn:2006}
 \citation{Hahn:2010:GADF}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Geometric Attraction-Driven Flow, edge-regions and segmentations}{2}{section.2}\protected@file@percent }
-\newlabel{Sec:er_teeth}{{2}{2}{Geometric Attraction-Driven Flow, edge-regions and segmentations}{section.2}{}}
+\citation{Hahn:2010:GADF}
+\@writefile{toc}{\contentsline {section}{\numberline {2}GADF, edge-regions and segmentations}{2}{section.2}\protected@file@percent }
+\newlabel{Sec:er_teeth}{{2}{2}{GADF, edge-regions and segmentations}{section.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}GADF}{2}{subsection.2.1}\protected@file@percent }
 \newlabel{Subsec:GADF}{{2.1}{2}{GADF}{subsection.2.1}{}}
+\newlabel{Def:gadf}{{2.1}{2}{GADF}{equation.2.1}{}}
+\citation{Hahn:2010:GADF}
+\citation{Hahn:2010:GADF}
 \citation{T001}
 \citation{T001}
 \citation{Hahn:2006}
 \citation{Hahn:2010:GADF}
-\citation{SpecRemoval:2018}
-\citation{SpecRemoval:2020}
-\citation{SpecRemoval:2016}
-\citation{SpecRemoval:2015}
-\citation{LeeRemoval:2010}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Edges-regions}{3}{subsection.2.2}\protected@file@percent }
 \newlabel{Subsec:er_outside}{{2.2}{3}{Edges-regions}{subsection.2.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Active Contour Model}{3}{subsection.2.3}\protected@file@percent }
 \newlabel{Subsec:activecontour}{{2.3}{3}{Active Contour Model}{subsection.2.3}{}}
-\newlabel{Eq:gadf}{{2.1}{3}{Active Contour Model}{equation.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Light reflections in teeth images}{3}{subsection.2.4}\protected@file@percent }
-\newlabel{Subsec:light}{{2.4}{3}{Light reflections in teeth images}{subsection.2.4}{}}
+\newlabel{Eq:gadf}{{2.2}{3}{Active Contour Model}{equation.2.2}{}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:1a}{{1(a)}{4}{A teeth image \cite {T001}\relax }{figure.caption.1}{}}
 \newlabel{sub@fig:1a}{{(a)}{4}{A teeth image \cite {T001}\relax }{figure.caption.1}{}}
@@ -79,9 +76,20 @@
 \newlabel{sub@Fig:2b}{{(b)}{5}{$\ome $\relax }{figure.caption.2}{}}
 \newlabel{Fig:2c}{{2(c)}{5}{\relax }{figure.caption.2}{}}
 \newlabel{sub@Fig:2c}{{(c)}{5}{\relax }{figure.caption.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Teeth image with light reflection. (b) The region $\Omega _E$ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont (\ignorespaces \ref  {Eq:gadf}\unskip \@@italiccorr )}} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. \relax }}{5}{figure.caption.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces (a) Teeth image with light reflection. (b) The region $\Omega _E$ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by\nobreakspace  {}\textup  {\hbox {\mathsurround \z@ \normalfont  (\ignorespaces \ref  {Eq:gadf}\unskip \@@italiccorr )}} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. \relax }}{5}{figure.caption.2}\protected@file@percent }
 \newlabel{Fig:er_outside}{{2}{5}{(a) Teeth image with light reflection. (b) The region $\ome $ of (a). (c) Edge-regions obtained from (b) by dilation after removing unnecessary components. (d--f) From left to right, the contour evolution over time by~\eqref {Eq:gadf} is shown; the first column shows initial contours located at the left tooth, the right tooth, and outside of teeth. Observe that if the contour meet an edge-region, it digs into the edge-region along the GADF, and if the edge-region encloses regions, the contour stops at the boundary of those regions. Especially in (d), the contour cannot extract the entire tooth boundary. \relax }{figure.caption.2}{}}
-\citation{Zhang:2020}
+\citation{SpecRemoval:2018}
+\citation{SpecRemoval:2020}
+\citation{SpecRemoval:2016}
+\citation{SpecRemoval:2015}
+\citation{LeeRemoval:2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Light reflections in teeth images}{6}{subsection.2.4}\protected@file@percent }
+\newlabel{Subsec:light}{{2.4}{6}{Light reflections in teeth images}{subsection.2.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Method}{6}{section.3}\protected@file@percent }
+\newlabel{Sec:PM}{{3}{6}{Proposed Method}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }}{7}{figure.caption.3}\protected@file@percent }
+\newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }{figure.caption.3}{}}
+\citation{Zhang:2020:ResNeSt}
 \citation{Zhang:2018:BCE}
 \citation{T023}
 \citation{T023}
@@ -91,13 +99,6 @@
 \citation{Zhang:2020:ResNeSt}
 \citation{He:2015:ResNet}
 \citation{He:2019:ResNetTrick}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Proposed Method}{6}{section.3}\protected@file@percent }
-\newlabel{Sec:PM}{{3}{6}{Proposed Method}{section.3}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Obtaining pseudo edge-region from a neural network}{6}{subsection.3.1}\protected@file@percent }
-\newlabel{Subsec:pre_er}{{3.1}{6}{Obtaining pseudo edge-region from a neural network}{subsection.3.1}{}}
-\newlabel{Def:omcc}{{3.1}{6}{Obtaining pseudo edge-region from a neural network}{equation.3.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }}{7}{figure.caption.3}\protected@file@percent }
-\newlabel{Fig:flowchart}{{3}{7}{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. \relax }{figure.caption.3}{}}
 \newlabel{Fig:4a}{{4(a)}{8}{A training image \cite {T023}\relax }{figure.caption.4}{}}
 \newlabel{sub@Fig:4a}{{(a)}{8}{A training image \cite {T023}\relax }{figure.caption.4}{}}
 \newlabel{Fig:4b}{{4(b)}{8}{$\ome $\relax }{figure.caption.4}{}}
@@ -108,6 +109,9 @@
 \newlabel{sub@Fig:4d}{{(d)}{8}{Labeled image $Y$\relax }{figure.caption.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces  Labeling process described in Section\nobreakspace  {}\ref  {Subsec:pre_er}: (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }}{8}{figure.caption.4}\protected@file@percent }
 \newlabel{Fig:labeling}{{4}{8}{Labeling process described in Section~\ref {Subsec:pre_er}: (a) An image in the training dataset. (b) The region $\Omega _E$. (c) Manually selected regions. (d) The labeled image obtained from (c) by the dilation. \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Obtaining pseudo edge-region from a neural network}{8}{subsection.3.1}\protected@file@percent }
+\newlabel{Subsec:pre_er}{{3.1}{8}{Obtaining pseudo edge-region from a neural network}{subsection.3.1}{}}
+\newlabel{Def:omcc}{{3.1}{8}{Obtaining pseudo edge-region from a neural network}{equation.3.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The structure of the neural network: ResNeSt\nobreakspace  {}\cite  {Zhang:2020:ResNeSt} + upscale module. Overall, each bold arrow represents a layer and the types of layers are listed in the lower right legend in the colors of the arrows . Each layer is followed by a batch normalization (BN) and an activation function with only two exceptions: the global average poolings (GAP) and fully connected layers in (b) having thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are some notations: $/$ and $+$ mean stride and padding of the layer with the following number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq  m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite  {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }}{9}{figure.caption.5}\protected@file@percent }
 \newlabel{Fig:network}{{5}{9}{The structure of the neural network: ResNeSt~\cite {Zhang:2020:ResNeSt} + upscale module. Overall, each bold arrow represents a layer and the types of layers are listed in the lower right legend in the colors of the arrows . Each layer is followed by a batch normalization (BN) and an activation function with only two exceptions: the global average poolings (GAP) and fully connected layers in (b) having thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are some notations: $/$ and $+$ mean stride and padding of the layer with the following number, respectively. The bilinear upscaling is applied with scale factor $2$. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet \cite {He:2015:ResNet,He:2019:ResNetTrick}; MOD1 is added after the first layer and the dashed identity connection changes to MOD2 in the legend. \relax }{figure.caption.5}{}}
 \citation{Freeman:1961:Chaincoding}
@@ -173,51 +177,6 @@
 \newlabel{Fig:results}{{8}{13}{Segmented results of several methods for input images \cite {T000,T008,T005,T018,T017}. \relax }{figure.caption.8}{}}
 \bibstyle{siam}
 \bibdata{bibliography}
-\bibcite{T000}{1}
-\bibcite{T008}{2}
-\bibcite{Blum:1967}{3}
-\bibcite{Caselles:1997:GAC}{4}
-\bibcite{Chan:2001:chanvese}{5}
 \@writefile{toc}{\contentsline {section}{\numberline {A}List of features of non-tooth region}{14}{appendix.A}\protected@file@percent }
 \newlabel{App:list_nonteeth}{{A}{14}{List of features of non-tooth region}{appendix.A}{}}
-\bibcite{Cohen:1991:Balloon}{6}
-\bibcite{Dollar:2006:BEL}{7}
-\bibcite{T005}{8}
-\bibcite{Freeman:1961:Chaincoding}{9}
-\bibcite{SpecRemoval:2018}{10}
-\bibcite{Hahn:2006}{11}
-\bibcite{Hahn:2010:GADF}{12}
-\bibcite{He:2018:MRCNN}{13}
-\bibcite{He:2015:ResNet}{14}
-\bibcite{He:2019:ResNetTrick}{15}
-\bibcite{Jonker:1992:Morphological}{16}
-\bibcite{Kass:1988:Snakes}{17}
-\bibcite{Kim:2020}{18}
-\bibcite{Kingma:2017}{19}
-\bibcite{Krizhevsky:2012:ImageNet}{20}
-\bibcite{LeeRemoval:2010}{21}
-\bibcite{SpecRemoval:2020}{22}
-\bibcite{Yuan:2020:teethParanomic}{23}
-\bibcite{T018}{24}
-\bibcite{Na:2014LteethMorph}{25}
-\bibcite{Naumovich:2015:teethCT3D}{26}
-\bibcite{Park:2014:SRM}{27}
-\bibcite{T001}{28}
-\bibcite{Said:2006:teethxray}{29}
-\bibcite{Shah:2006:teethautoseg}{30}
-\bibcite{T017}{31}
-\bibcite{T023}{32}
-\bibcite{SpecRemoval:2016}{33}
-\bibcite{SUSSMAN:1994}{34}
-\bibcite{Pham:2020}{35}
-\bibcite{Vincent:1991:watershed}{36}
-\bibcite{WU:2016}{37}
-\bibcite{Xu:1997:GVF}{38}
-\bibcite{Xu:2000:ParamGeoAC}{39}
-\bibcite{SpecRemoval:2015}{40}
-\bibcite{Zhang:2020:ResNeSt}{41}
-\bibcite{Zhang:1984}{42}
-\bibcite{Zhang:2018:BCE}{43}
-\bibcite{Zhu:2020:teethMaskrcnn}{44}
-\bibcite{Zhu:1996:RegCompet}{45}
-\gdef \@abspage@last{17}
+\gdef \@abspage@last{14}
