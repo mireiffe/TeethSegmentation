@@ -159,7 +159,7 @@ The remainder of this paper is organized as follows. In Section~\ref{Sec:er_teet
 % Sec:Background
 \section{GADF, edge-regions and segmentations}
 \label{Sec:er_teeth}
-In this section, we briefly review the GADF and edge-region in~\cite{Hahn:2006, Hahn:2010:GADF}, which play key roles in segmenting individual tooth. Then we will show that the edge-regions obtained by GADF are incomplete due to the problematic features of the teeth image.
+In this section, we briefly review the GADF and edge-region in~\cite{Hahn:2006,Hahn:2010:GADF}, which play key roles in segmenting individual tooth. Then we will show that the edge-regions obtained by GADF are incomplete due to the problematic features of the teeth image.
 
 % Subsec:GADF
 \subsection{GADF}
@@ -182,42 +182,33 @@ where $\mbox{sgn}$ is the sign function and
 \end{align*}
 By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge point. The GADF can be naturally extended to color images; see~\cite{Hahn:2006,Hahn:2010:GADF}. In this paper, we consider the GADF only for grayscale images. A grayscale image are obtained by averaging each channel of a given color image.
 
-% Subsection: Edges outside the tooth boundaries
-\subsection{Edges-regions}
-\label{Subsec:er_outside}
+% Subsection: Edge-regions
+\subsection{Edge-regions}
+\label{Subsec:edge-regions}
 
-The edge-region is roughly defined as the curve of thin regions containing most of object boundaries, regardless of the strength of edges. In~\cite{Hahn:2010:GADF}, the region $\ome$, called the candidate of edge-regions, is defined as 
+The edge-region is roughly defined as the curve of thin regions containing most of object boundaries, regardless of the strength of edges. In~\cite{Hahn:2010:GADF}, $\ome$ is a region, called the candidate of edge-region, where $F_a$ faces each other, i.e. 
 \begin{align*}
     \ome = \left\{ x\in\Omega \mid F_a(x^*) \cdot F_a(x) < 0 ~\mbox{and}~ x^*=x+F_a(x) \right\}\pd %\label{Def:pre_er}
 \end{align*}
-Since GADFs are vector field of normalized gradients designed toward edge points, $\ome$ contains all object boundaries, regardless of the strength of edges. 
+Since $F_a$ is defined using normalized gradient, it is independent of the strength of edges. Thus $\ome$ is a region that satisfies the rough definition of the edge-region. But in practice, $\ome$ is a candidate for edge-region, because it contains many regions that are not intersected with the boundaries of the object. Hence it is necessary to remove them as many as possible. In~\cite{Hahn:2006}, the removing is performed by analyzing image intensity and morphology of candidate for edge-regions.
 
-In the paper~\cite{Hahn:2010:GADF}, $\oma=\delta_S(\ome)$ is used as the edge-region, and because of the characteristics of omee, it fits well with the rough definition of the boundary region.
-
-이 논문에서는 ome를 dilate한 omee를 경계영역으로 사용하고 있는데, omee의 특징때문에 이 것은 경계영역에 대한 러프한 정의에 잘 부합한다. 하지만, 실제 이미지들은 물체와 물체 사이 뿐만 아니라, 잡티와 빛반사 들 여러 요소들로 인해 생기는 잡다한 경계들이 존재하고 있다. 이 말은, $\oma$ is just a candidate for the edge-region, because $\ome$ contains many regions that are not intersected with the boundaries of the objects. Hence it is necessary to remove them as many as possible. 이 논문에는, 이미지의 인텐시티와 omee의 형태적 특성을 고려하여 필요없는 부분을 제거하려는 아이디어를 사용하였다. 그림 2에는 깔끔하게 정돈된 이미지와 프렉티컬한 이미지에서 계산된 omee를 각각 확인할 수 있다. 정돈된 이미지에 대한 omee는 물체간의 경계에서만 잘 형성되는 경계영역이 나타나지만, 실제의 이미지에서는 그 외에도 아주 많은 잡다한 영역이 함께 형성되는 걸 볼 수 있으며, 논문과 같은 방식으로 필요없는 영역을 제거한 결과도 함께 볼 수 있다.
-
-
-The edge-region $\delta_S(\ome)$ used in~\cite{Hahn:2010:GADF} is appropriate to the rough definition:   is used as the edge-region where
-and $\delta_{S}(X)$ is a dilation of a set $X$ by a $3 \times 3$ square structuring element $S$ with origin at its center. Here, $\ome$ is the region where GADF faces each other, and since the GADF
-
-
-In practice, as shown in Figure~\ref{Fig:1d}, $\oma$ is a candidate for the edge-region, because $\ome$ contains many regions that are not intersected with the boundaries of the objects. Hence it is necessary to remove them as many as possible.
+In Figure~\ref{Fig:edge_regions}, we can see that $\ome$ is well formed only at the boundary of objects for the synthetic image, but there are a lot of regions not intersected to object boundaries in the practical images. In the last row, edge-regions of several images obtained by removing unnecessary regions from the candidate of edge-regions are presented. We will elaborate about these regions in Section~\ref{Subsec:light_reflection}.
 
 % Figure: Weak edges in teeth image
 \input{./fig1.tex}
 
 % Subsection: Active Contour Model
 \subsection{Active Contour Model}
-\label{Subsec:activecontour}
+\label{Subsec:active_contour}
+
+
+
+The movement of the contour is performed by a force applied in the normal direction to the contour. Therefore, by defining the appropriate force, we can move the contour to reach the boundary of the object. This kind of methods are called geometric active contours methods \cite{Caselles:1997:GAC,Xu:2000:ParamGeoAC} and are widely used formulated as a level set method.
 
 As an initial contour evolves forward to edges, these unnecessary parts hinder the movement of the contour. In fact, except for connected components of $\oma$ with closed shape, it can be easily removed or disregarded; the components with a small size or flat image intensities around them are easily removed \cite{Hahn:2006}. For the components that cannot form a closed shape, the evolving contour can intrude from the ends and disregard the component. The connected components with closed shape are mainly caused by a strong light reflection. They, like a barrier, block the movement of the contour and make it difficult to find the correct tooth boundary. As a result, presence of such light reflections is a major obstacle to individual tooth segmentation. The described contour evolution is shown in Figure~\ref{Fig:er_outside}.
 
 % Figure: Edge regions outside the tooth boundaries
 \input{./fig2.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 액티브 컨투어에 대한 설명
 
@@ -243,7 +234,7 @@ MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVV
 
 % Subsection: Light reflections in the teeth image
 \subsection{Light reflections in teeth images}
-\label{Subsec:light}
+\label{Subsec:light_reflection}
 
 There have been several studies to remove light reflections in a single image \cite{SpecRemoval:2018,SpecRemoval:2020,SpecRemoval:2016,SpecRemoval:2015}. In these works, an image was separated into a non-reflective image and a reflection map in the image domain. These methods are based on the intensity histogram or assumption of a dichromatic image model using color information of the reflective region. However, in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, parts of the tooth surface is also removed along with the light reflection. 
 

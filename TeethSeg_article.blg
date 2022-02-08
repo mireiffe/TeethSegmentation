@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: TeethSeg_article.aux
+The style file: siam.bst
+Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "LeeWater:2010"
+Warning--I didn't find a database entry for "LeeSegRemoval:2010"
+You've used 45 entries,
+            2030 wiz_defined-function locations,
+            796 strings with 12642 characters,
+and the built_in function-call counts, 17430 in all, are:
+= -- 1661
+> -- 812
+< -- 0
++ -- 324
+- -- 276
+* -- 1312
+:= -- 2631
+add.period$ -- 53
+call.type$ -- 45
+change.case$ -- 272
+chr.to.int$ -- 0
+cite$ -- 45
+duplicate$ -- 789
+empty$ -- 1313
+format.name$ -- 276
+if$ -- 3796
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 41
+newline$ -- 146
+num.names$ -- 89
+pop$ -- 300
+preamble$ -- 1
+purify$ -- 229
+quote$ -- 0
+skip$ -- 680
+stack$ -- 0
+substring$ -- 1157
+swap$ -- 343
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 176
+warning$ -- 0
+while$ -- 169
+width$ -- 47
+write$ -- 402
+(There were 2 warnings)
