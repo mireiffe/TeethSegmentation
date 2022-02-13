@@ -1,0 +1,44 @@
+\begin{figure}
+    \centering
+    \begin{subfigure}[]{1\textwidth}
+        % \centering
+        \begin{tikzpicture}[node distance=1.4cm and 1.5cm]
+            \node (title1) [title] {(a) Data labeling and training};
+            \node (title3) [title, right=6.5cm of title1] {(b) Segmentation};
+            \node (teeth1) [io, below=.9cm of title1] {Teeth image};
+            \node (pro11) [process, below=of teeth1] {$\Omega_E$ from GADF};
+            \node (pro12) [process, below=of pro11] {Manual selection \& dilation};
+            \node (label) [io, right=of teeth1] {Labeled data};
+            \node (pro14) [process, below=of label] {Training};
+            \node (dnn) [io, below=of pro14] {Deep neural network};
+            
+            \node (teeth3) [io, below=.5cm of title3] {Teeth image};
+            \node (pro31) [process, below=.65cm of teeth3] {Deep neural network};
+            \node (pro32) [process, below=.65cm of pro31] {Pseudo edge-region + region refinement};
+            \node (pro33) [process, below=.65cm of pro32] {Active contours};
+            \node (pro34) [process, below=.65cm of pro33] {Region identification};
+            \node (res) [io, below=.65cm of pro34] {Result};
+            
+            \draw [arrow] (teeth1) -- (pro11);
+            \draw [arrow] (pro11) -- (pro12);
+            \draw [arrow] (pro12.east) -| ($(label.west) + (-.8, 0)$) -- (label.west);
+            \draw [arrow] (label) -- (pro14);
+            \draw [arrow] (pro14) -- (dnn);
+            \draw [arrow] (teeth3) -- (pro31);
+            \draw [arrow] (pro31) -- (pro32);
+            \draw [arrow] (pro32) -- (pro33);
+            \draw [arrow] (pro33) -- (pro34);
+            \draw [arrow] (pro34) -- (res);
+
+            \draw [red,line width=.5mm,dotted] ($(teeth1.east) + (-.07, -.2)$) |- ($(label.west) + (-.07, -.2)$);
+            \draw [arrow, red,line width=.5mm, dotted] ($(label.west) + (-.45, -.2)$) |- (pro14.west);
+            \draw [arrow, red,line width=.5mm, dotted] (dnn.east) -| ($(pro31.west) + (-.95,0)$) -- (pro31.west);
+            \begin{scope}[on background layer]
+                \draw[black,line width=.4mm,dashed] ($(title1.west)+(-.6,0)$)  rectangle ($(title1.east)+(5.3,-11)$);
+                \draw[black,line width=.4mm,dashed] ($(title3.west)+(-.7,0)$)  rectangle ($(title3.east)+(.7,-11)$);
+            \end{scope}
+        \end{tikzpicture}
+    \end{subfigure}
+    \caption{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. }
+    \label{Fig:flowchart}
+\end{figure}

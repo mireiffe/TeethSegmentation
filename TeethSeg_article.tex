@@ -191,12 +191,12 @@ The edge-region is roughly defined as the curve of thin regions containing most 
 \begin{align*}
     \ome = \left\{ x\in\Omega \mid F_a(x^*) \cdot F_a(x) < 0 ~\mbox{and}~ x^*=x+F_a(x) \right\}\pd %\label{Def:pre_er}
 \end{align*}
-Since $F_a$ is defined using normalized gradient of image intensities, it is independent of the strength of edges so that $\ome$ satisfies the rough definition of the edge-region. But in practice, $\ome$ is just a candidate for the edge-region, because it contains many regions that are not intersected with the boundaries of the object. Hence it is necessary to remove them as many as possible. 
+Since $F_a$ is defined using normalized gradient of image intensities, it is independent of the strength of edges so that $\ome$ satisfies the rough definition of the edge-region. But in practice, $\ome$ is just a candidate for the edge-region, because it contains many regions that are not intersected with the boundaries of the object. Hence it is necessary to remove them as many as possible. Among connected components of $\ome$, those who are having small size or formed upon flat image intensities are assumed not to contain object boundaries, and can be easily removed~\cite{Hahn:2006}. 
 
-In fact, among connection components of $\ome$, those who are having small size or formed upon flat image intensities are assumed not to contain object boundaries, and can be easily removed~\cite{Hahn:2006}. In the top of Figure~\ref{Fig:edge_regions}, there are three images: a synthetic image and two practical images. We can see that $\ome$ is well formed only at the boundary of objects for the synthetic image, but there are a lot of regions not intersected to object boundaries in the practical images. In the last row, edge-regions obtained by removing above parts from $\ome$ are presented. Observe that there are still unnecessary regions in the obtained edge-regions and they can be divided into those with closed shapes and others. The regions with non-closed shape can be treated applying active contour model which is explained in Section~\ref{Subsec:active_contour}. For the regions with closed shape are caused by small regions sticking together or strong stains such as light reflection. This will be discussed in Section~\ref{Subsec:light_reflection}.
+In the top of Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic image and two practical images. We can see that $\ome$ is well formed only at the boundary of objects for the synthetic image, but there are a lot of regions not intersected to object boundaries in the practical images. In the bottom, edge-regions obtained by simple removing and dilating processes from $\ome$ are presented. Nevertheless, especially in the bottom right image, there are still unnecessary regions in the obtained edge-regions. These can be divided into those with closed shapes and others, we will deal them within the next two sections. %The regions with non-closed shape can be treated applying active contour model~\ref{Subsec:active_contour}, and about the regions with closed shape, the main obstacles of individual tooth segmentation, it will be discussed in Section~\ref{Subsec:light_reflection}.
 
 % Figure: Weak edges in teeth image
-\input{ .Figures/edge_region/fig.tex}
+\input{ ./Figures/edge_region/fig.tex}
 
 % Subsection: Active Contour Models
 \subsection{Active Contour Models}
@@ -233,10 +233,10 @@ In~\cite{Hahn:2010:GADF}, contour evolution using a level set formulation is pro
 \end{align}
 where $\mu$ is a constant, $\phi_0$ is the initial signed distance function (SDF), $\chi$ is a characteristic function of the subscripted set, and $\oma=\delta_{S}\left( \ome \right)$ where $\delta_{S}(X)$ is a dilation of a set $X$ by a $3 \times 3$ square structuring element $S$ with origin at its center. Observe that the initial contour goes outward in $\Omega_b = \Omega\setminus\oma$ by a balloon force $F_b$ and reaches the edge following $F_a$ once it enters $\oma$. 
 
-For $\oma$ obtained from $\ome$ in Figure~\ref{Fig:edge_regions_4}, contours evolving by~\eqref{Eq:ac_gadf} with different initial positions are presented over time; see~Figure~\ref{Fig:evolution}. As an initial contour evolves, unnecessary regions hinder the movement of the contour. For the regions that are not forming the closed shape, the evolving contours can intrude from the ends and disregard the component. On the other hands, if the contour faces a region with closed shape then, like a barrier, they block the movement of the contour and make it difficult to find the correct object boundary.
+Using the edge-region of Figure~~\ref{Fig:edge_regions_4} as $\oma$, contours evolving by~\eqref{Eq:ac_gadf} with different initial positions are presented over time in Figure~\ref{Fig:evolution}. As an initial contour evolves, unnecessary regions hinder the movement of the contour. For the regions that are not forming the closed shape, the evolving contours can intrude from the ends and disregard the component. On the other hands, if the contour faces a region with closed shape then, like a barrier, they block the movement of the contour and make it difficult to find the correct object boundary so that incorrect segmentation occurs.
 
 % Figure: Edge regions outside the tooth boundaries
-\input{./fig2.tex}
+\input{ ./Figures/evolution/fig.tex}
 
 % Subsection: Light reflections in the teeth image
 \subsection{Light reflections in teeth images}
@@ -264,7 +264,7 @@ In this section, we describe the steps of the proposed individual tooth segmenta
 \end{itemize}
 
 % Figure: Algorithm flowchart
-\input{./fig3.tex}
+\input{ ./fig3.tex}
     
 % Subsection: Obtaining pre-edge regions from a neural network
 \subsection{Obtaining pseudo edge-region from a neural network}
