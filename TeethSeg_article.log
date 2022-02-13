@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  8 FEB 2022 19:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  13 FEB 2022 18:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -709,609 +709,151 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 131.
 LaTeX Info: Redefining \pageref on input line 131.
 LaTeX Info: Redefining \nameref on input line 131.
- (./TeethSeg_article.out) (./TeethSeg_article.out)
 \@outlinefile=\write4
 \openout4 = `TeethSeg_article.out'.
 
- [1
+
+
+LaTeX Warning: Citation `Kass:1988:Snakes' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Citation `Xu:1997:GVF' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Citation `Caselles:1997:GAC' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Citation `Cohen:1991:Balloon' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Reference `Subsec:active_contour' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Citation `Chan:2001:chanvese' on page 1 undefined on input line 149.
+
+
+LaTeX Warning: Citation `Yuan:2020:teethParanomic' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Naumovich:2015:teethCT3D' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Said:2006:teethxray' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Shah:2006:teethautoseg' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Na:2014LteethMorph' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Vincent:1991:watershed' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Kim:2020' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Pham:2020' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Zhu:2020:teethMaskrcnn' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `He:2018:MRCNN' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `WU:2016' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Dollar:2006:BEL' on page 1 undefined on input line 151.
+
+
+LaTeX Warning: Citation `Na:2014LteethMorph' on page 1 undefined on input line 151.
+
+[1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 167.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+LaTeX Warning: Citation `Yuan:2020:teethParanomic' on page 2 undefined on input line 153.
+
+
+LaTeX Warning: Citation `Naumovich:2015:teethCT3D' on page 2 undefined on input line 153.
+
+
+LaTeX Warning: Citation `WU:2016' on page 2 undefined on input line 153.
+
+
+LaTeX Warning: Reference `Sec:er_teeth' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Sec:PM' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Sec:result' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Reference `Sec:Conclusion' on page 2 undefined on input line 157.
+
+
+LaTeX Warning: Citation `Hahn:2006' on page 2 undefined on input line 163.
+
+
+LaTeX Warning: Citation `Hahn:2010:GADF' on page 2 undefined on input line 163.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 168.
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 167.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 168.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] (./fig1.tex
-<./Figures/Fig1_img.png, id=143, 681.29532pt x 310.15875pt>
-File: ./Figures/Fig1_img.png Graphic file (type png)
-<use ./Figures/Fig1_img.png>
-Package pdftex.def Info: ./Figures/Fig1_img.png  used on input line 49.
-(pdftex.def)             Requested size: 284.52756pt x 129.53223pt.
-<./Figures/Fig1_img1.png, id=146, 31.11626pt x 31.11626pt>
-File: ./Figures/Fig1_img1.png Graphic file (type png)
-<use ./Figures/Fig1_img1.png>
-Package pdftex.def Info: ./Figures/Fig1_img1.png  used on input line 59.
-(pdftex.def)             Requested size: 68.28644pt x 68.30115pt.
-<./Figures/Fig1_img3.png, id=147, 31.11626pt x 31.11626pt>
-File: ./Figures/Fig1_img3.png Graphic file (type png)
-<use ./Figures/Fig1_img3.png>
-Package pdftex.def Info: ./Figures/Fig1_img3.png  used on input line 60.
-(pdftex.def)             Requested size: 68.28644pt x 68.30115pt.
-<./Figures/Fig1_img2.png, id=148, 31.11626pt x 31.11626pt>
-File: ./Figures/Fig1_img2.png Graphic file (type png)
-<use ./Figures/Fig1_img2.png>
-Package pdftex.def Info: ./Figures/Fig1_img2.png  used on input line 61.
-(pdftex.def)             Requested size: 68.28644pt x 68.30115pt.
-) (./fig2.tex
-<./Figures/Fig2_img.png, id=153, 212.795pt x 192.72pt>
-File: ./Figures/Fig2_img.png Graphic file (type png)
-<use ./Figures/Fig2_img.png>
-Package pdftex.def Info: ./Figures/Fig2_img.png  used on input line 6.
-(pdftex.def)             Requested size: 87.96408pt x 79.6678pt.
-<./Figures/Fig2_er.png, id=154, 212.795pt x 192.72pt>
-File: ./Figures/Fig2_er.png Graphic file (type png)
-<use ./Figures/Fig2_er.png>
-Package pdftex.def Info: ./Figures/Fig2_er.png  used on input line 12.
-(pdftex.def)             Requested size: 87.96408pt x 79.6678pt.
-<./Figures/Fig2_reser.png, id=155, 212.795pt x 192.72pt>
-File: ./Figures/Fig2_reser.png Graphic file (type png)
-<use ./Figures/Fig2_reser.png>
-Package pdftex.def Info: ./Figures/Fig2_reser.png  used on input line 18.
-(pdftex.def)             Requested size: 87.96408pt x 79.6678pt.
-<./Figures/Fig2_evolve_1/iter0.png, id=156, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_1/iter0.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_1/iter0.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_1/iter0.png  used on input line 30.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_1/iter150.png, id=157, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_1/iter150.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_1/iter150.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_1/iter150.png  used on input line 34.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_1/iter250.png, id=158, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_1/iter250.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_1/iter250.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_1/iter250.png  used on input line 38.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_1/iter300.png, id=159, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_1/iter300.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_1/iter300.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_1/iter300.png  used on input line 42.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_1/iter1000.png, id=160, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_1/iter1000.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_1/iter1000.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_1/iter1000.png  used on input line 46.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_2/iter0.png, id=161, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_2/iter0.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_2/iter0.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_2/iter0.png  used on input line 56.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_2/iter200.png, id=162, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_2/iter200.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_2/iter200.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_2/iter200.png  used on input line 60.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_2/iter350.png, id=163, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_2/iter350.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_2/iter350.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_2/iter350.png  used on input line 64.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_2/iter650.png, id=164, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_2/iter650.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_2/iter650.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_2/iter650.png  used on input line 68.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_2/iter1000.png, id=165, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_2/iter1000.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_2/iter1000.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_2/iter1000.png  used on input line 72.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_3/iter0.png, id=166, 392.96812pt x 355.3275pt>
-File: ./Figures/Fig2_evolve_3/iter0.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_3/iter0.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_3/iter0.png  used on input line 81.
-(pdftex.def)             Requested size: 75.51617pt x 68.28644pt.
-<./Figures/Fig2_evolve_3/iter200.png, id=167, 392.96812pt x 356.83313pt>
-File: ./Figures/Fig2_evolve_3/iter200.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_3/iter200.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_3/iter200.png  used on input line 85.
-(pdftex.def)             Requested size: 75.19838pt x 68.28644pt.
-<./Figures/Fig2_evolve_3/iter350.png, id=168, 392.96812pt x 356.83313pt>
-File: ./Figures/Fig2_evolve_3/iter350.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_3/iter350.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_3/iter350.png  used on input line 89.
-(pdftex.def)             Requested size: 75.19838pt x 68.28644pt.
-<./Figures/Fig2_evolve_3/iter650.png, id=169, 392.96812pt x 356.83313pt>
-File: ./Figures/Fig2_evolve_3/iter650.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_3/iter650.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_3/iter650.png  used on input line 93.
-(pdftex.def)             Requested size: 75.19838pt x 68.28644pt.
-<./Figures/Fig2_evolve_3/iter1000.png, id=170, 392.96812pt x 356.83313pt>
-File: ./Figures/Fig2_evolve_3/iter1000.png Graphic file (type png)
-<use ./Figures/Fig2_evolve_3/iter1000.png>
-Package pdftex.def Info: ./Figures/Fig2_evolve_3/iter1000.png  used on input line 97.
-(pdftex.def)             Requested size: 75.19838pt x 68.28644pt.
-)
-Overfull \hbox (696.33244pt too wide) in paragraph at lines 231--233
-[]\OT1/cmr/m/n/10 MMMMMMMMMMMMMMMMMMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
- []
-
-[3] [4 <./Figures/Fig1_img.png (PNG copy)> <./Figures/Fig1_img1.png (PNG copy)> <./Figures/Fig1_img3.png (PNG copy)> <./Figures/Fig1_img2.png (PNG copy)>] [5 <./Figures/Fig2_img.png (PNG copy)> <./Figures/Fig2_er.png (PNG copy)> <./Figures/Fig2_reser.png (PNG copy)> <./Figures/Fig2_evolve_1/iter0.png (PNG copy)> <./Figures/Fig2_evolve_1/iter150.png (PNG copy)> <./Figures/Fig2_evolve_1/iter250.png (PNG copy)> <./Figures/Fig2_evolve_1/iter300.png (PNG copy)> <./Figures/Fig2_evolve_1/iter1000.png (PNG copy)> <./Figures/Fig2_evolve_2/iter0.png (PNG copy)> <./Figures/Fig2_evolve_2/iter200.png (PNG copy)> <./Figures/Fig2_evolve_2/iter350.png (PNG copy)> <./Figures/Fig2_evolve_2/iter650.png (PNG copy)> <./Figures/Fig2_evolve_2/iter1000.png (PNG copy)> <./Figures/Fig2_evolve_3/iter0.png (PNG copy)> <./Figures/Fig2_evolve_3/iter200.png (PNG copy)> <./Figures/Fig2_evolve_3/iter350.png (PNG copy)> <./Figures/Fig2_evolve_3/iter650.png (PNG copy)> <./Figures/Fig2_evolve_3/iter1000.png (PNG copy)>] (./fig3.tex) [6] [7]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 278.
-
-<./Figures/Fig4_img.png, id=230, 358.52695pt x 239.04149pt>
-File: ./Figures/Fig4_img.png Graphic file (type png)
-<use ./Figures/Fig4_img.png>
-Package pdftex.def Info: ./Figures/Fig4_img.png  used on input line 282.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/Fig4_er.png, id=233, 358.52695pt x 239.04149pt>
-File: ./Figures/Fig4_er.png Graphic file (type png)
-<use ./Figures/Fig4_er.png>
-Package pdftex.def Info: ./Figures/Fig4_er.png  used on input line 288.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/Fig4_seler.png, id=234, 358.52695pt x 239.04149pt>
-File: ./Figures/Fig4_seler.png Graphic file (type png)
-<use ./Figures/Fig4_seler.png>
-Package pdftex.def Info: ./Figures/Fig4_seler.png  used on input line 295.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/Fig4_label.png, id=235, 358.52695pt x 239.04149pt>
-File: ./Figures/Fig4_label.png Graphic file (type png)
-<use ./Figures/Fig4_label.png>
-Package pdftex.def Info: ./Figures/Fig4_label.png  used on input line 301.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-(./TeethSeg_network.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1.
-
-
-LaTeX Warning: Float too large for page by 22.48415pt on input line 219.
-
 )
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 319.
-
-<./Figures/Fig10_img0.pdf, id=245, 358.4592pt x 238.22601pt>
-File: ./Figures/Fig10_img0.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img0.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img0.pdf  used on input line 328.
-(pdftex.def)             Requested size: 102.75264pt x 68.28644pt.
-<./Figures/Fig10_neter0.pdf, id=246, 358.4592pt x 238.22601pt>
-File: ./Figures/Fig10_neter0.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_neter0.pdf>
-Package pdftex.def Info: ./Figures/Fig10_neter0.pdf  used on input line 329.
-(pdftex.def)             Requested size: 102.75264pt x 68.28644pt.
-<./Figures/Fig10_img1.pdf, id=247, 358.4592pt x 163.25865pt>
-File: ./Figures/Fig10_img1.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img1.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img1.pdf  used on input line 333.
-(pdftex.def)             Requested size: 149.92828pt x 68.28644pt.
-<./Figures/Fig10_neter1.pdf, id=248, 358.4592pt x 163.25865pt>
-File: ./Figures/Fig10_neter1.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_neter1.pdf>
-Package pdftex.def Info: ./Figures/Fig10_neter1.pdf  used on input line 334.
-(pdftex.def)             Requested size: 149.92828pt x 68.28644pt.
-<./Figures/Fig10_img5.pdf, id=249, 358.4592pt x 206.18405pt>
-File: ./Figures/Fig10_img5.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img5.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img5.pdf  used on input line 338.
-(pdftex.def)             Requested size: 118.71852pt x 68.28644pt.
-<./Figures/Fig10_neter5.pdf, id=250, 358.4592pt x 206.18405pt>
-File: ./Figures/Fig10_neter5.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_neter5.pdf>
-Package pdftex.def Info: ./Figures/Fig10_neter5.pdf  used on input line 339.
-(pdftex.def)             Requested size: 118.71852pt x 68.28644pt.
-
-Overfull \hbox (9.24564pt too wide) in paragraph at lines 349--350
-\LUC/nanummj/m/n/10/b0 ´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\´\LUC/nanummj/m/n/10/c6 ©\LUC/nanummj/m/n/10/c7 t\LUC/nanummj/m/n/10/bc ^^T\LUC/nanummj/m/n/10/b0 ^^\
- []
-
-[8 <./Figures/Fig4_img.png> <./Figures/Fig4_er.png> <./Figures/Fig4_seler.png> <./Figures/Fig4_label.png>] [9]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 365.
-
-<./Figures/Fig8_img.png, id=284, 246.24026pt x 267.06024pt>
-File: ./Figures/Fig8_img.png Graphic file (type png)
-<use ./Figures/Fig8_img.png>
-Package pdftex.def Info: ./Figures/Fig8_img.png  used on input line 369.
-(pdftex.def)             Requested size: 91.82135pt x 99.58464pt.
-<./Figures/Fig8_curve.pdf, id=286, 246.24196pt x 267.10992pt>
-File: ./Figures/Fig8_curve.pdf Graphic file (type pdf)
-<use ./Figures/Fig8_curve.pdf>
-Package pdftex.def Info: ./Figures/Fig8_curve.pdf  used on input line 375.
-(pdftex.def)             Requested size: 91.80696pt x 99.58464pt.
-<./Figures/Fig8_ext.png, id=287, 246.24026pt x 267.06024pt>
-File: ./Figures/Fig8_ext.png Graphic file (type png)
-<use ./Figures/Fig8_ext.png>
-Package pdftex.def Info: ./Figures/Fig8_ext.png  used on input line 381.
-(pdftex.def)             Requested size: 91.82135pt x 99.58464pt.
-<./Figures/Fig8_use_er.png, id=288, 246.24026pt x 267.06024pt>
-File: ./Figures/Fig8_use_er.png Graphic file (type png)
-<use ./Figures/Fig8_use_er.png>
-Package pdftex.def Info: ./Figures/Fig8_use_er.png  used on input line 387.
-(pdftex.def)             Requested size: 91.82135pt x 99.58464pt.
-[10 <./Figures/Fig10_img0.pdf> <./Figures/Fig10_neter0.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_neter0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig10_img1.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_img1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig10_neter1.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_neter1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig10_img5.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_img5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig10_neter5.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_neter5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig8_img.png> <./Figures/Fig8_curve.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig8_curve.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig8_ext.png> <./Figures/Fig8_use_er.png>]
-
-LaTeX Warning: Reference `' on page 11 undefined on input line 427.
-
-
-LaTeX Warning: Reference `' on page 11 undefined on input line 427.
-
-
-LaTeX Warning: Reference `' on page 11 undefined on input line 427.
-
-[11]
-
-LaTeX Warning: Reference `' on page 12 undefined on input line 429.
-
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 445.
-
-File: ./Figures/Fig10_img0.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img0.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img0.pdf  used on input line 451.
-(pdftex.def)             Requested size: 71.13188pt x 47.27357pt.
-File: ./Figures/Fig10_img1.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img1.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img1.pdf  used on input line 452.
-(pdftex.def)             Requested size: 71.13188pt x 32.39705pt.
-File: ./Figures/Fig10_img5.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img5.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img5.pdf  used on input line 453.
-(pdftex.def)             Requested size: 71.13188pt x 40.91516pt.
-<./Figures/Fig10_img8.pdf, id=344, 358.4592pt x 224.6771pt>
-File: ./Figures/Fig10_img8.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img8.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img8.pdf  used on input line 454.
-(pdftex.def)             Requested size: 71.13188pt x 44.58493pt.
-<./Figures/Fig10_img18.pdf, id=345, 358.4592pt x 201.87201pt>
-File: ./Figures/Fig10_img18.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img18.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img18.pdf  used on input line 455.
-(pdftex.def)             Requested size: 71.13188pt x 40.05948pt.
-<./Figures/Fig10_img17.pdf, id=346, 358.4592pt x 184.83052pt>
-File: ./Figures/Fig10_img17.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_img17.pdf>
-Package pdftex.def Info: ./Figures/Fig10_img17.pdf  used on input line 456.
-(pdftex.def)             Requested size: 71.13188pt x 36.67776pt.
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [][] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 451--457
- [] 
- []
-
-<./Figures/lee2010_0.pdf, id=347, 358.4592pt x 238.22601pt>
-File: ./Figures/lee2010_0.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_0.pdf>
-Package pdftex.def Info: ./Figures/lee2010_0.pdf  used on input line 461.
-(pdftex.def)             Requested size: 71.13188pt x 47.27357pt.
-<./Figures/lee2010_1.pdf, id=348, 358.4592pt x 163.25865pt>
-File: ./Figures/lee2010_1.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_1.pdf>
-Package pdftex.def Info: ./Figures/lee2010_1.pdf  used on input line 462.
-(pdftex.def)             Requested size: 71.13188pt x 32.39705pt.
-<./Figures/lee2010_5.pdf, id=349, 358.4592pt x 206.18405pt>
-File: ./Figures/lee2010_5.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_5.pdf>
-Package pdftex.def Info: ./Figures/lee2010_5.pdf  used on input line 463.
-(pdftex.def)             Requested size: 71.13188pt x 40.91516pt.
-<./Figures/lee2010_8.pdf, id=350, 358.4592pt x 224.6771pt>
-File: ./Figures/lee2010_8.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_8.pdf>
-Package pdftex.def Info: ./Figures/lee2010_8.pdf  used on input line 464.
-(pdftex.def)             Requested size: 71.13188pt x 44.58493pt.
-<./Figures/lee2010_18.pdf, id=351, 358.4592pt x 201.87201pt>
-File: ./Figures/lee2010_18.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_18.pdf>
-Package pdftex.def Info: ./Figures/lee2010_18.pdf  used on input line 465.
-(pdftex.def)             Requested size: 71.13188pt x 40.05948pt.
-<./Figures/lee2010_17.pdf, id=352, 358.4592pt x 184.83052pt>
-File: ./Figures/lee2010_17.pdf Graphic file (type pdf)
-<use ./Figures/lee2010_17.pdf>
-Package pdftex.def Info: ./Figures/lee2010_17.pdf  used on input line 466.
-(pdftex.def)             Requested size: 71.13188pt x 36.67776pt.
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [][] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 461--467
- [] 
- []
-
-
-LaTeX Warning: Citation `LeeWater:2010' on page 12 undefined on input line 467.
-
-
-LaTeX Warning: Citation `LeeWater:2010' on page 12 undefined on input line 467.
-
-<./Figures/lee2010s_0.pdf, id=353, 358.4592pt x 238.22601pt>
-File: ./Figures/lee2010s_0.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_0.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_0.pdf  used on input line 472.
-(pdftex.def)             Requested size: 71.13188pt x 47.27357pt.
-<./Figures/lee2010s_1.pdf, id=354, 358.4592pt x 163.25865pt>
-File: ./Figures/lee2010s_1.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_1.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_1.pdf  used on input line 473.
-(pdftex.def)             Requested size: 71.13188pt x 32.39705pt.
-<./Figures/lee2010s_5.pdf, id=355, 358.4592pt x 206.18405pt>
-File: ./Figures/lee2010s_5.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_5.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_5.pdf  used on input line 474.
-(pdftex.def)             Requested size: 71.13188pt x 40.91516pt.
-<./Figures/lee2010s_8.pdf, id=356, 358.4592pt x 224.6771pt>
-File: ./Figures/lee2010s_8.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_8.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_8.pdf  used on input line 475.
-(pdftex.def)             Requested size: 71.13188pt x 44.58493pt.
-<./Figures/lee2010s_18.pdf, id=357, 358.4592pt x 201.87201pt>
-File: ./Figures/lee2010s_18.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_18.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_18.pdf  used on input line 476.
-(pdftex.def)             Requested size: 71.13188pt x 40.05948pt.
-<./Figures/lee2010s_17.pdf, id=358, 358.4592pt x 184.83052pt>
-File: ./Figures/lee2010s_17.pdf Graphic file (type pdf)
-<use ./Figures/lee2010s_17.pdf>
-Package pdftex.def Info: ./Figures/lee2010s_17.pdf  used on input line 477.
-(pdftex.def)             Requested size: 71.13188pt x 36.67776pt.
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [][] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 472--478
- [] 
- []
-
-
-LaTeX Warning: Citation `LeeSegRemoval:2010' on page 12 undefined on input line 478.
-
-
-LaTeX Warning: Citation `LeeSegRemoval:2010' on page 12 undefined on input line 478.
-
-<./Figures/na2014_0.pdf, id=359, 358.4592pt x 238.22601pt>
-File: ./Figures/na2014_0.pdf Graphic file (type pdf)
-<use ./Figures/na2014_0.pdf>
-Package pdftex.def Info: ./Figures/na2014_0.pdf  used on input line 483.
-(pdftex.def)             Requested size: 71.13188pt x 47.27357pt.
-<./Figures/na2014_1.pdf, id=360, 358.4592pt x 163.25865pt>
-File: ./Figures/na2014_1.pdf Graphic file (type pdf)
-<use ./Figures/na2014_1.pdf>
-Package pdftex.def Info: ./Figures/na2014_1.pdf  used on input line 484.
-(pdftex.def)             Requested size: 71.13188pt x 32.39705pt.
-<./Figures/na2014_5.pdf, id=361, 358.4592pt x 206.18405pt>
-File: ./Figures/na2014_5.pdf Graphic file (type pdf)
-<use ./Figures/na2014_5.pdf>
-Package pdftex.def Info: ./Figures/na2014_5.pdf  used on input line 485.
-(pdftex.def)             Requested size: 71.13188pt x 40.91516pt.
-<./Figures/na2014_8.pdf, id=362, 358.4592pt x 224.6771pt>
-File: ./Figures/na2014_8.pdf Graphic file (type pdf)
-<use ./Figures/na2014_8.pdf>
-Package pdftex.def Info: ./Figures/na2014_8.pdf  used on input line 486.
-(pdftex.def)             Requested size: 71.13188pt x 44.58493pt.
-<./Figures/na2014_18.pdf, id=363, 358.4592pt x 201.87201pt>
-File: ./Figures/na2014_18.pdf Graphic file (type pdf)
-<use ./Figures/na2014_18.pdf>
-Package pdftex.def Info: ./Figures/na2014_18.pdf  used on input line 487.
-(pdftex.def)             Requested size: 71.13188pt x 40.05948pt.
-<./Figures/na2014_17.pdf, id=364, 358.4592pt x 184.83052pt>
-File: ./Figures/na2014_17.pdf Graphic file (type pdf)
-<use ./Figures/na2014_17.pdf>
-Package pdftex.def Info: ./Figures/na2014_17.pdf  used on input line 488.
-(pdftex.def)             Requested size: 71.13188pt x 36.67776pt.
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [][] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 483--489
- [] 
- []
-
-<./Figures/Fig10_res0.pdf, id=367, 358.4592pt x 238.22601pt>
-File: ./Figures/Fig10_res0.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res0.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res0.pdf  used on input line 494.
-(pdftex.def)             Requested size: 71.13188pt x 47.27357pt.
-<./Figures/Fig10_res1.pdf, id=368, 358.4592pt x 163.25865pt>
-File: ./Figures/Fig10_res1.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res1.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res1.pdf  used on input line 495.
-(pdftex.def)             Requested size: 71.13188pt x 32.39705pt.
-<./Figures/Fig10_res5.pdf, id=369, 358.4592pt x 206.18405pt>
-File: ./Figures/Fig10_res5.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res5.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res5.pdf  used on input line 496.
-(pdftex.def)             Requested size: 71.13188pt x 40.91516pt.
-<./Figures/Fig10_res8.pdf, id=370, 358.4592pt x 224.6771pt>
-File: ./Figures/Fig10_res8.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res8.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res8.pdf  used on input line 497.
-(pdftex.def)             Requested size: 71.13188pt x 44.58493pt.
-<./Figures/Fig10_res18.pdf, id=371, 358.4592pt x 201.87201pt>
-File: ./Figures/Fig10_res18.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res18.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res18.pdf  used on input line 498.
-(pdftex.def)             Requested size: 71.13188pt x 40.05948pt.
-<./Figures/Fig10_res17.pdf, id=372, 358.4592pt x 184.83052pt>
-File: ./Figures/Fig10_res17.pdf Graphic file (type pdf)
-<use ./Figures/Fig10_res17.pdf>
-Package pdftex.def Info: ./Figures/Fig10_res17.pdf  used on input line 499.
-(pdftex.def)             Requested size: 71.13188pt x 36.67776pt.
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [][] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [] 
- []
-
-
-Overfull \hbox (4.20976pt too wide) in paragraph at lines 494--500
- [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 500--500
-[]\OT1/cmr/m/n/9 (e) |Our al-go-
- []
-
-[12] [13 <./Figures/Fig10_img8.pdf> <./Figures/Fig10_img18.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_img18.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/Fig10_img17.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/Fig10_img17.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_0.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_0.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_1.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_5.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_5.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_8.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_8.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_18.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_18.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./Figures/lee2010_17.pdf
-
-pdfTeX warning: pdflatex.exe (file ./Figures/lee2010_17.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->
-!pdfTeX error: pdflatex.exe (file ./Figures/lee2010_17.pdf): fflush() failed (Invalid argument)
- ==> Fatal error occurred, no output PDF file produced!
+LaTeX Warning: Citation `Hahn:2010:GADF' on page 2 undefined on input line 176.
+
+
+LaTeX Warning: Citation `Hahn:2006' on page 2 undefined on input line 184.
+
+
+LaTeX Warning: Citation `Hahn:2010:GADF' on page 2 undefined on input line 184.
+
+
+LaTeX Warning: Citation `Hahn:2010:GADF' on page 2 undefined on input line 190.
+
+[2]
+
+LaTeX Warning: Citation `Hahn:2006' on page 3 undefined on input line 196.
+
+
+LaTeX Warning: Reference `Fig:edge_regions' on page 3 undefined on input line 196.
+
+
+LaTeX Warning: Reference `Subsec:active_contour' on page 3 undefined on input line 196.
+
+
+LaTeX Warning: Reference `Subsec:light_reflection' on page 3 undefined on input line 196.
+
+
+! LaTeX Error: File `.Figures/edge_region/fig.tex' not found.
+
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex:199: Emergency stop.
+<read *> 
+         
+l.199 \input{ .Figures/edge_region/fig.tex}
+                                           ^^M
+*** (cannot \read from terminal in nonstop modes)
+
+ 
+Here is how much of TeX's memory you used:
+ 24318 strings out of 478353
+ 462254 string characters out of 5852100
+ 742825 words of memory out of 5000000
+ 42005 multiletter control sequences out of 15000+600000
+ 410108 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,10n,89p,1757b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
+g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex:199:  ==> Fatal error occurred, no output PDF file produced!
