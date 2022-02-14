@@ -258,17 +258,17 @@ In this section, we describe the steps of the proposed individual tooth segmenta
 \begin{itemize}
 \setlength{\itemindent}{5mm}
     \item[STEP 1] Obtaining pseudo edge-regions from a neural network,
-    \item[STEP 2] Refinement of the pseudo edge-region,
-    \item[STEP 3] Segmentation using active contours with competing ballon forces,
-    \item[STEP 4] Identification of tooth and non--tooth region.
+    % \item[STEP 2] Acquiring initial contours using morphological characteristics of teeth regions,
+    \item[STEP 2] Segmentation using active contours,
+    \item[STEP 3] Identification of tooth and non-tooth region.
 \end{itemize}
 
 % Figure: Algorithm flowchart
 \input{ ./fig3.tex}
     
-% Subsection: Obtaining pre-edge regions from a neural network
+% Subsection: Obtaining pseudo edge-regions from a neural network
 \subsection{Obtaining pseudo edge-region from a neural network}
-\label{Subsec:pre_er}
+\label{Subsec:pseudo_er}
 
 As shown in Figure~\ref{Fig:flowchart}(a), we make labels for training data using GADF and manual selection; first, we manually select the connected components of $\Omega_E$ intersecting the tooth boundary, then the label $Y\colon\Omega\subset\mathbf{R}^2\rightarrow\{0,\,1\}$ is defined as a binary image
 \begin{align*}
@@ -280,7 +280,7 @@ As shown in Figure~\ref{Fig:flowchart}(a), we make labels for training data usin
 \end{align*}
 where $\oms$ is obtained by dilating the selected regions from $\ome$ using an $\eta\times\eta$ square structuring element with the origin at its center. In Figure~\ref{Fig:labeling}, the labeling process is presented.
 
-We consider a neural network consisting of the part of ResNeSt--50 \cite{Zhang:2020:ResNeSt} before the global average pooling layer as the encoder part and a custom upscaling module for the decoder part. The network takes a 3 channel image $X\colon\Omega\rightarrow\mathbf{R}^3$ as an input and produces an image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ as an output and is trained by minimizing the binary cross entropy (BCE) loss function \cite{Zhang:2018:BCE} of $Y$ and $\hat{Y}$. The entire network structure is shown in Figure~\ref{Fig:network}.
+We consider a neural network consisting of the part of ResNeSt-50 \cite{Zhang:2020:ResNeSt} before the global average pooling as the encoder part and a custom upscaling module for the decoder part. The network takes a three channel image $X\colon\Omega\rightarrow\mathbf{R}^3$ as an input and produces an image $\hat{Y}\colon\Omega\rightarrow(0,\,1)$ as an output and is trained by minimizing the binary cross entropy (BCE) loss function \cite{Zhang:2018:BCE} of $Y$ and $\hat{Y}$. The entire network structure is shown in Appendix~\ref{App:neural_net}.
 
 % Figure: Labeling images
 \begin{figure}[]
@@ -314,14 +314,11 @@ We consider a neural network consisting of the part of ResNeSt--50 \cite{Zhang:2
     \label{Fig:labeling}
 \end{figure}
 
-The network output $\hat{Y}(x)$ is the probability that an edge-region caused by the tooth boundary exists at $x$. We call
+The network output $\hat{Y}(x)$ is taken as the probability map that an edge-region caused by the tooth boundary exists at $x$. We call
 \begin{align}
     \omcc = \left\{ x\in\Omega \mid \hat{Y}(x) > 0.5 \right\} \label{Def:omcc}
 \end{align}
-as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth images are shown in Figure~\ref{Fig:pre_er}.
-
-% Figure: Network structure
-\input{./TeethSeg_network.tex}
+as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth images are shown in Figure~\ref{Fig:pre_er}. One notable point is that the pseudo edge-regions obtained from the neural network look better than the regions obtained from the manual selection, i.e. the labels.
 
 % Figure: pre_er
 \begin{figure}[]
@@ -346,15 +343,13 @@ as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth im
         \includegraphics[height=2.4cm]{./Figures/Fig10_img5.pdf}
         \includegraphics[height=2.4cm]{./Figures/Fig10_neter5.pdf}
     \end{subfigure}
-    \caption{First row: Input images. Second row: obtained pseudo edge-region from the neural network. }
+    \caption{First row: Input images. Second row: Pseudo edge-region from the neural network. }
     \label{Fig:pre_er}
 \end{figure}
 
-% Subsection: Refinement of pre--edge region
-\subsection{Refinement of pseudo edge-region}
+% Subsection: Acquiring initial contours
+\subsection{Acquiring initial contours}
 \label{Subsec:refine}
-
-내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜내용이바뀜
 
 The region $\omcc$ in Section~\eqref{Def:omcc} is not yet perfect enough for segmenting individual tooth. Since it contains small fragments and leakages, which mean breakage of the closed curve, a refining process is applied to $\omcc$ to form a thick closed curve surrounding the individual tooth. First, small fragments and holes compared to the size of the image domain $\Omega$ are removed, and then dilation and erosion are sequentially applied by an $\omega \times\omega$ square structuring element with origin at its center. Second, since we want $\omcc$ to consist of thick closed curves,  Thus, we can fill the leakages by extending the ends of the curves in $\omcc$. By applying the chin--coding \cite{Freeman:1961:Chaincoding,Jonker:1992:Morphological} to the skeleton \cite{Blum:1967} of $\omcc$, we can find the parametric curves representing $\omcc$, see Figure~\ref{Fig:ex_ends_b}.
 
@@ -404,6 +399,40 @@ We call the resulting extension as $\omc$ and finally, we define a region $\ER :
 \subsection{Segmentation using active contours}
 \label{Subsec:SegLevelset}
 
+In this section, ~
+
+\subsubsection{Acquiring initial contours}
+\label{Subsec:initial_contours}
+
+If the pseudo edge-region is perfectly given, then all individual tooth regions are enclosed by curves consisting the pseudo edge-region, so that initial contour for each individual tooth region is naturally given by the boundary of the enclosed region. However, pseudo edge-region contains small fragments and leakages, which mean breakage of the closed curve, thus it is required to find positions for each individual tooth region. 
+
+First, the non-tooth regions are identified among the enclosed regions. The methods listed below are criterions for identifying non-tooth regions. For a enclosed region $X$, let $c$ be the center of mass and $\mathcal{I}$ the 2-D moment of inertia tensor about $c$ defined by
+\begin{align*}
+    \mathcal{I} &=
+    \begin{bmatrix}
+        I_{xx} & I_{xy}\\
+        I_{yx} & I_{yy}
+    \end{bmatrix}\cm\\
+\end{align*}
+where $x$, $y$ are coordinates of the vector from $c$ to each point of $X$, and
+\begin{align*}
+    I_{xx} = \int_{X} my^2 \cm\quad I_{yy} = \int_{X} mx^2\quad\mbox{and}\quad I_{xy} = I_{yx} = -\int_{X} mxy\pd
+\end{align*}
+Then the inertia tensor has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda > \lambda$). Let $v$ be a normalized eigenvector corresponding to $\lambda$.
+\begin{itemize}
+    \setlength{\itemindent}{2mm}
+    \item [(C--1)] If the center of mass $c$ is outside the region, the region is identified as a non-tooth region.
+
+    \item [(C--2)] If $\Lambda / \lambda > 2.5$ and $|v\cdot e_1| \ge \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region is identified as a non-tooth region.
+    
+    \item [(C--3)] Count the number of points with positive or negative curvature on the boundary of region. If
+    \begin{align*}
+        \int_{\partial{X}} \sgn(\kappa(s)) \operatorname{d}\!s < -0.2 \int_{\partial{X}} \operatorname{d}\!s\cm
+    \end{align*}
+    then the region is identified as a non-tooth region.
+\end{itemize}
+
+
 In this section, we denote $\sdf(A)$ by a SDF which is negative on the set $A$ and constantly zero on $\partial A$. In addition, for a SDF $\phi$, $\opp$, $\opn$ and $\opo$ denote the sets $\left\{x\mid \phi > 0 \right\}$, $\left\{x\mid \phi < 0 \right\}$ and $\left\{x\mid \phi = 0 \right\}$, respectively.
 
 The movement of the contour is performed by a force applied in the normal direction to the contour. Therefore, by defining the appropriate force, we can move the contour to reach the boundary of the object. This kind of methods are called geometric active contours methods \cite{Caselles:1997:GAC,Xu:2000:ParamGeoAC} and are widely used formulated as a level set method. In this paper, we segment each tooth region using multiple active contours formulated as multiple level sets. Let $\{\Omega_i\}_{i=1}^N$ be a collection of all connected component of $\Omega\setminus\omc$. As shown in Figure~\ref{Fig:ex_ends_d}, $\omi$ is included in an individual tooth region, gum or oral cavity. Thus, to find a curve enclosing an individual tooth, we take the curve on $\partial\omi$ and push it outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
@@ -426,7 +455,20 @@ Suppose that an initial contour $\opo$ is evolving by \eqref{Eq:proposed}. Basic
 
 As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth from the result in Section~\ref{Subsec:SegLevelset}, we need to identify tooth and non-tooth regions. In a human teeth image, tooth and non-tooth regions can be easily distinguished by shape and color. Teeth are relatively white and convex in shape, thus non-tooth regions can be easily removed. We can check the shape or color of a region by considering several aspects: inertia tensor, curvature on the boundaries, and point distribution in a color space. The region having the following features is identified as a non--teeth region in order.
 
-어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자어펜딕스 가져오자
+The methods in the list below is applied sequentially for identification of tooth and non-tooth regions. For a region, let $c$ be the center of mass and $\mathcal{I}$ the inertia tensor about $c$. Then the inertia tensor has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda \le \lambda$). Let $v$ be an normalized eigenvector corresponding to the $\lambda$. Let the image $I$ be embedded into the CIELAB color space~\cite{} and denoted by $I_{LAB}(x)=[L(x),\,A(x),\,B(x)]$, and let $x^*\in\Omega$ be a point such that
+\begin{align*}
+    x^* = \argmax A(x)\pd
+\end{align*}
+
+\begin{itemize}
+    \item [(F--1)] If the center of mass $c$ is outside the region, a region identified as a non-tooth region.
+
+    \item [(F--2)] If the ratio $\Lambda / \lambda$ is larger than the average of the ratio for all regions and $|v\cdot e_1| \le \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region identified as a non-tooth region.
+    
+    \item [(F--3)] Count the number of points with positive or negative curvature on the boundary of region. If there are more points of negative curvature than points of positive curvature, the region is identified as a non-tooth region
+    
+    \item [(F--4)] For each vertical line passing through the region, values of $I_{LAB}$ on the points where the line passes are clustered together $I_{LAB}(x^*)$ by the $k$--means clurstering algorithm.
+\end{itemize}
 
 % Section: Experimental results
 \section{Experimental results and numerical aspect}
@@ -529,23 +571,11 @@ One of the most important application of individual tooth segmentation is the 3D
 
 %% Appendix
 \appendix
-\section{List of features of non-tooth region}
-\label{App:list_nonteeth}
+\section{Structure of neural network}
+\label{App:neural_net}
 
-The methods in the list below is applied sequentially for identification of tooth and non-tooth regions. For a region, let $c$ be the center of mass and $\mathcal{I}$ the inertia tensor about $c$. Then the inertia tensor has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda \le \lambda$). Let $v$ be an normalized eigenvector corresponding to the $\lambda$. Let the image $I$ be embedded into the CIELAB color space~\cite{} and denoted by $I_{LAB}(x)=[L(x),\,A(x),\,B(x)]$, and let $x^*\in\Omega$ be a point such that
-\begin{align*}
-    x^* = \argmax A(x)\pd
-\end{align*}
-
-\begin{itemize}
-    \item [(F--1)] If the center of mass $c$ is outside the region, a region identified as a non-tooth region.
-
-    \item [(F--2)] If the ratio $\Lambda / \lambda$ is larger than the average of the ratio for all regions and $|v\cdot e_1| \le \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region identified as a non-tooth region.
-    
-    \item [(F--3)] Count the number of points with positive or negative curvature on the boundary of region. If there are more points of negative curvature than points of positive curvature, the region is identified as a non-tooth region
-    
-    \item [(F--4)] For each vertical line passing through the region, values of $I_{LAB}$ on the points where the line passes are clustered together $I_{LAB}(x^*)$ by the $k$--means clurstering algorithm.
-\end{itemize}
+% Figure: Network structure
+\input{./TeethSeg_network.tex}
 
 %% References
 \bibliographystyle{siam}
