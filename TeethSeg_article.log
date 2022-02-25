@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  21 FEB 2022 06:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  22 FEB 2022 14:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1020,44 +1020,44 @@ Overfull \hbox (2.3249pt too wide) in paragraph at lines 39--40
  []
 
 ) [11 <./Figures/proposed/er.png> <./Figures/proposed/example/ex1.png> <./Figures/proposed/example/ex3.png> <./Figures/proposed/example/ex5.png> <./Figures/proposed/example/ex7.png> <./Figures/proposed/example/ex9.png> <./Figures/proposed/example/ex11.png> <./Figures/proposed/example/ex13.png> <./Figures/proposed/example/ex15.png>]
-LaTeX Font Info:    Trying to load font information for LUC+uhcmj on input line 374.
+LaTeX Font Info:    Trying to load font information for LUC+uhcmj on input line 375.
  (c:/texlive/2021/texmf-dist/tex/latex/kotex-utf/lucuhcmj.fd
 File: lucuhcmj.fd 2013/09/26 UHC Myeongjo font definitions
 )
 Missing character: There is no  in font uwmj20!
 Missing character: There is no  in font uwmj20!
 
-LaTeX Warning: Citation `T002' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T002' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T003' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T003' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T004' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T004' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T006' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T006' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T007' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T007' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T009' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T009' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T010' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T010' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T011' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T011' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T012' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T012' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T019' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T019' on page 12 undefined on input line 400.
 
 
-LaTeX Warning: Citation `T020' on page 12 undefined on input line 399.
+LaTeX Warning: Citation `T020' on page 12 undefined on input line 400.
 
 [12] (./Figures/results/fig.tex
 
@@ -1269,13 +1269,13 @@ Package rerunfilecheck Info: File `TeethSeg_article.out' has not changed.
 Here is how much of TeX's memory you used:
  25906 strings out of 478353
  498302 string characters out of 5852100
- 836439 words of memory out of 5000000
+ 837440 words of memory out of 5000000
  43378 multiletter control sequences out of 15000+600000
  418206 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,18n,89p,1776b,1328s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TeethSeg_article.pdf (19 pages, 45801306 bytes).
+Output written on TeethSeg_article.pdf (19 pages, 45797172 bytes).
 PDF statistics:
  687 PDF objects out of 1000 (max. 8388607)
  471 compressed objects within 5 object streams

@@ -326,15 +326,16 @@ where $x$, $y$ are coordinates of the vector from $c$ to each point of $X$, and 
 Then the inertia tensor has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda > \lambda$). Let $v$ be a normalized eigenvector corresponding to $\lambda$. The methods listed below are criterions for identifying non-tooth regions: 
 \begin{itemize}
     \setlength{\itemindent}{2mm}
-    \item [(C--1)] If the center of mass $c$ is outside the region, the region is identified as not a tooth region.
-
-    \item [(C--2)] If $\Lambda / \lambda > 2.5$ and $|v\cdot e_1| \ge \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region is identified as not a tooth region.
-    
-    \item [(C--3)] Let $\kappa(s)$ be an Euclidean curvature on $s\in\partial{X}$. If 
+    \item [(C--1)] Let $\kappa(s)$ be an Euclidean curvature on $s\in\partial{X}$. If 
     \begin{align*}
-        \frac{1}{|\partial{X}|}\int_{\partial{X}} \mbox{sgn}(\kappa(s)) \operatorname{d}\!s < -0.2\cm
+        \frac{1}{|\partial{X}|}\int_{\partial{X}} \mbox{sgn}(\kappa(s)) \operatorname{d}\!s < 0.25\cm
     \end{align*}
     then the region is identified as not a tooth region.
+
+    \item [(C--2)] If the center of mass $c$ is outside the region, the region is identified as not a tooth region.
+
+    \item [(C--3)] If $\Lambda / \lambda > 2.5$ and $|v\cdot e_1| \ge \cos(\pi/4)$ for $e_1 = (1,\,0)$, the region is identified as not a tooth region.
+    
 \end{itemize}
 Let $\omt$ and $\omn$ be tooth and non-tooth regions identified by the above list, respectively. For $\omt$, there is nothing to do as mentioned above. For $\omn$, by taking all local minima of $\sdf(\omn)$, we can retain landmarks for each object in the merged region; see the third row of Figure~\ref{Fig:pre_er}. 
 
