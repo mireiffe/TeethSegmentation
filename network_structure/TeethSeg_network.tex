@@ -1,3 +1,141 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper}
+\usepackage{authblk}
+
+%% Packages
+\usepackage{graphicx, subcaption}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{bm}
+\usepackage{algorithm, algorithmic}
+\usepackage{multirow}
+\usepackage{bbm}
+\usepackage{hyperref,url}
+\usepackage{kotex}
+\usepackage[labelformat=simple]{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows.meta}
+
+\tikzstyle{title} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm, fill=white!100]
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text width=1.3cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, text width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\captionsetup[figure]{labelsep=period}
+% \renewcommand{\thefigure}{\Roman{figure}}
+% \captionsetup[subfigure]{labelformat=parens} % default is 'parens'
+% \renewcommand{\thesubfigure}{\thefigure.\alph{subfigure}.}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+%% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+%% Equations
+\numberwithin{equation}{section}
+
+%% Algorithms
+\renewcommand\algorithmicdo{}
+\renewcommand\algorithmicthen{}
+\renewcommand\algorithmicendfor{\textbf{end}}
+
+%% Macros
+\def\chfun{\mathbbm{1}}
+\def\calc{\mathcal{C}}
+\def\endske{E\left(\mathcal{S}^8\right)}
+\def\endomc{E\left(\Omega_c\right)}
+
+
+\def\gphi{\nabla\phi}
+\def\ngphi{\left|\nabla\phi\right|}
+\def\ngphii{\left|\nabla\phi_i\right|}
+
+\def\fci{F_{c,\,i}}
+\def\fcj{F_{c,\,j}}
+
+\def\fsi{F_{s,\,i}}
+
+\def\cm{\, ,}
+\def\pd{\, .}
+
+\def\omi{\Omega_i}
+\def\oma{\Omega_a}
+\def\ome{\Omega_E}
+\def\oms{\Omega_S}
+\def\omc{\overline{\Omega}_P}
+\def\omcc{\Omega_P}
+\def\omt{\Omega_T}
+\def\omn{\Omega_N}
+
+\def\ER{\mathcal{R}}
+\def\PER{\mathcal{P}}
+\def\ERC{\Omega \setminus \ER}
+
+\def\opp{\Omega_{\phi_i}^+}
+\def\opn{\Omega_{\phi_i}^-}
+% \def\opo{\Omega_{\phi}^0}
+\def\opo{C_{\phi_i}}
+
+\def\sdf{sdf}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+% \def\tOmega{\tilde{\Omega}}
+% \def\tGamma{\tilde{\Gamma}}
+% \def\tV{\tilde{V}}
+% \def\W{\mathbb{W}}
+% \def\tu{\tilde{u}}
+% \def\bu{\bar{u}}
+% \def\hu{\hat{u}}
+% \def\bl{\bar{\lambda}}
+% \def\p{\mathbf{p}}
+% \def\P{\mathbf{P}}
+% \def\intO{\int_{\Omega}}
+% \def\intOs{\int_{\Omega_s}}
+% \def\m{\mathbf{m}}
+% \def\n{\mathbf{n}}
+% \def\blambda{\bm{\lambda}}
+
+% \def\tE{\tilde{E}}
+% \def\N{\mathcal{N}}
+
+% \def\div{\mathrm{div}}
+% \def\proj{\mathrm{proj}}
+% \def\prox{\mathrm{prox}}
+% \def\ran{\mathrm{ran}\,}
+% \def\ed{\mathrm{ed}}
+% \def\supp{\mathrm{supp}\,}
+% \def\TOL{\mathrm{TOL}}
+% \DeclareMathOperator*{\argmin}{\arg\min}
+
+% Text Color and Strike
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\blue}[1]{{\color{blue}{#1}}}
+
+\title{ Individual Tooth Segmentation in Human Teeth Images Using Pseudo Edge-Regions Obtained by Deep Neural Networks }
+\author{Seongeun Kim and Chang-Ock Lee}
+\affil{Department of Mathematical Sciences, KAIST, Daejeon 34141, Korea}
+\date{ }
+
+\begin{document}
+
 \begin{figure}[]
 \centering
 \begin{subfigure}[]{1\textwidth}
@@ -188,31 +326,35 @@
 
             % \draw [line width=\aw,color=yellow!80!black] (\init,0) to ++(\al,0) node[right, color=black] {$3\times 3$ maxpool, $/2$, $+1$};\\
 
-            \draw [line width=\aw] (\init,0) to ++(\al,0) node[right, color=black] {\footnotesize{(a) $3\times 3$ maxpool, $/2$, $+1$}};\\
-            \draw [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] (\init,0) to ++(\al,0) node[right, color=black] {\,(b) GAP};\\
+            % \draw [line width=\aw] (\init,0) to ++(\al,0) node[right, color=black] {GAP};\\
+            \draw [line width=\aw] (\init,0) to ++(\al,0) node[right, color=black] {$3\times 3$ maxpool, $/2$, $+1$};\\
+            % \draw [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] (\init,0) to ++(\al,0) node[right, color=black] {\,(b) GAP};\\
 
             \draw [line width=\aw,color=cyan!90!white] (\init,0) to ++(\al,0) node[right, color=black] {RNS--$m$};\\
 
             \draw [line width=\aw,color=yellow!90!black] (\init,0) to ++(\al,0) node[right, color=black] {$2\times 2$, trans conv, $/2$};\\
 
-            \draw [line width=\aw,color=violet!90!white] (\init,0) to ++(\al,0) node[right, color=black] {(a) Bilinear upscale};\\
-            \draw [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] (\init,0) to ++(\al,0) node[right, color=black] {\,(b) Fully connected};\\
+            % \draw [line width=\aw,color=violet!90!white] (\init,0) to ++(\al,0) node[right, color=black] {Fully connected};\\
+            \draw [line width=\aw,color=violet!90!white] (\init,0) to ++(\al,0) node[right, color=black] {Bilinear upscale, $\ast 2$};\\
+            % \draw [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] (\init,0) to ++(\al,0) node[right, color=black] {\,(b) Fully connected};\\
 
             \draw [line width=\aw,color=red] (\init,0) to ++(\al,0) node[right, color=black] {$1\times 1$ conv};\\
 
-            \draw [-{Triangle[scale=.5]},line width=.3mm,color=black] (\init,0) to ++(\al,0) node[right, color=black] {Identity};
-            \draw [-{Triangle[scale=.5]},line width=.3mm,color=black,dashed] (-\init,0) to ++(\al,0) node[right, color=black] {Identity};\\
+            % \draw [-{Triangle[scale=.5]},line width=.3mm,color=black] (\init,0) to ++(\al,0) node[right, color=black] {Identity};
+            % \draw [-{Triangle[scale=.5]},line width=.3mm,color=black,dashed] (-\init,0) to ++(\al,0) node[right, color=black] {Identity};\\
 
             \draw [-{Triangle[scale=.5]},line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {ReLU};
             \draw [-{Circle[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Sigmoid};\\
-            \draw [-{Arc Barb[scale=.5]},line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {None};
-            \draw [-{Bar[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Softmax};\\
-            \node (mod1) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD1} node[right, color=black] {$3 \times 3$ avgpool, $/2$, $+1$};\\
-            \node (mod2) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD2} node[right, color=black] {$2 \times 2$ avgpool, $/2$};\\
-            \node (mod22) at (0,.25) [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {} node[right, color=black] {$1 \times 1$ conv, BN};\\
+            % \draw [-{Arc Barb[scale=.5]},line width=\aw,color=black] (\init,0) to ++(\al,0) node[right, color=black] {None};
+            % \draw [-{Bar[scale=.5]},line width=\aw,color=black] (-\init,0) to ++(\al,0) node[right, color=black] {Softmax};\\
+            % \node (mod1) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD1} node[right, color=black] {$3 \times 3$ avgpool, $/2$, $+1$};\\
+            % \node (mod2) at (0,.25) [draw,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {\footnotesize MOD2} node[right, color=black] {$2 \times 2$ avgpool, $/2$};\\
+            % \node (mod22) at (0,.25) [draw=none,minimum width=\init/2 cm,minimum height=.2 cm, fill=none] {} node[right, color=black] {$1 \times 1$ conv, BN};\\
         };
     \end{tikzpicture}
 \end{subfigure}
-\caption{\small{The structure of the neural network: ResNeSt~\cite{Zhang:2020:ResNeSt} + upscale module. Overall, each rectangle and each bold arrow represent an intermediate result (or input) and a operation, respectively. The number at the top of the rectangle indicates the number of channels. Among the arrows, if there is a number in the square above the arrow, that means the arrow is repeated as many times as that number. The operation types are color-specific and are listed in the lower-right legend. Every arrow has a batch normalization (BN) after the operation with only two exceptions in (b): the global average pooling (GAP) and fully connected layers marked with thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are notations $/$ and $+$, which mean stride and padding of the operation with the following number, respectively. All the bilinear upscalings are applied with scale factor $2$. There are totally $7$ RNS-$m$ blocks in~(a). For that arrows, $m$ is $64$, $128$, $128$, $256$, $256$, $512$, $512$ in order. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet~\cite{He:2015:ResNet,He:2019:ResNetTrick}: the MOD1 in the legend is added after the first layer, and the dashed identity connection changes to MOD2 in the legend. }}
+% \caption{\small{The structure of the neural network: ResNeSt~\cite{Zhang:2020:ResNeSt} + upscale module. Overall, each rectangle and each bold arrow represent an intermediate result (or input) and a operation, respectively. The number at the top of the rectangle indicates the number of channels. Among the arrows, if there is a number in the square above the arrow, that means the arrow is repeated as many times as that number. The operation types are color-specific and are listed in the lower-right legend. Every arrow has a batch normalization (BN) after the operation with only two exceptions in (b): the global average pooling (GAP) and fully connected layers marked with thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are notations $/$ and $+$, which mean stride and padding of the operation with the following number, respectively. All the bilinear upscalings are applied with scale factor $2$. There are totally $7$ RNS-$m$ blocks in~(a). For that arrows, $m$ is $64$, $128$, $128$, $256$, $256$, $512$, $512$ in order. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet~\cite{He:2015:ResNet,He:2019:ResNetTrick}: the MOD1 in the legend is added after the first layer, and the dashed identity connection changes to MOD2 in the legend. }}
 \label{Fig:network}
 \end{figure}
+
+\end{document}

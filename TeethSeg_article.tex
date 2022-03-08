@@ -13,6 +13,7 @@
 \usepackage{bbm}
 \usepackage{hyperref,url}
 \usepackage{kotex}
+\usepackage[bottom]{footmisc}
 \usepackage[labelformat=simple]{subcaption}
 
 \usepackage{tikz}
@@ -128,6 +129,12 @@
 \usepackage{color}
 \newcommand{\red}[1]{{\color{red}{#1}}}
 \newcommand{\blue}[1]{{\color{blue}{#1}}}
+\newcommand{\blfootnote}[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 \title{ Individual Tooth Segmentation in Human Teeth Images Using Pseudo Edge-Regions Obtained by Deep Neural Networks }
 \author{Seongeun Kim and Chang-Ock Lee}
@@ -138,32 +145,33 @@
 \maketitle
 
 \begin{abstract}
-In human teeth images taken outside the oral cavity with a general digital camera, it is difficult to segment individual tooth due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we propose a method for segmenting individual tooth in human teeth images. The key of the method is to obtain pseudo edge-regions using deep neural networks. After additional steps to acquire initial contours for each tooth region, we apply an active contour model to segment the individual tooth. We also present a strategy using existing model-based methods for labeling the data required for neural network training.
+In human teeth images taken outside the oral cavity with a general digital camera, it is difficult to segment individual tooth due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we propose a method for segmenting individual tooth in human teeth images. The key to this method is to obtain pseudo edge-regions using deep neural networks. After an additional step to obtain initial contours for each tooth region, the individual tooth are segmented by applying an active contour model. We also present a strategy using existing model-based methods for labeling the data required for neural network training.~{\blfootnote{This work was supported by the National Research Foundation~(NRF) of Korea grant funded by the Korea government (No.~2020R1A2C1A01004276).}}
 \end{abstract}
 
 {\small \textbf{Key words}
-Tooth segmentation, Neural network, Geometric attraction--driven flow, Edge-region, Light reflection}
+Tooth segmentation, Neural network, Geometric attraction-driven flow, Edge-region, Light reflection}
 
 {\small \textbf{AMS subject classifications}
-94A08, 68T07}
+68T07, 94A08}
 
 %% Main text starts ---------------------------------------------------------------------------------------------------
+
 % Section: Introduction
 \section{Introduction}
 \label{Sec:Introduction}
 
-Image segmentation is one of major topics in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation and boundary detection. It makes contours move to the boundary of the nearby object~\cite{Kass:1988:Snakes}; gradient vector flows (GVF)~\cite{Xu:1997:GVF}, geodesic active contours (GAC)~\cite{Caselles:1997:GAC} are well-known models with different moving forces. In \cite{Chan:2001:chanvese}, a region-based active contour method was proposed unlike the previous methods using edge maps. Details on these models are elaborated in Section~\ref{Subsec:active_contour}.
+Image segmentation is one of major topics in the field of computer vision. The main goal of image segmentation is to segment objects in an image according to a specific purpose and many outstanding methodologies have been developed. The active contour model is one of the popular methods for the image segmentation and boundary detection. It makes contours move to the boundary of the nearby object~\cite{Kass:1988:Snakes}; gradient vector flows (GVF)~\cite{Xu:1997:GVF} and geodesic active contours (GAC)~\cite{Caselles:1997:GAC} are well-known models with different moving forces. In \cite{Chan:2001:chanvese}, a region-based active contour method was proposed unlike the previous methods using edge maps.
 
-Segmentation of individual tooth in human teeth images has been mainly performed on computed tomography~(CT) or X-ray images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. Teeth are easily segmented in these CT or X-ray images since the intensity of the teeth region is much stronger than the gums or tissues. However, segmenting individual tooth in a teeth image taken outside the oral cavity with a general digital camera is a more difficult problem. In the teeth images, not only weak edges and light reflections appear, but also colors and illuminance are inhomogeneous due to plaque and oral structure, which are major obstacles to segmentation of individual tooth. Several attempts have been made to segment individual tooth in teeth images. In~\cite{Na:2014LteethMorph}, the watershed algorithm~\cite{Vincent:1991:watershed} with color information was proposed. Recently, segmentations using supervised learning methods are mainly performed. In~\cite{WU:2016}, a supervised learning method BEL~\cite{Dollar:2006:BEL} was used to obtain the individual tooth boundaries, and in~\cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, deep learning methods based on Mask R-CNN~\cite{He:2018:MRCNN} were proposed. Although the model-based methods are reliable, it produces poor results when applied to images obtained in an unrefined environment. On the other hand, it is well known that supervised learning methods can give excellent results for a variety of images, but require sufficient amount of training data for stable performance, and that the labeling process of training data takes a lot of time and cost.
+Segmentation of individual tooth in human teeth images has been mainly performed on computed tomography~(CT) or X-ray images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D,Said:2006:teethxray,Shah:2006:teethautoseg}. In these images, teeth are easily segmented  because the intensity of the tooth region is much stronger than that of the gums or tissues. However, segmenting individual tooth in a teeth image taken outside the oral cavity with a general digital camera is a more difficult problem. In the teeth images, not only weak edges and light reflections appear, but also colors and illuminance are inhomogeneous due to plaque and oral structure, which are major obstacles to segmentation of individual tooth. Several attempts have been made to segment individual tooth in teeth images. In~\cite{Na:2014LteethMorph}, the watershed algorithm~\cite{Vincent:1991:watershed} with color information was proposed. Recently, segmentations using supervised learning methods have been mainly performed. In~\cite{WU:2016}, a supervised learning method BEL~\cite{Dollar:2006:BEL} was used to obtain the individual tooth boundaries, and in~\cite{Kim:2020,Pham:2020,Zhu:2020:teethMaskrcnn}, deep learning methods based on Mask R-CNN~\cite{He:2018:MRCNN} were proposed. Although model-based methods are reliable, they produce poor results when applied to images obtained in an unrefined environment. On the other hand, it is well known that supervised learning methods can give excellent results for a variety of images, but require a sufficient amount of training data for stable performance, and the labeling process of training data takes a lot of time and cost.
 
-The main applications of individual tooth segmentation are reconstruction of 3D tooth models, dental identification of deceased individuals performed in forensic dentistry~\cite{Pretty:2001:forensic}, and dental healthcare. The 3D teeth model reconstruction was developed based on individual tooth segmentation in CT images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}. However, in a recent study~\cite{WU:2016}, a 3D teeth model reconstruction method using individual tooth boundaries in a single teeth image was proposed. In addition, identification of decease is one of the most important field in forensic dentistry to the point where the FBI has created a dedicated organization to operate automatic tooth recognition system~\cite{Shah:2006:teethautoseg}. This is established by comparison of antemortem and postmortem dental records, and an individual tooth segmentation is necessary in this process~\cite{Pretty:2001:forensic}.
+The main applications of individual tooth segmentation are reconstruction of 3D teeth models, dental identification of deceased persons performed in forensic dentistry~\cite{Pretty:2001:forensic}, and dental healthcare. The 3D teeth model reconstruction was developed based on individual tooth segmentation in CT images~\cite{Yuan:2020:teethParanomic,Naumovich:2015:teethCT3D}. However, in a recent study~\cite{WU:2016}, a 3D teeth model reconstruction method using individual tooth boundaries in a single teeth image was proposed. In addition, identification of the deceased is one of the most important field in forensic dentistry. This is established by comparison of antemortem and postmortem dental records, and an individual tooth segmentation is necessary in this process~\cite{Pretty:2001:forensic, Shah:2006:teethautoseg}.
 
-In this paper, we segment individual tooth regions using the deep neural network and active contour model. First, we obtain the pseudo edge-region using a deep neural network. When preparing data for training the networks, manually select regions on the tooth boundary among edge-regions acquired by geometric attraction-driven flow (GADF). This greatly reduces the time and cost of the data labeling process compared to performing the entire process manually. After that, active contours model using multiple contours are applied to acquire initial contours, and then segment regions from the pseudo edge-region. Finally, by identifying tooth and non-tooth regions, only the tooth region is obtained as a result.
+In this paper, we segment individual tooth regions using a deep neural network and an active contour model. First, we obtain pseudo edge-region using the deep neural network. After that, an active contour model using multiple contours is applied to obtain initial contours, and then regions are segmented from the pseudo edge-region. Finally, it identifies tooth regions and regions without teeth, resulting in only the tooth region. When preparing data for training the neural network, we manually select regions on the tooth boundary among the edge-regions acquired by the geometric attraction-driven flow (GADF). This greatly reduces the time and cost of the data labeling process compared to performing the entire process manually.
 
-The remainder of this paper is organized as follows. In Section~\ref{Sec:er_teeth}, we will discuss geometric attraction-driven flow (GADF), edge-regions, and problems of edge-regions obtained from teeth images. In Section~\ref{Sec:PM}, the proposed algorithm is described, and the experimental results are presented in Section~\ref{Sec:result}. We will conclude this paper in Section~\ref{Sec:Conclusion}. 
+The remainder of this paper is organized as follows. In Section~\ref{Sec:er_teeth}, we will discuss GADF, edge-regions, and problems of edge-regions obtained from teeth images. In Section~\ref{Sec:PM}, the proposed algorithm is described, and the experimental results are presented in Section~\ref{Sec:result}. We will conclude this paper in Section~\ref{Sec:Conclusion}. 
 
 % Sec:Background
-\section{GADF, edge-regions and segmentations}
+\section{GADF, edge-regions, and segmentation}
 \label{Sec:er_teeth}
 
 In this section, we briefly review the GADF, edge-region in~\cite{Hahn:2006,Hahn:2010:GADF}, and active contour models, which play key roles in segmenting individual tooth. Then we will show that the edge-regions obtained by GADF are incomplete due to the problematic features of the teeth image.
@@ -187,25 +195,25 @@ where $\mbox{sgn}$ is the sign function and
 \begin{align*}
     \ell(x) &= \int^{\epsilon}_{0} {u'_x(s)}\,ds - \int^{0}_{-\epsilon} {u'_x(s)}\,ds\quad\mbox{for a small}~\epsilon > 0\pd
 \end{align*}
-By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge point. The GADF can be naturally extended to color images; see~\cite{Hahn:2006,Hahn:2010:GADF}, but in this paper, we consider the GADF only for grayscale images which are obtained by averaging channels of given color images.
+By the definition, $F_a(x)$ points along the line $x + s\frac{\nabla{I(x)}}{|\nabla{I(x)}|}$ towards the edge point. The GADF can be naturally extended to color images; see~\cite{Hahn:2006,Hahn:2010:GADF}. However, in this paper, we consider the GADF only for grayscale images obtained by averaging channels of a given color image.
 
 % Subsection: Edge-regions
 \subsection{Edge-regions}
 \label{Subsec:edge-regions}
 
-The edge-region is roughly defined as the curve of thin regions containing most of object boundaries, regardless of the strength of edges. In~\cite{Hahn:2010:GADF}, $\ome$ is defined as a region where $F_a$ faces each other, i.e. 
+The edge-region is roughly defined as the union of thin regions containing most of object boundaries, regardless of the strength of edges. In~\cite{Hahn:2010:GADF}, $\ome$ is defined as a region where $F_a$ faces each other, i.e.,
 \begin{align*}
     \ome = \left\{ x\in\Omega \mid F_a(x^*) \cdot F_a(x) < 0 ~\mbox{and}~ x^*=x+F_a(x) \right\}\pd %\label{Def:pre_er}
 \end{align*}
 Since $F_a$ is defined using normalized image gradient, it is independent of the strength of edges so that $\ome$ satisfies the rough definition of the edge-region. But in practice, $\ome$ is just a candidate for the edge-region, because it contains many regions that are not intersected with the boundaries of the object. Hence it is necessary to remove them as many as possible.
 
-In Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic image and two real teeth images. For the synthetic image, $\ome$ is well formed only at the tooth boundary, but in the teeth images, there are a lot of regions that do not intersect tooth boundaries. Among the connected components of $\ome$, those who are having small size or formed upon flat image intensities are assumed not to contain tooth boundaries and can be easily removed~\cite{Hahn:2006}. In the rightmost column, refined and dilated $\ome$ using the similar idea to~\cite{Hahn:2006} are presented. Despite these efforts, there are still many unnecessary regions in the refined edge-regions; see the bottom right of~\ref{Fig:edge_regions}. We will talk about this region in the next two sections. %The regions with non-closed shape can be treated applying active contour model~\ref{Subsec:active_contour}, and about the regions with closed shape, the main obstacles of individual tooth segmentation, it will be discussed in Section~\ref{Subsec:light_reflection}.
+In Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic image and two real teeth images. In the case of the synthetic image, $\ome$ is well formed only at the tooth boundary, but in the teeth images, there are a lot of regions that do not intersect with the tooth boundaries. Among the connected components of $\ome$, those that are small in size or formed in flat regions are removed assuming that they do not contain tooth boundaries~\cite{Hahn:2006}. In the rightmost column, the edge-region $\oma$ is presented, which is obtained from $\ome$ by the refinement followed by the dilation. Despite these efforts, there are still many regions that are not intersected with the tooth boundary in the refined edge-regions; see the bottom right of Figure~\ref{Fig:edge_regions}. We will address this issue in the next two sections. %The regions with non-closed shape can be treated applying active contour model~\ref{Subsec:active_contour}, and about the regions with closed shape, the main obstacles of individual tooth segmentation, it will be discussed in Section~\ref{Subsec:light_reflection}.
 
 % Figure: Weak edges in teeth image
 \input{ ./Figures/edge_region/fig.tex}
 
 % Subsection: Active Contour Models
-\subsection{Active Contour Models}
+\subsection{Active contour model}
 \label{Subsec:active_contour}
 
 The active contour model is one of the popular image segmentation and edge detection model. It is firstly introduced in~\cite{Kass:1988:Snakes}, named as snake. Let $I:\Omega\subset\mathbf{R}^2 \rightarrow [0,\,1]$ be a given image and $\calc:[0,\,1] \rightarrow \Omega$ be a parametric curve. The traditional snake finds contour which minimizes the energy functional 

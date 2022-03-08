@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  8 MAR 2022 18:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  25 FEB 2022 12:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex"
-(g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex
+**"g:/My Drive/Documents/Research works/proposal_defense/tex/network_structure/TeethSeg_network.tex"
+(g:/My Drive/Documents/Research works/proposal_defense/tex/network_structure/TeethSeg_network.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -372,21 +372,10 @@ File: lucenc.dfu 2007/09/05 UTF-8 support for dhucs
 \josatoks=\toks34
  (c:/texlive/2021/texmf-dist/tex/latex/cjk-ko/kolabels-utf.sty
 Package: kolabels-utf 2015/03/20 v1.5 UTF-8 Hangul item labels
-))) (c:/texlive/2021/texmf-dist/tex/latex/footmisc/footmisc.sty
-Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
-\FN@temptoken=\toks35
-\footnotemargin=\dimen171
-\c@pp@next@reset=\count298
-Package footmisc Info: Declaring symbol style bringhurst on input line 855.
-Package footmisc Info: Declaring symbol style chicago on input line 863.
-Package footmisc Info: Declaring symbol style wiley on input line 872.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
-Package footmisc Info: Declaring symbol style lamport* on input line 903.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
-) (c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks36
-\pgfutil@tempdima=\dimen172
-\pgfutil@tempdimb=\dimen173
+))) (c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks35
+\pgfutil@tempdima=\dimen171
+\pgfutil@tempdimb=\dimen172
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box54
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -396,31 +385,31 @@ Package: pgf 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks37
-\pgfkeys@temptoks=\toks38
+\pgfkeys@pathtoks=\toks36
+\pgfkeys@temptoks=\toks37
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks39
+\pgfkeys@tmptoks=\toks38
 ))
-\pgf@x=\dimen174
-\pgf@y=\dimen175
-\pgf@xa=\dimen176
-\pgf@ya=\dimen177
-\pgf@xb=\dimen178
-\pgf@yb=\dimen179
-\pgf@xc=\dimen180
-\pgf@yc=\dimen181
-\pgf@xd=\dimen182
-\pgf@yd=\dimen183
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\pgf@xd=\dimen181
+\pgf@yd=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count299
-\c@pgf@countb=\count300
-\c@pgf@countc=\count301
-\c@pgf@countd=\count302
-\t@pgf@toka=\toks40
-\t@pgf@tokb=\toks41
-\t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count303
+\c@pgf@counta=\count298
+\c@pgf@countb=\count299
+\c@pgf@countc=\count300
+\c@pgf@countd=\count301
+\t@pgf@toka=\toks39
+\t@pgf@tokb=\toks40
+\t@pgf@tokc=\toks41
+\pgf@sys@id@count=\count302
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -431,8 +420,8 @@ File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count304
-\pgfsyssoftpath@bigbuffer@items=\count305
+\pgfsyssoftpath@smallbuffer@items=\count303
+\pgfsyssoftpath@bigbuffer@items=\count304
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -453,52 +442,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen184
-\pgfmath@count=\count306
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count305
 \pgfmath@box=\box55
-\pgfmath@toks=\toks43
-\pgfmath@stack@operand=\toks44
-\pgfmath@stack@operation=\toks45
+\pgfmath@toks=\toks42
+\pgfmath@stack@operand=\toks43
+\pgfmath@stack@operation=\toks44
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count307
+\c@pgfmathroundto@lastzeros=\count306
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@picminx=\dimen185
-\pgf@picmaxx=\dimen186
-\pgf@picminy=\dimen187
-\pgf@picmaxy=\dimen188
-\pgf@pathminx=\dimen189
-\pgf@pathmaxx=\dimen190
-\pgf@pathminy=\dimen191
-\pgf@pathmaxy=\dimen192
-\pgf@xx=\dimen193
-\pgf@xy=\dimen194
-\pgf@yx=\dimen195
-\pgf@yy=\dimen196
-\pgf@zx=\dimen197
-\pgf@zy=\dimen198
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@path@lastx=\dimen199
-\pgf@path@lasty=\dimen256
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@shorten@end@additional=\dimen257
-\pgf@shorten@start@additional=\dimen258
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count308
+\pgf@picture@serial@count=\count307
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgflinewidth=\dimen259
+\pgflinewidth=\dimen258
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@pt@x=\dimen260
-\pgf@pt@y=\dimen261
-\pgf@pt@temp=\dimen262
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -507,12 +496,12 @@ File: pgfcoreobjects.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfcorepathprocessing.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowsep=\dimen263
+\pgfarrowsep=\dimen262
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@max=\dimen264
-\pgf@sys@shading@range@num=\count309
-\pgf@shadingcount=\count310
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count308
+\pgf@shadingcount=\count309
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -533,47 +522,47 @@ File: pgfmoduleshapes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfmoduleplot.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@nodesepstart=\dimen265
-\pgf@nodesepend=\dimen266
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
 ) (c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen267
-\pgffor@skip=\dimen268
-\pgffor@stack=\toks46
-\pgffor@toks=\toks47
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
+\pgffor@stack=\toks45
+\pgffor@toks=\toks46
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count311
-\pgfplotmarksize=\dimen269
+\pgf@plot@mark@count=\count310
+\pgfplotmarksize=\dimen268
 )
-\tikz@lastx=\dimen270
-\tikz@lasty=\dimen271
-\tikz@lastxsaved=\dimen272
-\tikz@lastysaved=\dimen273
-\tikz@lastmovetox=\dimen274
-\tikz@lastmovetoy=\dimen275
-\tikzleveldistance=\dimen276
-\tikzsiblingdistance=\dimen277
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikz@lastmovetox=\dimen273
+\tikz@lastmovetoy=\dimen274
+\tikzleveldistance=\dimen275
+\tikzsiblingdistance=\dimen276
 \tikz@figbox=\box61
 \tikz@figbox@bg=\box62
 \tikz@tempbox=\box63
 \tikz@tempbox@bg=\box64
-\tikztreelevel=\count312
-\tikznumberofchildren=\count313
-\tikznumberofcurrentchild=\count314
-\tikz@fig@count=\count315
+\tikztreelevel=\count311
+\tikznumberofchildren=\count312
+\tikznumberofcurrentchild=\count313
+\tikz@fig@count=\count314
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count316
-\pgfmatrixcurrentcolumn=\count317
-\pgf@matrix@numberofcolumns=\count318
+\pgfmatrixcurrentrow=\count315
+\pgfmatrixcurrentcolumn=\count316
+\pgf@matrix@numberofcolumns=\count317
 )
-\tikz@expandcount=\count319
+\tikz@expandcount=\count318
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
@@ -584,7 +573,7 @@ File: pgflibraryshapes.geometric.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 File: tikzlibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\arrowsize=\dimen278
+\arrowsize=\dimen277
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
@@ -595,54 +584,54 @@ File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@layerboxsaved@background=\box66
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfarrowinset=\dimen279
-\pgfarrowlength=\dimen280
-\pgfarrowwidth=\dimen281
-\pgfarrowlinewidth=\dimen282
+\pgfarrowinset=\dimen278
+\pgfarrowlength=\dimen279
+\pgfarrowwidth=\dimen280
+\pgfarrowlinewidth=\dimen281
 )
-\c@theorem=\count320
+\c@theorem=\count319
  (c:/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box67
 \UL@hyphenbox=\box68
 \UL@skip=\skip62
-\UL@hook=\toks48
-\UL@height=\dimen283
-\UL@pe=\count321
-\UL@pixel=\dimen284
+\UL@hook=\toks47
+\UL@height=\dimen282
+\UL@pe=\count320
+\UL@pixel=\dimen283
 \ULC@box=\box69
 Package: ulem 2019/11/18
-\ULdepth=\dimen285
+\ULdepth=\dimen284
 ) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
+\l__color_backend_stack_int=\count321
 \l__pdf_internal_box=\box70
-) (./TeethSeg_article.aux)
-\openout1 = `TeethSeg_article.aux'.
+) (./TeethSeg_network.aux)
+\openout1 = `TeethSeg_network.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 144.
-LaTeX Font Info:    ... okay on input line 144.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 144.
-LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 144.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
+LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 137.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 137.
  (c:/texlive/2021/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    ... okay on input line 137.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -680,17 +669,17 @@ LaTeX Font Info:    ... okay on input line 144.
 
 (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen286
+\scratchcounter=\count322
+\scratchdimen=\dimen285
 \scratchbox=\box71
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks49
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen287
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks50
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count325
+\MPscratchDim=\dimen286
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks49
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (c:/texlive/2021/texmf-dist/tex/latex/grfext/grfext.sty
@@ -707,7 +696,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 144.
+Package hyperref Info: Link coloring OFF on input line 137.
  (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -715,206 +704,44 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 144.
-LaTeX Info: Redefining \pageref on input line 144.
-LaTeX Info: Redefining \nameref on input line 144.
- (./TeethSeg_article.out) (./TeethSeg_article.out)
+LaTeX Info: Redefining \ref on input line 137.
+LaTeX Info: Redefining \pageref on input line 137.
+LaTeX Info: Redefining \nameref on input line 137.
+ (./TeethSeg_network.out) (./TeethSeg_network.out)
 \@outlinefile=\write4
-\openout4 = `TeethSeg_article.out'.
+\openout4 = `TeethSeg_network.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 148.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 139.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 166.
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 148.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 166.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+) [1{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./TeethSeg_network.aux)
+Package rerunfilecheck Info: File `TeethSeg_network.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 24870 strings out of 478353
+ 471987 string characters out of 5852100
+ 797307 words of memory out of 5000000
+ 42543 multiletter control sequences out of 15000+600000
+ 415407 words of font info for 72 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,18n,89p,1506b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on TeethSeg_network.pdf (1 page, 92823 bytes).
+PDF statistics:
+ 61 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Figures/edge_region/fig.tex
-<./Figures/edge_region/stt.png, id=147, 213.79875pt x 194.7275pt>
-File: ./Figures/edge_region/stt.png Graphic file (type png)
-<use ./Figures/edge_region/stt.png>
-Package pdftex.def Info: ./Figures/edge_region/stt.png  used on input line 7.
-(pdftex.def)             Requested size: 93.71614pt x 85.35826pt.
-<./Figures/edge_region/nolight.png, id=148, 216.81pt x 197.83pt>
-File: ./Figures/edge_region/nolight.png Graphic file (type png)
-<use ./Figures/edge_region/nolight.png>
-Package pdftex.def Info: ./Figures/edge_region/nolight.png  used on input line 8.
-(pdftex.def)             Requested size: 93.54738pt x 85.35826pt.
-<./Figures/edge_region/light.png, id=150, 218.27pt x 197.83pt>
-File: ./Figures/edge_region/light.png Graphic file (type png)
-<use ./Figures/edge_region/light.png>
-Package pdftex.def Info: ./Figures/edge_region/light.png  used on input line 9.
-(pdftex.def)             Requested size: 94.17732pt x 85.35826pt.
-<./Figures/edge_region/stt_er.png, id=151, 213.79875pt x 194.7275pt>
-File: ./Figures/edge_region/stt_er.png Graphic file (type png)
-<use ./Figures/edge_region/stt_er.png>
-Package pdftex.def Info: ./Figures/edge_region/stt_er.png  used on input line 15.
-(pdftex.def)             Requested size: 93.71614pt x 85.35826pt.
-<./Figures/edge_region/nolight_er.png, id=152, 213.79875pt x 194.7275pt>
-File: ./Figures/edge_region/nolight_er.png Graphic file (type png)
-<use ./Figures/edge_region/nolight_er.png>
-Package pdftex.def Info: ./Figures/edge_region/nolight_er.png  used on input line 16.
-(pdftex.def)             Requested size: 93.71614pt x 85.35826pt.
-<./Figures/edge_region/light_er.png, id=153, 214.8025pt x 194.7275pt>
-File: ./Figures/edge_region/light_er.png Graphic file (type png)
-<use ./Figures/edge_region/light_er.png>
-Package pdftex.def Info: ./Figures/edge_region/light_er.png  used on input line 17.
-(pdftex.def)             Requested size: 94.15613pt x 85.35826pt.
-<./Figures/edge_region/stt_Er_l.png, id=154, 213.79875pt x 194.7275pt>
-File: ./Figures/edge_region/stt_Er_l.png Graphic file (type png)
-<use ./Figures/edge_region/stt_Er_l.png>
-Package pdftex.def Info: ./Figures/edge_region/stt_Er_l.png  used on input line 22.
-(pdftex.def)             Requested size: 93.71614pt x 85.35826pt.
-<./Figures/edge_region/nolight_Er_l.png, id=155, 213.79875pt x 194.7275pt>
-File: ./Figures/edge_region/nolight_Er_l.png Graphic file (type png)
-<use ./Figures/edge_region/nolight_Er_l.png>
-Package pdftex.def Info: ./Figures/edge_region/nolight_Er_l.png  used on input line 23.
-(pdftex.def)             Requested size: 93.71614pt x 85.35826pt.
-<./Figures/edge_region/light_Er_l.png, id=156, 214.8025pt x 194.7275pt>
-File: ./Figures/edge_region/light_Er_l.png Graphic file (type png)
-<use ./Figures/edge_region/light_Er_l.png>
-Package pdftex.def Info: ./Figures/edge_region/light_Er_l.png  used on input line 24.
-(pdftex.def)             Requested size: 94.15613pt x 85.35826pt.
-) [3] [4 <./Figures/edge_region/stt.png (PNG copy)> <./Figures/edge_region/nolight.png> <./Figures/edge_region/light.png> <./Figures/edge_region/stt_er.png (PNG copy)> <./Figures/edge_region/nolight_er.png (PNG copy)> <./Figures/edge_region/light_er.png (PNG copy)> <./Figures/edge_region/stt_Er_l.png (PNG copy)> <./Figures/edge_region/nolight_Er_l.png (PNG copy)> <./Figures/edge_region/light_Er_l.png (PNG copy)>] (./Figures/evolution/fig.tex
-<./Figures/evolution/light_steps/iter0.png, id=187, 394.47375pt x 356.83313pt>
-File: ./Figures/evolution/light_steps/iter0.png Graphic file (type png)
-<use ./Figures/evolution/light_steps/iter0.png>
-Package pdftex.def Info: ./Figures/evolution/light_steps/iter0.png  used on input line 11.
-(pdftex.def)             Requested size: 83.35356pt x 75.39963pt.
-
-Overfull \hbox (3.88435pt too wide) in paragraph at lines 11--12
- [][] 
- []
-
-<./Figures/evolution/light_steps/iter150.png, id=188, 392.96812pt x 357.58594pt>
-File: ./Figures/evolution/light_steps/iter150.png Graphic file (type png)
-<use ./Figures/evolution/light_steps/iter150.png>
-Package pdftex.def Info: ./Figures/evolution/light_steps/iter150.png  used on input line 15.
-(pdftex.def)             Requested size: 82.86153pt x 75.39963pt.
-
-Overfull \hbox (3.39232pt too wide) in paragraph at lines 15--16
- [][] 
- []
-
-<./Figures/evolution/light_steps/iter350.png, id=189, 394.47375pt x 357.58594pt>
-File: ./Figures/evolution/light_steps/iter350.png Graphic file (type png)
-<use ./Figures/evolution/light_steps/iter350.png>
-Package pdftex.def Info: ./Figures/evolution/light_steps/iter350.png  used on input line 19.
-(pdftex.def)             Requested size: 83.179pt x 75.39963pt.
-
-Overfull \hbox (3.7098pt too wide) in paragraph at lines 19--20
- [][] 
- []
-
-<./Figures/evolution/light_steps/iter750.png, id=190, 394.47375pt x 358.33875pt>
-File: ./Figures/evolution/light_steps/iter750.png Graphic file (type png)
-<use ./Figures/evolution/light_steps/iter750.png>
-Package pdftex.def Info: ./Figures/evolution/light_steps/iter750.png  used on input line 23.
-(pdftex.def)             Requested size: 82.99843pt x 75.39963pt.
-
-Overfull \hbox (3.52922pt too wide) in paragraph at lines 23--24
- [][] 
- []
-
-<./Figures/evolution/light_steps/iter1250.png, id=191, 395.97937pt x 358.33875pt>
-File: ./Figures/evolution/light_steps/iter1250.png Graphic file (type png)
-<use ./Figures/evolution/light_steps/iter1250.png>
-Package pdftex.def Info: ./Figures/evolution/light_steps/iter1250.png  used on input line 27.
-(pdftex.def)             Requested size: 83.31522pt x 75.39963pt.
-
-Overfull \hbox (3.84601pt too wide) in paragraph at lines 27--28
- [][] 
- []
-
-) [5] [6 <./Figures/evolution/light_steps/iter0.png (PNG copy)> <./Figures/evolution/light_steps/iter150.png (PNG copy)> <./Figures/evolution/light_steps/iter350.png (PNG copy)> <./Figures/evolution/light_steps/iter750.png (PNG copy)> <./Figures/evolution/light_steps/iter1250.png (PNG copy)>] (./Figures/flowchart/fig.tex
-Overfull \hbox (9.95587pt too wide) in paragraph at lines 21--21
- [][]\OT1/cmr/m/n/10 Segmented 
- []
-
-) (./Figures/labeling/fig.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1.
-
-<./Figures/labeling/img.png, id=232, 358.52695pt x 239.04149pt>
-File: ./Figures/labeling/img.png Graphic file (type png)
-<use ./Figures/labeling/img.png>
-Package pdftex.def Info: ./Figures/labeling/img.png  used on input line 5.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/labeling/er.png, id=235, 358.52695pt x 239.04149pt>
-File: ./Figures/labeling/er.png Graphic file (type png)
-<use ./Figures/labeling/er.png>
-Package pdftex.def Info: ./Figures/labeling/er.png  used on input line 11.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/labeling/sel_reg.png, id=236, 358.52695pt x 239.04149pt>
-File: ./Figures/labeling/sel_reg.png Graphic file (type png)
-<use ./Figures/labeling/sel_reg.png>
-Package pdftex.def Info: ./Figures/labeling/sel_reg.png  used on input line 18.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-<./Figures/labeling/label.png, id=237, 358.52695pt x 239.04149pt>
-File: ./Figures/labeling/label.png Graphic file (type png)
-<use ./Figures/labeling/label.png>
-Package pdftex.def Info: ./Figures/labeling/label.png  used on input line 24.
-(pdftex.def)             Requested size: 162.1617pt x 108.12054pt.
-) [7] [8 <./Figures/labeling/img.png> <./Figures/labeling/er.png> <./Figures/labeling/sel_reg.png> <./Figures/labeling/label.png>] (./Figures/per_init/fig.tex
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 1.
-
-<./Figures/per_init/img0.pdf, id=256, 358.4592pt x 238.22601pt>
-File: ./Figures/per_init/img0.pdf Graphic file (type pdf)
-<use ./Figures/per_init/img0.pdf>
-Package pdftex.def Info: ./Figures/per_init/img0.pdf  used on input line 6.
-(pdftex.def)             Requested size: 107.0299pt x 71.13188pt.
-<./Figures/per_init/img0_per.pdf, id=257, 358.4592pt x 238.22601pt>
-File: ./Figures/per_init/img0_per.pdf Graphic file (type pdf)
-<use ./Figures/per_init/img0_per.pdf>
-Package pdftex.def Info: ./Figures/per_init/img0_per.pdf  used on input line 7.
-(pdftex.def)             Requested size: 107.0299pt x 71.13188pt.
-<./Figures/per_init/img0_lmk2.png, id=258, 638.00859pt x 424.02164pt>
-File: ./Figures/per_init/img0_lmk2.png Graphic file (type png)
-<use ./Figures/per_init/img0_lmk2.png>
-Package pdftex.def Info: ./Figures/per_init/img0_lmk2.png  used on input line 8.
-(pdftex.def)             Requested size: 107.02895pt x 71.13188pt.
-<./Figures/per_init/img0_init.png, id=259, 638.00859pt x 424.02164pt>
-File: ./Figures/per_init/img0_init.png Graphic file (type png)
-<use ./Figures/per_init/img0_init.png>
-Package pdftex.def Info: ./Figures/per_init/img0_init.png  used on input line 9.
-(pdftex.def)             Requested size: 107.02895pt x 71.13188pt.
-<./Figures/per_init/img1.pdf, id=260, 358.4592pt x 163.25865pt>
-File: ./Figures/per_init/img1.pdf Graphic file (type pdf)
-<use ./Figures/per_init/img1.pdf>
-Package pdftex.def Info: ./Figures/per_init/img1.pdf  used on input line 13.
-(pdftex.def)             Requested size: 156.18008pt x 71.13188pt.
-<./Figures/per_init/img1_per.pdf, id=261, 358.4592pt x 163.25865pt>
-File: ./Figures/per_init/img1_per.pdf Graphic file (type pdf)
-<use ./Figures/per_init/img1_per.pdf>
-Package pdftex.def Info: ./Figures/per_init/img1_per.pdf  used on input line 14.
-(pdftex.def)             Requested size: 156.18008pt x 71.13188pt.
-<./Figures/per_init/img1_lmk2.png, id=262, 860.18239pt x 391.69775pt>
-File: ./Figures/per_init/img1_lmk2.png Graphic file (type png)
-<use ./Figures/per_init/img1_lmk2.png>
-Package pdftex.def Info: ./Figures/per_init/img1_lmk2.png  used on input line 15.
-(pdftex.def)             Requested size: 156.2043pt x 71.13188pt.
-<./Figures/per_init/img1_init.png, id=263, 860.18239pt x 391.69775pt>
-File: ./Figures/per_init/img1_init.png Graphic file (type png)
-<use ./Figures/per_init/img1_init.png>
-Package pdftex.def Info: ./Figures/per_init/img1_init.png  used on input line 16.
-(pdftex.def)             Requested size: 156.2043pt x 71.13188pt.
-<./Figures/per_init/img13.png, id=264, 678.37816pt x 424.02164pt>
-File: ./Figures/per_init/img13.png Graphic file (type png)
-<use ./Figures/per_init/img13.png>
-Package pdftex.def Info: ./Figures/per_init/img13.png  used on input line 20.
-(pdftex.def)             Requested size: 113.80113pt x 71.13188pt.
-<./Figures/per_init/img13_per.png, id=265, 678.37816pt x 424.02164pt>
-File: ./Figures/per_init/img13_per.png Graphic file (type png)
-<use ./Figures/per_init/img13_per.png>
-Package pdftex.def Info: ./Figures/per_init/img13_per.png  used on input line 21.
-(pdftex.def)             Requested size: 113.80113pt x 71.13188pt.
-<./Figures/per_init/img13_lmk2.png, id=266, 678.37816pt x 424.02164pt>
-File: ./Figures/per_init/img13_lmk2.png Graphic file (type png)
-<use ./Figures/per_init/img13
