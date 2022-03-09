@@ -14,45 +14,45 @@ Warning--I didn't find a database entry for "T011"
 Warning--I didn't find a database entry for "T012"
 Warning--I didn't find a database entry for "T019"
 Warning--I didn't find a database entry for "T020"
-You've used 45 entries,
+You've used 43 entries,
             2030 wiz_defined-function locations,
-            814 strings with 12836 characters,
-and the built_in function-call counts, 17722 in all, are:
-= -- 1704
-> -- 833
+            801 strings with 12462 characters,
+and the built_in function-call counts, 16927 in all, are:
+= -- 1619
+> -- 808
 < -- 0
-+ -- 331
-- -- 284
-* -- 1340
-:= -- 2669
-add.period$ -- 54
-call.type$ -- 45
-change.case$ -- 278
++ -- 321
+- -- 276
+* -- 1281
+:= -- 2555
+add.period$ -- 52
+call.type$ -- 43
+change.case$ -- 268
 chr.to.int$ -- 0
-cite$ -- 45
-duplicate$ -- 792
-empty$ -- 1310
-format.name$ -- 284
-if$ -- 3855
+cite$ -- 43
+duplicate$ -- 754
+empty$ -- 1252
+format.name$ -- 276
+if$ -- 3679
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 38
-newline$ -- 147
-num.names$ -- 89
-pop$ -- 294
+int.to.str$ -- 43
+missing$ -- 36
+newline$ -- 141
+num.names$ -- 85
+pop$ -- 288
 preamble$ -- 1
-purify$ -- 233
+purify$ -- 225
 quote$ -- 0
-skip$ -- 698
+skip$ -- 660
 stack$ -- 0
-substring$ -- 1200
-swap$ -- 353
+substring$ -- 1126
+swap$ -- 333
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 180
+type$ -- 172
 warning$ -- 0
-while$ -- 173
-width$ -- 47
-write$ -- 400
+while$ -- 163
+width$ -- 45
+write$ -- 382
 (There were 11 warnings)

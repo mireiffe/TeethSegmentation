@@ -19,10 +19,6 @@
 {\sc T.~F. Chan and L.~A. Vese}, {\em Active contours without edges}, IEEE
   Transactions on Image Processing, 10 (2001), pp.~266--277.
 
-\bibitem{Cohen:1991:Balloon}
-{\sc L.~D. Cohen}, {\em On active contour models and balloons}, CVGIP: Image
-  Understanding, 53 (1991), pp.~211--218.
-
 \bibitem{Dollar:2006:BEL}
 {\sc P.~Dollar, Z.~Tu, and S.~Belongie}, {\em Supervised learning of edges and
   object boundaries}, 2006 IEEE Computer Society Conference on Computer Vision
@@ -201,12 +197,6 @@
 {\sc C.~Xu and J.~L. Prince}, {\em Gradient vector flow: a new external force
   for snakes}, in Proceedings of IEEE Computer Society Conference on Computer
   Vision and Pattern Recognition, 1997, pp.~66--71.
-
-\bibitem{Xu:2000:ParamGeoAC}
-{\sc C.~Xu, A.~Yezzi, and J.~L. Prince}, {\em On the relationship between
-  parametric and geometric active contours}, Conference Record of the
-  Thirty-Fourth Asilomar Conference on Signals, Systems and Computers, 1
-  (2000), pp.~483--489.
 
 \bibitem{SpecRemoval:2015}
 {\sc Q.~Yang, J.~Tang, and N.~Ahuja}, {\em Efficient and robust specular

@@ -216,38 +216,16 @@ In Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic imag
 \subsection{Active contour model}
 \label{Subsec:active_contour}
 
-The active contour model is one of the popular image segmentation and edge detection model. It is firstly introduced in~\cite{Kass:1988:Snakes}, named as snake. Let $I:\Omega\subset\mathbf{R}^2 \rightarrow [0,\,1]$ be a given image and $\calc:[0,\,1] \rightarrow \Omega$ be a parametric curve. The traditional snake finds contour which minimizes the energy functional 
-\begin{align*}
-    E_{snake}\left(\calc(s)\right) &= \int_{0}^{1} \frac{1}{2}\left( \alpha|\calc'(s)|^2 + \beta |\calc''(s)|^2 \right) \operatorname{d}\!s + E_{ext}(\calc(s)) \cm
-\end{align*}
-where $\alpha$ and $\beta$ are positive constants. The first term regulates deformation of the contour, and the last term attracts the contour to where the $E_{ext}$ is minimized. There is another energy minimization model GVF~\cite{Xu:1997:GVF} that proposes a vector field $\mathbf{v}=(u,\,v)$ defined in $\Omega$ which minimizes the energy functional
-\begin{align*}
-    E_{GV\!F}(\mathbf{v}) = \int\int \mu\left( u_x^2 + u_y^2 + v_x^2 + v_y^2 \right) + |\nabla{f}|^2|\mathbf{v} - \nabla{f}|^2 \operatorname{d}\!x\operatorname{d}\!y\cm
-\end{align*}
-where $\mu$ is a constant and $f$ is an edge map having larger values near the image edges. Two commonly mentioned drawbacks are that the methods are sensitive to the position of the initial contour, and hard to approach to the concave boundary with difficulty of parameter choice~\cite{Caselles:1997:GAC,Hahn:2010:GADF,Xu:1997:GVF}.
-
-Meanwhile, some attempts have been made by focusing the fact: movement of the contour is performed by force applied in the normal direction at the point on the contour. An example is the balloon model~\cite{Cohen:1991:Balloon} which proposes force for contour evolution
-\begin{align*}
-    F(s) = k_1\mathbf{n}(s) - k\frac{\nabla\calc(s)}{|\nabla\calc(s)|}\cm
-\end{align*}
-where $k_1,\,k_2$ are constants and $\mathbf{n}(s)$ is the unit normal vector at the point $\mathcal{C}(s)$. This model is very simple and powerful, but too naive that it only proceeds in one direction according to the sign of $k_1$. The GAC~\cite{Caselles:1997:GAC} which is a contour that minimizes the following energy functional is proposed:
+We consider a contour evolution in~\cite{Hahn:2010:GADF} using the GADF $F_a$~\eqref{Def:gadf} with the binary balloon force $F_b$ in the level set formulation:
 \begin{align}
-    E_{GAC} = \int_0^1 {|\calc'(s)|g\left( |\nabla{I(\calc(s))}| \right)} \operatorname{d}\!s\cm \label{Eq:GAC_energe}
+    \begin{split}
+    \frac{\partial}{\partial{t}}\phi(x,\,t) &= \mu\kappa(\phi)\left|\nabla\phi\right| + \chi_{\Omega_b}F_b|\nabla\phi| - \chi_{\oma}F_a\cdot\nabla\phi\cm\\
+    \phi(x,\,0) &= \phi_0(x)\cm
+    \end{split} \label{Eq:ac_gadf}
 \end{align}
-where $g$ is a function with $g(0) = 1$ and $g(r)\rightarrow 0$ as $r\rightarrow \infty$. The geodesic flow, derived from~\eqref{Eq:GAC_energe}, has level set formulation
-\begin{align}
-    \frac{\partial}{\partial{t}}\phi = g(I)\left( c + \kappa(\phi) \right)|\gphi| + \nabla{g}\cdot\gphi\cm \label{Eq:GAC_lvset}
-\end{align}
-where $c$ is a constant and $\kappa(\phi)$ is curvature of level set of the function $\phi$. Containing the relation between~\eqref{Eq:GAC_energe} and~\eqref{Eq:GAC_lvset}, equivalence relation between parametric and geometric active contour models can be achieved using the level set method~\cite{Xu:2000:ParamGeoAC}.
+where $\mu$ is a constant, $\kappa(\phi)$ is the curvature of $\phi$, $\phi_0$ is the initial signed distance function (SDF), and $\chi$ is a characteristic function of the subscripted set. Here, $\oma$ is an edge-region, and $\Omega_b = \Omega\setminus\oma$. By \eqref{Eq:ac_gadf}, the initial contour moves outward in $\Omega_b$ by the binary balloon force $F_b$ and, once entering $\oma$, reaches the edge along $F_a$.
 
-A contour evolution using the GADF~\eqref{Def:gadf} is proposed with level set formulation in~\cite{Hahn:2010:GADF}:
-\begin{align}
-    \frac{\partial}{\partial{t}}\phi(x,\,t) &= \mu\kappa(\phi)\left|\nabla\phi\right| + \chi_{\Omega_b}F_b|\nabla\phi| - \chi_{\oma}F_a\cdot\nabla\phi\cm \label{Eq:ac_gadf}\\
-    \phi(x,\,0) &= \phi_0(x)\cm \nonumber
-\end{align}
-where $\mu$ is a constant, $\phi_0$ is the initial signed distance function (SDF), $\chi$ is a characteristic function of the subscripted set, $\oma$ is an edge-region, and $\Omega_b = \Omega\setminus\oma$. In~\cite{Hahn:2010:GADF}, $\oma=\delta_S(\ome)$ where $\delta_{S}(X)$ is a dilation of a set $X$ by a $3 \times 3$ square structuring element $S$ with origin at its center. By \eqref{Eq:ac_gadf}, the initial contour goes outward in $\Omega_b$ by a balloon force $F_b$ and reaches the edge following $F_a$ once it enters $\oma$. 
-
-In Figure~\ref{Fig:evolution}, contours evolving by~\eqref{Eq:ac_gadf} with different initial positions are presented over time, using the edge-region in the bottom of~\ref{Fig:edge_regions_4} as $\oma$. As an initial contour evolves, unnecessary regions hinder the movement of the contour. There are two types of unnecessary regions; the regions having closed and non-closed shape. For the regions that are not forming the closed shape, the evolving contours can intrude that from ends, then encroach the region. On the other hands, if the contour faces a region with closed shape then, like a barrier, they block the movement of the contour and make it difficult to find the correct object boundary so that incorrect segmentation occurs.
+In Figure~\ref{Fig:evolution}, using the edge-region at the bottom of~\ref{Fig:edge_regions_4}, the contours evolved by~\eqref{Eq:ac_gadf} with different initial positions are presented over time. As the contour evolves, the edge-regions interfere the movement of the contour. There are two types of edge-regions: closed shape and non-closed shape. For the region that does not form a closed shape, evolving contours can invade the region from the ends and then encroach on the region. On the other hand, like a barrier, closed-shaped edge-regions block the movement of the contour sometimes stopping the contour at the place other than the object boundary, resulting in incorrect segmentation.
 
 % Figure: Edge regions outside the tooth boundaries
 \input{ ./Figures/evolution/fig.tex}
@@ -256,7 +234,7 @@ In Figure~\ref{Fig:evolution}, contours evolving by~\eqref{Eq:ac_gadf} with diff
 \subsection{Light reflections in teeth images}
 \label{Subsec:light_reflection}
 
-As discussed in previous Sections~\ref{Subsec:edge-regions}, \ref{Subsec:active_contour}, there are unnecessary regions in edge-regions that impedes the active contours. Teeth images have many problematic features which make unnecessary regions, but closed shape regions are mainly caused by strong light reflections on teeth and gums. The light reflections accompany strong intensity jumps and irregular shapes so that it is hard to remove the regions causing from the reflections using simple methods such as mentioned in~\ref{Subsec:edge-regions}.
+As discussed in Sections~\ref{Subsec:edge-regions} and \ref{Subsec:active_contour}, there are bad regions in the edge-regions, that prevent the active contours from reaching near the boundary of objects. In the case of teeth images, closed-shaped edge-regions caused by strong light reflection in the teeth and gums mainly become such bad regions. Since light reflection is accompanied by strong intensity jumps and irregular shapes, it is difficult to remove the edge-regions due to the reflection with simple method such as those mentioned in Section~\ref{Subsec:edge-regions}.
 
 One simple way to prevent these regions is to remove light reflections from the teeth image. There have been several studies to remove light reflections in a single image~\cite{SpecRemoval:2018,SpecRemoval:2020,SpecRemoval:2016,SpecRemoval:2015}. In these works, an image was decomposed into a non-reflective image and a reflection map in the image domain. These methods are based on the intensity histogram or assumption of a dichromatic image model~\cite{Shafer:1985:colorsep} using color information of the reflective region. However, in the case of teeth images, the colors of the light reflection and the tooth surface are almost the same due to the characteristics of human teeth. For this reason, when these methods are actually applied, parts of the tooth surface is also removed along with the light reflection. 
 
