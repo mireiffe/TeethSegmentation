@@ -17,16 +17,7 @@
 \usepackage[labelformat=simple]{subcaption}
 
 \usepackage{tikz}
-\usetikzlibrary{shapes.geometric, arrows, positioning, calc}
-\usetikzlibrary{backgrounds}
-\usetikzlibrary{arrows.meta}
-
-\tikzstyle{title} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm, fill=white!100]
-\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
-\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text width=1.3cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, text width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
-\tikzstyle{arrow} = [thick,->,>=stealth]
+\usetikzlibrary{shapes, arrows.meta, positioning, calc, arrows, backgrounds}
 
 \captionsetup[figure]{labelsep=period}
 % \renewcommand{\thefigure}{\Roman{figure}}
@@ -208,7 +199,7 @@ The edge-region is roughly defined as the union of thin regions containing most 
 \end{align*}
 Since $F_a$ is defined using normalized image gradient, it is independent of the strength of edges so that $\ome$ satisfies the rough definition of the edge-region. But in practice, $\ome$ is just a candidate for the edge-region, because it contains many regions that are not intersected with the boundaries of the object. Hence, it is necessary to remove them as many as possible.
 
-In Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic image and two real teeth images. In the case of the synthetic image, $\ome$ is well formed only at the tooth boundary, but in the teeth images, there are a lot of regions that do not intersect with the tooth boundaries. Among the connected components of $\ome$, those that are small in size or formed in flat regions are removed assuming that they do not contain tooth boundaries~\cite{Hahn:2006}. In the rightmost column, the edge-region $\oma$ is presented, which is obtained through such removal process from $\ome$. Despite these efforts, there are still many regions that are not intersected with the tooth boundary in the refined edge-regions; see the bottom right of Figure~\ref{Fig:edge_regions}. We will address this issue in the next two sections. %The regions with non-closed shape can be treated applying active contour model~\ref{Subsec:active_contour}, and about the regions with closed shape, the main obstacles of individual tooth segmentation, it will be discussed in Section~\ref{Subsec:light_reflection}.
+In Figure~\ref{Fig:edge_regions}, there are three teeth images: a synthetic image and two real teeth images. In the case of the synthetic image, $\ome$ is well formed only at the tooth boundary, but in the teeth images, there are a lot of regions that do not intersect with the tooth boundaries. Among the connected components of $\ome$, those that are small in size or formed in flat regions are removed assuming that they do not contain tooth boundaries~\cite{Hahn:2006}. In the rightmost column, the edge-region $\oma$ is presented, which is obtained through such removal process from $\ome$. Despite these efforts, there are still many regions that are not intersected with the tooth boundary in the refined edge-regions; see the bottom right of Figure~\ref{Fig:edge_regions}. We will address this issue in the next two sections.
 
 % Figure: Weak edges in teeth image
 \input{ ./Figures/edge_region/fig.tex}
@@ -226,7 +217,7 @@ We consider a contour evolution in~\cite{Hahn:2010:GADF} using the GADF $F_a$~\e
 \end{align}
 where $\mu$ is a constant, $\kappa(\phi)$ is the curvature of $\phi$, $\phi_0$ is the initial signed distance function (SDF), and $\chi$ is a characteristic function of the subscripted set. Here, $\oma$ is an edge-region, and $\Omega_b = \Omega\setminus\oma$. By \eqref{Eq:ac_gadf}, the initial contour moves outward in $\Omega_b$ by the binary balloon force $F_b$ and, once entering $\oma$, reaches the edge along $F_a$.
 
-In Figure~\ref{Fig:evolution}, using the edge-region at the bottom of~\ref{Fig:edge_regions_4}, the contours evolved by~\eqref{Eq:ac_gadf} with different initial positions are presented over time. As the contour evolves, the edge-regions interfere the movement of the contour. There are two types of edge-regions: closed shape and non-closed shape. For the region that does not form a closed shape, evolving contours can invade the region from the ends and then encroach on the region. On the other hand, like a barrier, closed-shaped edge-regions block the movement of the contour sometimes stopping the contour at the place other than the object boundary, resulting in incorrect segmentation.
+In Figure~\ref{Fig:evolution}, using the edge-region at the bottom of Figure~\ref{Fig:edge_regions_4}, the contours evolved by~\eqref{Eq:ac_gadf} with different initial positions are presented over time. As the contour evolves, the edge-regions interfere the movement of the contour. There are two types of edge-regions: closed shape and non-closed shape. For the region that does not form a closed shape, evolving contours can invade the region from the ends and then encroach on the region. On the other hand, like a barrier, closed-shaped edge-regions block the movement of the contour sometimes stopping the contour at the place other than the object boundary, resulting in incorrect segmentation.
 
 % Figure: Edge regions outside the tooth boundaries
 \input{ ./Figures/evolution/fig.tex}
@@ -279,10 +270,14 @@ We consider a neural network consisting of the part of ResNeSt-50~\cite{Zhang:20
 \input{ ./Figures/labeling/fig.tex}
 
 The network output $\hat{Y}(x)$ can be thought as the probability map that an edge-region caused by the tooth boundary exists at $x$. We call
-\begin{align}
-    \PER = \left\{ x\in\Omega \mid \hat{Y}(x) > 0.5 \right\} \label{Def:omcc}
-\end{align}
-as a pseudo edge-region of $X$, and examples of pseudo edge-regions for teeth images are shown in the first two rows of Figure~\ref{Fig:pre_er}. One notable point is that the pseudo edge-region obtained by the neural network look better than the regions obtained by the manual selection from $\ome$.
+\begin{align*}
+    \PER = \delta_\theta\left( \PER_0 \right)
+\end{align*}
+as a pseudo edge-region of $X$ where
+\begin{align*}
+    \PER_0 = \left\{ x\in\Omega \mid \hat{Y}(x) > 0.5 \right\} \cm %\label{Def:per0}
+\end{align*}
+and $\delta_\theta$ is successive dilation and erosion by a $\theta \times \theta$ square structuring element with $\theta=\max\{\lfloor \omega / 1.5 + 0.5 \rfloor, 1\}$ and $\omega$ is the average thickness of $\PER_0$. Examples of pseudo edge-regions for teeth images are shown in the first two rows of Figure~\ref{Fig:pre_er}. One notable point is that the pseudo edge-region obtained by the neural network look better than the regions obtained by the manual selection from $\ome$.
 
 % Figure: pre_er
 \input{ ./Figures/per_init/fig.tex}
@@ -296,34 +291,7 @@ In this section, we propose two active contour models formulated by the level se
 \subsubsection{Acquiring initial contours}
 \label{Subsec:initial_contours}
 
-If the pseudo edge-region perfectly matches the tooth boundaries, all tooth regions are surrounded by thin regions, so initial contours can be naturally selected as the boundary of the thin regions. However, there are often leakages in the pseudo edge-region, which does not enclose the tooth region. Thus, multiple objects may be linked into a single region, in which case each object must be separated. When multiple objects are linked, the shape or orientation of the region distinguishes from the single tooth region. Hence, we first consider how to distinguish the tooth region from the other regions. 
-
-For a connected region $X$, let $c$ be the center of mass and $\mathcal{I}$ be the 2 dimensional moment tensor about $c$ defined by
-\begin{align*}
-    \mathcal{I} &=
-    \begin{bmatrix}
-        I_{xx} & I_{xy}\\
-        I_{yx} & I_{yy}
-    \end{bmatrix}\cm
-\end{align*}
-where $x$ and $y$ are coordinates of the vector from $c$ to each point of $X$, and
-\begin{align*}
-    I_{xx} = \int_{X} x^2 \cm\quad I_{yy} = \int_{X} y^2\quad\mbox{and}\quad I_{xy} = I_{yx} = \int_{X} xy\pd
-\end{align*}
-Then the moment tensor $I$ has two eigenvalues $\Lambda$ and $\lambda$ ($\Lambda > \lambda$). Let $v$ be a normalized eigenvector corresponding to $\lambda$. The methods listed below are the criteria for identifying non-tooth regions: 
-\begin{itemize}
-    \setlength{\itemindent}{2mm}
-    \item [(C--1)] For the curvature $\kappa(s)$ at $s\in\partial{X}$, 
-    \begin{align*}
-        \frac{1}{|\partial{X}|}\int_{\partial{X}} \mbox{sgn}(\kappa(s)) ds < 0.2\pd
-    \end{align*}
-
-    \item [(C--2)] The center of mass $c$ is outside the region.
-
-    \item [(C--3)] The ratio $\Lambda / \lambda \ge 2.5$ and $|v\cdot e_1| \ge \cos(\pi/4)$ for $e_1 = (1,\,0)$.
-    
-\end{itemize}
-If one of the above criteria is satisfied, the region is identified as not a tooth region. Otherwise, the region is regarded as a tooth. Let $\omt$ and $\omn$ be tooth and non-tooth regions, respectively, identified by the above criteria. For $\omn$, at all local minima of $\sdf(\omn)$, we can retain landmarks for each object in the region; see the third row of Figure~\ref{Fig:pre_er}. 
+If the pseudo edge-region perfectly matches the tooth boundaries, all tooth regions are surrounded by thin regions, so initial contours can be naturally selected as the boundary of the thin regions. However, there are often leakages in the pseudo edge-region, which does not enclose the tooth region. Thus, multiple objects may be linked into a single region, in which case each object must be separated. Let $\mathcal{S}$ be such a single region. By taking all local minima of $\sdf(\mathcal{S})$, we can retain landmarks for linked objects in $\sdf(\mathcal{S})$; see the third row of Figure~\ref{Fig:pre_er}. 
 
 In order to get better initial contours, each landmark is expanded to touch the pseudo edge-region. Let $\{L_i\}_{i=1}^K$ be distinct $K$ landmarks. For each level set function $\phi_i$, the competing balloon force $\fci$ is defined as
 \begin{align}
@@ -337,12 +305,12 @@ which is designed to inflate the zero level set $\{\phi_i = 0\}$ until it meets 
         \phi_i(x,\,0) &= \phi_{i}^L(x)\cm
     \end{split}\label{Eq:evolv_init}
 \end{align}
-where $\mu$, $\nu$ are constants, $\kappa(\phi_i)$ is the curvature of $\phi_i$, $\PER$ is the pseudo edge-region, and $\phi_i^L = \sdf(L_i)$ for all $i=1,\,\ldots,\,K$. The first term is a regularization term, and the second term makes contour $\phi_i$ stop when it meets the zero level sets of other $\phi_j$ including $\phi_0$. The third term prevent the contour to enter $\PER$. In order to resolve the over-segmentation, a standby process is introduced when applying the evolution~\eqref{Eq:evolv_init}; until all contours touch $\PER$ within a certain range, contours that touch each other are merged rather than stop by $\fci$. For $\omt$, we take the contour as $\partial\omt$. Resulting contours are shown in the last row of Figure~\ref{Fig:pre_er}. We take these contours as the initial contours for the contour evolution for segmentation.
+where $\mu$, $\nu$ are constants, $\kappa(\phi_i)$ is the curvature of $\phi_i$, $\PER$ is the pseudo edge-region, and $\phi_i^L = \sdf(L_i)$ for all $i=1,\,\ldots,\,K$. The first term is a regularization term, and the second term makes contour $\phi_i$ stop when it meets the zero level sets of other $\phi_j$ including $\phi_0$. The third term prevent the contour to enter $\PER$. In order to resolve the over-segmentation, a standby process is introduced when applying the evolution~\eqref{Eq:evolv_init}; until all contours reach a certain range of $\PER$, contours that touch each other are merged rather than stop by $\fci$. In this process, contour points that have already reached a certain range of $\PER$ stop and wait until all the contours reach the range. When all contours reach the range, they evolve again. Contours in standby and resulting contours are shown in the last two rows of Figure~\ref{Fig:pre_er}. We take these resulting contours as the initial contours for the contour evolution for segmentation.
 
 \subsubsection{Segmentation using active contours}
 \label{Subsec:segmentation}
 
-Now, we segment each region using multiple contours found in the previous section. Let $\left\{\phi_{i,\,0}\right\}_{i=1}^{N}$ be a collection of level set functions which are steady-state solutions of~\eqref{Eq:evolv_init}. Here, we assume that $\PER$ contains the tooth boundaries. Since the contours touch the $\partial\PER$, we push $\phi_{i,\,0}$ outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
+Now, we segment each region using multiple contours found in the previous section. Let $\left\{\phi_{i,\,0}\right\}_{i=1}^{N}$ be a collection of level set functions which are steady-state solutions of~\eqref{Eq:evolv_init}. Here, we assume that $\PER$ contains the tooth boundaries and let $\ER$ be edge-region candidate intersecting $\PER$, i.e., $\ER=\PER\cap\ome$. Since the contours touch the $\partial\PER$, we push $\phi_{i,\,0}$ outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
 \begin{align}
     \begin{split}
         \frac{\partial}{\partial{t}}\phi_i(x,\,t) &= \mu\kappa(\phi_i)\ngphii + \chi_{\ERC}\left( \fci + {\fsi} \right) \ngphii-\chi_{\ER}F_a\cdot \gphii \cm \\
@@ -376,9 +344,7 @@ Then, $x^*$ is the point at which $I(x^*)$ has the most red color.
 \section{Experimental results and numerical aspect}
 \label{Sec:result}
 
-\textbf{Parameters and Numerical schemes.} In Section~\ref{Subsec:pseudo_er}, $\eta=\lfloor|\Omega| / 600 + 1/2\rfloor$. In all experiments, the parameters $\mu=2$ and $\nu=0.5$ are used in~\eqref{Eq:evolv_init}, and $\mu=2$ in~\eqref{Eq:proposed}. In addition, when~\eqref{Eq:evolv_init} is applied, $\PER$ is morphologically closed to improve the condition of the edge-region by a $\theta \times \theta$ square structuring element with origin at its center where $\theta=\max\{\lfloor \omega / 1.5 + 0.5 \rfloor, 1\}$ and $\omega$ is the average thickness of $\PER$. 
-
-Overall, the finite difference scheme is applied to approximate all derivatives. For contour evolutions, the explicit Euler method is used, and the time increment was set as 0.3 in all cases. While performing the contour evolutions, the level set function is frequently reinitialized by the method in~\cite{SUSSMAN:1994}. 
+\textbf{Parameters and Numerical schemes.} In Section~\ref{Subsec:pseudo_er}, $\eta=\lfloor|\Omega| / 600 + 1/2\rfloor$. In all experiments, the parameters $\mu=2$ and $\nu=0.5$ are used in~\eqref{Eq:evolv_init}, and $\mu=2$ in~\eqref{Eq:proposed}. The finite difference scheme is applied to approximate all derivatives. For contour evolutions, the explicit Euler method is used, and the time increment was set as 0.3 in all cases. While performing the contour evolutions, the level set function is frequently reinitialized by the method in~\cite{SUSSMAN:1994}. 
 
 \noindent\textbf{Dataset and data augmentation.} The training dataset consists of $46$ images in~\cite{T000,T001,T002,T003,T004,T005,T006,T007,T008,T009,T010,T011,T012,T013,T017,T018,T019,T020}. All teeth images contain light reflections on the surface of teeth, gums and other parts. 
 
@@ -393,9 +359,9 @@ To get more diverse training data, data augmentation is applied. In each epoch, 
 
 It seems that the number of epochs is excessive compared to those that are usually chosen, but in fact it is not. For each image, there are at least $16$ image variants that can be obtained with data augmentation, even excluding patch cropping and resizing. Since the parameters of each data augmentation are randomly selected each time and randomly selected patches from random size images are used, it is comparable to typical $100$ epochs.
 
-\noindent\textbf{Results.} In Figure~\ref{Fig:results}, several teeth images with segmentation results for existing and proposed methods are presented. The results of the modified watershed algorithm (MWA) that is a model-based method~\cite{Na:2014LteethMorph} are in Figure~\ref{Fig:na2014}. The parameters used in MWA could not be obtained from~\cite{Na:2014LteethMorph}, so they were selected with our best effort. Many wrong results, such as captured light reflection or mis-segmented tooth boundaries, appear in the results in~\ref{Fig:na2014}. Figures~\ref{Fig:mrcnn} and~\ref{Fig:mrcnn_w} show the results using the methods based on Mask R-CNN~\cite{He:2018:MRCNN,Pham:2020,Zhu:2020:teethMaskrcnn}. For training, we used the same training data set as in this paper with the same augmentation strategy, but with different labeled data. Mask R-CNN requires individual tooth regions as labels, which were generated through a well-known labeling tool, Labelme~\cite{Russell:2007:labelme}.
+\noindent\textbf{Results.} In Figure~\ref{Fig:results}, several teeth images with segmentation results for existing and proposed methods are presented. The results of the modified watershed algorithm (MWA) that is a model-based method~\cite{Na:2014LteethMorph} are in Figure~\ref{Fig:na2014}. The parameters used in MWA could not be obtained from~\cite{Na:2014LteethMorph}, so they were selected with our best effort. Many wrong results, such as captured light reflection or mis-segmented tooth boundaries, appear in the results in~\ref{Fig:na2014}. Figures~\ref{Fig:mrcnn} and~\ref{Fig:mrcnn_w} show the results using the methods based on Mask R-CNN~\cite{He:2018:MRCNN,Pham:2020,Zhu:2020:teethMaskrcnn}. For training, we used the same training dataset as in this paper with the same data augmentation strategy of~\cite{Detectron2018}, but with different labeled data. Mask R-CNN requires individual tooth regions as labels, which were generated through a well-known labeling tool, Labelme~\cite{Russell:2007:labelme}.
 
-Figure~\ref{Fig:ours} shows the results of our proposed algorithm. As shown in the figure, the methods used in the last three columns of Figure~\ref{Fig:results} all show remarkable results. The two results of Mask R-CNN look similar but, our results are distinct from the two results. A few differences can be observed; Since the results with Mask R-CNN are pixel-based segmentation, the segmenting lines appear stepwise along the pixels and gaps with the actual teeth occur as well. Meanwhile, because our method uses level sets, the segmenting lines are smooth and fit well with the actual teeth. Finally, Mask R-CNN shows relatively poor capture of the outermost teeth of the image compared to our method.
+Figure~\ref{Fig:ours} shows the results of our proposed algorithm. As shown in the figure, the methods used in the last three columns of Figure~\ref{Fig:results} all show remarkable results. The two results of Mask R-CNN look similar but, our results are distinct from the two results. A few differencces can be observed; Since the results with Mask R-CNN are pixel-based segmentation, the segmenting lines appear stepwise along the pixels and gaps with the actual teeth occur as well. Meanwhile, because our method uses level sets, the segmenting lines are smooth and fit well with the atual teeth. Finally, Mask R-CNN shows relatively poor capture of the outermost teeth of the image compared to our method.
 
 Quantitative measurement is impossible since there is no ground truth, but compared to the results of the existing methods, it can be seen that the tooth regions are neatly segmented. In particular, only the tooth regions are segmented in the teeth images where the lips and the face part exist.
 
@@ -419,6 +385,8 @@ Individual tooth segmentation can be used importantly for 3D teeth model reconst
 \appendix
 \section{Structure of neural network}
 \label{App:neural_net}
+
+In this appendix, the structure of the neural network used in Section~\ref{Subsec:pseudo_er} is presented in Figure~\ref{Fig:network}. For the encoder part of neural network, the feature extraction part of ResNeSt-50\cite{Zhang:2020:ResNeSt} was used, and the upscaling decoder part was designed.
 
 % Figure: Network structure
 \input{./TeethSeg_network.tex}

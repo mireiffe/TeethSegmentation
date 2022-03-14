@@ -1,0 +1,267 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper}
+\usepackage{authblk}
+
+%% Packages
+\usepackage{graphicx, subcaption}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{bm}
+\usepackage{algorithm, algorithmic}
+\usepackage{multirow}
+\usepackage{bbm}
+\usepackage{hyperref,url}
+\usepackage{kotex}
+\usepackage[bottom]{footmisc}
+\usepackage[labelformat=simple]{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes, arrows.meta, positioning, calc, arrows, backgrounds}
+
+\captionsetup[figure]{labelsep=period}
+% \renewcommand{\thefigure}{\Roman{figure}}
+% \captionsetup[subfigure]{labelformat=parens} % default is 'parens'
+% \renewcommand{\thesubfigure}{\thefigure.\alph{subfigure}.}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+%% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+%% Equations
+\numberwithin{equation}{section}
+
+%% Algorithms
+\renewcommand\algorithmicdo{}
+\renewcommand\algorithmicthen{}
+\renewcommand\algorithmicendfor{\textbf{end}}
+
+%% Macros
+\def\chfun{\mathbbm{1}}
+\def\calc{\mathcal{C}}
+\def\endske{E\left(\mathcal{S}^8\right)}
+\def\endomc{E\left(\Omega_c\right)}
+
+
+\def\gphi{\nabla\phi}
+\def\gphii{\nabla\phi_i}
+\def\ngphi{\left|\nabla\phi\right|}
+\def\ngphii{\left|\nabla\phi_i\right|}
+
+\def\fci{F_{c,\,i}}
+\def\fcj{F_{c,\,j}}
+
+\def\fsi{F_{s,\,i}}
+
+\def\cm{\, ,}
+\def\pd{\, .}
+
+\def\omi{\Omega_i}
+\def\oma{\Omega_a}
+\def\ome{\Omega_E}
+\def\oms{\Omega_S}
+\def\omc{\overline{\Omega}_P}
+\def\omcc{\Omega_P}
+\def\omt{\Omega_T}
+\def\omn{\Omega_N}
+
+\def\ER{\mathcal{R}}
+\def\PER{\mathcal{P}}
+\def\ERC{\Omega \setminus \ER}
+
+\def\opp{\Omega_{\phi_i}^+}
+\def\opn{\Omega_{\phi_i}^-}
+% \def\opo{\Omega_{\phi}^0}
+\def\opo{C_{\phi_i}}
+
+\def\sdf{\mbox{\textrm{sdf}}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+% \def\tOmega{\tilde{\Omega}}
+% \def\tGamma{\tilde{\Gamma}}
+% \def\tV{\tilde{V}}
+% \def\W{\mathbb{W}}
+% \def\tu{\tilde{u}}
+% \def\bu{\bar{u}}
+% \def\hu{\hat{u}}
+% \def\bl{\bar{\lambda}}
+% \def\p{\mathbf{p}}
+% \def\P{\mathbf{P}}
+% \def\intO{\int_{\Omega}}
+% \def\intOs{\int_{\Omega_s}}
+% \def\m{\mathbf{m}}
+% \def\n{\mathbf{n}}
+% \def\blambda{\bm{\lambda}}
+
+% \def\tE{\tilde{E}}
+% \def\N{\mathcal{N}}
+
+% \def\div{\mathrm{div}}
+% \def\proj{\mathrm{proj}}
+% \def\prox{\mathrm{prox}}
+% \def\ran{\mathrm{ran}\,}
+% \def\ed{\mathrm{ed}}
+% \def\supp{\mathrm{supp}\,}
+% \def\TOL{\mathrm{TOL}}
+% \DeclareMathOperator*{\argmin}{\arg\min}
+
+% Text Color and Strike
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\blue}[1]{{\color{blue}{#1}}}
+\newcommand{\blfootnote}[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+\title{ Individual Tooth Segmentation in Human Teeth Images Using Pseudo Edge-Regions Obtained by Deep Neural Networks }
+\author{Seongeun Kim and Chang-Ock Lee}
+\affil{Department of Mathematical Sciences, KAIST, Daejeon 34141, Korea}
+\date{ }
+
+\begin{document}
+\maketitle
+
+\begin{figure}
+	\newcommand*{\algvgap}{2.9}%
+	\newcommand*{\segvgap}{0.7}%
+	\newcommand*{\midgap}{1.4}%
+	\newcommand*{\minwid}{4}%
+	\newcommand*{\minhei}{1.7}%
+	\centering
+	\begin{tikzpicture}[font=\large, thick, node distance=1.5cm and 1.5cm, scale=0.8, every node/.style={scale=0.85}]
+	\tikzstyle{inter} = [
+		draw,
+		trapezium, 
+		trapezium left angle = 65,
+		trapezium right angle = 115,
+		trapezium stretches,
+		minimum width=\minwid cm,
+		minimum height=\minhei cm,
+		align=center,
+		text width=0.7*\minwid cm,
+		fill=blue!20
+		]
+	\tikzstyle{io} = [
+		draw,
+		rounded rectangle,
+		minimum width=\minwid cm,
+		minimum height=\minhei cm,
+		text width=\minwid cm,
+		align=center,
+		fill=red!30
+		]
+	\tikzstyle{proc} = [
+		draw,
+		minimum width=\minwid cm,
+		minimum height=\minhei cm,
+		text width=\minwid cm,
+		align=center,
+	    fill=orange!20,
+		]
+
+	\node [draw,
+		minimum width=3cm,
+		minimum height=1.2cm,
+		fill=white
+		] (title_b) at (3,0) {(b) Segmentation};
+	
+	%segmentation
+	\node [io,
+		below=0.8*\segvgap cm of title_b,
+		] (input) {Teeth image};
+
+	\node [inter,
+		below=\segvgap cm of input,
+		] (dnn) {Deep \\ neural network};
+
+	\node [inter,
+		below=\segvgap cm of dnn,
+		] (per) {Pseudo \\ edge-region};
+
+	\node [proc,
+		below=\segvgap cm of per,
+		] (ac) {Active contours};
+
+	\node [inter,
+		below=\segvgap cm of ac,
+		] (regions) {Segmented regions};
+		
+	\node [proc,
+		below=\segvgap cm of regions
+		] (id) {Region identification};
+		
+	\node [io,
+		below=\segvgap cm of id,
+		] (res) {Result};
+		
+	% labeling
+	\node [inter,
+		left=\midgap cm of dnn,
+		] (train) {Training};
+
+	\node [inter,
+        minimum width=\minwid cm,
+        minimum height=\minhei cm,
+		left=3.8*\midgap cm of input,
+		] (image) { Teeth image };
+
+	\node [draw,
+		minimum width=3cm,
+		minimum height=1.2cm,
+		left=1.85*\midgap cm of title_b,
+		fill=white
+		] (title_a) {(a) Data labeling and training};
+
+    \node [proc,
+		below=\algvgap cm of image,
+		] (ome) {$\ome$ from GADF};
+
+	\node [proc,
+		below=\algvgap cm of ome,
+		] (selection) {{Manual selection} \\ {\& dilation}};
+
+	\node [inter,
+		below=\algvgap cm of selection,
+		] (label) {Label};
+
+	% Arrows
+	\draw[thick,-latex] (image) edge (ome)
+		(ome) edge (selection)
+		(selection) edge (label)
+		(train) edge (dnn);
+
+	\draw[thick,-latex] (input) edge (dnn)
+		(dnn) edge (per)
+		(per) edge (ac)
+		(ac) edge (regions)
+		(regions) edge (id)
+		(id) edge (res);
+
+	\draw[thick,-latex] (image) -| (train);
+	\draw[thick,-latex] (label) -| (train);
+	
+	\begin{scope}[on background layer]
+		\draw[black,line width=.4mm,dashed] ($(title_a.west)+(-2.5,0)$)  rectangle ($(title_a.east)+(2,-30*\segvgap)$);
+		\draw[black,line width=.4mm,dashed] ($(title_b.west)+(-.8,0)$)  rectangle ($(title_b.east)+(.8,-30*\segvgap)$);
+	\end{scope}
+  \end{tikzpicture}
+  \caption{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. }
+  \label{Fig:flowchart}
+\end{figure}
+
+\end{document}

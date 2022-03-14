@@ -169,7 +169,7 @@
         \draw [dashed,line width=.25mm] (x1.west) -- ($(x21.west) + (0,-1cm)$) -- ($(x7.west) + (0,-2.5cm)$) -- (sum3.south) [-{Triangle[scale=.5]}];
         \draw [-{Triangle[scale=.5]},line width=.2mm] (sum3.east) to (x8.north);
     \end{tikzpicture}
-    \caption{ResNeSt block with mid--channel size $m$ (RNS--$m$)}
+    \caption{ResNeSt block with mid--channel size $m$ (RNS-$m$)}
 \end{subfigure}
 \begin{subfigure}[]{.3\textwidth}
     \newcommand*{\hg}{1.2}%
@@ -213,6 +213,6 @@
         };
     \end{tikzpicture}
 \end{subfigure}
-\caption{\small{The structure of the neural network: ResNeSt~\cite{Zhang:2020:ResNeSt} + upscale module. Overall, each rectangle and each bold arrow represent an intermediate result (or input) and a operation, respectively. The number at the top of the rectangle indicates the number of channels. Among the arrows, if there is a number in the square above the arrow, that means the arrow is repeated as many times as that number. The operation types are color-specific and are listed in the lower-right legend. Every arrow has a batch normalization (BN) after the operation with only two exceptions in (b): the global average pooling (GAP) and fully connected layers marked with thin line width. The type of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are notations $/$ and $+$, which mean stride and padding of the operation with the following number, respectively. All the bilinear upscalings are applied with scale factor $2$. There are totally $7$ RNS-$m$ blocks in~(a). For that arrows, $m$ is $64$, $128$, $128$, $256$, $256$, $512$, $512$ in order. When $c \neq m$ in (b), a modification occurs in RNS--$m$ as same as downsampling layers in the ResNet~\cite{He:2015:ResNet,He:2019:ResNetTrick}: the MOD1 in the legend is added after the first layer, and the dashed identity connection changes to MOD2 in the legend. }}
+\caption{\small{The structure of the neural network: ResNeSt-50~\cite{Zhang:2020:ResNeSt} + upscale module. Overall, each rectangle and each bold arrow represent an intermediate result (or input) and an operation, respectively. The number at the top of each rectangle indicates the number of channels. If there is a number in the square above the arrow, it means that the arrow repeats that number. The operation types are color-specific and are listed in the lower-right legend. All arrows have batch normalization~(BN) after the operation with two exceptions in (b):~global average pooling~(GAP) and fully connected layers marked with thin lines. The types of the activation functions are indicated by the shape of arrowheads and are also listed in the legend. In the legend, there are notations $/$ and $+$, which mean stride and padding of the operation with the following number, respectively. All bilinear upscalings are applied with scale factor $2$. There are a total of $7$ RNS-$m$ blocks in~(a). For those arrows, $m$ is $64$, $128$, $128$, $256$, $256$, $512$, $512$ in that order. When $c \neq m$ in (b), a modification occurs in RNS-$m$ as same as downsampling layers in ResNet~\cite{He:2015:ResNet,He:2019:ResNetTrick}; MOD1 in the legend is added after the first layer and the dashed identity connection changes to MOD2 in the legend. }}
 \label{Fig:network}
 \end{figure}
