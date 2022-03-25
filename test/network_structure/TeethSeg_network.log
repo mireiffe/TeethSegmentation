@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  25 FEB 2022 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  15 MAR 2022 12:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"g:/My Drive/Documents/Research works/proposal_defense/tex/network_structure/TeethSeg_network.tex"
-(g:/My Drive/Documents/Research works/proposal_defense/tex/network_structure/TeethSeg_network.tex
+**"g:/My Drive/Documents/Research works/proposal_defense/tex/test/network_structure/TeethSeg_network.tex"
+(g:/My Drive/Documents/Research works/proposal_defense/tex/test/network_structure/TeethSeg_network.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2021-11-22> (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -725,23 +725,52 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 166.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./TeethSeg_network.aux)
+)
+Overfull \hbox (6.61737pt too wide) in paragraph at lines 354--355
+ [][] 
+ []
+
+
+LaTeX Warning: Citation `Zhang:2020:ResNeSt' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Citation `He:2015:ResNet' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Citation `He:2019:ResNetTrick' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Citation `Zhang:2020:ResNeSt' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Citation `He:2015:ResNet' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Citation `He:2019:ResNetTrick' on page 1 undefined on input line 356.
+
+
+LaTeX Warning: Float too large for page by 15.04147pt on input line 358.
+
+[1{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./TeethSeg_network.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `TeethSeg_network.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24870 strings out of 478353
- 471987 string characters out of 5852100
- 797307 words of memory out of 5000000
- 42543 multiletter control sequences out of 15000+600000
+ 24957 strings out of 478353
+ 473647 string characters out of 5852100
+ 840171 words of memory out of 5000000
+ 42630 multiletter control sequences out of 15000+600000
  415407 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,89p,1506b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on TeethSeg_network.pdf (1 page, 92823 bytes).
+ 84i,18n,89p,1748b,1317s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+Output written on TeethSeg_network.pdf (1 page, 124142 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 71 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  2 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -183,7 +183,7 @@ In \cite{Hahn:2010:GADF}, the GADF is defined as
 \begin{align}
     F_a(x) = \mbox{sgn}(\ell(x))\frac{\nabla I(x)}{\left|\nabla{I(x)}\right|},\quad \forall{x}\in\Omega\cm  \label{Def:gadf}
 \end{align}
-where $\mbox{sgn}$ is the sign function and 
+where $\mbox{sgn}$ is the sign function and
 \begin{align*}
     \ell(x) &= \int^{\epsilon}_{0} {u'_x(s)}\,ds - \int^{0}_{-\epsilon} {u'_x(s)}\,ds\quad\mbox{for a small}~\epsilon > 0\pd
 \end{align*}
@@ -286,14 +286,14 @@ and $\delta_\theta$ is successive dilation and erosion by a $\theta \times \thet
 \subsection{Segmentation using active contours}
 \label{Subsec:SegLevelset}
 
-In this section, we propose two active contour models formulated by the level set method, one for acquiring initial contours and the other for segment regions. We denote $\sdf(A)$ as the SDF which is negative in the set $A$ and constantly zero on $\partial A$.
+In this section, we propose two successive active contour models formulated by the level set method. Resulting contours from the first active contour model are used for initial contours of the second active contour model. We denote $\sdf(A)$ as the SDF which is negative in the set $A$ and constantly zero on $\partial A$.
 
-\subsubsection{Acquiring initial contours}
-\label{Subsec:initial_contours}
+\subsubsection{The first active contour model}
+\label{Subsec:first_ac}
 
-If the pseudo edge-region perfectly matches the tooth boundaries, all tooth regions are surrounded by thin regions, so initial contours can be naturally selected as the boundary of the thin regions. However, there are often leakages in the pseudo edge-region, which does not enclose the tooth region. Thus, multiple objects may be linked into a single region, in which case each object must be separated. Let $\mathcal{S}$ be such a single region. By taking all local minima of $\sdf(\mathcal{S})$, we can retain landmarks for linked objects in $\sdf(\mathcal{S})$; see the third row of Figure~\ref{Fig:pre_er}. 
+If the pseudo edge-region perfectly matches the tooth boundaries, all tooth regions are surrounded by thin regions, so they are naturally separated. However, there are often leakages in the pseudo edge-region, which does not enclose the tooth region. Thus, multiple objects may be linked into a single region, in which case each object must be separated. Let $\mathcal{S}$ be such a single region. For each local minimum of $\sdf(\mathcal{S})$, by taking boundary of set where $\sdf(\mathcal{S})$ is less than the half of the minimum value, we can obtain initial contours for each linked object in $\mathcal{S}$; see the third row of Figure~\ref{Fig:pre_er}. 
 
-In order to get better initial contours, each landmark is expanded to touch the pseudo edge-region. Let $\{L_i\}_{i=1}^K$ be distinct $K$ landmarks. For each level set function $\phi_i$, the competing balloon force $\fci$ is defined as
+In order to get better initial contours for the second active contour model, each contour is expanded to touch the pseudo edge-region. For a collection $\{\phi_i\}$ of level set functions, the competing balloon force $\fci$ is defined as
 \begin{align}
     \fci(x,\,t) =
         -1 - \sum_{j\neq i}\min\left(\phi_j(x,\,t) - 1,\,0\right)\cm \label{Def:CompeteBalloon}
@@ -302,22 +302,24 @@ which is designed to inflate the zero level set $\{\phi_i = 0\}$ until it meets 
 \begin{align}
     \begin{split}
         \frac{\partial}{\partial{t}}\phi_i(x,\,t) &= \mu\kappa(\phi_i)\ngphii + \chi_{\Omega\setminus\PER}\fci\ngphii +\nu\chi_{\PER}\ngphii\cm\\
-        \phi_i(x,\,0) &= \phi_{i}^L(x)\cm
+        \phi_i(x,\,0) &= \phi_{i}^{F}(x)\cm
     \end{split}\label{Eq:evolv_init}
 \end{align}
-where $\mu$, $\nu$ are constants, $\kappa(\phi_i)$ is the curvature of $\phi_i$, $\PER$ is the pseudo edge-region, and $\phi_i^L = \sdf(L_i)$ for all $i=1,\,\ldots,\,K$. The first term is a regularization term, and the second term makes contour $\phi_i$ stop when it meets the zero level sets of other $\phi_j$ including $\phi_0$. The third term prevent the contour to enter $\PER$. In order to resolve the over-segmentation, a standby process is introduced when applying the evolution~\eqref{Eq:evolv_init}; until all contours reach a certain range of $\PER$, contours that touch each other are merged rather than stop by $\fci$. In this process, contour points that have already reached a certain range of $\PER$ stop and wait until all the contours reach the range. When all contours reach the range, they evolve again. Contours in standby and resulting contours are shown in the last two rows of Figure~\ref{Fig:pre_er}. We take these resulting contours as the initial contours for the contour evolution for segmentation.
+where $\mu$, $\nu$ are constants, $\kappa(\phi_i)$ is the curvature of $\phi_i$, $\PER$ is the pseudo edge-region, and $\phi_i^F$ is SDFs representing initial contours obtained before. The first term is a regularization term, and the second term makes contour $\phi_i$ stop when it meets the zero level sets of other $\phi_j$ including $\phi_0$. The third term prevent the contour to enter $\PER$. 
 
-\subsubsection{Segmentation using active contours}
-\label{Subsec:segmentation}
+In initial contours, the distance from each contour to $\PER$ are all different. In order to ensure that all contours reach $\PER$ at the same time, a standby process is introduced when applying the evolution~\eqref{Eq:evolv_init}; contours that have reached a certain range of $\PER$ stop and wait until all the contours reach the range. If all contours reach the range, then they continue to evolve. In this process, until all contours reach a certain range of $\PER$, contours that touch each other are merged rather than stopped by $\fci$ to reduce the over-segmentation. Contours in standby and resulting contours are shown in the last two rows of Figure~\ref{Fig:pre_er}.
 
-Now, we segment each region using multiple contours found in the previous section. Let $\left\{\phi_{i,\,0}\right\}_{i=1}^{N}$ be a collection of level set functions which are steady-state solutions of~\eqref{Eq:evolv_init}. Here, we assume that $\PER$ contains the tooth boundaries and let $\ER$ be edge-region candidate intersecting $\PER$, i.e., $\ER=\PER\cap\ome$. Since the contours touch the $\partial\PER$, we push $\phi_{i,\,0}$ outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
+\subsubsection{The second active contour model}
+\label{Subsec:second_ac}
+
+Now, we segment each region using contours found in the previous section. Let $\left\{\phi_{i}^S\right\}_{i=1}^{N}$ be a collection of level set functions which are steady-state solutions of~\eqref{Eq:evolv_init}. Here, we assume that $\PER$ contains the tooth boundaries and let $\ER$ be edge-region candidate intersecting $\PER$, i.e., $\ER=\PER\cap\ome$. Since the contours are touching $\partial\PER$, we will push $\phi_{i}^S$ outward until it reaches the boundary of the tooth. For this, we propose a contour evolution with a level set formulation:
 \begin{align}
     \begin{split}
         \frac{\partial}{\partial{t}}\phi_i(x,\,t) &= \mu\kappa(\phi_i)\ngphii + \chi_{\ERC}\left( \fci + {\fsi} \right) \ngphii-\chi_{\ER}F_a\cdot \gphii \cm \\
-        \phi_i(x,\,0) &= \phi_{i,\,0}(x)\cm
+        \phi_i(x,\,0) &= \phi_{i}^S(x)\cm
     \end{split} \label{Eq:proposed}
 \end{align}
-where $\mu$ is a constant, $\kappa(\phi_i)$ is the curvature of $\phi_i$. Here are three forces $F_a$,~$\fsi$ and $\fci$; $F_a$ is the GADF defined in~\eqref{Def:gadf} and $\fci$ is the competing balloon force~\eqref{Def:CompeteBalloon}. The force $\fsi$ is called the statistically reinstating force~(SRF) proposed in~\cite{Park:2014:SRM}. It examines the intensity distribution of local regions inside and outside of a given contour and assign $1$ or $-1$ to move the contour so that the point on the contour belongs to the region with more similar intensity.
+where $\mu$ is a constant, $\kappa(\phi_i)$ is the curvature of $\phi_i$. Here are three forces $F_a$,~$\fsi$ and $\fci$; $F_a$ is the GADF defined in~\eqref{Def:gadf} and $\fci$ is the competing balloon force~\eqref{Def:CompeteBalloon}. The force $\fsi$ is called the statistically reinstating force~(SRF) proposed in~\cite{Park:2014:SRM}. It examines the intensity distributions of local regions inside and outside of a given contour and assign $1$ or $-1$ to move the contour so that the point on the contour belongs to the region with more similar intensity.
 
 When a contour $\calc$ evolves by~\eqref{Eq:proposed}, the first term controls the smoothness of $\calc$, and other terms control the movement of the contour. When $\calc$ is in $\ER$, it is only affected by the third term that attracts $\calc$ to the boundary of a tooth. On the other hand, when $\calc$ is in $\ERC$, the contour is affected by the second term. We consider two cases according to the relation between $\calc$ and other contours. Let a point $x$ be in $\calc$. In the case that $x$ is away from the other contours, $\fci=-1$ so that the second term of~\eqref{Eq:proposed} becomes ${\fsi} - 1$. If $\fsi(x)=-1$, then the second term becomes $-2$, hence, $\calc$ moves outward. But if $\fsi(x)=1$, the second term becomes $0$ and $\calc$ stops. In the case that $x$ is close to other contours, then $\fci$ becomes $0$ and $\calc$ is affected by $\fsi$. Thus the contour moves following the SRF~\cite{Park:2014:SRM}. In Figure~\ref{Fig:proposed}, we can see how contour moves differently under different situations.
 
@@ -328,17 +330,12 @@ When a contour $\calc$ evolves by~\eqref{Eq:proposed}, the first term controls t
 \subsection{Identification of tooth and non-tooth regions}
 \label{Subsec:regClass}
 
-As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth, we need to identify tooth and non-tooth regions from the result in Section~\ref{Subsec:SegLevelset}. In a human teeth image, tooth and non-tooth regions can be easily distinguished by shape and color. Teeth are relatively white and convex in shape, thus non-tooth regions can be easily removed. 
+As a final step, the identification of the segmented regions remains. Since our goal is to segment each individual tooth, we need to identify tooth regions, and exclude non-tooth regions from the result in Section~\ref{Subsec:SegLevelset}. In a human teeth image, tooth and non-tooth regions can be easily distinguished by analysis of colors.
 
-In Section~\ref{Subsec:initial_contours}, we identified tooth and non-tooth regions using morphological characteristics of the regions. But it is not always possible to identify regions using morphological characteristics. In order to exclude the non-tooth regions by considering not only morphologies but also color information, the method~(C-4) below is applied following the methods~(C-1)--(C-3) in Section~\ref{Subsec:initial_contours}: The CIE-Lab color space~\cite{Zeileis:2009:escaping} is designed to express the human vision system. It expresses color with three values ​​$L$, $a$, and $b$: $L$ represents lightness, and $a$ and $b$ represent four colors red, green, blue, and yellow. Let the image $I$ be embedded into the CIE-Lab color space denoted by $I_{Lab}(x)=[L(x),\,a(x),\,b(x)]$, and let $x^*\in\Omega$ be a point such that
-\begin{align*}
-    x^* = \argmax a(x)\pd
-\end{align*}
-Then, $x^*$ is the point at which $I(x^*)$ has the most red color.
-\begin{itemize}
-    \setlength{\itemindent}{2mm}
-    \item [(C--4)] If $I_{Lab}$ values on the region is $k$-means clustered together with $I_{Lab}(x^*)$ among all the regions sharing the $x$-coordinate with the region, then the region is identified as not a tooth region.
-\end{itemize}
+First, the teeth enhanced map $G/R-\alpha B$ was proposed in consideration of the ratios of $R$, $G$ and $B$ values: Teeth are white or ivory in color, and thus both of $R$ and $G$ channels have similar values on there. Therefore, the value of $G/R$ is close to $1$ in teeth and close to $0$ in reddish parts such as gums and lips. However, $G/R$ emphasizes not only teeth but also light reflection. Light reflections are usually whiter than teeth so that $B$ values are larger in there than in teeth. Thus, by subtracting values proportional to $B$, the emphasis of the light reflection can be lowered. Second, among the regions segmented in Section~\ref{Subsec:SegLevelset}, those containing more than 25\% of pixels with values smaller than the average in the teeth enhanced map are removed. Examples of teeth enhanced map are shown in Figure~\ref{Fig:tem}.
+
+% Figure: teeth enhanced map
+\input{ ./Figures/TEM/fig.tex}
 
 % Section: Experimental results
 \section{Experimental results and numerical aspect}
@@ -359,7 +356,7 @@ To get more diverse training data, data augmentation is applied. In each epoch, 
 
 It seems that the number of epochs is excessive compared to those that are usually chosen, but in fact it is not. For each image, there are at least $16$ image variants that can be obtained with data augmentation, even excluding patch cropping and resizing. Since the parameters of each data augmentation are randomly selected each time and randomly selected patches from random size images are used, it is comparable to typical $100$ epochs.
 
-\noindent\textbf{Results.} In Figure~\ref{Fig:results}, several teeth images with segmentation results for existing and proposed methods are presented. The results of the modified watershed algorithm (MWA) that is a model-based method~\cite{Na:2014LteethMorph} are in Figure~\ref{Fig:na2014}. The parameters used in MWA could not be obtained from~\cite{Na:2014LteethMorph}, so they were selected with our best effort. Many wrong results, such as captured light reflection or mis-segmented tooth boundaries, appear in the results in~\ref{Fig:na2014}. Figures~\ref{Fig:mrcnn} and~\ref{Fig:mrcnn_w} show the results using the methods based on Mask R-CNN~\cite{He:2018:MRCNN,Pham:2020,Zhu:2020:teethMaskrcnn}. For training, we used the same training dataset as in this paper with the same data augmentation strategy of~\cite{Detectron2018}, but with different labeled data. Mask R-CNN requires individual tooth regions as labels, which were generated through a well-known labeling tool, Labelme~\cite{Russell:2007:labelme}.
+\noindent\textbf{Results.} In Figure~\ref{Fig:results}, several teeth images with segmentation results for existing and proposed methods are presented. The results of the modified watershed algorithm (MWA) that is a model-based method~\cite{Na:2014LteethMorph} are in Figure~\ref{Fig:na2014}. The parameters used in MWA could not be obtained from~\cite{Na:2014LteethMorph}, so they were selected with our best effort. Many wrong results, such as captured light reflection or mis-segmented tooth boundaries, appear in the results in~\ref{Fig:na2014}. Figures~\ref{Fig:mrcnn} and~\ref{Fig:mrcnn_w} show the results using the methods based on Mask R-CNN~\cite{He:2018:MRCNN,Pham:2020,Zhu:2020:teethMaskrcnn}. For training, we used the same training dataset as in this paper and all training strategies were followed exactly as in each paper~\cite{Kim:2020,Zhu:2020:teethMaskrcnn}. Mask R-CNN requires individual tooth regions as labels, which were generated through a well-known labeling tool, Labelme~\cite{Russell:2007:labelme}.
 
 Figure~\ref{Fig:ours} shows the results of our proposed algorithm. As shown in the figure, the methods used in the last three columns of Figure~\ref{Fig:results} all show remarkable results. The two results of Mask R-CNN look similar but, our results are distinct from the two results. A few differencces can be observed; Since the results with Mask R-CNN are pixel-based segmentation, the segmenting lines appear stepwise along the pixels and gaps with the actual teeth occur as well. Meanwhile, because our method uses level sets, the segmenting lines are smooth and fit well with the atual teeth. Finally, Mask R-CNN shows relatively poor capture of the outermost teeth of the image compared to our method.
 
@@ -386,7 +383,7 @@ Individual tooth segmentation can be used importantly for 3D teeth model reconst
 \section{Structure of neural network}
 \label{App:neural_net}
 
-In this appendix, the structure of the neural network used in Section~\ref{Subsec:pseudo_er} is presented in Figure~\ref{Fig:network}. For the encoder part of neural network, the feature extraction part of ResNeSt-50\cite{Zhang:2020:ResNeSt} was used, and the upscaling decoder part was designed.
+In this appendix, the structure of the neural network used in Section~\ref{Subsec:pseudo_er} is presented in Figure~\ref{Fig:network}. For the encoder part of neural network, the feature extraction part of ResNeSt-50~\cite{Zhang:2020:ResNeSt} was used, and the upscaling decoder part was designed.
 
 % Figure: Network structure
 \input{./TeethSeg_network.tex}
