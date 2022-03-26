@@ -18,6 +18,11 @@
 {\sc T.~F. Chan and L.~A. Vese}, {\em Active contours without edges}, IEEE
   Transactions on Image Processing, 10 (2001), pp.~266--277.
 
+\bibitem{T023}
+{\sc N.~Dental}.
+\newblock
+  \url{http://www.napelonidental.com/wp-content/uploads/2011/08/IMG_1984-1024x682.jpg}.
+
 \bibitem{Dollar:2006:BEL}
 {\sc P.~Dollar, Z.~Tu, and S.~Belongie}, {\em Supervised learning of edges and
   object boundaries}, in 2006 IEEE Computer Society Conference on Computer
@@ -124,7 +129,7 @@
   Journal of the Korean Society for Industrial and Applied Mathematics, 18
   (2014), pp.~129--142.
 
-\bibitem{T001}
+\bibitem{T001_21}
 {\sc PhotoMed}, {\em polar\_eyes cross polarization filter}.
 \newblock \url{https://www.photomed.net/polar_eyes.htm}.
 
@@ -158,12 +163,6 @@
 {\sc D.~Shankbone}, {\em Teeth of a model, 2007}.
 \newblock
   \url{https://en.wikipedia.org/wiki/Permanent_teeth#/media/File:Teeth_by_David_Shankbone.jpg}.
-
-\bibitem{T023}
-{\sc I.~Stec}, {\em {Strona Zdrowia} \'{S}nie\.{z}nobia{\l}y u\'smiech
-  modelki}.
-\newblock
-  \url{https://gs24.pl/snieznobialy-usmiech-modelki/ga/5332192/zd/8114812}.
 
 \bibitem{SpecRemoval:2016}
 {\sc J.~Suo, D.~An, X.~Ji, H.~Wang, and Q.~Dai}, {\em Fast and high quality
