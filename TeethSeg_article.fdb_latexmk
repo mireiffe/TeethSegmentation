@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex TeethSeg_article"] 1648281686 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1648281725
-  "TeethSeg_article.aux" 1648281723 21188 570171b869ca8a020517a018cc0610b2 "pdflatex"
-  "bibliography.bib" 1648281640 24012 74240d22931219b4340dc3624a9afdc4 ""
+["bibtex TeethSeg_article"] 1648441994 "TeethSeg_article.aux" "TeethSeg_article.bbl" "TeethSeg_article" 1648442045
+  "TeethSeg_article.aux" 1648442043 21720 82d6616b29fb7a3b5b74d42b60ed5490 "pdflatex"
+  "bibliography.bib" 1648366160 28521 ebe0fe4aade04829fb54dc83164f4095 ""
   "c:/texlive/2021/texmf-dist/bibtex/bst/base/siam.bst" 1640658954 19403 812681d329611d2a1625ad7ae5186edc ""
   (generated)
   "TeethSeg_article.bbl"
   "TeethSeg_article.blg"
-["pdflatex"] 1648281687 "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" "TeethSeg_article.pdf" "TeethSeg_article" 1648281725
+["pdflatex"] 1648441996 "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" "TeethSeg_article.pdf" "TeethSeg_article" 1648442045
   "Figures/TEM/fig.tex" 1648095678 744 6fe93a3ca86bfba79a498274ebe1cb20 ""
   "Figures/TEM/tem0.png" 1648054589 309220 2c5ccfc85456cf504a95b2d84b376648 ""
   "Figures/TEM/tem1.png" 1648055568 155914 0ba53058582bcebaa8591bb58c624920 ""
@@ -27,9 +27,9 @@
   "Figures/evolution/light_steps/iter300.png" 1647220339 15967 3c49a3d49947d7124220c8a9469c1fce ""
   "Figures/evolution/light_steps/iter500.png" 1647220724 19834 e6aed900243248112eb960db14d91a4a ""
   "Figures/evolution/light_steps/iter750.png" 1647221259 21522 73632afce61b8124293d723debe58bd8 ""
-  "Figures/flowchart/fig.tex" 1646908445 3060 c92f9744cd10d29d8800e92ad91236fd ""
+  "Figures/flowchart/fig.tex" 1648439000 3068 22c4d19d26b55a17d63f069fe2066d09 ""
   "Figures/labeling/er.png" 1637432839 124762 a0eb7e723d4c0410fe0ff495605f6eff ""
-  "Figures/labeling/fig.tex" 1646878287 1189 dc7f130424c50dfc93ac0fb077c26557 ""
+  "Figures/labeling/fig.tex" 1648439259 1184 1121a92fcfc3800c5283f45522147549 ""
   "Figures/labeling/img.png" 1637432854 622305 9c4d3b5b3b45960c07155f0b7d86c161 ""
   "Figures/labeling/label.png" 1637432862 70852 3c1f306bbda385df37b2078e8a742d5a ""
   "Figures/labeling/sel_reg.png" 1637432872 69513 f5a7d9b3e5f2f5e07cb68779544f6ca5 ""
@@ -98,10 +98,10 @@
   "Figures/results/na2014_18.pdf" 1637605405 807489 febfc22d3730a555d3975cd45336a8de ""
   "Figures/results/na2014_5.pdf" 1637605291 310300 6ddc7823edfd6698e8b729aa425b5d41 ""
   "Figures/results/na2014_8.pdf" 1637605294 142996 4eb2c9a916bbcee862ee7dcdd4c1a100 ""
-  "TeethSeg_article.aux" 1648281723 21188 570171b869ca8a020517a018cc0610b2 "pdflatex"
-  "TeethSeg_article.bbl" 1648281687 9247 d8e6fb528c71551fc3bc15c4e472cd1c "bibtex TeethSeg_article"
-  "TeethSeg_article.out" 1648281723 2915 1047ae95fd92078a28b8cbd2c8238cea "pdflatex"
-  "TeethSeg_article.tex" 1648096157 33879 2b7a1ea981601a124c63612bb7c6bd3d ""
+  "TeethSeg_article.aux" 1648442043 21720 82d6616b29fb7a3b5b74d42b60ed5490 "pdflatex"
+  "TeethSeg_article.bbl" 1648441995 12768 97cf9ae411ac9dbe15f7e897e5eaed33 "bibtex TeethSeg_article"
+  "TeethSeg_article.out" 1648442043 2915 1047ae95fd92078a28b8cbd2c8238cea "pdflatex"
+  "TeethSeg_article.tex" 1648441940 33765 74c41ecf88a41cf49b0e29b6dbd40ba0 ""
   "TeethSeg_network.tex" 1647316391 19116 f464a832b91d9122c5411d8cb49f35da ""
   "c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1640659195 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1640659847 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -342,7 +342,7 @@
   "c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1640662720 4412718 ada1c61bbfa7db40aae998c8d328ff5e ""
   "c:/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1640662891 2820070 e4786655df6966427ec32b626f6fb8c4 ""
   "c:/texlive/2021/texmf.cnf" 1640662697 713 e69b156964470283e0530f5060668171 ""
-  "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" 1648096157 33879 2b7a1ea981601a124c63612bb7c6bd3d ""
+  "g:/My Drive/Documents/Research works/proposal_defense/tex/TeethSeg_article.tex" 1648441940 33765 74c41ecf88a41cf49b0e29b6dbd40ba0 ""
   (generated)
   "TeethSeg_article.aux"
   "TeethSeg_article.log"

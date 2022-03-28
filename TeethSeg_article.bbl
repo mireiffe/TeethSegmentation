@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{TT054}
+{\sc {99 Health Ideas}}, {\em Tooth discoloration}.
+\newblock
+  \url{https://www.99healthideas.com/9-harmful-side-effects-of-antibiotics-and-ways-to-minimize-them/}.
+
 \bibitem{T000}
 {\sc M.~S.~M. Abdlhmed}, {\em Developmental disturbance of teeth}, in Faculty
   of Basic Medical Science-Libyan International Medical University, 2018.
@@ -18,10 +23,14 @@
 {\sc T.~F. Chan and L.~A. Vese}, {\em Active contours without edges}, IEEE
   Transactions on Image Processing, 10 (2001), pp.~266--277.
 
-\bibitem{T023}
-{\sc N.~Dental}.
+\bibitem{TT048}
+{\sc {Cross-Polar}}, {\em The polarizing effect}.
+\newblock \url{https://cross-polar.com/about/}.
+
+\bibitem{TT020_43}
+{\sc {Dentistry for Madison}}, {\em 8 health problems caused by crooked teeth}.
 \newblock
-  \url{http://www.napelonidental.com/wp-content/uploads/2011/08/IMG_1984-1024x682.jpg}.
+  \url{https://www.dentistryformadison.com/8-health-problems-caused-by-crooked-teeth/}.
 
 \bibitem{Dollar:2006:BEL}
 {\sc P.~Dollar, Z.~Tu, and S.~Belongie}, {\em Supervised learning of edges and
@@ -65,6 +74,10 @@
   Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern
   Recognition (CVPR), 2019, pp.~558--567.
 
+\bibitem{TT039}
+{\sc {Health JADE}}, {\em Fluorosis}.
+\newblock \url{https://healthjade.net/fluorosis/}.
+
 \bibitem{Kass:1988:Snakes}
 {\sc M.~Kass, A.~Witkin, and D.~Terzopoulos}, {\em Snakes: Active contour
   models}, International Journal of Computer Vision, 1 (1988), pp.~321--331.
@@ -77,6 +90,10 @@
 \bibitem{Kingma:2017}
 {\sc D.~P. Kingma and J.~Ba}, {\em Adam: A method for stochastic optimization},
   in arXiv preprint, arXiv: 1412.6980, 2014.
+
+\bibitem{TT015_9}
+{\sc {KRAUSE}}, {\em Smile makeovers}.
+\newblock \url{https://www.kcdcmontville.com/gallery.html}.
 
 \bibitem{Krizhevsky:2012:ImageNet}
 {\sc A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton}, {\em Image{N}et
@@ -106,11 +123,38 @@
 \newblock
   \url{https://www.listerine.com.au/cavities-strong-teeth/do-you-have-enamel-erosion}.
 
+\bibitem{TT014}
+{\sc J.~Martos, A.~Gewehr, and E.~Paim}, {\em Aesthetic approach for anterior
+  teeth with enamel hypoplasia}, in Contemporary clinical dentistry, 3 (2012),
+  Suppl1: S82.
+
+\bibitem{TT006}
+{\sc {Matthew Ferguson 57}}, {\em Dental fluorosis (mild)}.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Dental_fluorosis#/media/File:Dental_fluorosis_(mild).png}.
+
+\bibitem{TT029}
+{\sc {MedicineNet}}, {\em Mouth problems: {TMJ}, canker sores, painful gums and
+  more}.
+\newblock
+  \url{https://www.medicinenet.com/top_problems_in_your_mouth_pictures_slideshow/article.htm}.
+
+\bibitem{Miranda:2016}
+{\sc G.~E. Miranda, S.~G. de~Freitas, L.~V. de~Abreu~Maia, and R.~F.~H.
+  Melani}, {\em An unusual method of forensic human identification: use of
+  selfie photographs}, Forensic science international, 263 (2016),
+  pp.~e14--e17.
+
 \bibitem{Na:2014LteethMorph}
 {\sc S.~D. Na, G.~Lee, J.~H. Lee, and M.~N. Kim}, {\em Individual tooth region
   segmentation using modified watershed algorithm with morphological
   characteristic}, Bio-Medical Materials and Engineering, 24 (2014),
   pp.~3303--3309.
+
+\bibitem{TT023}
+{\sc {Napeloni Dental}}.
+\newblock
+  \url{http://www.napelonidental.com/wp-content/uploads/2011/08/IMG_1984-1024x682.jpg}.
 
 \bibitem{Naumovich:2015:teethCT3D}
 {\sc S.~S. Naumovich, S.~A. Naumovich, and V.~G. Goncharenko}, {\em
@@ -133,10 +177,24 @@
 {\sc PhotoMed}, {\em polar\_eyes cross polarization filter}.
 \newblock \url{https://www.photomed.net/polar_eyes.htm}.
 
+\bibitem{TT037_51}
+{\sc {POLARIS}}.
+\newblock \url{https://filtropolaris.com/}.
+
+\bibitem{TT026}
+{\sc {Pranita Kadam}}, {\em What is it specifically about {J}ulia {R}oberts's
+  smile that makes it so noteworthy?}
+\newblock
+  \url{https://www.quora.com/What-is-it-specifically-about-Julia-Robertss-smile-that-makes-it-so-noteworthy}.
+
 \bibitem{Pretty:2001:forensic}
 {\sc I.~Pretty and D.~Sweet}, {\em A look at forensic dentistry--{P}art 1: The
   role of teeth in the determination of human identity}, British Dental
   Journal, 190 (2001), pp.~359--366.
+
+\bibitem{TT052}
+{\sc {Quirke Dental Surgeons}}, {\em No drilling dentistry}.
+\newblock \url{https://qds.ie/resin-infiltration/}.
 
 \bibitem{Russell:2007:labelme}
 {\sc B.~C. Russell, A.~Torralba, K.~P. Murphy, and W.~T. Freeman}, {\em
@@ -159,10 +217,42 @@
   Symposium: Special Session on Research at the Biometric Consortium
   Conference, 2006, pp.~1--6.
 
-\bibitem{T017}
-{\sc D.~Shankbone}, {\em Teeth of a model, 2007}.
+\bibitem{TT035}
+{\sc {SHUAYB}}, {\em Smile gallery}.
+\newblock \url{https://www.shuaybdental.com/smile-gallery}.
+
+\bibitem{TT056_10}
+{\sc J.~H. Son, B.~Hur, H.~Kim, and J.~Park}, {\em Management of white spots:
+  resin infiltration technique and microabrasion}, The Journal of Korean
+  Academy of Conservative Dentistry, 36 (2011), pp.~66--71.
+
+\bibitem{TT027}
+{\sc {Southwest Nebraska Dental Center}}, {\em {ICON} resin infiltration
+  treatment}.
 \newblock
-  \url{https://en.wikipedia.org/wiki/Permanent_teeth#/media/File:Teeth_by_David_Shankbone.jpg}.
+  \url{https://www.swnebraskadental.com/smile-gallery/icon-resin-infiltration-treatment/14607}.
+
+\bibitem{TT046}
+{\sc {Spear Education}}, {\em A conservative, effective approach to white spot
+  lesions}.
+\newblock
+  \url{https://www.speareducation.com/spear-review/2017/07/a-conservative-effective-approach-to-white-spot-lesions}.
+
+\bibitem{TT049}
+{\sc {Sterling Dental}}, {\em What are those dark spots between your teeth?}
+\newblock
+  \url{https://sterlingdentaldds.com/what-are-those-dark-spots-between-your-teeth}.
+
+\bibitem{TT031}
+{\sc {Studio Dentale}}, {\em Raiz do dente exposta: Conheça as causas,
+  sintomas e saiba como tratar}.
+\newblock \url{https://studiodentale.com.br/raiz-dente-exposta/}.
+
+\bibitem{TT045}
+{\sc {Sunshine Smiles}}, {\em How to get rid of white spots on your front teeth
+  easily and pain free}.
+\newblock
+  \url{https://www.sunshinesmilesoc.com/blog/get-rid-white-spots-front-teeth-pain-free/13541}.
 
 \bibitem{SpecRemoval:2016}
 {\sc J.~Suo, D.~An, X.~Ji, H.~Wang, and Q.~Dai}, {\em Fast and high quality
@@ -174,6 +264,10 @@
   computing solutions to incompressible two-phase flow}, Journal of
   Computational Physics, 114 (1994), pp.~146--159.
 
+\bibitem{TT017}
+{\sc {Van Dyk Castro}}, {\em Smile gallery}.
+\newblock \url{https://www.vandykcastro.com/smile}.
+
 \bibitem{Pham:2020}
 {\sc T.~Van~Pham, Y.~Lucas, S.~Treuillet, and L.~Debraux}, {\em Object contour
   refinement using instance segmentation in dental images}, Advanced Concepts
@@ -183,6 +277,10 @@
 {\sc L.~Vincent and P.~Soille}, {\em Watersheds in digital spaces: an efficient
   algorithm based on immersion simulations}, IEEE Transactions on Pattern
   Analysis and Machine Intelligence, 13 (1991), pp.~583--598.
+
+\bibitem{TT007_25_28_50}
+{\sc {Wedgwook Dental Clinic}}, {\em Procedures}.
+\newblock \url{http://www.drengdds.com/Wedgwood_Dental_Clinic/Procedures.html}.
 
 \bibitem{WU:2016}
 {\sc C.~Wu, D.~Bradley, P.~Garrido, M.~Zollh{\"o}fer, C.~Theobalt, M.~Gross,
