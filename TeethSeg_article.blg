@@ -3,44 +3,46 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: TeethSeg_article.aux
 The style file: siam.bst
 Database file #1: bibliography.bib
+Warning--empty year in Naumovich:2015:teethCT3D
 You've used 62 entries,
             2030 wiz_defined-function locations,
-            871 strings with 15007 characters,
-and the built_in function-call counts, 20867 in all, are:
-= -- 1921
+            870 strings with 14955 characters,
+and the built_in function-call counts, 20971 in all, are:
+= -- 1944
 > -- 973
 < -- 0
 + -- 393
 - -- 326
-* -- 1493
-:= -- 3211
+* -- 1502
+:= -- 3224
 add.period$ -- 86
 call.type$ -- 62
-change.case$ -- 348
+change.case$ -- 347
 chr.to.int$ -- 0
-cite$ -- 62
-duplicate$ -- 925
-empty$ -- 1694
+cite$ -- 63
+duplicate$ -- 924
+empty$ -- 1684
 format.name$ -- 326
-if$ -- 4502
+if$ -- 4524
 int.to.chr$ -- 0
 int.to.str$ -- 62
 missing$ -- 38
 newline$ -- 213
 num.names$ -- 123
-pop$ -- 437
+pop$ -- 429
 preamble$ -- 1
 purify$ -- 288
 quote$ -- 0
-skip$ -- 783
+skip$ -- 796
 stack$ -- 0
-substring$ -- 1210
-swap$ -- 351
+substring$ -- 1242
+swap$ -- 358
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 248
-warning$ -- 0
-while$ -- 200
+warning$ -- 1
+while$ -- 203
 width$ -- 64
 write$ -- 527
+(There was 1 warning)

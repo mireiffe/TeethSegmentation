@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  8 APR 2022 12:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  8 APR 2022 22:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -383,6 +383,11 @@ Package footmisc Info: Declaring symbol style wiley on input line 872.
 Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
 Package footmisc Info: Declaring symbol style lamport* on input line 903.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 924.
+) (c:/texlive/2021/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count299
+\c@@ppsavesec=\count300
+\c@@ppsaveapp=\count301
 ) (c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks36
 \pgfutil@tempdima=\dimen172
@@ -413,14 +418,14 @@ Package: pgfsys 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@yd=\dimen183
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count299
-\c@pgf@countb=\count300
-\c@pgf@countc=\count301
-\c@pgf@countd=\count302
+\c@pgf@counta=\count302
+\c@pgf@countb=\count303
+\c@pgf@countc=\count304
+\c@pgf@countd=\count305
 \t@pgf@toka=\toks40
 \t@pgf@tokb=\toks41
 \t@pgf@tokc=\toks42
-\pgf@sys@id@count=\count303
+\pgf@sys@id@count=\count306
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
 )
@@ -431,8 +436,8 @@ File: pgfsys-pdftex.def 2021/05/15 v3.1.9a (3.1.9a)
 File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count304
-\pgfsyssoftpath@bigbuffer@items=\count305
+\pgfsyssoftpath@smallbuffer@items=\count307
+\pgfsyssoftpath@bigbuffer@items=\count308
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 )) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -454,13 +459,13 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
 Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen184
-\pgfmath@count=\count306
+\pgfmath@count=\count309
 \pgfmath@box=\box55
 \pgfmath@toks=\toks43
 \pgfmath@stack@operand=\toks44
 \pgfmath@stack@operation=\toks45
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count307
+\c@pgfmathroundto@lastzeros=\count310
 )) (c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@picminx=\dimen185
@@ -490,7 +495,7 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count308
+\pgf@picture@serial@count=\count311
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgflinewidth=\dimen259
@@ -511,8 +516,8 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen264
-\pgf@sys@shading@range@num=\count309
-\pgf@shadingcount=\count310
+\pgf@sys@shading@range@num=\count312
+\pgf@shadingcount=\count313
 ) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -548,7 +553,7 @@ Package: pgffor 2021/05/15 v3.1.9a (3.1.9a)
 Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count311
+\pgf@plot@mark@count=\count314
 \pgfplotmarksize=\dimen269
 )
 \tikz@lastx=\dimen270
@@ -563,17 +568,17 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@figbox@bg=\box62
 \tikz@tempbox=\box63
 \tikz@tempbox@bg=\box64
-\tikztreelevel=\count312
-\tikznumberofchildren=\count313
-\tikznumberofcurrentchild=\count314
-\tikz@fig@count=\count315
+\tikztreelevel=\count315
+\tikznumberofchildren=\count316
+\tikznumberofcurrentchild=\count317
+\tikz@fig@count=\count318
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count316
-\pgfmatrixcurrentcolumn=\count317
-\pgf@matrix@numberofcolumns=\count318
+\pgfmatrixcurrentrow=\count319
+\pgfmatrixcurrentcolumn=\count320
+\pgf@matrix@numberofcolumns=\count321
 )
-\tikz@expandcount=\count319
+\tikz@expandcount=\count322
  (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 ))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
@@ -638,50 +643,50 @@ File: tikzlibrarybackgrounds.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@layerbox@background=\box85
 \pgf@layerboxsaved@background=\box86
 )
-\c@theorem=\count320
+\c@theorem=\count323
  (c:/texlive/2021/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box87
 \UL@hyphenbox=\box88
 \UL@skip=\skip62
 \UL@hook=\toks48
 \UL@height=\dimen283
-\UL@pe=\count321
+\UL@pe=\count324
 \UL@pixel=\dimen284
 \ULC@box=\box89
 Package: ulem 2019/11/18
 \ULdepth=\dimen285
-) (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count322
-\l__pdf_internal_box=\box90
 )
-(./TeethSeg_article.aux)
+(c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-12-14 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count325
+\l__pdf_internal_box=\box90
+) (./TeethSeg_article.aux)
 \openout1 = `TeethSeg_article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
-LaTeX Font Info:    ... okay on input line 136.
-LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 136.
-LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 136.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for LUC/nanummj/m/n on input line 134.
+LaTeX Font Info:    Trying to load font information for LUC+nanummj on input line 134.
  (c:/texlive/2021/texmf-dist/tex/latex/nanumtype1/lucnanummj.fd
 File: lucnanummj.fd 2013/02/12 v0.1 Nanum Myeongjo font definitions
 )
-LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    ... okay on input line 134.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -719,16 +724,16 @@ LaTeX Font Info:    ... okay on input line 136.
 
 (c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
+\scratchcounter=\count326
 \scratchdimen=\dimen286
 \scratchbox=\box91
-\nofMPsegments=\count324
-\nofMParguments=\count325
+\nofMPsegments=\count327
+\nofMParguments=\count328
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count326
+\MPscratchCnt=\count329
 \MPscratchDim=\dimen287
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
+\MPnumerator=\count330
+\makeMPintoPDFobject=\count331
 \everyMPtoPDFconversion=\toks50
 ) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -746,7 +751,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 136.
+Package hyperref Info: Link coloring OFF on input line 134.
  (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -754,72 +759,72 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 136.
-LaTeX Info: Redefining \pageref on input line 136.
-LaTeX Info: Redefining \nameref on input line 136.
+LaTeX Info: Redefining \ref on input line 134.
+LaTeX Info: Redefining \pageref on input line 134.
+LaTeX Info: Redefining \nameref on input line 134.
  (./TeethSeg_article.out) (./TeethSeg_article.out)
 \@outlinefile=\write4
 \openout4 = `TeethSeg_article.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 136.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 140.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 136.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] (./Figures/edge_region/fig.tex
-<./Figures/edge_region/stt.png, id=149, 213.79875pt x 194.7275pt>
+<./Figures/edge_region/stt.png, id=147, 213.79875pt x 194.7275pt>
 File: ./Figures/edge_region/stt.png Graphic file (type png)
 <use ./Figures/edge_region/stt.png>
 Package pdftex.def Info: ./Figures/edge_region/stt.png  used on input line 7.
 (pdftex.def)             Requested size: 106.21075pt x 96.73918pt.
-<./Figures/edge_region/nolight.png, id=150, 216.81pt x 197.83pt>
+<./Figures/edge_region/nolight.png, id=148, 216.81pt x 197.83pt>
 File: ./Figures/edge_region/nolight.png Graphic file (type png)
 <use ./Figures/edge_region/nolight.png>
 Package pdftex.def Info: ./Figures/edge_region/nolight.png  used on input line 8.
 (pdftex.def)             Requested size: 106.01947pt x 96.73918pt.
-<./Figures/edge_region/light.png, id=152, 218.27pt x 197.83pt>
+<./Figures/edge_region/light.png, id=150, 218.27pt x 197.83pt>
 File: ./Figures/edge_region/light.png Graphic file (type png)
 <use ./Figures/edge_region/light.png>
 Package pdftex.def Info: ./Figures/edge_region/light.png  used on input line 9.
 (pdftex.def)             Requested size: 106.73341pt x 96.73918pt.
-<./Figures/edge_region/stt_er.png, id=153, 213.79875pt x 194.7275pt>
+<./Figures/edge_region/stt_er.png, id=151, 213.79875pt x 194.7275pt>
 File: ./Figures/edge_region/stt_er.png Graphic file (type png)
 <use ./Figures/edge_region/stt_er.png>
 Package pdftex.def Info: ./Figures/edge_region/stt_er.png  used on input line 15.
 (pdftex.def)             Requested size: 106.21075pt x 96.73918pt.
-<./Figures/edge_region/nolight_er.png, id=154, 213.79875pt x 194.7275pt>
+<./Figures/edge_region/nolight_er.png, id=152, 213.79875pt x 194.7275pt>
 File: ./Figures/edge_region/nolight_er.png Graphic file (type png)
 <use ./Figures/edge_region/nolight_er.png>
 Package pdftex.def Info: ./Figures/edge_region/nolight_er.png  used on input line 16.
 (pdftex.def)             Requested size: 106.21075pt x 96.73918pt.
-<./Figures/edge_region/light_er.png, id=155, 214.8025pt x 194.7275pt>
+<./Figures/edge_region/light_er.png, id=153, 214.8025pt x 194.7275pt>
 File: ./Figures/edge_region/light_er.png Graphic file (type png)
 <use ./Figures/edge_region/light_er.png>
 Package pdftex.def Info: ./Figures/edge_region/light_er.png  used on input line 17.
 (pdftex.def)             Requested size: 106.7094pt x 96.73918pt.
-<./Figures/edge_region/st_Er_l.png, id=156, 213.79875pt x 194.7275pt>
+<./Figures/edge_region/st_Er_l.png, id=154, 213.79875pt x 194.7275pt>
 File: ./Figures/edge_region/st_Er_l.png Graphic file (type png)
 <use ./Figures/edge_region/st_Er_l.png>
 Package pdftex.def Info: ./Figures/edge_region/st_Er_l.png  used on input line 22.
 (pdftex.def)             Requested size: 106.21075pt x 96.73918pt.
-<./Figures/edge_region/nolight_Er_l.png, id=157, 213.79875pt x 194.7275pt>
+<./Figures/edge_region/nolight_Er_l.png, id=155, 213.79875pt x 194.7275pt>
 File: ./Figures/edge_region/nolight_Er_l.png Graphic file (type png)
 <use ./Figures/edge_region/nolight_Er_l.png>
 Package pdftex.def Info: ./Figures/edge_region/nolight_Er_l.png  used on input line 23.
 (pdftex.def)             Requested size: 106.21075pt x 96.73918pt.
-<./Figures/edge_region/light_Er_l.png, id=158, 214.8025pt x 194.7275pt>
+<./Figures/edge_region/light_Er_l.png, id=156, 214.8025pt x 194.7275pt>
 File: ./Figures/edge_region/light_Er_l.png Graphic file (type png)
 <use ./Figures/edge_region/light_Er_l.png>
 Package pdftex.def Info: ./Figures/edge_region/light_Er_l.png  used on input line 24.
 (pdftex.def)             Requested size: 106.7094pt x 96.73918pt.
 ) (./Figures/evolution/fig.tex
-<./Figures/evolution/light_steps/iter0.png, id=167, 395.97937pt x 360.59718pt>
+<./Figures/evolution/light_steps/iter0.png, id=166, 395.97937pt x 360.59718pt>
 File: ./Figures/evolution/light_steps/iter0.png Graphic file (type png)
 <use ./Figures/evolution/light_steps/iter0.png>
 Package pdftex.def Info: ./Figures/evolution/light_steps/iter0.png  used on input line 7.
@@ -829,7 +834,7 @@ Overfull \hbox (1.76146pt too wide) in paragraph at lines 7--8
  [][] 
  []
 
-<./Figures/evolution/light_steps/iter300.png, id=168, 395.97937pt x 360.59718pt>
+<./Figures/evolution/light_steps/iter300.png, id=167, 395.97937pt x 360.59718pt>
 File: ./Figures/evolution/light_steps/iter300.png Graphic file (type png)
 <use ./Figures/evolution/light_steps/iter300.png>
 Package pdftex.def Info: ./Figures/evolution/light_steps/iter300.png  used on input line 11.
@@ -839,7 +844,7 @@ Overfull \hbox (1.76146pt too wide) in paragraph at lines 11--12
  [][] 
  []
 
-<./Figures/evolution/light_steps/iter500.png, id=169, 395.97937pt x 360.59718pt>
+<./Figures/evolution/light_steps/iter500.png, id=168, 395.97937pt x 360.59718pt>
 File: ./Figures/evolution/light_steps/iter500.png Graphic file (type png)
 <use ./Figures/evolution/light_steps/iter500.png>
 Package pdftex.def Info: ./Figures/evolution/light_steps/iter500.png  used on input line 15.
@@ -849,7 +854,7 @@ Overfull \hbox (1.76146pt too wide) in paragraph at lines 15--16
  [][] 
  []
 
-<./Figures/evolution/light_steps/iter750.png, id=170, 395.97937pt x 360.59718pt>
+<./Figures/evolution/light_steps/iter750.png, id=169, 395.97937pt x 360.59718pt>
 File: ./Figures/evolution/light_steps/iter750.png Graphic file (type png)
 <use ./Figures/evolution/light_steps/iter750.png>
 Package pdftex.def Info: ./Figures/evolution/light_steps/iter750.png  used on input line 19.
@@ -859,7 +864,7 @@ Overfull \hbox (1.76146pt too wide) in paragraph at lines 19--20
  [][] 
  []
 
-<./Figures/evolution/light_steps/iter2400.png, id=171, 395.97937pt x 360.59718pt>
+<./Figures/evolution/light_steps/iter2400.png, id=170, 395.97937pt x 360.59718pt>
 File: ./Figures/evolution/light_steps/iter2400.png Graphic file (type png)
 <use ./Figures/evolution/light_steps/iter2400.png>
 Package pdftex.def Info: ./Figures/evolution/light_steps/iter2400.png  used on input line 23.
@@ -982,7 +987,7 @@ pdfTeX warning: pdflatex.exe (file ./Figures/per_init/img1_per0.pdf): PDF inclus
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1.
 
-<./Figures/proposed/er.png, id=306, 103.60582pt x 267.06024pt>
+<./Figures/proposed/er.png, id=307, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/er.png Graphic file (type png)
 <use ./Figures/proposed/er.png>
 Package pdftex.def Info: ./Figures/proposed/er.png  used on input line 7.
@@ -992,338 +997,258 @@ Overfull \hbox (1.22144pt too wide) in paragraph at lines 7--8
  [][] 
  []
 
-<./Figures/proposed/example_1/ex1.png, id=307, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex1.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex1.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex1.png  used on input line 12.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 <./Figures/proposed/example/ex1.png, id=308, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex1.png Graphic file (type png)
 <use ./Figures/proposed/example/ex1.png>
 Package pdftex.def Info: ./Figures/proposed/example/ex1.png  used on input line 13.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 12--14
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 13--14
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 12--14
- [] 
- []
-
-<./Figures/proposed/example_1/ex5.png, id=309, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex5.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex5.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex5.png  used on input line 17.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex3.png, id=310, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex3.png, id=309, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex3.png Graphic file (type png)
 <use ./Figures/proposed/example/ex3.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex3.png  used on input line 18.
+Package pdftex.def Info: ./Figures/proposed/example/ex3.png  used on input line 19.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 17--19
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 19--20
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 17--19
- [] 
- []
-
-<./Figures/proposed/example_1/ex10.png, id=311, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex10.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex10.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex10.png  used on input line 22.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex6.png, id=312, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex6.png, id=310, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex6.png Graphic file (type png)
 <use ./Figures/proposed/example/ex6.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex6.png  used on input line 23.
+Package pdftex.def Info: ./Figures/proposed/example/ex6.png  used on input line 25.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 22--24
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 25--26
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 22--24
- [] 
- []
-
-<./Figures/proposed/example_1/ex20.png, id=313, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex20.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex20.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex20.png  used on input line 27.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex9.png, id=314, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex9.png, id=311, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex9.png Graphic file (type png)
 <use ./Figures/proposed/example/ex9.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex9.png  used on input line 28.
+Package pdftex.def Info: ./Figures/proposed/example/ex9.png  used on input line 31.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 27--29
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 31--32
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 27--29
- [] 
- []
-
-<./Figures/proposed/example_1/ex30.png, id=315, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex30.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex30.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex30.png  used on input line 32.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex12.png, id=316, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex12.png, id=312, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex12.png Graphic file (type png)
 <use ./Figures/proposed/example/ex12.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex12.png  used on input line 33.
+Package pdftex.def Info: ./Figures/proposed/example/ex12.png  used on input line 37.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 32--34
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 37--38
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 32--34
- [] 
- []
-
-<./Figures/proposed/example_1/ex40.png, id=317, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex40.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex40.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex40.png  used on input line 37.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex15.png, id=318, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex15.png, id=313, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex15.png Graphic file (type png)
 <use ./Figures/proposed/example/ex15.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex15.png  used on input line 38.
+Package pdftex.def Info: ./Figures/proposed/example/ex15.png  used on input line 43.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 37--39
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 43--44
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 37--39
- [] 
- []
-
-<./Figures/proposed/example_1/ex50.png, id=319, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex50.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex50.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex50.png  used on input line 42.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex20.png, id=320, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex20.png, id=314, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex20.png Graphic file (type png)
 <use ./Figures/proposed/example/ex20.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex20.png  used on input line 43.
+Package pdftex.def Info: ./Figures/proposed/example/ex20.png  used on input line 49.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 42--44
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 49--50
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 42--44
- [] 
- []
-
-<./Figures/proposed/example_1/ex60.png, id=321, 103.60582pt x 267.06024pt>
-File: ./Figures/proposed/example_1/ex60.png Graphic file (type png)
-<use ./Figures/proposed/example_1/ex60.png>
-Package pdftex.def Info: ./Figures/proposed/example_1/ex60.png  used on input line 47.
-(pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
-<./Figures/proposed/example/ex90.png, id=322, 103.60582pt x 267.06024pt>
+<./Figures/proposed/example/ex90.png, id=315, 103.60582pt x 267.06024pt>
 File: ./Figures/proposed/example/ex90.png Graphic file (type png)
 <use ./Figures/proposed/example/ex90.png>
-Package pdftex.def Info: ./Figures/proposed/example/ex90.png  used on input line 48.
+Package pdftex.def Info: ./Figures/proposed/example/ex90.png  used on input line 55.
 (pdftex.def)             Requested size: 43.04935pt x 110.96556pt.
 
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 47--49
+Overfull \hbox (1.22144pt too wide) in paragraph at lines 55--56
  [][] 
  []
 
-
-Overfull \hbox (1.22144pt too wide) in paragraph at lines 47--49
- [] 
- []
-
-) [10 <./Figures/proposed/er.png> <./Figures/proposed/example_1/ex1.png> <./Figures/proposed/example/ex1.png> <./Figures/proposed/example_1/ex5.png> <./Figures/proposed/example/ex3.png> <./Figures/proposed/example_1/ex10.png> <./Figures/proposed/example/ex6.png> <./Figures/proposed/example_1/ex20.png> <./Figures/proposed/example/ex9.png> <./Figures/proposed/example_1/ex30.png> <./Figures/proposed/example/ex12.png> <./Figures/proposed/example_1/ex40.png> <./Figures/proposed/example/ex15.png> <./Figures/proposed/example_1/ex50.png> <./Figures/proposed/example/ex20.png> <./Figures/proposed/example_1/ex60.png> <./Figures/proposed/example/ex90.png>] (./Figures/TEM/fig.tex
-<./Figures/TEM/tem0.png, id=353, 358.3858pt x 238.12401pt>
+) (./Figures/TEM/fig.tex
+<./Figures/TEM/tem0.png, id=321, 358.3858pt x 238.12401pt>
 File: ./Figures/TEM/tem0.png Graphic file (type png)
 <use ./Figures/TEM/tem0.png>
 Package pdftex.def Info: ./Figures/TEM/tem0.png  used on input line 6.
 (pdftex.def)             Requested size: 107.0572pt x 71.13188pt.
-<./Figures/TEM/tem1.png, id=354, 358.3858pt x 163.1721pt>
+<./Figures/TEM/tem1.png, id=322, 358.3858pt x 163.1721pt>
 File: ./Figures/TEM/tem1.png Graphic file (type png)
 <use ./Figures/TEM/tem1.png>
 Package pdftex.def Info: ./Figures/TEM/tem1.png  used on input line 10.
 (pdftex.def)             Requested size: 156.23561pt x 71.13188pt.
-<./Figures/TEM/tem13.png, id=355, 358.3858pt x 224.00877pt>
+<./Figures/TEM/tem13.png, id=323, 358.3858pt x 224.00877pt>
 File: ./Figures/TEM/tem13.png Graphic file (type png)
 <use ./Figures/TEM/tem13.png>
 Package pdftex.def Info: ./Figures/TEM/tem13.png  used on input line 14.
 (pdftex.def)             Requested size: 113.7999pt x 71.13188pt.
-) [11 <./Figures/TEM/tem0.png> <./Figures/TEM/tem1.png> <./Figures/TEM/tem13.png>] (./Figures/results/fig.tex
+) [10 <./Figures/proposed/er.png> <./Figures/proposed/example/ex1.png> <./Figures/proposed/example/ex3.png> <./Figures/proposed/example/ex6.png> <./Figures/proposed/example/ex9.png> <./Figures/proposed/example/ex12.png> <./Figures/proposed/example/ex15.png> <./Figures/proposed/example/ex20.png> <./Figures/proposed/example/ex90.png>] [11 <./Figures/TEM/tem0.png> <./Figures/TEM/tem1.png> <./Figures/TEM/tem13.png>] (./Figures/results/fig.tex
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 1.
 
-<./Figures/results/img0.png, id=436, 358.3858pt x 238.12401pt>
+<./Figures/results/img0.png, id=420, 358.3858pt x 238.12401pt>
 File: ./Figures/results/img0.png Graphic file (type png)
 <use ./Figures/results/img0.png>
 Package pdftex.def Info: ./Figures/results/img0.png  used on input line 7.
 (pdftex.def)             Requested size: 79.6678pt x 52.93245pt.
-<./Figures/results/img1.png, id=437, 358.3858pt x 163.1721pt>
+<./Figures/results/img1.png, id=421, 358.3858pt x 163.1721pt>
 File: ./Figures/results/img1.png Graphic file (type png)
 <use ./Figures/results/img1.png>
 Package pdftex.def Info: ./Figures/results/img1.png  used on input line 8.
 (pdftex.def)             Requested size: 79.6678pt x 36.27144pt.
-<./Figures/results/img5.png, id=438, 358.3858pt x 206.08243pt>
+<./Figures/results/img5.png, id=422, 358.3858pt x 206.08243pt>
 File: ./Figures/results/img5.png Graphic file (type png)
 <use ./Figures/results/img5.png>
 Package pdftex.def Info: ./Figures/results/img5.png  used on input line 9.
 (pdftex.def)             Requested size: 79.6678pt x 45.80995pt.
-<./Figures/results/img8.png, id=439, 358.3858pt x 224.57338pt>
+<./Figures/results/img8.png, id=423, 358.3858pt x 224.57338pt>
 File: ./Figures/results/img8.png Graphic file (type png)
 <use ./Figures/results/img8.png>
 Package pdftex.def Info: ./Figures/results/img8.png  used on input line 10.
 (pdftex.def)             Requested size: 79.6678pt x 49.92029pt.
-<./Figures/results/img13.png, id=440, 358.3858pt x 224.00877pt>
+<./Figures/results/img13.png, id=424, 358.3858pt x 224.00877pt>
 File: ./Figures/results/img13.png Graphic file (type png)
 <use ./Figures/results/img13.png>
 Package pdftex.def Info: ./Figures/results/img13.png  used on input line 11.
 (pdftex.def)             Requested size: 79.6678pt x 49.79478pt.
-<./Figures/results/img18.png, id=441, 358.3858pt x 201.84785pt>
+<./Figures/results/img18.png, id=425, 358.3858pt x 201.84785pt>
 File: ./Figures/results/img18.png Graphic file (type png)
 <use ./Figures/results/img18.png>
 Package pdftex.def Info: ./Figures/results/img18.png  used on input line 12.
 (pdftex.def)             Requested size: 79.6678pt x 44.86865pt.
-<./Figures/results/na2014_0.pdf, id=442, 358.4592pt x 238.22601pt>
+<./Figures/results/na2014_0.pdf, id=426, 358.4592pt x 238.22601pt>
 File: ./Figures/results/na2014_0.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_0.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_0.pdf  used on input line 17.
 (pdftex.def)             Requested size: 79.6678pt x 52.94423pt.
-<./Figures/results/na2014_1.pdf, id=443, 358.4592pt x 163.25865pt>
+<./Figures/results/na2014_1.pdf, id=427, 358.4592pt x 163.25865pt>
 File: ./Figures/results/na2014_1.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_1.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_1.pdf  used on input line 18.
 (pdftex.def)             Requested size: 79.6678pt x 36.2832pt.
-<./Figures/results/na2014_5.pdf, id=444, 358.4592pt x 206.18405pt>
+<./Figures/results/na2014_5.pdf, id=428, 358.4592pt x 206.18405pt>
 File: ./Figures/results/na2014_5.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_5.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_5.pdf  used on input line 19.
 (pdftex.def)             Requested size: 79.6678pt x 45.8231pt.
-<./Figures/results/na2014_8.pdf, id=445, 358.4592pt x 224.6771pt>
+<./Figures/results/na2014_8.pdf, id=429, 358.4592pt x 224.6771pt>
 File: ./Figures/results/na2014_8.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_8.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_8.pdf  used on input line 20.
 (pdftex.def)             Requested size: 79.6678pt x 49.93306pt.
-<./Figures/results/na2014_13.pdf, id=446, 358.4592pt x 224.037pt>
+<./Figures/results/na2014_13.pdf, id=430, 358.4592pt x 224.037pt>
 File: ./Figures/results/na2014_13.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_13.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_13.pdf  used on input line 21.
 (pdftex.def)             Requested size: 79.6678pt x 49.7908pt.
-<./Figures/results/na2014_18.pdf, id=447, 358.4592pt x 201.87201pt>
+<./Figures/results/na2014_18.pdf, id=431, 358.4592pt x 201.87201pt>
 File: ./Figures/results/na2014_18.pdf Graphic file (type pdf)
 <use ./Figures/results/na2014_18.pdf>
 Package pdftex.def Info: ./Figures/results/na2014_18.pdf  used on input line 22.
 (pdftex.def)             Requested size: 79.6678pt x 44.86478pt.
-<./Figures/results/mrcnn_0.png, id=448, 358.3858pt x 238.12401pt>
+<./Figures/results/mrcnn_0.png, id=432, 358.3858pt x 238.12401pt>
 File: ./Figures/results/mrcnn_0.png Graphic file (type png)
 <use ./Figures/results/mrcnn_0.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_0.png  used on input line 28.
 (pdftex.def)             Requested size: 79.6678pt x 52.93245pt.
-<./Figures/results/mrcnn_1.png, id=449, 358.3858pt x 163.1721pt>
+<./Figures/results/mrcnn_1.png, id=433, 358.3858pt x 163.1721pt>
 File: ./Figures/results/mrcnn_1.png Graphic file (type png)
 <use ./Figures/results/mrcnn_1.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_1.png  used on input line 29.
 (pdftex.def)             Requested size: 79.6678pt x 36.27144pt.
-<./Figures/results/mrcnn_5.png, id=450, 358.3858pt x 206.08243pt>
+<./Figures/results/mrcnn_5.png, id=434, 358.3858pt x 206.08243pt>
 File: ./Figures/results/mrcnn_5.png Graphic file (type png)
 <use ./Figures/results/mrcnn_5.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_5.png  used on input line 30.
 (pdftex.def)             Requested size: 79.6678pt x 45.80995pt.
-<./Figures/results/mrcnn_8.png, id=451, 358.3858pt x 224.57338pt>
+<./Figures/results/mrcnn_8.png, id=435, 358.3858pt x 224.57338pt>
 File: ./Figures/results/mrcnn_8.png Graphic file (type png)
 <use ./Figures/results/mrcnn_8.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_8.png  used on input line 31.
 (pdftex.def)             Requested size: 79.6678pt x 49.92029pt.
-<./Figures/results/mrcnn_13.png, id=452, 358.3858pt x 224.00877pt>
+<./Figures/results/mrcnn_13.png, id=436, 358.3858pt x 224.00877pt>
 File: ./Figures/results/mrcnn_13.png Graphic file (type png)
 <use ./Figures/results/mrcnn_13.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_13.png  used on input line 32.
 (pdftex.def)             Requested size: 79.6678pt x 49.79478pt.
-<./Figures/results/mrcnn_18.png, id=453, 358.3858pt x 201.84785pt>
+<./Figures/results/mrcnn_18.png, id=437, 358.3858pt x 201.84785pt>
 File: ./Figures/results/mrcnn_18.png Graphic file (type png)
 <use ./Figures/results/mrcnn_18.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_18.png  used on input line 33.
 (pdftex.def)             Requested size: 79.6678pt x 44.86865pt.
-<./Figures/results/mrcnn_w_0.png, id=454, 358.3858pt x 238.12401pt>
+<./Figures/results/mrcnn_w_0.png, id=438, 358.3858pt x 238.12401pt>
 File: ./Figures/results/mrcnn_w_0.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_0.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_0.png  used on input line 39.
 (pdftex.def)             Requested size: 79.6678pt x 52.93245pt.
-<./Figures/results/mrcnn_w_1.png, id=455, 358.3858pt x 163.1721pt>
+<./Figures/results/mrcnn_w_1.png, id=439, 358.3858pt x 163.1721pt>
 File: ./Figures/results/mrcnn_w_1.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_1.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_1.png  used on input line 40.
 (pdftex.def)             Requested size: 79.6678pt x 36.27144pt.
-<./Figures/results/mrcnn_w_5.png, id=456, 358.3858pt x 206.08243pt>
+<./Figures/results/mrcnn_w_5.png, id=440, 358.3858pt x 206.08243pt>
 File: ./Figures/results/mrcnn_w_5.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_5.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_5.png  used on input line 41.
 (pdftex.def)             Requested size: 79.6678pt x 45.80995pt.
-<./Figures/results/mrcnn_w_8.png, id=457, 358.3858pt x 224.57338pt>
+<./Figures/results/mrcnn_w_8.png, id=441, 358.3858pt x 224.57338pt>
 File: ./Figures/results/mrcnn_w_8.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_8.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_8.png  used on input line 42.
 (pdftex.def)             Requested size: 79.6678pt x 49.92029pt.
-<./Figures/results/mrcnn_w_13.png, id=458, 358.3858pt x 224.00877pt>
+<./Figures/results/mrcnn_w_13.png, id=442, 358.3858pt x 224.00877pt>
 File: ./Figures/results/mrcnn_w_13.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_13.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_13.png  used on input line 43.
 (pdftex.def)             Requested size: 79.6678pt x 49.79478pt.
-<./Figures/results/mrcnn_w_18.png, id=459, 358.3858pt x 201.84785pt>
+<./Figures/results/mrcnn_w_18.png, id=443, 358.3858pt x 201.84785pt>
 File: ./Figures/results/mrcnn_w_18.png Graphic file (type png)
 <use ./Figures/results/mrcnn_w_18.png>
 Package pdftex.def Info: ./Figures/results/mrcnn_w_18.png  used on input line 44.
 (pdftex.def)             Requested size: 79.6678pt x 44.86865pt.
-<./Figures/results/img0_res.pdf, id=460, 358.4592pt x 238.22601pt>
+<./Figures/results/img0_res.pdf, id=444, 358.4592pt x 238.22601pt>
 File: ./Figures/results/img0_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img0_res.pdf>
 Package pdftex.def Info: ./Figures/results/img0_res.pdf  used on input line 50.
 (pdftex.def)             Requested size: 79.6678pt x 52.94423pt.
-<./Figures/results/img1_res.pdf, id=461, 358.4592pt x 163.25865pt>
+<./Figures/results/img1_res.pdf, id=445, 358.4592pt x 163.25865pt>
 File: ./Figures/results/img1_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img1_res.pdf>
 Package pdftex.def Info: ./Figures/results/img1_res.pdf  used on input line 51.
 (pdftex.def)             Requested size: 79.6678pt x 36.2832pt.
-<./Figures/results/img5_res.pdf, id=462, 358.4592pt x 206.18405pt>
+<./Figures/results/img5_res.pdf, id=446, 358.4592pt x 206.18405pt>
 File: ./Figures/results/img5_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img5_res.pdf>
 Package pdftex.def Info: ./Figures/results/img5_res.pdf  used on input line 52.
 (pdftex.def)             Requested size: 79.6678pt x 45.8231pt.
-<./Figures/results/img8_res.pdf, id=463, 358.4592pt x 224.6771pt>
+<./Figures/results/img8_res.pdf, id=447, 358.4592pt x 224.6771pt>
 File: ./Figures/results/img8_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img8_res.pdf>
 Package pdftex.def Info: ./Figures/results/img8_res.pdf  used on input line 53.
 (pdftex.def)             Requested size: 79.6678pt x 49.93306pt.
-<./Figures/results/img13_res.pdf, id=464, 358.4592pt x 224.037pt>
+<./Figures/results/img13_res.pdf, id=448, 358.4592pt x 224.037pt>
 File: ./Figures/results/img13_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img13_res.pdf>
 Package pdftex.def Info: ./Figures/results/img13_res.pdf  used on input line 54.
 (pdftex.def)             Requested size: 79.6678pt x 49.7908pt.
-<./Figures/results/img18_res.pdf, id=465, 358.4592pt x 201.87201pt>
+<./Figures/results/img18_res.pdf, id=449, 358.4592pt x 201.87201pt>
 File: ./Figures/results/img18_res.pdf Graphic file (type pdf)
 <use ./Figures/results/img18_res.pdf>
 Package pdftex.def Info: ./Figures/results/img18_res.pdf  used on input line 55.
 (pdftex.def)             Requested size: 79.6678pt x 44.86478pt.
-) [12] [13 <./Figures/results/img0.png> <./Figures/results/img1.png> <./Figures/results/img5.png> <./Figures/results/img8.png> <./Figures/results/img13.png> <./Figures/results/img18.png> <./Figures/results/na2014_0.pdf> <./Figures/results/na2014_1.pdf
+) [12 <./Figures/results/img0.png> <./Figures/results/img1.png> <./Figures/results/img5.png> <./Figures/results/img8.png> <./Figures/results/img13.png> <./Figures/results/img18.png> <./Figures/results/na2014_0.pdf> <./Figures/results/na2014_1.pdf
 
 pdfTeX warning: pdflatex.exe (file ./Figures/results/na2014_1.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./Figures/results/na2014_5.pdf
@@ -1358,29 +1283,29 @@ Underfull \hbox (badness 2027) in paragraph at lines 41--44
 []\OT1/cmr/m/sc/10 Dozenist\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 Photo of teeth, 2006\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / en . wikipedia . org / wiki / Human _ tooth #
  []
 
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
-[]\OT1/cmr/m/sc/10 Listerin\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 Do you have enamel ero-sion?  []$\OT1/cmtt/m/n/10 https : / / www . listerine . com . au /
- []
-
-[16]
-Underfull \hbox (badness 5460) in paragraph at lines 166--169
-[]\OT1/cmr/m/sc/10 A. Or-thodon-tics\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 How to close space be-tween front teeth?  []$\OT1/cmtt/m/n/10 https : / / www .
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
+[]\OT1/cmr/m/sc/10 P. Kadam\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 What is it specif-i-cally about Ju-lia Roberts's
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--189
-[]\OT1/cmr/m/sc/10 Pranita Kadam\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 What is it specif-i-cally about Ju-lia Roberts's
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 185--189
+Underfull \hbox (badness 10000) in paragraph at lines 87--91
 \OT1/cmr/m/it/10 smile that makes it so note-wor-thy?  []$\OT1/cmtt/m/n/10 https : / / www . quora . com /
  []
 
 
-Overfull \hbox (20.57614pt too wide) in paragraph at lines 185--189
+Overfull \hbox (20.57614pt too wide) in paragraph at lines 87--91
 \OT1/cmtt/m/n/10 What-[]is-[]it-[]specifically-[]about-[]Julia-[]Robertss-[]smile-[]that-[]makes-[]it-[]so-[]noteworthy$[]\OT1/cmr/m/n/10 . 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--136
+[]\OT1/cmr/m/sc/10 Listerin\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 Do you have enamel ero-sion?  []$\OT1/cmtt/m/n/10 https : / / www . listerine . com . au /
+ []
+
+[15]
+Underfull \hbox (badness 5460) in paragraph at lines 172--175
+[]\OT1/cmr/m/sc/10 A. Or-thodon-tics\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 How to close space be-tween front teeth?  []$\OT1/cmtt/m/n/10 https : / / www .
  []
 
 
@@ -1388,55 +1313,48 @@ Underfull \hbox (badness 10000) in paragraph at lines 196--198
 []\OT1/cmr/m/sc/10 Quirke Den-tal Sur-geons\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 No drilling den-tistry\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / qds . ie /
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--234
-\OT1/cmtt/m/n/10 / / www . swnebraskadental . com / smile-[]gallery / icon-[]resin-[]infiltration-[]treatment /
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
+[]\OT1/cmr/m/sc/10 Spear\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 A con-ser-va-tive, ef-fec-tive ap-proach to white spot le-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-[]\OT1/cmr/m/sc/10 Spear Ed-u-ca-tion\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 A con-ser-va-tive, ef-fec-tive ap-proach to white spot
+Underfull \hbox (badness 10000) in paragraph at lines 230--233
+\OT1/cmr/m/it/10 sions\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / www . speareducation . com / spear-[]review / 2017 / 07 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--240
-\OT1/cmr/m/it/10 le-sions\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / www . speareducation . com / spear-[]review / 2017 / 07 /
- []
-
-
-Underfull \hbox (badness 2781) in paragraph at lines 242--245
+Underfull \hbox (badness 2781) in paragraph at lines 235--238
 []\OT1/cmr/m/sc/10 Sterling Den-tal\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 What are those dark spots be-tween your teeth?  []$\OT1/cmtt/m/n/10 https : / /
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--249
 []\OT1/cmr/m/sc/10 Sunshine Smiles\OT1/cmr/m/n/10 , \OT1/cmr/m/it/10 How to get rid of white spots on your front
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--256
+Underfull \hbox (badness 10000) in paragraph at lines 245--249
 \OT1/cmr/m/it/10 teeth eas-ily and pain free\OT1/cmr/m/n/10 .  []$\OT1/cmtt/m/n/10 https : / / www . sunshinesmilesoc . com / blog /
  []
 
-) [18] (./TeethSeg_article.aux)
+[17]) [18] (./TeethSeg_article.aux)
 Package rerunfilecheck Info: File `TeethSeg_article.out' has not changed.
-(rerunfilecheck)             Checksum: 1047AE95FD92078A28B8CBD2C8238CEA;2915.
+(rerunfilecheck)             Checksum: 11A91202DAAF2ADA3F30207FD572E87E;2917.
  ) 
 Here is how much of TeX's memory you used:
- 27519 strings out of 478353
- 546158 string characters out of 5852100
- 905963 words of memory out of 5000000
- 44926 multiletter control sequences out of 15000+600000
+ 27576 strings out of 478353
+ 545955 string characters out of 5852100
+ 907476 words of memory out of 5000000
+ 44988 multiletter control sequences out of 15000+600000
  419926 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,18n,89p,1839b,1321s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
+ 84i,18n,89p,1784b,1395s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on TeethSeg_article.pdf (18 pages, 48150483 bytes).
+Output written on TeethSeg_article.pdf (18 pages, 47879615 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
- 517 compressed objects within 6 object streams
- 112 named destinations out of 1000 (max. 500000)
- 548 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 743 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 508 words of extra memory for PDF output out of 10000 (max. 10000000)
 

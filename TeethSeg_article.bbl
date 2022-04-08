@@ -42,6 +42,11 @@
 \newblock
   \url{https://en.wikipedia.org/wiki/Human_tooth#/media/File:06-10-06smile.jpg}.
 
+\bibitem{TT006}
+{\sc M.~{Ferguson 57}}.
+\newblock
+  \url{https://en.wikipedia.org/wiki/Dental_fluorosis#/media/File:Dental_fluorosis_(mild).png}.
+
 \bibitem{SpecRemoval:2018}
 {\sc J.~Guo, Z.~Zhou, and L.~Wang}, {\em Single image highlight removal with a
   sparse and low-rank reflection model}, in Proceedings of the European
@@ -77,6 +82,12 @@
 \bibitem{TT039}
 {\sc {Health JADE}}, {\em Fluorosis}.
 \newblock \url{https://healthjade.net/fluorosis/}.
+
+\bibitem{TT026}
+{\sc P.~Kadam}, {\em What is it specifically about {J}ulia {R}oberts's smile
+  that makes it so noteworthy?}
+\newblock
+  \url{https://www.quora.com/What-is-it-specifically-about-Julia-Robertss-smile-that-makes-it-so-noteworthy}.
 
 \bibitem{Kass:1988:Snakes}
 {\sc M.~Kass, A.~Witkin, and D.~Terzopoulos}, {\em Snakes: Active contour
@@ -125,13 +136,8 @@
 
 \bibitem{TT014}
 {\sc J.~Martos, A.~Gewehr, and E.~Paim}, {\em Aesthetic approach for anterior
-  teeth with enamel hypoplasia}, in Contemporary clinical dentistry, 3 (2012),
-  Suppl1: S82.
-
-\bibitem{TT006}
-{\sc {Matthew Ferguson 57}}, {\em Dental fluorosis (mild)}.
-\newblock
-  \url{https://en.wikipedia.org/wiki/Dental_fluorosis#/media/File:Dental_fluorosis_(mild).png}.
+  teeth with enamel hypoplasia}, Contemporary Clinical Dentistry, 3 (2012),
+  pp.~S82--S85.
 
 \bibitem{TT029}
 {\sc {MedicineNet}}, {\em Mouth problems: {TMJ}, canker sores, painful gums and
@@ -142,7 +148,7 @@
 \bibitem{Miranda:2016}
 {\sc G.~E. Miranda, S.~G. de~Freitas, L.~V. de~Abreu~Maia, and R.~F.~H.
   Melani}, {\em An unusual method of forensic human identification: use of
-  selfie photographs}, Forensic science international, 263 (2016),
+  selfie photographs}, Forensic Science International, 263 (2016),
   pp.~e14--e17.
 
 \bibitem{Na:2014LteethMorph}
@@ -159,8 +165,8 @@
 \bibitem{Naumovich:2015:teethCT3D}
 {\sc S.~S. Naumovich, S.~A. Naumovich, and V.~G. Goncharenko}, {\em
   Three-dimensional reconstruction of teeth and jaws based on segmentation of
-  {CT} images using watershed transformation}, in Dentomaxillofacial Radiology,
-  44 (2015), 20140313.
+  {CT} images using watershed transformation}, Dentomaxillofacial Radiology,
+  44, (2015), 20140313.
 
 \bibitem{T013}
 {\sc A.~Orthodontics}, {\em How to close space between front teeth?}
@@ -180,12 +186,6 @@
 \bibitem{TT037_51}
 {\sc {POLARIS}}.
 \newblock \url{https://filtropolaris.com/}.
-
-\bibitem{TT026}
-{\sc {Pranita Kadam}}, {\em What is it specifically about {J}ulia {R}oberts's
-  smile that makes it so noteworthy?}
-\newblock
-  \url{https://www.quora.com/What-is-it-specifically-about-Julia-Robertss-smile-that-makes-it-so-noteworthy}.
 
 \bibitem{Pretty:2001:forensic}
 {\sc I.~Pretty and D.~Sweet}, {\em A look at forensic dentistry--{P}art 1: The
@@ -222,19 +222,12 @@
 \newblock \url{https://www.shuaybdental.com/smile-gallery}.
 
 \bibitem{TT056_10}
-{\sc J.~H. Son, B.~Hur, H.~Kim, and J.~Park}, {\em Management of white spots:
-  resin infiltration technique and microabrasion}, The Journal of Korean
+{\sc J.~H. Son, B.~Hur, H.-C. Kim, and J.-K. Park}, {\em Management of white
+  spots: resin infiltration technique and microabrasion}, The Journal of Korean
   Academy of Conservative Dentistry, 36 (2011), pp.~66--71.
 
-\bibitem{TT027}
-{\sc {Southwest Nebraska Dental Center}}, {\em {ICON} resin infiltration
-  treatment}.
-\newblock
-  \url{https://www.swnebraskadental.com/smile-gallery/icon-resin-infiltration-treatment/14607}.
-
 \bibitem{TT046}
-{\sc {Spear Education}}, {\em A conservative, effective approach to white spot
-  lesions}.
+{\sc {Spear}}, {\em A conservative, effective approach to white spot lesions}.
 \newblock
   \url{https://www.speareducation.com/spear-review/2017/07/a-conservative-effective-approach-to-white-spot-lesions}.
 
@@ -263,6 +256,11 @@
 {\sc M.~Sussman, P.~Smereka, and S.~Osher}, {\em A level set approach for
   computing solutions to incompressible two-phase flow}, Journal of
   Computational Physics, 114 (1994), pp.~146--159.
+
+\bibitem{TT027}
+{\sc {SW Nebraska Dental Center}}, {\em {ICON} resin infiltration treatment}.
+\newblock
+  \url{https://www.swnebraskadental.com/smile-gallery/icon-resin-infiltration-treatment/14607}.
 
 \bibitem{TT017}
 {\sc {Van Dyk Castro}}, {\em Smile gallery}.
