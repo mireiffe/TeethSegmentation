@@ -100,7 +100,7 @@
 
 \bibitem{Kingma:2017}
 {\sc D.~P. Kingma and J.~Ba}, {\em Adam: A method for stochastic optimization},
-  in arXiv preprint, arXiv: 1412.6980, 2014.
+  arXiv preprint, arXiv: 1412.6980,  (2014).
 
 \bibitem{TT015_9}
 {\sc {KRAUSE}}, {\em Smile makeovers}.
@@ -298,7 +298,7 @@
 \bibitem{Zhang:2020:ResNeSt}
 {\sc H.~Zhang, C.~Wu, Z.~Zhang, Y.~Zhu, H.~Lin, Z.~Zhang, Y.~Sun, T.~He,
   J.~Mueller, R.~Manmatha, M.~Li, and A.~Smola}, {\em {ResNeSt}:
-  Split-attention networks}, in arXiv preprint, arXiv: 2004.08955, 2020.
+  Split-attention networks}, arXiv preprint, arXiv: 2004.08955,  (2020).
 
 \bibitem{Zhang:2018:BCE}
 {\sc Z.~Zhang and M.~R. Sabuncu}, {\em Generalized cross entropy loss for

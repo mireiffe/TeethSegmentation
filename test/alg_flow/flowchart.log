@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  10 MAR 2022 19:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.12.28)  9 APR 2022 18:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -763,11 +763,16 @@ LaTeX Info: Redefining \nameref on input line 136.
 \@outlinefile=\write4
 \openout4 = `flowchart.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 232.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+Overfull \hbox (7.11087pt too wide) in paragraph at lines 218--218
+ [][]\OT1/cmr/m/n/10 Segmented 
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 239.
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 232.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 239.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -782,18 +787,18 @@ Package rerunfilecheck Info: File `flowchart.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26069 strings out of 478353
- 512071 string characters out of 5852100
+ 26086 strings out of 478353
+ 512547 string characters out of 5852100
  802991 words of memory out of 5000000
- 43715 multiletter control sequences out of 15000+600000
- 411249 words of font info for 56 fonts, out of 8000000 for 9000
+ 43738 multiletter control sequences out of 15000+600000
+ 408589 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,89p,540b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on flowchart.pdf (2 pages, 58974 bytes).
+ 84i,9n,89p,540b,944s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on flowchart.pdf (2 pages, 71874 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 46 PDF objects out of 1000 (max. 8388607)
+ 31 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

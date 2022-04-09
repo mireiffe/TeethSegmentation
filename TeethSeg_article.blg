@@ -7,29 +7,29 @@ Warning--empty year in Naumovich:2015:teethCT3D
 You've used 62 entries,
             2030 wiz_defined-function locations,
             870 strings with 14955 characters,
-and the built_in function-call counts, 20971 in all, are:
+and the built_in function-call counts, 20913 in all, are:
 = -- 1944
 > -- 973
 < -- 0
 + -- 393
 - -- 326
-* -- 1502
-:= -- 3224
+* -- 1506
+:= -- 3222
 add.period$ -- 86
 call.type$ -- 62
 change.case$ -- 347
 chr.to.int$ -- 0
 cite$ -- 63
-duplicate$ -- 924
-empty$ -- 1684
+duplicate$ -- 916
+empty$ -- 1662
 format.name$ -- 326
-if$ -- 4524
+if$ -- 4502
 int.to.chr$ -- 0
 int.to.str$ -- 62
 missing$ -- 38
 newline$ -- 213
 num.names$ -- 123
-pop$ -- 429
+pop$ -- 421
 preamble$ -- 1
 purify$ -- 288
 quote$ -- 0

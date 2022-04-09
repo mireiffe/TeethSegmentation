@@ -1178,13 +1178,6 @@ INPUT ./Figures/flowchart/fig.tex
 INPUT ./Figures/flowchart/fig.tex
 INPUT ./Figures/flowchart/fig.tex
 INPUT ./Figures/flowchart/fig.tex
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT ./Figures/labeling/fig.tex
 INPUT ./Figures/labeling/fig.tex
 INPUT ./Figures/labeling/fig.tex

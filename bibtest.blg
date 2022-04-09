@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: bibtest.aux
+The style file: siam.bst
+Database file #1: bibliography.bib
+Warning--empty year in Naumovich:2015:teethCT3D
+You've used 88 entries,
+            2030 wiz_defined-function locations,
+            1023 strings with 19331 characters,
+and the built_in function-call counts, 31716 in all, are:
+= -- 2976
+> -- 1501
+< -- 0
++ -- 608
+- -- 512
+* -- 2340
+:= -- 4840
+add.period$ -- 114
+call.type$ -- 88
+change.case$ -- 523
+chr.to.int$ -- 0
+cite$ -- 89
+duplicate$ -- 1391
+empty$ -- 2450
+format.name$ -- 512
+if$ -- 6848
+int.to.chr$ -- 0
+int.to.str$ -- 88
+missing$ -- 64
+newline$ -- 293
+num.names$ -- 173
+pop$ -- 611
+preamble$ -- 1
+purify$ -- 440
+quote$ -- 0
+skip$ -- 1208
+stack$ -- 0
+substring$ -- 1982
+swap$ -- 568
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 348
+warning$ -- 1
+while$ -- 301
+width$ -- 90
+write$ -- 756
+(There was 1 warning)
