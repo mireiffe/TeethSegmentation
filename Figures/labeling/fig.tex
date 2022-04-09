@@ -1,0 +1,30 @@
+\begin{figure}[]
+    \centering
+    \begin{subfigure}[]{.4\textwidth}
+        \centering
+        \includegraphics[height=3.8cm]{./Figures/labeling/img.png}
+        \caption{A training image~\cite{TT023}}
+        \label{Fig:4a}
+    \end{subfigure}
+    \begin{subfigure}[]{.4\textwidth}
+        \centering
+        \includegraphics[height=3.8cm]{./Figures/labeling/er.png}
+        \caption{Edge-region candidate~$\ome$}
+        \label{Fig:4b}
+    \end{subfigure}\\
+    \vspace{1mm}
+    \begin{subfigure}[]{.4\textwidth}
+        \centering
+        \includegraphics[height=3.8cm]{./Figures/labeling/sel_reg.png}
+        \caption{Selected components}
+        \label{Fig:4c}
+    \end{subfigure}
+    \begin{subfigure}[]{.4\textwidth}
+        \centering
+        \includegraphics[height=3.8cm]{./Figures/labeling/label.png}
+        \caption{An obtained label~$Y$}
+        \label{Fig:4d}
+    \end{subfigure}
+    \caption{ Labeling process described in Section~\ref{Subsec:pseudo_er}: (a)~An image in the training dataset. (b)~Edge-region candidate~$\Omega_E$. (c)~Manually selected components from~(b). (d)~A label is defined as a binary image $Y$ having values $1$ in the dilated region of (c) and $0$ otherwise. }
+    \label{Fig:labeling}
+\end{figure}

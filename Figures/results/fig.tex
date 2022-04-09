@@ -1,0 +1,61 @@
+\begin{figure}[]
+    \newcommand*{\wdth}{2.8}%
+    \newcommand*{\twdth}{.19}%
+    \centering
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/results/img0.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/img1.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/img5.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/img8.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/img13.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/img18.png}
+        \caption{Input images}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_0.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_1.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_5.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_8.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_13.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/na2014_18.pdf}
+        \caption{MWA}
+        \label{Fig:na2014}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_0.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_1.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_5.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_8.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_13.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_18.png}
+        \caption{MRCNN}
+        \label{Fig:mrcnn}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_0.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_1.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_5.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_8.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_13.png}
+        \includegraphics[width=\wdth cm]{./Figures/results/mrcnn_w_18.png}
+        \caption{MRCNN2}
+        \label{Fig:mrcnn_w}
+    \end{subfigure}
+    \begin{subfigure}[]{\twdth \textwidth}
+        \centering
+        \includegraphics[width=\wdth cm]{./Figures/results/img0_res.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/img1_res.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/img5_res.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/img8_res.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/img13_res.pdf}
+        \includegraphics[width=\wdth cm]{./Figures/results/img18_res.pdf}
+        \caption{Our algorithm}
+        \label{Fig:ours}
+    \end{subfigure}
+    \caption{ Segmentation results of teeth images using various methods~\cite{T000,T008,T005,T018,T013,T001_21}. MWA in (b) is the modified watershed algorithm~\cite{Na:2014LteethMorph}. MRCNN and MRCNN2 are methods based on Mask R-CNN in~\cite{He:2018:MRCNN,Zhu:2020:teethMaskrcnn} and~\cite{Kim:2020}, respectively. In (e), the results using our algorithm are presented. }
+    \label{Fig:results}
+\end{figure}

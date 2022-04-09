@@ -1,0 +1,27 @@
+\begin{figure}
+    \newcommand*{\wid}{ 2.6 }%
+    \newcommand*{\twid}{ .19 }%
+    \centering
+    \begin{subfigure}{ \twid \textwidth}
+        \centering
+        \includegraphics[height=\wid cm]{./Figures/evolution/light_steps/iter0.png}
+    \end{subfigure}
+    \begin{subfigure}{ \twid \textwidth}
+        \centering
+        \includegraphics[height=\wid cm]{./Figures/evolution/light_steps/iter300.png}
+    \end{subfigure}
+    \begin{subfigure}{ \twid \textwidth}
+        \centering
+        \includegraphics[height=\wid cm]{./Figures/evolution/light_steps/iter500.png}
+    \end{subfigure}
+    \begin{subfigure}{ \twid \textwidth}
+        \centering
+        \includegraphics[height=\wid cm]{./Figures/evolution/light_steps/iter750.png}
+    \end{subfigure}
+    \begin{subfigure}{ \twid \textwidth}
+        \centering
+        \includegraphics[height=\wid cm]{./Figures/evolution/light_steps/iter2400.png}
+    \end{subfigure}
+    \caption{From left to right, multiple contours evolved by~\eqref{Eq:ac_gadf} are shown over time. The evolution steps are presented from the initial-state to the steady-state. There are three active contours with different colors. Observe that if a contour meets an edge-region, it digs into the edge-region along GADF, and if the edge-region encloses regions, the contour stops at the boundary of these regions. However, when the contour meets the tip of a component of non-closed shape, the contour intrudes the component and eventually encroaches. }
+    \label{Fig:evolution}
+\end{figure}
