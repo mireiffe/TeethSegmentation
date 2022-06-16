@@ -1,0 +1,254 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper}
+\usepackage{authblk}
+
+%% Packages
+\usepackage{graphicx, subcaption}
+\usepackage{amsmath,amssymb,amsthm,amsfonts}
+\usepackage{bm}
+\usepackage{algorithm, algorithmic}
+\usepackage{multirow}
+\usepackage{bbm}
+\usepackage{hyperref,url}
+\usepackage{kotex}
+\usepackage[labelformat=simple]{subcaption}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, positioning, calc}
+\usetikzlibrary{backgrounds}
+\usetikzlibrary{arrows.meta}
+
+\tikzstyle{title} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, text width=3cm, fill=white!100]
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text width=1.3cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, text width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\captionsetup[figure]{labelsep=period}
+% \renewcommand{\thefigure}{\Roman{figure}}
+% \captionsetup[subfigure]{labelformat=parens} % default is 'parens'
+% \renewcommand{\thesubfigure}{\thefigure.\alph{subfigure}.}
+\renewcommand\thesubfigure{(\alph{subfigure})}
+
+%% Theorems
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+%% Equations
+\numberwithin{equation}{section}
+
+%% Algorithms
+\renewcommand\algorithmicdo{}
+\renewcommand\algorithmicthen{}
+\renewcommand\algorithmicendfor{\textbf{end}}
+
+%% Macros
+\def\chfun{\mathbbm{1}}
+\def\calc{\mathcal{C}}
+\def\endske{E\left(\mathcal{S}^8\right)}
+\def\endomc{E\left(\Omega_c\right)}
+
+
+\def\gphi{\nabla\phi}
+\def\ngphi{\left|\nabla\phi\right|}
+\def\ngphii{\left|\nabla\phi_i\right|}
+
+\def\fci{F_{c,\,i}}
+\def\fcj{F_{c,\,j}}
+
+\def\fsi{F_{s,\,i}}
+
+\def\cm{\, ,}
+\def\pd{\, .}
+
+\def\omi{\Omega_i}
+\def\oma{\Omega_a}
+\def\ome{\Omega_E}
+\def\oms{\Omega_S}
+\def\omc{\overline{\Omega}_P}
+\def\omcc{\Omega_P}
+\def\omt{\Omega_T}
+\def\omn{\Omega_N}
+
+\def\ER{\mathcal{R}}
+\def\PER{\mathcal{P}}
+\def\ERC{\Omega \setminus \ER}
+
+\def\opp{\Omega_{\phi_i}^+}
+\def\opn{\Omega_{\phi_i}^-}
+% \def\opo{\Omega_{\phi}^0}
+\def\opo{C_{\phi_i}}
+
+\def\sdf{sdf}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+% \def\tOmega{\tilde{\Omega}}
+% \def\tGamma{\tilde{\Gamma}}
+% \def\tV{\tilde{V}}
+% \def\W{\mathbb{W}}
+% \def\tu{\tilde{u}}
+% \def\bu{\bar{u}}
+% \def\hu{\hat{u}}
+% \def\bl{\bar{\lambda}}
+% \def\p{\mathbf{p}}
+% \def\P{\mathbf{P}}
+% \def\intO{\int_{\Omega}}
+% \def\intOs{\int_{\Omega_s}}
+% \def\m{\mathbf{m}}
+% \def\n{\mathbf{n}}
+% \def\blambda{\bm{\lambda}}
+
+% \def\tE{\tilde{E}}
+% \def\N{\mathcal{N}}
+
+% \def\div{\mathrm{div}}
+% \def\proj{\mathrm{proj}}
+% \def\prox{\mathrm{prox}}
+% \def\ran{\mathrm{ran}\,}
+% \def\ed{\mathrm{ed}}
+% \def\supp{\mathrm{supp}\,}
+% \def\TOL{\mathrm{TOL}}
+% \DeclareMathOperator*{\argmin}{\arg\min}
+
+% Text Color and Strike
+\usepackage[normalem]{ulem}
+\usepackage{color}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\blue}[1]{{\color{blue}{#1}}}
+
+\title{ Individual Tooth Segmentation in Human Teeth Images Using Pseudo Edge-Regions Obtained by Deep Neural Networks }
+\author{Seongeun Kim and Chang-Ock Lee}
+\affil{Department of Mathematical Sciences, KAIST, Daejeon 34141, Korea}
+\date{ }
+
+\begin{document}
+
+\begin{figure}
+    \newcommand*{\al}{0.3}%
+    \newcommand*{\aw}{1.mm}%
+    \newcommand*{\hei}{1.1 cm}%
+    \newcommand*{\flr}{3.5cm}%
+    \newcommand*{\wgap}{1cm}%
+    \newcommand*{\init}{0}%
+    \newcommand*{\wwa}{.2}%
+    \newcommand*{\wwb}{.3}%
+    \newcommand*{\wwc}{.4}%
+    \newcommand*{\wwd}{.5}%
+    \newcommand*{\wwe}{.6}%
+    \newcommand*{\wwf}{.7}%
+    \newcommand*{\wwg}{.9}%
+
+    \newcommand*{\hha}{1}%
+    \newcommand*{\hhb}{.9}%
+    \newcommand*{\hhc}{.8}%
+    \newcommand*{\hhd}{.6}%
+    \newcommand*{\hhe}{.4}%
+    \newcommand*{\hhf}{.3}%
+    \newcommand*{\hhg}{.2}%
+    \centering
+    \begin{tikzpicture}[]
+        \footnotesize
+        \node (x0) at (0,0) [draw=none,minimum width=1mm,minimum height=\hei, fill=blue!50!white,label=above:{$3$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=red!50!yellow] (x0.south) to ++(0,-\al);
+
+        \node (x1) at ($(x0) + (0,-\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwa cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$32$}] {}; 
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x1.east) -- ++(\al, 0);
+
+        \node (x2) at ($(x1) + (\al+ \wwa/2 + \wwa/2,0)$) [draw=none,minimum width=\wwa cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$32$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x2.east) -- ++(\al, 0);
+        
+        \node (x3) at ($(x2) + (\al+\wwa/2 + \wwb/2,0)$) [draw=none,minimum width=\wwb cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=black] (x3.south) to ++(0,-\al);
+        
+        \node (x4) at ($(x3) + (0,-\hhb*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwb cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x4.east) to node [above, color=black] {} ++(\al, 0);
+        
+        \node (x5) at ($(x4) + (\al+\wwb/2 + \wwd/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x5.east) -- node [above, color=black] {\scriptsize $\boxed{2}$} ++(2*\al, 0);
+
+        \node (x6) at ($(x5) + (2*\al+\wwd/2 + \wwd/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x6.south) to  ++(0,-\al) {};
+
+        \node (x7) at ($(x6) + (0,-\hhc*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x7.east) to node [above, color=black] {\scriptsize $\boxed{3}$} ++(2*\al,0) {};
+
+        \node (x8) at ($(x7) + (2*\al+\wwe/2 + \wwe/2,0)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x8.south) to  ++(0,-\al) {};
+
+        \node (x9) at ($(x8) + (0,-\hhd*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x9.east) to node [above,color=black] {\scriptsize $\boxed{5}$} ++(2*\al,0) {};
+
+        \node (x10) at ($(x9) + (2*\al+\wwf/2 + \wwf/2,0)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x10.south) to  ++(0,-\al) {};
+
+        \node (x11) at ($(x10) + (0,-\hhe*\hei-\al cm - .3 cm)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=cyan!90!white] (x11.east) to node [above, color=black] {\scriptsize $\boxed{2}$} ++(5*\al,0) {};
+        
+        \node (x12) at ($(x11) + (5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=\hhf*\hei, fill=blue!50!white,label=above:{$2048$}] {};
+        
+        % latent variable
+        % \node (x13) at ($(x12) + (1.5*\al+\wwg/2 + \wwg/2,0)$) [draw=none,minimum width=\wwg cm,minimum height=2mm, fill=blue!50!white,label=above:{$2048$}] {};
+        % \draw [line width=\aw] (x12.east) to (x13.west) {};
+        
+        \node (x14_c) at ($(x12) + (-\wwf,\hhe*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=orange!50!white,label=above:{$1024$}] {};
+        \node (x14) at ($(x12) + (0,\hhe*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$1024$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=yellow!90!black] (x14.south) to ++(0,-\al);
+        
+        \node (x15) at ($(x14) + (1.5*\al + \wwg/2 + \wwf/2,0)$) [draw=none,minimum width=\wwf cm,minimum height=\hhe*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x14.east) to node [above, color=black] {\scriptsize $\boxed{2}$} (x15.west) {};
+
+        \node (x16_c) at ($(x15) + (-\wwe,\hhd*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=orange!50!white,label=above:{$512$}] {};
+        \node (x16) at ($(x15) + (0,\hhd*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=yellow!90!black] (x16.south) to ++(0,-\al);
+        
+        \node (x17) at ($(x16) + (1.5*\al + \wwe/2 + \wwf/2,0)$) [draw=none,minimum width=\wwe cm,minimum height=\hhd*\hei, fill=blue!50!white,label=above:{$512$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x16.east) to node [above, color=black] {\scriptsize $\boxed{2}$} (x17.west) {};
+
+        \node (x18_c) at ($(x17) + (-\wwd,\hhc*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=orange!50!white,label=above:{$256$}] {};
+        \node (x18) at ($(x17) + (0,\hhc*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=yellow!90!black] (x18.south) to ++(0,-\al);
+        
+        \node (x19) at ($(x18) + (1.5*\al + \wwd/2 + \wwe/2,0)$) [draw=none,minimum width=\wwd cm,minimum height=\hhc*\hei, fill=blue!50!white,label=above:{$256$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x18.east) to node [above, color=black] {\scriptsize $\boxed{2}$} (x19.west) {};
+
+        \node (x20_c) at ($(x19) + (-\wwc,\hhb*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwc cm,minimum height=\hhb*\hei, fill=orange!50!white,label=above:{\scriptsize$128$}] {};
+        \node (x20) at ($(x19) + (0,\hhb*\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwc cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{\scriptsize$128$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=violet!90!white] (x20.south) to ++(0,-\al);
+        
+        \node (x21) at ($(x20) + (1.5*\al + \wwd/2 + \wwc/2,0)$) [draw=none,minimum width=\wwc cm,minimum height=\hhb*\hei, fill=blue!50!white,label=above:{$128$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x20.east) to node [above, color=black] {\scriptsize $\boxed{2}$} (x21.west) {};
+
+        \node (x22_c) at ($(x21) + (-\wwb,\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwb cm,minimum height=\hei, fill=orange!50!white,label=above:{\scriptsize{$64$}}] {};
+        \node (x22) at ($(x21) + (0,\hei+\al cm + .3 cm)$) [draw=none,minimum width=\wwb cm,minimum height=\hei, fill=blue!50!white,label=above:{\scriptsize$64$}] {};
+        \draw [{Triangle[scale=.5]}-,line width=\aw,color=violet!90!white] (x22.south) to ++(0,-\al);
+        
+        \node (x23) at ($(x22) + (1.5*\al + \wwb/2 + \wwc/2,0)$) [draw=none,minimum width=\wwb cm,minimum height=\hei, fill=blue!50!white,label=above:{$64$}] {};
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=green!80!black] (x22.east) to node [above, color=black] {\scriptsize $\boxed{2}$} (x23.west) {};
+        
+        \node (x24) at ($(x23) + (\al + \wwb/2 + .1,0)$) [draw=none,minimum width=.1 cm,minimum height=\hei, fill=blue!50!white,label=above:{$1$}] {};
+        \draw [-{Circle[scale=.5]},line width=\aw,,color=red] (x23.east) to (x24.west) {};
+
+        \draw [-{Triangle[scale=.5]},line width=\aw,color=red] (x0) to (x22_c) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw / 4,color=black] (x3) to (x20_c) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw / 4,color=black] (x6) to (x18_c) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw / 4,color=black] (x8) to (x16_c) {};
+        \draw [-{Triangle[scale=.5]},line width=\aw / 4,color=black] (x10) to (x14_c) {};
+
+    \end{tikzpicture}
+    \caption{Network structure}
+    \label{Fig:network}
+\end{figure}
+\end{document}

@@ -968,17 +968,6 @@ INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT c:/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 INPUT c:/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 INPUT c:/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-INPUT ./TeethSeg_article.out
-INPUT TeethSeg_article.out
-INPUT ./TeethSeg_article.out
-INPUT TeethSeg_article.out
-INPUT ./TeethSeg_article.out
-INPUT TeethSeg_article.out
-INPUT ./TeethSeg_article.out
-INPUT TeethSeg_article.out
-INPUT ./TeethSeg_article.out
-INPUT ./TeethSeg_article.out
-OUTPUT TeethSeg_article.out
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
 INPUT c:/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
@@ -1298,5 +1287,3 @@ INPUT TeethSeg_article.bbl
 INPUT ./TeethSeg_article.bbl
 INPUT TeethSeg_article.bbl
 INPUT TeethSeg_article.aux
-INPUT ./TeethSeg_article.out
-INPUT ./TeethSeg_article.out

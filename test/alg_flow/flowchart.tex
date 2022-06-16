@@ -270,18 +270,18 @@
 		] (title_b) {\textbf{(b) Segmentation}};
 	
 	\node [draw,
-		minimum width=3cm,
+		minimum width=5cm,
 		minimum height=1cm,
 		above=1.85*\midgap cm of title_b,
 		fill=white
 		] (title_a) {\textbf{(a) Data labeling and training}};
 	
 	\begin{scope}[on background layer]
-		\draw[black,line width=.4mm,dashed] ($(title_a.west)+(-6.65,0)$)  rectangle ($(title_a.west)+(-6.65,0)+(18.2,-8*\segvgap)$);
+		\draw[black,line width=.4mm,dashed] ($(title_a.west)+(-6.77,0)$)  rectangle ($(title_a.west)+(-6.77,0)+(18.2,-8*\segvgap)$);
 		\draw[black,line width=.4mm,dashed] ($(title_b.west)+(-7.7,0)$)  rectangle ($(title_b.west)+(-7.7,0)+(18.2,-6.3*\segvgap)$);
 	\end{scope}
   \end{tikzpicture}
-  \caption{Algorithm flowchart: (a) Data labeling and training process. (b) Segmentation process. }
+  \caption{Algorithm flowchart. }
   \label{Fig:flowchart}
 \end{figure}
 \end{document}

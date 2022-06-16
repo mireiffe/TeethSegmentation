@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[10pt,draft]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{geometry} % to change the page dimensions
 \geometry{a4paper}
@@ -135,7 +135,8 @@
 \maketitle
 
 \begin{abstract}
-In human teeth images taken outside the oral cavity with a general digital camera, it is difficult to segment individual tooth due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we propose a method for segmenting individual tooth in human teeth images. The key to this method is to obtain pseudo edge-region using deep neural networks. After an additional step to obtain initial contours for each tooth region, the individual tooth is segmented by applying active contour models. We also present a strategy using existing model-based methods for labeling the data required for neural network training.
+In human teeth images taken outside the oral cavity with a general digital camera, it is difficult to segment individual tooth due to common obstacles such as weak edges, intensity inhomogeneities and strong light reflections. In this work, we propose a method for segmenting individual tooth in human teeth images. The key to this method is to obtain pseudo edge-region using deep neural networks. {\color{red}We present a strategy for training neural networks while significantly simplifying the labeling process of training data using model-based methods.}
+After an additional step to obtain initial contours for each tooth region, the individual tooth is segmented by applying active contour models.
 \end{abstract}
 
 {\small \textbf{Key words}
